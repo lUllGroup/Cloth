@@ -73,7 +73,7 @@ RWStructuredBuffer<particle> Output : BACKBUFFER;
 //COMPUTE SHADER ===============================================================
 //==============================================================================
 
-[numthreads(256, 1, 1)]
+[numthreads(2, 1, 1)]
 void CSConstantForce( uint3 DTid : SV_DispatchThreadID)
 {
 

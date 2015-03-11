@@ -1,10 +1,10 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.3.dtd" >
-   <PATCH nodename="C:\Users\Michael\Desktop\nodecloth\String Physics\subpatches\clothTex.v4p" systemname="clothTex" filename="C:\Users\Michael\Desktop\nodecloth\String Physics\subpatches\clothTex.v4p" scrollx="990" scrolly="375">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
+   <PATCH nodename="C:\Users\Admin\Desktop\Coth\subpatches\clothTex.v4p" systemname="clothTex" filename="C:\Users\Michael\Desktop\nodecloth\String Physics\subpatches\clothTex.v4p" scrollx="990" scrolly="375">
    <BOUNDS type="Window" left="11580" top="3465" width="19245" height="11880">
    </BOUNDS>
    <PACK Name="image" Version="0.2.0">
    </PACK>
-   <PACK Name="addonpack" Version="33.3.0">
+   <PACK Name="addonpack" Version="33.7.0">
    </PACK>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="2" systemname="IOBox (String)">
    <BOUNDS type="Box" left="1830" top="1560" width="1095" height="465">
@@ -169,9 +169,9 @@
    </PIN>
    </NODE>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="15" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="11565" top="5865" width="480" height="480">
+   <BOUNDS type="Box" left="11625" top="5760" width="480" height="480">
    </BOUNDS>
-   <BOUNDS type="Node" left="11565" top="5865" width="0" height="0">
+   <BOUNDS type="Node" left="11625" top="5760" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Y Input Value" visible="1" slicecount="1" values="1">
    </PIN>
@@ -199,7 +199,7 @@
    </PIN>
    <PIN pinname="Texture SizeXY" visible="1">
    </PIN>
-   <PIN pinname="AA Samples per Pixel" slicecount="1" values="4">
+   <PIN pinname="AA Samples per Pixel" slicecount="1" values="16">
    </PIN>
    <PIN pinname="Buffers" visible="1">
    </PIN>
@@ -224,6 +224,8 @@
    <PIN pinname="Near Plane" slicecount="1" values="0.05">
    </PIN>
    <PIN pinname="Far Plane" slicecount="1" values="160">
+   </PIN>
+   <PIN pinname="Initial FOV" slicecount="1" values="0.2">
    </PIN>
    </NODE>
    <NODE systemname="GetMatrix (Transform)" nodename="GetMatrix (Transform)" componentmode="Hidden" id="18">
@@ -283,7 +285,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="13230" top="4710" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.003">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.002">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -327,7 +329,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="8490" top="4845" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="2" visible="1" values="1000,1000">
+   <PIN pinname="Y Input Value" slicecount="2" visible="1" values="3000,3000">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -433,7 +435,7 @@
    <NODE systemname="Text (DX11.Layer)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.Text.dll" nodename="Text (DX11.Layer)" componentmode="Hidden" id="37">
    <BOUNDS type="Node" left="1650" top="5355" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Font" slicecount="1" values="|Gill Sans Display MT Pro BdCn|">
+   <PIN pinname="Font" slicecount="1" values="Arial">
    </PIN>
    <PIN pinname="Size" slicecount="1" values="300">
    </PIN>
@@ -575,5 +577,7 @@
    <LINK srcnodeid="59" srcpinname="Output" dstnodeid="56" dstpinname="Input 2">
    </LINK>
    <LINK srcnodeid="37" srcpinname="Layer" dstnodeid="48" dstpinname="Layer">
+   </LINK>
+   <LINK srcnodeid="15" srcpinname="Y Output Value" dstnodeid="16" dstpinname="Enabled">
    </LINK>
    </PATCH>
