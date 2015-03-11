@@ -1,0 +1,169 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.3.dtd" >
+   <PATCH nodename="C:\Users\Michael\Desktop\nodecloth\String Physics\subpatches\tracking.v4p" systemname="tracking" filename="C:\Users\Michael\Desktop\nodecloth\String Physics\subpatches\tracking.v4p" scrollx="1185" scrolly="45">
+   <NODE systemname="RGB (Kinect Microsoft)" nodename="RGB (Kinect Microsoft)" componentmode="Hidden" id="0" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.MSKinect.dll">
+   <BOUNDS type="Node" left="3450" top="4575" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Kinect Runtime" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Texture" visible="1">
+   </PIN>
+   <BOUNDS type="Box" left="3450" top="4575">
+   </BOUNDS>
+   </NODE>
+   <NODE systemname="Depth (Kinect Microsoft)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.MSKinect.dll" nodename="Depth (Kinect Microsoft)" componentmode="Hidden" id="2">
+   <BOUNDS type="Node" left="2715" top="4575" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Kinect Runtime" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Texture" visible="1">
+   </PIN>
+   <BOUNDS type="Box" left="2715" top="4575">
+   </BOUNDS>
+   </NODE>
+   <NODE systemname="RGBDepth (Kinect Microsoft)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.MSKinect.dll" nodename="RGBDepth (Kinect Microsoft)" componentmode="Hidden" id="3">
+   <BOUNDS type="Node" left="4230" top="4575" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Kinect Runtime" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Texture" visible="1">
+   </PIN>
+   <BOUNDS type="Box" left="4230" top="4575">
+   </BOUNDS>
+   <PIN pinname="Relative Lookup" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="4" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="1515" top="4575" width="1095" height="270">
+   </BOUNDS>
+   <BOUNDS type="Node" left="1515" top="4575" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Vector Size" slicecount="1" values="2">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Y Input Value" slicecount="2" values="0.325000007869676,0.253333330990539">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   <PIN pinname="Columns" slicecount="1" values="2">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="World (Kinect Microsoft)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.MSKinect.dll" nodename="World (Kinect Microsoft)" componentmode="Hidden" id="7">
+   <BOUNDS type="Node" left="5250" top="3345" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Kinect Runtime" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Texture" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="SmoothSettings (Kinect Microsoft)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.MSKinect.dll" nodename="SmoothSettings (Kinect Microsoft)" componentmode="Hidden" id="8">
+   <BOUNDS type="Node" left="5175" top="1500" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Jitter Radius" slicecount="1" values="0.05">
+   </PIN>
+   <PIN pinname="Correction" slicecount="1" values="0.5">
+   </PIN>
+   <PIN pinname="Max Deviation Radius" slicecount="1" values="0.87">
+   </PIN>
+   <PIN pinname="Prediction" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Smoothing" slicecount="1" values="10">
+   </PIN>
+   </NODE>
+   <NODE id="9" systemname="IOBox (Node)" componentmode="InABox" nodename="IOBox (Node)">
+   <PIN pinname="Descriptive Name" slicecount="1" values="Texture">
+   </PIN>
+   <BOUNDS type="Box" left="2715" top="6345" width="750" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="2715" top="6345" width="750" height="240">
+   </BOUNDS>
+   <PIN pinname="Input Node" visible="1" slicecount="1" values="||">
+   </PIN>
+   </NODE>
+   <BOUNDS type="Window" left="10320" top="5790" width="6855" height="7335">
+   </BOUNDS>
+   <PACK Name="image" Version="0.2.0">
+   </PACK>
+   <PACK Name="addonpack" Version="33.3.0">
+   </PACK>
+   <LINK srcnodeid="2" srcpinname="Texture" dstnodeid="9" dstpinname="Input Node">
+   </LINK>
+   <NODE id="1" systemname="Kinect (Devices Microsoft)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.MSKinect.dll" nodename="Kinect (Devices Microsoft)" componentmode="Hidden">
+   <PIN pinname="Reset" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Emit Infrared" slicecount="1" values="1">
+   </PIN>
+   <BOUNDS type="Node" left="3450" top="2100" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Enabled" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Enable Color" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Motor Angle" slicecount="1" values="0.9">
+   </PIN>
+   <PIN pinname="Kinect Runtime" visible="1">
+   </PIN>
+   <PIN pinname="Depth FOVXY" visible="1">
+   </PIN>
+   <PIN pinname="Enable Depth" slicecount="1" values="1">
+   </PIN>
+   <BOUNDS type="Box" left="3450" top="2100">
+   </BOUNDS>
+   <PIN pinname="Infrared Color" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Depth Range" slicecount="1" values="Default">
+   </PIN>
+   <PIN pinname="Enable Skeleton Smoothing" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="High Res Depth" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Smooth Parameters" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="1" srcpinname="Kinect Runtime" dstnodeid="7" dstpinname="Kinect Runtime">
+   </LINK>
+   <LINK srcnodeid="1" srcpinname="Kinect Runtime" dstnodeid="3" dstpinname="Kinect Runtime" linkstyle="Bezier">
+   <LINKPOINT x="3510" y="3603">
+   </LINKPOINT>
+   <LINKPOINT x="5010" y="3403">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="8" srcpinname="Output" dstnodeid="1" dstpinname="Smooth Parameters">
+   </LINK>
+   <LINK srcnodeid="1" srcpinname="Kinect Runtime" dstnodeid="0" dstpinname="Kinect Runtime" linkstyle="Bezier">
+   <LINKPOINT x="3480" y="3603">
+   </LINKPOINT>
+   <LINKPOINT x="3480" y="3403">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="1" srcpinname="Kinect Runtime" dstnodeid="2" dstpinname="Kinect Runtime" linkstyle="Bezier">
+   <LINKPOINT x="3465" y="3595">
+   </LINKPOINT>
+   <LINKPOINT x="2745" y="3395">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="1" srcpinname="Depth FOVXY" dstnodeid="4" dstpinname="Y Input Value" linkstyle="Bezier">
+   <LINKPOINT x="5110" y="3588">
+   </LINKPOINT>
+   <LINKPOINT x="1610" y="3388">
+   </LINKPOINT>
+   </LINK>
+   <NODE systemname="Preview (DX11.Texture)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Preview (DX11.Texture)" componentmode="InAWindow" id="10" stayontop="1">
+   <BOUNDS type="Node" left="6300" top="4650" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="6300" top="4650" width="6000" height="4500">
+   </BOUNDS>
+   <BOUNDS type="Window" left="3030" top="7380" width="6240" height="5085">
+   </BOUNDS>
+   <PIN pinname="Texture In" visible="1" slicecount="1" values="||">
+   </PIN>
+   </NODE>
+   </PATCH>

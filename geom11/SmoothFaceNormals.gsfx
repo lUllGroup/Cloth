@@ -1,0 +1,121 @@
+ByteAddressBuffer normalsBuffer;
+
+StructuredBuffer<float> AdjacentFaces;
+StructuredBuffer<float> AdjacentFacesCount;
+StructuredBuffer<float> AdjacentFacesOffset;
+
+struct vsIn
+{
+	float4 pos : POSITION;
+	float2 uv : TEXCOORD0;
+};
+
+struct GSIn
+{
+    float3 pos  : POSITION;
+	float2 uv : TEXCOORD0;
+};
+
+struct GSOut
+{
+    float3 pos  : POSITION;
+	float3 normal : NORMAL;
+	float2 uv : TEXCOORD0;
+};
+
+GSIn VS(vsIn input)
+{
+	GSIn o;
+	o.pos = input.pos.xyz;
+	o.uv = input.uv;
+    return o;
+}
+
+[maxvertexcount(3)]
+void GS(triangle GSIn input[3], uint primID : SV_PrimitiveID, inout TriangleStream<GSOut> gsout)
+{ 
+	GSOut elem = (GSOut)0;
+
+	elem.pos = input[0].pos;
+	elem.uv = input[0].uv;
+	
+	float3 adjNorm = float3(0,0,0);
+	
+	int vOff = 0;
+	
+	vOff = 0;
+	for(int a = 0; a < AdjacentFacesCount[primID*3 + vOff] ; a++){
+		
+		adjNorm += float3(asfloat(normalsBuffer.Load(AdjacentFaces[ a + AdjacentFacesOffset[primID*3 + vOff]] * 3 * 32 + 12)),
+						  asfloat(normalsBuffer.Load(AdjacentFaces[ a + AdjacentFacesOffset[primID*3 + vOff]] * 3 * 32 + 16)),
+						  asfloat(normalsBuffer.Load(AdjacentFaces[ a + AdjacentFacesOffset[primID*3 + vOff]] * 3 * 32 + 20)));
+		
+		}
+	
+		
+	elem.normal =  normalize(adjNorm);
+	
+	gsout.Append(elem);
+	
+	//////////////////////////////////////////////////////////////////////////////////
+	
+	elem.pos = input[1].pos;
+	elem.uv = input[1].uv;
+	
+	adjNorm = float3(0,0,0);
+
+	vOff = 1;
+	
+	for(int b = 0; b < AdjacentFacesCount[primID*3 + vOff] ; b++){
+		
+		adjNorm += float3(asfloat(normalsBuffer.Load(AdjacentFaces[ b + AdjacentFacesOffset[primID * 3 + vOff]]*3 * 32 + 12)),
+						  asfloat(normalsBuffer.Load(AdjacentFaces[ b + AdjacentFacesOffset[primID * 3 + vOff]]*3 * 32 + 16)),
+						  asfloat(normalsBuffer.Load(AdjacentFaces[ b + AdjacentFacesOffset[primID * 3 + vOff]]*3 * 32 + 20)));
+	}
+	
+	elem.normal =  normalize(adjNorm);
+
+	
+	//////////////////////////////////////////////////////////////////////////////////
+	
+	gsout.Append(elem);
+	
+	elem.pos = input[2].pos;
+	elem.uv = input[2].uv;
+
+	adjNorm = float3(0,0,0);
+
+	vOff = 2;
+	for(int c = 0; c < AdjacentFacesCount[primID*3 + vOff] ; c++){
+		
+		adjNorm += float3(asfloat(normalsBuffer.Load(AdjacentFaces[ c + AdjacentFacesOffset[primID * 3  + vOff]]*3 * 32 + 12)),
+						  asfloat(normalsBuffer.Load(AdjacentFaces[ c + AdjacentFacesOffset[primID * 3  + vOff]]*3 * 32 + 16)),
+						  asfloat(normalsBuffer.Load(AdjacentFaces[ c + AdjacentFacesOffset[primID * 3  + vOff]]*3 * 32 + 20)));
+	
+		
+	}
+
+	
+	elem.normal =  normalize(adjNorm);
+	
+	
+	
+	gsout.Append(elem);
+
+	//////////////////////////////////////////////////////////////////////////////////
+	
+	
+	gsout.RestartStrip();
+	
+}
+
+GeometryShader gsStreamOut = ConstructGSWithSO( CompileShader( gs_4_0, GS() ), "POSITION.xyz;NORMAL.xyz;TEXCOORD.xy",NULL,NULL,NULL,-1 );
+technique11 PassMesh
+{
+    pass PP2
+    {
+        SetVertexShader( CompileShader( vs_4_0, VS() ) );
+        SetGeometryShader( gsStreamOut );
+    }  
+}
+

@@ -1,0 +1,56 @@
+SamplerState g_samLinear : IMMUTABLE
+{
+	Filter = MIN_MAG_MIP_LINEAR;
+	AddressU = WRAP;
+	AddressV = WRAP;
+};
+
+
+struct VSIn
+{	
+    float3 pos  : POSITION; 
+	float3 norm  : NORMAL;
+	float2 texcoord : TEXCOORD0;
+};
+
+struct particle
+{
+	float3 pos;
+	float3 oldPos;
+	bool pinched;
+	float3 outputBuffer;
+};
+
+
+StructuredBuffer<particle> pData;
+
+float1 mapRange(float1 value, float from1,float to1,float from2, float to2){
+	
+	return  (value - from1) / (to1 - from1) * (to2 - from2) + from2;
+}
+
+StructuredBuffer<float1> displaceData;
+
+VSIn VS2(VSIn input,uint id : SV_VertexID)
+{
+	VSIn o;
+	o.texcoord = input.texcoord;
+	o.pos = float4(pData[id].pos.x,pData[id].pos.y,pData[id].pos.z,1);
+    
+	o.norm =  input.norm;
+	
+  	return o;
+} 
+
+
+GeometryShader StreamOutGS = ConstructGSWithSO( CompileShader( vs_4_0, VS2() ),
+"POSITION.xyz; NORMAL.xyz; TEXCOORD.xy", NULL, NULL, NULL, -1);
+
+technique10 PassMesh
+{
+    pass PP2
+    {
+        SetVertexShader( CompileShader( vs_5_0, VS2() ) );
+        SetGeometryShader( StreamOutGS );
+    }  
+}
