@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="C:\Users\Admin\Desktop\Coth\subpatches\tracking.v4p" systemname="tracking" filename="C:\Users\Michael\Desktop\nodecloth\String Physics\subpatches\tracking.v4p" scrollx="0" scrolly="3975">
+   <PATCH nodename="C:\Users\Admin\Desktop\Coth\subpatches\tracking.v4p" systemname="tracking" filename="C:\Users\Michael\Desktop\nodecloth\String Physics\subpatches\tracking.v4p" scrollx="0" scrolly="0">
    <NODE systemname="Depth (Kinect Microsoft)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.MSKinect.dll" nodename="Depth (Kinect Microsoft)" componentmode="Hidden" id="2">
    <BOUNDS type="Node" left="3435" top="3855" width="100" height="100">
    </BOUNDS>
@@ -9,14 +9,6 @@
    </PIN>
    <BOUNDS type="Box" left="3435" top="3855">
    </BOUNDS>
-   </NODE>
-   <NODE systemname="World (Kinect Microsoft)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.MSKinect.dll" nodename="World (Kinect Microsoft)" componentmode="Hidden" id="7">
-   <BOUNDS type="Node" left="6315" top="2910" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Kinect Runtime" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Texture" visible="1">
-   </PIN>
    </NODE>
    <NODE id="9" systemname="IOBox (Node)" componentmode="InABox" nodename="IOBox (Node)">
    <PIN pinname="Descriptive Name" slicecount="1" values="Texture">
@@ -60,42 +52,6 @@
    <PIN pinname="Filter Mode" slicecount="1" values="MinMagMipPoint">
    </PIN>
    </NODE>
-   <NODE systemname="Transform (Transform 3d)" nodename="Transform (Transform 3d)" componentmode="Hidden" id="33">
-   <BOUNDS type="Node" left="7815" top="2865" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="ScaleZ" visible="1">
-   </PIN>
-   <PIN pinname="ScaleY" visible="1">
-   </PIN>
-   <PIN pinname="ScaleX" visible="1">
-   </PIN>
-   <PIN pinname="TranslateX" visible="1" slicecount="1" values="-0.19">
-   </PIN>
-   <PIN pinname="Transform Out" visible="1">
-   </PIN>
-   <PIN pinname="TranslateY" slicecount="1" values="-0.58">
-   </PIN>
-   </NODE>
-   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="34" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="8805" top="1875" width="795" height="240">
-   </BOUNDS>
-   <BOUNDS type="Node" left="8805" top="1875" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="2">
-   </PIN>
-   <PIN pinname="Units" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Precision" slicecount="1" values="4">
-   </PIN>
-   <PIN pinname="Y Output Value" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="34" srcpinname="Y Output Value" dstnodeid="33" dstpinname="ScaleZ">
-   </LINK>
-   <LINK srcnodeid="34" srcpinname="Y Output Value" dstnodeid="33" dstpinname="ScaleY">
-   </LINK>
-   <LINK srcnodeid="34" srcpinname="Y Output Value" dstnodeid="33" dstpinname="ScaleX">
-   </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="35" systemname="IOBox (Value Advanced)">
    <BOUNDS type="Box" left="7545" top="1215" width="795" height="480">
    </BOUNDS>
@@ -118,22 +74,6 @@
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
    </NODE>
-   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="37" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="3795" top="2670" width="795" height="240">
-   </BOUNDS>
-   <BOUNDS type="Node" left="3795" top="2670" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Units" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Precision" slicecount="1" values="4">
-   </PIN>
-   <PIN pinname="Value Type" slicecount="1" values="Integer">
-   </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="|Kinect Count|">
-   </PIN>
-   <PIN pinname="Y Input Value" slicecount="1" values="0">
-   </PIN>
-   </NODE>
    <NODE id="42" systemname="Kinect (Devices Microsoft)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.MSKinect.dll" nodename="Kinect (Devices Microsoft)" componentmode="Hidden">
    <BOUNDS type="Node" left="3450" top="2100" width="100" height="100">
    </BOUNDS>
@@ -145,11 +85,11 @@
    </PIN>
    <PIN pinname="Reset" slicecount="1" values="0">
    </PIN>
-   <PIN pinname="Enabled" slicecount="1" values="1">
+   <PIN pinname="Enabled" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Index" visible="1" slicecount="1" values="0">
    </PIN>
-   <PIN pinname="Motor Angle" slicecount="1" values="0.6" visible="1">
+   <PIN pinname="Motor Angle" slicecount="1" visible="1" values="0.6">
    </PIN>
    <PIN pinname="Enable Skeleton Smoothing" slicecount="1" values="0">
    </PIN>
@@ -165,14 +105,10 @@
    </PIN>
    <PIN pinname="High Res Depth" slicecount="1" values="1">
    </PIN>
+   <PIN pinname="Kinect Runtime" visible="1">
+   </PIN>
    </NODE>
-   <LINK srcnodeid="42" srcpinname="Kinect Runtime" dstnodeid="7" dstpinname="Kinect Runtime">
-   </LINK>
    <LINK srcnodeid="23" srcpinname="Output" dstnodeid="42" dstpinname="Smooth Parameters">
-   </LINK>
-   <LINK srcnodeid="42" srcpinname="Kinect Count" dstnodeid="37" dstpinname="Y Input Value">
-   </LINK>
-   <LINK srcnodeid="42" srcpinname="Kinect Runtime" dstnodeid="2" dstpinname="Kinect Runtime" linkstyle="PolyLine">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="44" systemname="IOBox (Value Advanced)">
    <BOUNDS type="Box" left="3810" top="855" width="795" height="240">
@@ -221,11 +157,11 @@
    </PIN>
    <PIN pinname="Reset" slicecount="1" values="0">
    </PIN>
-   <PIN pinname="Enabled" slicecount="1" values="1">
+   <PIN pinname="Enabled" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Index" visible="1" slicecount="1" values="1">
    </PIN>
-   <PIN pinname="Motor Angle" slicecount="1" values="0.6" visible="1">
+   <PIN pinname="Motor Angle" slicecount="1" visible="1" values="0.6">
    </PIN>
    <PIN pinname="Enable Skeleton Smoothing" slicecount="1" values="0">
    </PIN>
@@ -272,8 +208,6 @@
    <BOUNDS type="Box" left="1215" top="3795">
    </BOUNDS>
    </NODE>
-   <LINK srcnodeid="47" srcpinname="Kinect Runtime" dstnodeid="49" dstpinname="Kinect Runtime">
-   </LINK>
    <NODE systemname="TransformTexture (DX11.TextureFX)" filename="%VVVV%\packs\dx11\nodes\texture11\Filter\TransformTexture.tfx" nodename="TransformTexture (DX11.TextureFX)" componentmode="Hidden" id="53">
    <BOUNDS type="Node" left="3450" top="7260" width="100" height="100">
    </BOUNDS>
@@ -374,18 +308,6 @@
    </NODE>
    <LINK srcnodeid="53" srcpinname="Texture Out" dstnodeid="59" dstpinname="Texture In">
    </LINK>
-   <NODE systemname="Preview (DX11.Texture)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Preview (DX11.Texture)" componentmode="InABox" id="61" stayontop="1">
-   <BOUNDS type="Node" left="7410" top="5940" width="100" height="100">
-   </BOUNDS>
-   <BOUNDS type="Box" left="7410" top="5940" width="6000" height="4500">
-   </BOUNDS>
-   <BOUNDS type="Window" left="16080" top="8790" width="9600" height="6390">
-   </BOUNDS>
-   <PIN pinname="Texture In" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Background Color" slicecount="1" values="|0.00000,0.00000,0.00000,1.00000|">
-   </PIN>
-   </NODE>
    <NODE systemname="Levels (DX11.TextureFX)" filename="%VVVV%\packs\dx11\nodes\texture11\Filter\Levels.tfx" nodename="Levels (DX11.TextureFX)" componentmode="Hidden" id="62">
    <BOUNDS type="Node" left="3675" top="10125" width="100" height="100">
    </BOUNDS>
@@ -452,8 +374,6 @@
    </LINK>
    <LINK srcnodeid="59" srcpinname="Texture Out" dstnodeid="63" dstpinname="Texture In 2">
    </LINK>
-   <LINK srcnodeid="63" srcpinname="Texture Out" dstnodeid="61" dstpinname="Texture In">
-   </LINK>
    <LINK srcnodeid="53" srcpinname="Texture Out" dstnodeid="48" dstpinname="Texture In 2" linkstyle="PolyLine">
    </LINK>
    <LINK srcnodeid="54" srcpinname="Texture Out" dstnodeid="48" dstpinname="Texture In">
@@ -483,7 +403,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="1380" top="870" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.6">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.8">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -497,5 +417,17 @@
    <LINK srcnodeid="66" srcpinname="Y Output Value" dstnodeid="42" dstpinname="Motor Angle">
    </LINK>
    <LINK srcnodeid="48" srcpinname="Texture Out" dstnodeid="9" dstpinname="Input Node">
+   </LINK>
+   <NODE systemname="Preview (DX11.Texture)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Preview (DX11.Texture)" componentmode="InABox" id="67">
+   <BOUNDS type="Node" left="6465" top="11790" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="6465" top="11790" width="6000" height="4500">
+   </BOUNDS>
+   <BOUNDS type="Window" left="12660" top="12135" width="6240" height="5010">
+   </BOUNDS>
+   <PIN pinname="Texture In" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="63" srcpinname="Texture Out" dstnodeid="67" dstpinname="Texture In">
    </LINK>
    </PATCH>

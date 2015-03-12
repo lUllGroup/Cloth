@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="C:\Users\Admin\Desktop\Coth\CLOTH.v4p" systemname="verlet_patch" filename="C:\Users\Michael\Desktop\Verlet Strings - NEW\verlet_patch.v4p" bgcolor="15132390" scrollx="11865" scrolly="11400">
+   <PATCH nodename="C:\Users\Admin\Desktop\Coth\CLOTH.v4p" systemname="verlet_patch" filename="C:\Users\Michael\Desktop\Verlet Strings - NEW\verlet_patch.v4p" bgcolor="15132390" scrollx="16740" scrolly="10395">
    <BOUNDS type="Window" left="-15" top="5070" width="28815" height="10530">
    </BOUNDS>
    <NODE systemname="FileTexture (DX11 2d)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="FileTexture (DX11 2d)" componentmode="Hidden" id="40" hiddenwhenlocked="0">
@@ -1381,7 +1381,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="38115" top="12405" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="2" visible="1" values="1,10">
+   <PIN pinname="Y Input Value" slicecount="2" visible="1" values="1.25,2">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -3320,18 +3320,6 @@
    </NODE>
    <LINK srcnodeid="1703" srcpinname="Transform Out" dstnodeid="789" dstpinname="Transform">
    </LINK>
-   <NODE systemname="tracking" filename="subpatches\tracking.v4p" nodename="subpatches\tracking.v4p" componentmode="Hidden" id="1208" stayontop="1">
-   <BOUNDS type="Node" left="26012" top="17746" width="1770" height="270">
-   </BOUNDS>
-   <BOUNDS type="Box" left="22580" top="14074" width="6865" height="7345">
-   </BOUNDS>
-   <BOUNDS type="Window" left="6030" top="6045" width="17460" height="8175">
-   </BOUNDS>
-   <PIN pinname="Texture" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="1208" srcpinname="Texture" dstnodeid="434" dstpinname="Depth">
-   </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="1778" systemname="IOBox (Value Advanced)">
    <BOUNDS type="Box" left="21255" top="16365" width="795" height="240">
    </BOUNDS>
@@ -3352,6 +3340,42 @@
    <BOUNDS type="Box" left="20460" top="17850" width="795" height="240">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" values="-0.5">
+   </PIN>
+   </NODE>
+   <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="1780">
+   <BOUNDS type="Node" left="32265" top="15300" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="32265" top="15300" width="795" height="240">
+   </BOUNDS>
+   </NODE>
+   <NODE systemname="OnOpen (VVVV)" nodename="OnOpen (VVVV)" componentmode="Hidden" id="1781">
+   <BOUNDS type="Node" left="4140" top="31155" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Bang" visible="1">
+   </PIN>
+   <PIN pinname="Simulate" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <NODE systemname="KinectDepth" filename="subpatches\KinectDepth.v4p" nodename="subpatches\KinectDepth.v4p" componentmode="Hidden" id="1782">
+   <BOUNDS type="Node" left="26010" top="15480" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Window" left="630" top="2370" width="14400" height="15600">
+   </BOUNDS>
+   <PIN pinname="Texture Out" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="1783" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="18900" top="15405" width="495" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="18900" top="15405" width="495" height="270">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="supp">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
    </PIN>
    </NODE>
    </PATCH>
