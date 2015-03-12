@@ -1,10 +1,10 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.3.dtd" >
-   <PATCH nodename="C:\Users\Michael\Desktop\nodecloth\String Physics\subpatches\wavingFlag2.v4p" systemname="wavingFlag2" filename="C:\Users\Michael\Desktop\nodecloth\String Physics\subpatches\wavingFlag2.v4p" scrollx="495" scrolly="585">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
+   <PATCH nodename="C:\Users\Admin\Desktop\Coth\subpatches\wavingFlag2.v4p" systemname="wavingFlag2" filename="C:\Users\Michael\Desktop\nodecloth\String Physics\subpatches\wavingFlag2.v4p" scrollx="2550" scrolly="1860">
    <BOUNDS type="Window" left="7230" top="5880" width="16005" height="8400">
    </BOUNDS>
    <PACK Name="image" Version="0.2.0">
    </PACK>
-   <PACK Name="addonpack" Version="33.3.0">
+   <PACK Name="addonpack" Version="33.7.0">
    </PACK>
    <NODE systemname="Count (Value)" nodename="Count (Value)" componentmode="Hidden" id="1">
    <BOUNDS type="Node" left="2460" top="6060" width="540" height="270">
@@ -207,7 +207,7 @@
    </BOUNDS>
    <PIN pinname="Input 1" visible="1">
    </PIN>
-   <PIN pinname="Input 2" visible="1" slicecount="1" values="3">
+   <PIN pinname="Input 2" visible="1" slicecount="1" values="2">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
@@ -225,7 +225,7 @@
    </PIN>
    <PIN pinname="Reset" visible="1" slicecount="1" values="0">
    </PIN>
-   <PIN pinname="Time" visible="1" slicecount="1" values="2">
+   <PIN pinname="Time" visible="1" slicecount="1" values="2.5">
    </PIN>
    </NODE>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="211" systemname="IOBox (Value Advanced)">
@@ -287,7 +287,7 @@
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
-   <PIN pinname="Input 2" slicecount="1" visible="1" values="1">
+   <PIN pinname="Input 2" slicecount="1" visible="1" values="3">
    </PIN>
    </NODE>
    <NODE systemname="Multiply (Value)" nodename="Multiply (Value)" componentmode="Hidden" id="224">
@@ -297,7 +297,7 @@
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
-   <PIN pinname="Input 2" slicecount="1" values="1">
+   <PIN pinname="Input 2" slicecount="1" values="2">
    </PIN>
    </NODE>
    <NODE systemname="Add (Value)" nodename="Add (Value)" componentmode="Hidden" id="227">
@@ -331,7 +331,7 @@
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
-   <PIN pinname="Input 2" slicecount="1" values="2">
+   <PIN pinname="Input 2" slicecount="1" values="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="195" srcpinname="Y" dstnodeid="230" dstpinname="Input 1">
@@ -781,13 +781,11 @@
    <NODE systemname="Abs (Complex)" nodename="Abs (Complex)" componentmode="Hidden" id="270">
    <BOUNDS type="Node" left="15330" top="10500" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Input Real" visible="1">
+   <PIN pinname="Input Real" visible="1" slicecount="1" values="1">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="210" srcpinname="Velocity Out" dstnodeid="270" dstpinname="Input Real">
-   </LINK>
    <LINK srcnodeid="270" srcpinname="Output" dstnodeid="268" dstpinname="Input">
    </LINK>
    <NODE systemname="Switch (Value Input)" nodename="Switch (Value Input)" componentmode="Hidden" id="271">
@@ -923,7 +921,7 @@
    </BOUNDS>
    <PIN pinname="Input" slicecount="1" values="0">
    </PIN>
-   <PIN pinname="Width" slicecount="1" values="-0.52">
+   <PIN pinname="Width" slicecount="1" values="-0.5">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
@@ -1069,50 +1067,6 @@
    <LINK srcnodeid="220" srcpinname="XY" dstnodeid="279" dstpinname="Input 1">
    </LINK>
    <LINK srcnodeid="220" srcpinname="XY" dstnodeid="210" dstpinname="FilterTime">
-   </LINK>
-   <NODE systemname="ApplyTransform (Transform Vector)" nodename="ApplyTransform (Transform Vector)" componentmode="Hidden" id="340">
-   <BOUNDS type="Node" left="10530" top="13065" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="XYZ UnTransformed" visible="1">
-   </PIN>
-   <PIN pinname="XYZ Transformed" visible="1">
-   </PIN>
-   <PIN pinname="Transform" visible="1" slicecount="1" values="||">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="184" srcpinname="Output" dstnodeid="340" dstpinname="XYZ UnTransformed">
-   </LINK>
-   <NODE systemname="Rotate (Transform)" nodename="Rotate (Transform)" componentmode="Hidden" id="341">
-   <BOUNDS type="Node" left="11085" top="11640" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Transform Out" visible="1">
-   </PIN>
-   <PIN pinname="Y" slicecount="1" visible="1" values="0">
-   </PIN>
-   <PIN pinname="X" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="Z" slicecount="1" visible="1" values="0">
-   </PIN>
-   </NODE>
-   <NODE systemname="LFO (Animation)" nodename="LFO (Animation)" componentmode="Hidden" id="342">
-   <BOUNDS type="Node" left="11355" top="10125" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   <PIN pinname="Period" slicecount="1" values="30">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="342" srcpinname="Output" dstnodeid="341" dstpinname="Y">
-   </LINK>
-   <NODE systemname="Transform (Transform 3d)" nodename="Transform (Transform 3d)" componentmode="Hidden" id="345">
-   <BOUNDS type="Node" left="11280" top="12015" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Yaw" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="345" srcpinname="Transform Out" dstnodeid="340" dstpinname="Transform">
-   </LINK>
-   <LINK srcnodeid="342" srcpinname="Output" dstnodeid="345" dstpinname="Yaw">
    </LINK>
    <LINK srcnodeid="271" srcpinname="Output" dstnodeid="272" dstpinname="Y Input Value">
    </LINK>

@@ -1,5 +1,5 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.3.dtd" >
-   <PATCH nodename="C:\Users\Michael\Desktop\nodecloth\String Physics\subpatches\tracking.v4p" systemname="tracking" filename="C:\Users\Michael\Desktop\nodecloth\String Physics\subpatches\tracking.v4p" scrollx="1185" scrolly="45">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
+   <PATCH nodename="C:\Users\Admin\Desktop\Coth\subpatches\tracking.v4p" systemname="tracking" filename="C:\Users\Michael\Desktop\nodecloth\String Physics\subpatches\tracking.v4p" scrollx="1125" scrolly="1215">
    <NODE systemname="RGB (Kinect Microsoft)" nodename="RGB (Kinect Microsoft)" componentmode="Hidden" id="0" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.MSKinect.dll">
    <BOUNDS type="Node" left="3450" top="4575" width="100" height="100">
    </BOUNDS>
@@ -62,22 +62,6 @@
    <PIN pinname="Texture" visible="1">
    </PIN>
    </NODE>
-   <NODE systemname="SmoothSettings (Kinect Microsoft)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.MSKinect.dll" nodename="SmoothSettings (Kinect Microsoft)" componentmode="Hidden" id="8">
-   <BOUNDS type="Node" left="5175" top="1500" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   <PIN pinname="Jitter Radius" slicecount="1" values="0.05">
-   </PIN>
-   <PIN pinname="Correction" slicecount="1" values="0.5">
-   </PIN>
-   <PIN pinname="Max Deviation Radius" slicecount="1" values="0.87">
-   </PIN>
-   <PIN pinname="Prediction" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="Smoothing" slicecount="1" values="10">
-   </PIN>
-   </NODE>
    <NODE id="9" systemname="IOBox (Node)" componentmode="InABox" nodename="IOBox (Node)">
    <PIN pinname="Descriptive Name" slicecount="1" values="Texture">
    </PIN>
@@ -92,10 +76,8 @@
    </BOUNDS>
    <PACK Name="image" Version="0.2.0">
    </PACK>
-   <PACK Name="addonpack" Version="33.3.0">
+   <PACK Name="addonpack" Version="33.7.0">
    </PACK>
-   <LINK srcnodeid="2" srcpinname="Texture" dstnodeid="9" dstpinname="Input Node">
-   </LINK>
    <NODE id="1" systemname="Kinect (Devices Microsoft)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.MSKinect.dll" nodename="Kinect (Devices Microsoft)" componentmode="Hidden">
    <PIN pinname="Reset" slicecount="1" values="0">
    </PIN>
@@ -107,7 +89,7 @@
    </PIN>
    <PIN pinname="Enable Color" slicecount="1" values="1">
    </PIN>
-   <PIN pinname="Motor Angle" slicecount="1" values="0.9">
+   <PIN pinname="Motor Angle" slicecount="1" values="0.82">
    </PIN>
    <PIN pinname="Kinect Runtime" visible="1">
    </PIN>
@@ -125,7 +107,7 @@
    </PIN>
    <PIN pinname="High Res Depth" slicecount="1" values="1">
    </PIN>
-   <PIN pinname="Smooth Parameters" visible="1">
+   <PIN pinname="Smooth Parameters" visible="1" slicecount="1" values="||">
    </PIN>
    </NODE>
    <LINK srcnodeid="1" srcpinname="Kinect Runtime" dstnodeid="7" dstpinname="Kinect Runtime">
@@ -135,8 +117,6 @@
    </LINKPOINT>
    <LINKPOINT x="5010" y="3403">
    </LINKPOINT>
-   </LINK>
-   <LINK srcnodeid="8" srcpinname="Output" dstnodeid="1" dstpinname="Smooth Parameters">
    </LINK>
    <LINK srcnodeid="1" srcpinname="Kinect Runtime" dstnodeid="0" dstpinname="Kinect Runtime" linkstyle="Bezier">
    <LINKPOINT x="3480" y="3603">
@@ -166,4 +146,22 @@
    <PIN pinname="Texture In" visible="1" slicecount="1" values="||">
    </PIN>
    </NODE>
+   <NODE systemname="SmoothSettings (Kinect Microsoft)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.MSKinect.dll" nodename="SmoothSettings (Kinect Microsoft)" componentmode="Hidden" id="23">
+   <BOUNDS type="Node" left="5175" top="1500" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Smoothing" slicecount="1" values="20">
+   </PIN>
+   <PIN pinname="Max Deviation Radius" slicecount="1" values="0.04">
+   </PIN>
+   <PIN pinname="Jitter Radius" slicecount="1" values="10.95">
+   </PIN>
+   <PIN pinname="Correction" slicecount="1" values="2">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="23" srcpinname="Output" dstnodeid="1" dstpinname="Smooth Parameters">
+   </LINK>
+   <LINK srcnodeid="2" srcpinname="Texture" dstnodeid="9" dstpinname="Input Node">
+   </LINK>
+   <LINK srcnodeid="7" srcpinname="Texture" dstnodeid="10" dstpinname="Texture In">
+   </LINK>
    </PATCH>

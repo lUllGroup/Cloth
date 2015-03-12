@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
    <PATCH nodename="C:\Users\Admin\Desktop\Coth\subpatches\clothTex.v4p" systemname="clothTex" filename="C:\Users\Michael\Desktop\nodecloth\String Physics\subpatches\clothTex.v4p" scrollx="990" scrolly="375">
-   <BOUNDS type="Window" left="11580" top="3465" width="19245" height="11880">
+   <BOUNDS type="Window" left="7665" top="4830" width="19245" height="11880">
    </BOUNDS>
    <PACK Name="image" Version="0.2.0">
    </PACK>
@@ -137,7 +137,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="11100" top="2385" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="23">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="25">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -199,7 +199,7 @@
    </PIN>
    <PIN pinname="Texture SizeXY" visible="1">
    </PIN>
-   <PIN pinname="AA Samples per Pixel" slicecount="1" values="16">
+   <PIN pinname="AA Samples per Pixel" slicecount="1" values="8">
    </PIN>
    <PIN pinname="Buffers" visible="1">
    </PIN>
@@ -207,7 +207,7 @@
    </PIN>
    <PIN pinname="Enable Depth Buffer" slicecount="1" values="0">
    </PIN>
-   <PIN pinname="Enabled" visible="1" slicecount="1" values="1">
+   <PIN pinname="Enabled" visible="1" slicecount="1" values="0">
    </PIN>
    </NODE>
    <NODE systemname="Camera (Transform Softimage)" filename="%VVVV%\lib\nodes\modules\Transform\Camera (Transform Softimage).v4p" nodename="Camera (Transform Softimage)" componentmode="Hidden" id="17">
@@ -285,7 +285,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="13230" top="4710" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.002">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.001">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -301,7 +301,7 @@
    </BOUNDS>
    <PIN pinname="Bang" visible="1">
    </PIN>
-   <PIN pinname="Simulate" visible="1">
+   <PIN pinname="Simulate" visible="1" slicecount="1" values="0">
    </PIN>
    </NODE>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="25" systemname="IOBox (Value Advanced)">
@@ -322,6 +322,8 @@
    <PIN pinname="X Input Value" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="Simulate">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
    </PIN>
    </NODE>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="26" systemname="IOBox (Value Advanced)">
@@ -373,8 +375,6 @@
    </BOUNDS>
    </NODE>
    <LINK srcnodeid="3" srcpinname="Color Output" dstnodeid="28" dstpinname="Color Input">
-   </LINK>
-   <LINK srcnodeid="25" srcpinname="Y Output Value" dstnodeid="24" dstpinname="Simulate">
    </LINK>
    <LINK srcnodeid="11" srcpinname="Geometry Out" dstnodeid="14" dstpinname="Geometry">
    </LINK>
@@ -578,18 +578,40 @@
    </LINK>
    <LINK srcnodeid="37" srcpinname="Layer" dstnodeid="48" dstpinname="Layer">
    </LINK>
-   <NODE systemname="Preview (DX11.Texture)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Preview (DX11.Texture)" componentmode="InAWindow" id="60" stayontop="1">
-   <BOUNDS type="Node" left="12285" top="8880" width="100" height="100">
+   <LINK srcnodeid="15" srcpinname="Y Output Value" dstnodeid="16" dstpinname="Enabled">
+   </LINK>
+   <NODE systemname="OR (Boolean)" nodename="OR (Boolean)" componentmode="Hidden" id="60">
+   <BOUNDS type="Node" left="7800" top="1965" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="12285" top="8880" width="6000" height="4500">
-   </BOUNDS>
-   <BOUNDS type="Window" left="13320" top="8415" width="8475" height="5790">
-   </BOUNDS>
-   <PIN pinname="Texture In" visible="1">
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="16" srcpinname="Buffers" dstnodeid="60" dstpinname="Texture In">
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="61" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="8175" top="945" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="8175" top="945" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Bang">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="61" srcpinname="Y Output Value" dstnodeid="60" dstpinname="Input 2">
    </LINK>
-   <LINK srcnodeid="15" srcpinname="Y Output Value" dstnodeid="16" dstpinname="Enabled">
+   <LINK srcnodeid="25" srcpinname="Y Output Value" dstnodeid="60" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="60" srcpinname="Output" dstnodeid="24" dstpinname="Simulate">
    </LINK>
    </PATCH>
