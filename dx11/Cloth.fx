@@ -294,23 +294,35 @@ void CSConstantForce( uint3 DTid : SV_DispatchThreadID)
 		float1 lookupA = mapRange(Output[iterator].pos.x,depthMap[0],depthMap[1],depthMap[2],depthMap[3]);
 		float1 lookupB = mapRange(Output[iterator].pos.y,depthMap[4],depthMap[5],depthMap[6],depthMap[7]);
 		
+		//lookupA = Output[iterator].pos.x;
+		//lookupB = Output[iterator].pos.y;
 		float2 lookup1 = float2(lookupA,lookupB);
 				
 		
-		float depth =  texDepth.SampleLevel(mySampler,lookup1,0).r  * 65.535;
+		//float depth =  texDepth.SampleLevel(mySampler,lookup1,0).r  * 65.535;
+		float depth =  texDepth.SampleLevel(mySampler,lookup1,0).r;
 
-		float3 newTarget = float3(Output[iterator].pos.x,Output[iterator].pos.y,(depth * -depthExtrude) - depthOffset);	
+		//float3 newTarget = float3(Output[iterator].pos.x,Output[iterator].pos.y,(depth * -depthExtrude) - depthOffset);	
 
+		float3 newTarget = float3(Output[iterator].pos.x,Output[iterator].pos.y,((-depth * -depthExtrude) - depthOffset));	
+
+		
 		float3 force2 = Output[iterator].pos - newTarget;
 	
 
-		if(depth > depthThreshold[0] && depth < depthThreshold[1] && force2.z > 0) {
-			if(Output[iterator].pos.z > positionThreshold[0] && Output[iterator].pos.z < positionThreshold[1]) {
-				Output[iterator].pos += force2 * -.005 * texRepellForce;
-			}
+		if(depth < depthThreshold[0]) {
+			//if(Output[iterator].pos.z > positionThreshold[0] && Output[iterator].pos.z < positionThreshold[1]) {
+				Output[iterator].pos += force2 * -.0005 * texRepellForce;
+			//}
 			
 		}
 	
+//		if(depth > depthThreshold[0] && depth < depthThreshold[1] && force2.z > 0) {
+//			if(Output[iterator].pos.z > positionThreshold[0] && Output[iterator].pos.z < positionThreshold[1]) {
+//				Output[iterator].pos += force2 * -.0005 * texRepellForce;
+//			}
+//			
+//		}
 			
 		//////////////////////////////////////////////////////
 		
