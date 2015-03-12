@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="C:\Users\Admin\Desktop\Coth\CLOTH.v4p" systemname="verlet_patch" filename="C:\Users\Michael\Desktop\Verlet Strings - NEW\verlet_patch.v4p" bgcolor="15132390" scrollx="0" scrolly="30480">
+   <PATCH nodename="C:\Users\Admin\Desktop\Coth\CLOTH.v4p" systemname="verlet_patch" filename="C:\Users\Michael\Desktop\Verlet Strings - NEW\verlet_patch.v4p" bgcolor="15132390" scrollx="15030" scrolly="8205">
    <BOUNDS type="Window" left="-15" top="5070" width="28815" height="10530">
    </BOUNDS>
    <NODE systemname="FileTexture (DX11 2d)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="FileTexture (DX11 2d)" componentmode="Hidden" id="40" hiddenwhenlocked="0">
@@ -1249,7 +1249,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="20385" top="18525" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="-0.5">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="-0.28">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -1265,7 +1265,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="21315" top="17460" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.66">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -1281,7 +1281,7 @@
    <LINK srcnodeid="1197" srcpinname="Y Output Value" dstnodeid="434" dstpinname="depthOffset">
    </LINK>
    <NODE id="1200" nodename="IOBox (Value Advanced)" componentmode="InABox" systemname="IOBox (Value Advanced)" hiddenwhenlocked="0" managers="">
-   <PIN pinname="Y Input Value" slicecount="8" visible="1" pintype="Input" values="0,0.5,0.5,1.5,0.2,-0.2,0,1.2">
+   <PIN pinname="Y Input Value" slicecount="8" visible="1" pintype="Input" values="-0.5,0.5,0,1,0.3,-0.3,0,1">
    </PIN>
    <PIN pinname="SliceCount Mode" slicecount="1" pintype="Configuration" values="ColsRowsPages">
    </PIN>
@@ -1381,7 +1381,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="38115" top="12405" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="2" visible="1" values="1,3">
+   <PIN pinname="Y Input Value" slicecount="2" visible="1" values="1,10">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -1665,7 +1665,7 @@
    <LINK srcnodeid="1103" srcpinname="Y Output Value" dstnodeid="1098" dstpinname="TriangleSize">
    </LINK>
    <NODE id="322" componentmode="InAWindow" systemname="Renderer (DX11)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Renderer (DX11)" stayontop="0">
-   <BOUNDS type="Window" left="-60" top="0" width="28860" height="5055">
+   <BOUNDS type="Window" left="-60" top="0" width="28860" height="5115">
    </BOUNDS>
    <BOUNDS type="Node" left="1665" top="39765" width="4365" height="270">
    </BOUNDS>
@@ -2343,9 +2343,9 @@
    <LINK srcnodeid="1668" srcpinname="Y Output Value" dstnodeid="1667" dstpinname="Input 2">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="1669" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="16680" top="17325" width="480" height="480">
+   <BOUNDS type="Box" left="17100" top="16620" width="480" height="480">
    </BOUNDS>
-   <BOUNDS type="Node" left="16680" top="17325" width="0" height="0">
+   <BOUNDS type="Node" left="17100" top="16620" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -2365,9 +2365,9 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="232" srcpinname="Right Button" dstnodeid="1669" dstpinname="Y Input Value" linkstyle="Bezier">
-   <LINKPOINT x="15375" y="16073">
+   <LINKPOINT x="15515" y="15838">
    </LINKPOINT>
-   <LINKPOINT x="16680" y="16073">
+   <LINKPOINT x="16960" y="15603">
    </LINKPOINT>
    </LINK>
    <NODE systemname="Keyboard (System Window Legacy2)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Keyboard (System Window)" componentmode="Hidden" id="1672">
@@ -2491,7 +2491,7 @@
    </PIN>
    </NODE>
    <NODE id="1655" systemname="EQ (Value)" nodename="EQ (Value)" componentmode="Hidden">
-   <BOUNDS type="Node" left="24090" top="17070" width="450" height="270">
+   <BOUNDS type="Node" left="24090" top="16770" width="450" height="270">
    </BOUNDS>
    <PIN pinname="Input 1" visible="1">
    </PIN>
@@ -2503,15 +2503,15 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="1607" srcpinname="Y Output Value" dstnodeid="1655" dstpinname="Input 1" linkstyle="Bezier" hiddenwhenlocked="1">
-   <LINKPOINT x="31895" y="10390">
+   <LINKPOINT x="31895" y="10290">
    </LINKPOINT>
-   <LINKPOINT x="23980" y="10910">
+   <LINKPOINT x="23980" y="10710">
    </LINKPOINT>
    </LINK>
    <LINK srcnodeid="1655" srcpinname="Inverse Output" dstnodeid="1652" dstpinname="Switch" linkstyle="Bezier">
-   <LINKPOINT x="24480" y="17685">
+   <LINKPOINT x="24480" y="17485">
    </LINKPOINT>
-   <LINKPOINT x="24150" y="17685">
+   <LINKPOINT x="24150" y="17585">
    </LINKPOINT>
    </LINK>
    <LINK srcnodeid="1606" srcpinname="Return" dstnodeid="1652" dstpinname="Input 2" linkstyle="Bezier" hiddenwhenlocked="1">
@@ -3188,18 +3188,6 @@
    </NODE>
    <LINK srcnodeid="1771" srcpinname="Y Output Value" dstnodeid="1526" dstpinname="applyOld">
    </LINK>
-   <NODE systemname="tracking" filename="subpatches\tracking.v4p" nodename="subpatches\tracking.v4p" componentmode="Hidden" id="1208" stayontop="1">
-   <BOUNDS type="Node" left="26012" top="17746" width="1770" height="270">
-   </BOUNDS>
-   <BOUNDS type="Box" left="22580" top="14074" width="6865" height="7345">
-   </BOUNDS>
-   <BOUNDS type="Window" left="10320" top="5790" width="6855" height="7335">
-   </BOUNDS>
-   <PIN pinname="Texture" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="1208" srcpinname="Texture" dstnodeid="434" dstpinname="Depth">
-   </LINK>
    <NODE id="1772" nodename="IOBox (Value Advanced)" componentmode="InABox" systemname="IOBox (Value Advanced)" hiddenwhenlocked="0" managers="">
    <PIN pinname="Y Input Value" slicecount="8" visible="1" pintype="Input" values="-0.5,0.5,0,1,0.3,-0.3,0,1">
    </PIN>
@@ -3301,7 +3289,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="15900" top="35040" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Color Input" slicecount="1" visible="1" values="|0.00000,1.00000,0.53542,1.00000|">
+   <PIN pinname="Color Input" slicecount="1" visible="1" values="|0.06523,0.00000,0.50143,1.00000|">
    </PIN>
    </NODE>
    <LINK srcnodeid="1775" srcpinname="Color Output" dstnodeid="1526" dstpinname="Specular Color">
@@ -3332,10 +3320,16 @@
    </NODE>
    <LINK srcnodeid="1703" srcpinname="Transform Out" dstnodeid="789" dstpinname="Transform">
    </LINK>
-   <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="1777">
-   <BOUNDS type="Node" left="23445" top="11655" width="100" height="100">
+   <NODE systemname="tracking" filename="subpatches\tracking.v4p" nodename="subpatches\tracking.v4p" componentmode="Hidden" id="1208" stayontop="1">
+   <BOUNDS type="Node" left="26012" top="17746" width="1770" height="270">
    </BOUNDS>
-   <BOUNDS type="Box" left="23445" top="11655" width="795" height="240">
+   <BOUNDS type="Box" left="22580" top="14074" width="6865" height="7345">
    </BOUNDS>
+   <BOUNDS type="Window" left="6030" top="6045" width="17460" height="8175">
+   </BOUNDS>
+   <PIN pinname="Texture" visible="1">
+   </PIN>
    </NODE>
+   <LINK srcnodeid="1208" srcpinname="Texture" dstnodeid="434" dstpinname="Depth">
+   </LINK>
    </PATCH>
