@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="C:\Users\Admin\Desktop\Coth\CLOTH.v4p" systemname="verlet_patch" filename="C:\Users\Michael\Desktop\Verlet Strings - NEW\verlet_patch.v4p" bgcolor="15132390" scrollx="18555" scrolly="10980">
-   <BOUNDS type="Window" left="0" top="7590" width="28980" height="9195">
+   <PATCH nodename="C:\Users\Admin\Desktop\Coth\CLOTH.v4p" systemname="verlet_patch" filename="C:\Users\Michael\Desktop\Verlet Strings - NEW\verlet_patch.v4p" bgcolor="15132390" scrollx="0" scrolly="25605">
+   <BOUNDS type="Window" left="-15" top="7710" width="28815" height="9195">
    </BOUNDS>
    <NODE systemname="FileTexture (DX11 2d)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="FileTexture (DX11 2d)" componentmode="Hidden" id="40" hiddenwhenlocked="0">
    <BOUNDS type="Node" left="6078" top="27240" width="840" height="270">
@@ -1055,7 +1055,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="19440" top="17460" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.1">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.12">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -1469,9 +1469,9 @@
    </BOUNDS>
    <BOUNDS type="Box" left="2421" top="27266" width="16050" height="9550">
    </BOUNDS>
-   <BOUNDS type="Window" left="7665" top="4830" width="19245" height="11880">
+   <BOUNDS type="Window" left="6180" top="7185" width="19245" height="8415">
    </BOUNDS>
-   <PIN pinname="Buffers" visible="1">
+   <PIN pinname="Buffers" visible="1" slicecount="1" values="||">
    </PIN>
    <PIN pinname="Buffers 1" visible="1">
    </PIN>
@@ -1479,7 +1479,7 @@
    </PIN>
    <PIN pinname="Simulate" visible="1">
    </PIN>
-   <PIN pinname="Texture SizeXY - Texture SizeXY" slicecount="2" values="5000,5000">
+   <PIN pinname="Texture SizeXY - Texture SizeXY" slicecount="2" visible="1" values="3000,3000">
    </PIN>
    <PIN pinname="Front" visible="1">
    </PIN>
@@ -2242,24 +2242,6 @@
    </NODE>
    <LINK srcnodeid="1650" srcpinname="Y Output Value" dstnodeid="1602" dstpinname="Set">
    </LINK>
-   <NODE systemname="Sampler (DX11 Advanced)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Sampler (DX11 Advanced)" componentmode="Hidden" id="1658">
-   <BOUNDS type="Node" left="11490" top="32325" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Address W" slicecount="1" values="Wrap">
-   </PIN>
-   <PIN pinname="Address V" slicecount="1" values="Wrap">
-   </PIN>
-   <PIN pinname="Address U" slicecount="1" values="Wrap">
-   </PIN>
-   <PIN pinname="Maximum Anisotropy" slicecount="1" values="16">
-   </PIN>
-   <PIN pinname="Comparison" slicecount="1" values="Never">
-   </PIN>
-   <PIN pinname="Filter Mode" slicecount="1" values="Anisotropic">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="1658" srcpinname="Sampler" dstnodeid="1648" dstpinname="g_samLinear">
-   </LINK>
    <NODE systemname="LFO (Animation)" nodename="LFO (Animation)" componentmode="Hidden" id="1661">
    <BOUNDS type="Node" left="26370" top="5985" width="100" height="100">
    </BOUNDS>
@@ -2797,7 +2779,7 @@
    <NODE systemname="FileTexture (DX11 2d)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="FileTexture (DX11 2d)" componentmode="Hidden" id="1750">
    <BOUNDS type="Node" left="5295" top="32040" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Filename" slicecount="1" values="|..\..\..\Public\Pictures\Sample Pictures\Koala.jpg|">
+   <PIN pinname="Filename" slicecount="1" values="assets\Space.jpg">
    </PIN>
    <PIN pinname="Texture Out" visible="1">
    </PIN>
@@ -2867,7 +2849,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="3540" top="31575" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -2879,7 +2861,7 @@
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="zTex">
    </PIN>
-   <PIN pinname="X Input Value" slicecount="1" values="0">
+   <PIN pinname="X Input Value" slicecount="1" values="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="1028" srcpinname="Y Output Value" dstnodeid="434" dstpinname="bounce">
@@ -2887,62 +2869,6 @@
    <LINK srcnodeid="1209" srcpinname="Back" dstnodeid="1648" dstpinname="Texture 1">
    </LINK>
    <LINK srcnodeid="1209" srcpinname="Front" dstnodeid="1648" dstpinname="Texture 2">
-   </LINK>
-   <NODE systemname="RenderCloth" filename="subpatches\RenderCloth.v4p" nodename="subpatches\RenderCloth.v4p" componentmode="Hidden" id="1526" stayontop="1" debug="0">
-   <BOUNDS type="Node" left="2660" top="33784" width="0" height="0">
-   </BOUNDS>
-   <BOUNDS type="Box" left="0" top="25737" width="12615" height="16095">
-   </BOUNDS>
-   <BOUNDS type="Window" left="15405" top="1515" width="12615" height="15810">
-   </BOUNDS>
-   <PIN pinname="Calculate" visible="1">
-   </PIN>
-   <PIN pinname="Layer" visible="1">
-   </PIN>
-   <PIN pinname="Busy" visible="1">
-   </PIN>
-   <PIN pinname="Texture" visible="1">
-   </PIN>
-   <PIN pinname="Texture 2" visible="1">
-   </PIN>
-   <PIN pinname="Texture Z" visible="1">
-   </PIN>
-   <PIN pinname="TextureZ" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="TextureFront" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="TextureBack" visible="1">
-   </PIN>
-   <PIN pinname="zTex" visible="1">
-   </PIN>
-   <PIN pinname="applyOld" visible="1">
-   </PIN>
-   <PIN pinname="Ambient Color" visible="1" slicecount="1" values="|0.14902,0.14902,0.14902,1.00000|">
-   </PIN>
-   <PIN pinname="Diffuse Color" visible="1" slicecount="1" values="|0.85098,0.85098,0.85098,1.00000|">
-   </PIN>
-   <PIN pinname="Specular Color" visible="1">
-   </PIN>
-   <PIN pinname="Light DirectionXYZ" visible="1" slicecount="3" values="0,-4.66,4.13">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="332" srcpinname="Buffers" dstnodeid="1526" dstpinname="pData" linkstyle="Bezier">
-   <LINKPOINT x="3135" y="27435">
-   </LINKPOINT>
-   <LINKPOINT x="3210" y="27435">
-   </LINKPOINT>
-   </LINK>
-   <LINK srcnodeid="1527" srcpinname="Y Output Value" dstnodeid="1526" dstpinname="Calculate">
-   </LINK>
-   <LINK srcnodeid="1526" srcpinname="Busy" dstnodeid="1542" dstpinname="Y Input Value">
-   </LINK>
-   <LINK srcnodeid="1209" srcpinname="Back" dstnodeid="1526" dstpinname="TextureBack">
-   </LINK>
-   <LINK srcnodeid="1209" srcpinname="Front" dstnodeid="1526" dstpinname="TextureFront">
-   </LINK>
-   <LINK srcnodeid="1750" srcpinname="Texture Out" dstnodeid="1526" dstpinname="TextureZ">
-   </LINK>
-   <LINK srcnodeid="1767" srcpinname="Y Output Value" dstnodeid="1526" dstpinname="zTex">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="1771" systemname="IOBox (Value Advanced)">
    <BOUNDS type="Box" left="4080" top="32355" width="480" height="480">
@@ -2964,8 +2890,6 @@
    <PIN pinname="X Input Value" slicecount="1" values="0">
    </PIN>
    </NODE>
-   <LINK srcnodeid="1771" srcpinname="Y Output Value" dstnodeid="1526" dstpinname="applyOld">
-   </LINK>
    <NODE id="1772" nodename="IOBox (Value Advanced)" componentmode="InABox" systemname="IOBox (Value Advanced)" hiddenwhenlocked="0" managers="">
    <PIN pinname="Y Input Value" slicecount="8" visible="1" pintype="Input" values="-0.5,0.5,0,1,0.3,-0.3,0,1">
    </PIN>
@@ -3047,17 +2971,15 @@
    </BOUNDS>
    <BOUNDS type="Node" left="19965" top="34770" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Color Input" slicecount="1" visible="1" values="|0.58572,0.58572,0.58572,1.00000|">
+   <PIN pinname="Color Input" slicecount="1" visible="1" values="|0.18679,0.00000,1.00000,1.00000|">
    </PIN>
    </NODE>
-   <LINK srcnodeid="1775" srcpinname="Color Output" dstnodeid="1526" dstpinname="Specular Color">
-   </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="1776" systemname="IOBox (Value Advanced)">
    <BOUNDS type="Box" left="11415" top="33480" width="795" height="720">
    </BOUNDS>
    <BOUNDS type="Node" left="11415" top="33480" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="3" visible="1" values="-3,-3,3">
+   <PIN pinname="Y Input Value" slicecount="3" visible="1" values="-4,-4,4">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -3070,8 +2992,6 @@
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="1776" srcpinname="Y Output Value" dstnodeid="1526" dstpinname="Light DirectionXYZ">
-   </LINK>
    <NODE systemname="MainLoop (VVVV)" nodename="MainLoop (VVVV)" componentmode="Hidden" id="-6">
    <BOUNDS type="Node" left="9675" top="6990" width="100" height="100">
    </BOUNDS>
@@ -3141,7 +3061,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="17325" top="33645" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Color Input" slicecount="1" visible="1" values="|0.30030,0.30030,0.30030,1.00000|">
+   <PIN pinname="Color Input" slicecount="1" visible="1" values="|0.30586,0.30586,0.30586,1.00000|">
    </PIN>
    <PIN pinname="Color Output" visible="1">
    </PIN>
@@ -3156,8 +3076,6 @@
    <PIN pinname="Color Output" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="1526" srcpinname="Layer" dstnodeid="1673" dstpinname="Input 1">
-   </LINK>
    <NODE systemname="KinectDepth" filename="subpatches\KinectDepth.v4p" nodename="subpatches\KinectDepth.v4p" componentmode="Hidden" id="1789" stayontop="1">
    <BOUNDS type="Node" left="25995" top="17475" width="100" height="100">
    </BOUNDS>
@@ -3171,23 +3089,17 @@
    </BOUNDS>
    <BOUNDS type="Node" left="17340" top="34740" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Color Input" slicecount="1" visible="1" values="|0.53291,0.53291,0.53291,1.00000|">
+   <PIN pinname="Color Input" slicecount="1" visible="1" values="|0.30586,0.30586,0.30586,1.00000|">
    </PIN>
    </NODE>
-   <LINK srcnodeid="1792" srcpinname="Color Output" dstnodeid="1526" dstpinname="Diffuse Color">
-   </LINK>
    <NODE nodename="IOBox (Color)" componentmode="InABox" id="1793" systemname="IOBox (Color)">
    <BOUNDS type="Box" left="14520" top="34740" width="2250" height="480">
    </BOUNDS>
    <BOUNDS type="Node" left="14520" top="34740" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Color Input" slicecount="1" visible="1" values="|0.44483,0.44483,0.44483,1.00000|">
+   <PIN pinname="Color Input" slicecount="1" visible="1" values="|0.71646,0.71646,0.71646,1.00000|">
    </PIN>
    </NODE>
-   <LINK srcnodeid="1793" srcpinname="Color Output" dstnodeid="1526" dstpinname="Ambient Color">
-   </LINK>
-   <LINK srcnodeid="1781" srcpinname="Bang" dstnodeid="1771" dstpinname="Y Input Value">
-   </LINK>
    <NODE systemname="Multiply (Value)" nodename="Multiply (Value)" componentmode="Hidden" id="1794">
    <BOUNDS type="Node" left="36225" top="14310" width="100" height="100">
    </BOUNDS>
@@ -3203,5 +3115,137 @@
    <LINK srcnodeid="1794" srcpinname="Output" dstnodeid="1198" dstpinname="Data">
    </LINK>
    <LINK srcnodeid="1789" srcpinname="Texture Out" dstnodeid="434" dstpinname="Depth">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="1796" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="11235" top="31350" width="795" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="11235" top="31350" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="2" visible="1" values="2000,2000">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Vector Size" slicecount="1" values="2">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="2">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="2" values="400,400">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="1796" srcpinname="Y Output Value" dstnodeid="1209" dstpinname="Texture SizeXY - Texture SizeXY">
+   </LINK>
+   <NODE systemname="Sampler (DX11 Advanced)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Sampler (DX11 Advanced)" componentmode="Hidden" id="1797">
+   <BOUNDS type="Node" left="11490" top="32325" width="100" height="100">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="1797" srcpinname="Sampler" dstnodeid="1648" dstpinname="g_samLinear">
+   </LINK>
+   <NODE systemname="Sampler (DX11 Advanced)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Sampler (DX11 Advanced)" componentmode="Hidden" id="1798">
+   <BOUNDS type="Node" left="3225" top="33210" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Sampler" visible="1">
+   </PIN>
+   <PIN pinname="Maximum Anisotropy" slicecount="1" values="16">
+   </PIN>
+   <PIN pinname="Filter Mode" slicecount="1" values="Anisotropic">
+   </PIN>
+   <PIN pinname="Comparison" slicecount="1" values="Never">
+   </PIN>
+   <PIN pinname="Mip Lod Bias" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Border Color" slicecount="1" values="|1.00000,1.00000,1.00000,1.00000|">
+   </PIN>
+   <PIN pinname="Address U" slicecount="1" values="Wrap">
+   </PIN>
+   <PIN pinname="Address V" slicecount="1" values="Wrap">
+   </PIN>
+   <PIN pinname="Address W" slicecount="1" values="Wrap">
+   </PIN>
+   </NODE>
+   <NODE systemname="Transform (Transform 2d)" nodename="Transform (Transform 2d)" componentmode="Hidden" id="1800">
+   <BOUNDS type="Node" left="15615" top="30885" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="ScaleX" slicecount="1" values="5">
+   </PIN>
+   <PIN pinname="ScaleY" slicecount="1" values="5">
+   </PIN>
+   </NODE>
+   <NODE systemname="RenderCloth" filename="subpatches\RenderCloth.v4p" nodename="subpatches\RenderCloth.v4p" componentmode="Hidden" id="1526" stayontop="1" debug="0">
+   <BOUNDS type="Node" left="2660" top="33784" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="0" top="25737" width="12615" height="16095">
+   </BOUNDS>
+   <BOUNDS type="Window" left="12480" top="660" width="12615" height="15810">
+   </BOUNDS>
+   <PIN pinname="Calculate" visible="1">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Busy" visible="1">
+   </PIN>
+   <PIN pinname="Texture" visible="1">
+   </PIN>
+   <PIN pinname="Texture 2" visible="1">
+   </PIN>
+   <PIN pinname="Texture Z" visible="1">
+   </PIN>
+   <PIN pinname="TextureZ" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="TextureFront" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="TextureBack" visible="1">
+   </PIN>
+   <PIN pinname="zTex" visible="1">
+   </PIN>
+   <PIN pinname="applyOld" visible="1">
+   </PIN>
+   <PIN pinname="Ambient Color" visible="1" slicecount="1" values="|0.14902,0.14902,0.14902,1.00000|">
+   </PIN>
+   <PIN pinname="Diffuse Color" visible="1" slicecount="1" values="|0.85098,0.85098,0.85098,1.00000|">
+   </PIN>
+   <PIN pinname="Specular Color" visible="1">
+   </PIN>
+   <PIN pinname="Light DirectionXYZ" visible="1" slicecount="3" values="0,-4.66,4.13">
+   </PIN>
+   <PIN pinname="g_samLinear" visible="1">
+   </PIN>
+   <PIN pinname="Texture Transform" visible="1" slicecount="1" values="||">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="332" srcpinname="Buffers" dstnodeid="1526" dstpinname="pData" linkstyle="Bezier">
+   <LINKPOINT x="3135" y="27435">
+   </LINKPOINT>
+   <LINKPOINT x="3210" y="27435">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="1527" srcpinname="Y Output Value" dstnodeid="1526" dstpinname="Calculate">
+   </LINK>
+   <LINK srcnodeid="1526" srcpinname="Busy" dstnodeid="1542" dstpinname="Y Input Value">
+   </LINK>
+   <LINK srcnodeid="1209" srcpinname="Back" dstnodeid="1526" dstpinname="TextureBack">
+   </LINK>
+   <LINK srcnodeid="1209" srcpinname="Front" dstnodeid="1526" dstpinname="TextureFront">
+   </LINK>
+   <LINK srcnodeid="1767" srcpinname="Y Output Value" dstnodeid="1526" dstpinname="zTex">
+   </LINK>
+   <LINK srcnodeid="1771" srcpinname="Y Output Value" dstnodeid="1526" dstpinname="applyOld">
+   </LINK>
+   <LINK srcnodeid="1775" srcpinname="Color Output" dstnodeid="1526" dstpinname="Specular Color">
+   </LINK>
+   <LINK srcnodeid="1776" srcpinname="Y Output Value" dstnodeid="1526" dstpinname="Light DirectionXYZ">
+   </LINK>
+   <LINK srcnodeid="1526" srcpinname="Layer" dstnodeid="1673" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="1792" srcpinname="Color Output" dstnodeid="1526" dstpinname="Diffuse Color">
+   </LINK>
+   <LINK srcnodeid="1793" srcpinname="Color Output" dstnodeid="1526" dstpinname="Ambient Color">
+   </LINK>
+   <LINK srcnodeid="1209" srcpinname="Buffers" dstnodeid="1526" dstpinname="TextureZ">
+   </LINK>
+   <LINK srcnodeid="1798" srcpinname="Sampler" dstnodeid="1526" dstpinname="g_samLinear">
+   </LINK>
+   <LINK srcnodeid="1800" srcpinname="Transform Out" dstnodeid="1526" dstpinname="Texture Transform">
    </LINK>
    </PATCH>
