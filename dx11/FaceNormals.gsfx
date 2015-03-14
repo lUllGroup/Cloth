@@ -60,12 +60,12 @@ void GS(triangle GSIn input[3], inout TriangleStream<GSOut> gsout)
 	gsout.RestartStrip();
 }
 
-GeometryShader gsStreamOut = ConstructGSWithSO( CompileShader( gs_4_0, GS() ), "POSITION.xyz;NORMAL.xyz;TEXCOORD.xy",NULL,NULL,NULL,-1 );
+GeometryShader gsStreamOut = ConstructGSWithSO( CompileShader( gs_5_0, GS() ), "POSITION.xyz;NORMAL.xyz;TEXCOORD.xy",NULL,NULL,NULL,-1 );
 technique11 PassMesh
 {
     pass PP2
     {
-        SetVertexShader( CompileShader( vs_4_0, VS() ) );
+        SetVertexShader( CompileShader( vs_5_0, VS() ) );
         SetGeometryShader( gsStreamOut );
     }  
 }

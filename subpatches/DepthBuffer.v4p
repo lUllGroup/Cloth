@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="C:\Users\Admin\Desktop\Coth\subpatches\DepthBuffer.v4p" systemname="PointCloud_Simple" filename="D:\workspace\dev\research\2014\kinectPointcloudDX11\prototype02\modules\PointCloud_Simple.v4p" scrollx="0" scrolly="0">
+   <PATCH nodename="C:\Users\Admin\Desktop\Coth\subpatches\DepthBuffer.v4p" systemname="PointCloud_Simple" filename="D:\workspace\dev\research\2014\kinectPointcloudDX11\prototype02\modules\PointCloud_Simple.v4p" scrollx="0" scrolly="4635">
    <BOUNDS type="Window" left="5595" top="2730" width="13260" height="9675">
    </BOUNDS>
    <PACK Name="addonpack" Version="33.7.0">

@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
    <PATCH nodename="C:\Users\Admin\Desktop\Coth\subpatches\DepthBuffer.v4p" systemname="PointCloud_Simple" filename="D:\workspace\dev\research\2014\kinectPointcloudDX11\prototype02\modules\PointCloud_Simple.v4p" scrollx="0" scrolly="0">
-   <BOUNDS type="Window" left="5010" top="1935" width="13260" height="9675">
+   <BOUNDS type="Window" left="5595" top="2730" width="13260" height="9675">
    </BOUNDS>
    <PACK Name="addonpack" Version="33.7.0">
    </PACK>
@@ -104,40 +104,6 @@
    <PIN pinname="Output Node" visible="1">
    </PIN>
    </NODE>
-   <NODE systemname="GS_DepthToCoordinates (DX11.GeomFX)" filename="geom11\GS_DepthToCoordinates.gsfx" nodename="GS_DepthToCoordinates (DX11.GeomFX)" componentmode="Hidden" id="35">
-   <BOUNDS type="Node" left="510" top="3705" width="6855" height="270">
-   </BOUNDS>
-   <BOUNDS type="Box" left="510" top="3705">
-   </BOUNDS>
-   <PIN pinname="View" visible="-1" pintype="Input" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Projection" visible="-1" pintype="Input" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="As Auto" visible="-1" pintype="Input" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="Max Elements" visible="-1" pintype="Input" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="Auto Layout" visible="-1" pintype="Input" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="Output Layout" visible="-1" pintype="Input" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Buffer Out" visible="1">
-   </PIN>
-   <PIN pinname="Enabled" visible="1" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="Query" visible="1">
-   </PIN>
-   <PIN pinname="Technique" slicecount="1" values="PointCloud">
-   </PIN>
-   <PIN pinname="Depth" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="FOVXY" slicecount="2" values="1.02101763714,0.795870131549312">
-   </PIN>
-   <PIN pinname="Transform In" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Geometry In" slicecount="1" values="||">
-   </PIN>
-   </NODE>
    <NODE systemname="Grid (DX11.Geometry)" filename="%VVVV%\packs\DX11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Grid (DX11.Geometry)" componentmode="Hidden" id="196">
    <BOUNDS type="Node" left="525" top="2355" width="780" height="270">
    </BOUNDS>
@@ -198,22 +164,6 @@
    </LINK>
    <LINK srcnodeid="29" srcpinname="Y Output Value" dstnodeid="30" dstpinname="Cycles">
    </LINK>
-   <LINK srcnodeid="12" srcpinname="Geometry Out" dstnodeid="35" dstpinname="Geometry In" linkstyle="VHV">
-   <LINKPOINT x="70" y="3620">
-   </LINKPOINT>
-   <LINKPOINT x="1010" y="3520">
-   </LINKPOINT>
-   </LINK>
-   <LINK srcnodeid="28" srcpinname="Output Node" dstnodeid="35" dstpinname="Transform In" linkstyle="VHV">
-   <LINKPOINT x="1495" y="2390">
-   </LINKPOINT>
-   <LINKPOINT x="1100" y="2290">
-   </LINKPOINT>
-   </LINK>
-   <LINK srcnodeid="30" srcpinname="Radians" dstnodeid="35" dstpinname="FOVXY">
-   </LINK>
-   <LINK srcnodeid="31" srcpinname="Output Node" dstnodeid="35" dstpinname="Depth">
-   </LINK>
    <LINK srcnodeid="195" srcpinname="Y Output Value" dstnodeid="194" dstpinname="XY">
    </LINK>
    <LINK srcnodeid="194" srcpinname="X" dstnodeid="196" dstpinname="Resolution X" linkstyle="VHV">
@@ -236,12 +186,6 @@
    <LINKPOINT x="1650" y="1200">
    </LINKPOINT>
    </LINK>
-   <LINK srcnodeid="7" srcpinname="Y Output Value" dstnodeid="35" dstpinname="Enabled" linkstyle="Bezier" hiddenwhenlocked="1">
-   <LINKPOINT x="11055" y="2273">
-   </LINKPOINT>
-   <LINKPOINT x="7365" y="2273">
-   </LINKPOINT>
-   </LINK>
    <NODE nodename="IOBox (Node)" componentmode="InABox" id="216" systemname="IOBox (Node)">
    <BOUNDS type="Box" left="1110" top="9315" width="795" height="240">
    </BOUNDS>
@@ -250,8 +194,6 @@
    <PIN pinname="Descriptive Name" slicecount="1" values="|Buffer Out|">
    </PIN>
    </NODE>
-   <LINK srcnodeid="35" srcpinname="Buffer Out" dstnodeid="216" dstpinname="Input Node">
-   </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="217" systemname="IOBox (Value Advanced)">
    <BOUNDS type="Box" left="2715" top="4545" width="795" height="240">
    </BOUNDS>
@@ -265,5 +207,63 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="197" srcpinname="Output" dstnodeid="217" dstpinname="Y Input Value">
+   </LINK>
+   <NODE systemname="GS_DepthToCoordinates (DX11.GeomFX)" filename="%VVVV%\packs\KinectDX11Bundle\nodes\modules\Visualization\geom11\GS_DepthToCoordinates.gsfx" nodename="GS_DepthToCoordinates (DX11.GeomFX)" componentmode="Hidden" id="35">
+   <BOUNDS type="Node" left="510" top="3705" width="6855" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="510" top="3705">
+   </BOUNDS>
+   <PIN pinname="View" visible="-1" pintype="Input" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Projection" visible="-1" pintype="Input" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="As Auto" visible="-1" pintype="Input" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Max Elements" visible="-1" pintype="Input" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Auto Layout" visible="-1" pintype="Input" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Output Layout" visible="-1" pintype="Input" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Buffer Out" visible="1">
+   </PIN>
+   <PIN pinname="Enabled" visible="1" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Query" visible="1">
+   </PIN>
+   <PIN pinname="Technique" slicecount="1" values="PointCloud">
+   </PIN>
+   <PIN pinname="Depth" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="FOVXY" slicecount="2" values="1.02101763714,0.795870131549312">
+   </PIN>
+   <PIN pinname="Transform In" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Geometry In" slicecount="1" values="||">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="12" srcpinname="Geometry Out" dstnodeid="35" dstpinname="Geometry In" linkstyle="VHV">
+   <LINKPOINT x="70" y="3620">
+   </LINKPOINT>
+   <LINKPOINT x="1010" y="3520">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="28" srcpinname="Output Node" dstnodeid="35" dstpinname="Transform In" linkstyle="VHV">
+   <LINKPOINT x="1495" y="2390">
+   </LINKPOINT>
+   <LINKPOINT x="1100" y="2290">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="30" srcpinname="Radians" dstnodeid="35" dstpinname="FOVXY">
+   </LINK>
+   <LINK srcnodeid="31" srcpinname="Output Node" dstnodeid="35" dstpinname="Depth">
+   </LINK>
+   <LINK srcnodeid="7" srcpinname="Y Output Value" dstnodeid="35" dstpinname="Enabled" linkstyle="Bezier" hiddenwhenlocked="1">
+   <LINKPOINT x="11055" y="2273">
+   </LINKPOINT>
+   <LINKPOINT x="7365" y="2273">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="35" srcpinname="Buffer Out" dstnodeid="216" dstpinname="Input Node">
    </LINK>
    </PATCH>
