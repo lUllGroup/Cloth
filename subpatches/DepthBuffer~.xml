@@ -187,9 +187,9 @@
    </LINKPOINT>
    </LINK>
    <NODE nodename="IOBox (Node)" componentmode="InABox" id="216" systemname="IOBox (Node)">
-   <BOUNDS type="Box" left="1110" top="9315" width="795" height="240">
+   <BOUNDS type="Box" left="1725" top="4830" width="795" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="1110" top="9315" width="0" height="0">
+   <BOUNDS type="Node" left="1725" top="4830" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Descriptive Name" slicecount="1" values="|Buffer Out|">
    </PIN>

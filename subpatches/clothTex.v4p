@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="C:\Users\Admin\Desktop\Coth\subpatches\clothTex.v4p" systemname="clothTex" filename="C:\Users\Michael\Desktop\nodecloth\String Physics\subpatches\clothTex.v4p" scrollx="600" scrolly="1830">
+   <PATCH nodename="C:\Users\Admin\Desktop\Coth\subpatches\clothTex.v4p" systemname="clothTex" filename="C:\Users\Michael\Desktop\nodecloth\String Physics\subpatches\clothTex.v4p" scrollx="4200" scrolly="2850">
    <BOUNDS type="Window" left="6180" top="7185" width="19245" height="8415">
    </BOUNDS>
    <PACK Name="image" Version="0.2.0">
@@ -477,6 +477,8 @@
    </PIN>
    <PIN pinname="Layer" visible="1" slicecount="1" values="||">
    </PIN>
+   <PIN pinname="AA Samples per Pixel" slicecount="1" values="8">
+   </PIN>
    </NODE>
    <LINK srcnodeid="48" srcpinname="Buffers" dstnodeid="27" dstpinname="Input Node">
    </LINK>
@@ -617,7 +619,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="12855" top="9165" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Descriptive Name" slicecount="1" values="Buffers">
+   <PIN pinname="Descriptive Name" slicecount="1" values="zTex">
    </PIN>
    <PIN pinname="Input Node" visible="1" slicecount="1" values="||">
    </PIN>
@@ -699,7 +701,7 @@
    </PIN>
    <PIN pinname="Phase" slicecount="1" visible="1" values="0.9074">
    </PIN>
-   <PIN pinname="Width" slicecount="1" values="1.855" visible="1">
+   <PIN pinname="Width" slicecount="1" visible="1" values="1.855">
    </PIN>
    <PIN pinname="Input" slicecount="1" values="0">
    </PIN>
@@ -735,7 +737,7 @@
    </BOUNDS>
    <PIN pinname="Output" visible="1">
    </PIN>
-   <PIN pinname="Period" slicecount="1" values="40">
+   <PIN pinname="Period" slicecount="1" values="10">
    </PIN>
    </NODE>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="91" systemname="IOBox (Value Advanced)">
@@ -743,7 +745,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="16665" top="5310" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="2" visible="1" values="1500,1500">
+   <PIN pinname="Y Input Value" slicecount="2" visible="1" values="1024,1024">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -827,7 +829,7 @@
    </PIN>
    <PIN pinname="TranslateX" visible="1" slicecount="1" values="0.5">
    </PIN>
-   <PIN pinname="Rotate" slicecount="1" values="0.0334" visible="1">
+   <PIN pinname="Rotate" slicecount="1" visible="1" values="0.0334">
    </PIN>
    <PIN pinname="CenterX" slicecount="1" values="0">
    </PIN>

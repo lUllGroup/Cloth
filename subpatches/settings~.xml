@@ -39,7 +39,7 @@
    </PIN>
    <PIN pinname="Input 1" visible="1">
    </PIN>
-   <PIN pinname="Input 2" visible="1">
+   <PIN pinname="Input 2" visible="1" slicecount="3" values="1,0.03,0.002">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
@@ -95,8 +95,6 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="0" srcpinname="Y Output Value" dstnodeid="1" dstpinname="Input 1">
-   </LINK>
-   <LINK srcnodeid="3" srcpinname="Y Output Value" dstnodeid="1" dstpinname="Input 2">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="6" systemname="IOBox (Value Advanced)">
    <BOUNDS type="Box" left="3975" top="4170" width="600" height="960">
@@ -343,7 +341,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="12945" top="2430" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.5">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -437,5 +435,7 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="30" srcpinname="Y Output Value" dstnodeid="16" dstpinname="Input 5">
+   </LINK>
+   <LINK srcnodeid="0" srcpinname="Y Output Value" dstnodeid="1" dstpinname="Input 2">
    </LINK>
    </PATCH>

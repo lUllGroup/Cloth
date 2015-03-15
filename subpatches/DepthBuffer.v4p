@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="C:\Users\Admin\Desktop\Coth\subpatches\DepthBuffer.v4p" systemname="PointCloud_Simple" filename="D:\workspace\dev\research\2014\kinectPointcloudDX11\prototype02\modules\PointCloud_Simple.v4p" scrollx="0" scrolly="4635">
+   <PATCH nodename="C:\Users\Admin\Desktop\Coth\subpatches\DepthBuffer.v4p" systemname="PointCloud_Simple" filename="D:\workspace\dev\research\2014\kinectPointcloudDX11\prototype02\modules\PointCloud_Simple.v4p" scrollx="0" scrolly="0">
    <BOUNDS type="Window" left="5595" top="2730" width="13260" height="9675">
    </BOUNDS>
    <PACK Name="addonpack" Version="33.7.0">
@@ -187,9 +187,9 @@
    </LINKPOINT>
    </LINK>
    <NODE nodename="IOBox (Node)" componentmode="InABox" id="216" systemname="IOBox (Node)">
-   <BOUNDS type="Box" left="1110" top="9315" width="795" height="240">
+   <BOUNDS type="Box" left="1725" top="4830" width="795" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="1110" top="9315" width="0" height="0">
+   <BOUNDS type="Node" left="1725" top="4830" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Descriptive Name" slicecount="1" values="|Buffer Out|">
    </PIN>
