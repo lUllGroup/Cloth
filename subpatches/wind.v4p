@@ -1,10 +1,10 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.3.dtd" >
-   <PATCH nodename="C:\Users\Michael\Desktop\nodecloth\String Physics\subpatches\wind.v4p" systemname="wind" filename="C:\Users\Michael\Desktop\nodecloth\String Physics\subpatches\wind.v4p" scrollx="1365" scrolly="2880">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
+   <PATCH nodename="C:\Users\Admin\Desktop\Coth\subpatches\wind.v4p" systemname="wind" filename="C:\Users\Michael\Desktop\nodecloth\String Physics\subpatches\wind.v4p" scrollx="1365" scrolly="2880">
    <BOUNDS type="Window" left="11895" top="7455" width="6840" height="7140">
    </BOUNDS>
    <PACK Name="image" Version="0.2.0">
    </PACK>
-   <PACK Name="addonpack" Version="33.3.0">
+   <PACK Name="addonpack" Version="33.7.0">
    </PACK>
    <NODE systemname="LFO (Animation)" nodename="LFO (Animation)" componentmode="Hidden" id="0">
    <BOUNDS type="Node" left="2595" top="1635" width="100" height="100">
@@ -211,7 +211,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="4590" top="6225" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="3" visible="1" values="0,-0.02,0">
+   <PIN pinname="Y Input Value" slicecount="3" visible="1" values="0,-0.4,0">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>

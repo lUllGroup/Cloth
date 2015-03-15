@@ -1,10 +1,10 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.3.dtd" >
-   <PATCH nodename="C:\Users\Michael\Desktop\nodecloth\String Physics\subpatches\windPinch.v4p" systemname="windPinch" filename="C:\Users\Michael\Desktop\nodecloth\String Physics\subpatches\windPinch.v4p" scrollx="0" scrolly="0">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
+   <PATCH nodename="C:\Users\Admin\Desktop\Coth\subpatches\windPinch.v4p" systemname="windPinch" filename="C:\Users\Michael\Desktop\nodecloth\String Physics\subpatches\windPinch.v4p" scrollx="0" scrolly="0">
    <BOUNDS type="Window" left="11685" top="0" width="11940" height="15150">
    </BOUNDS>
    <PACK Name="image" Version="0.2.0">
    </PACK>
-   <PACK Name="addonpack" Version="33.3.0">
+   <PACK Name="addonpack" Version="33.7.0">
    </PACK>
    <NODE systemname="Select (Value)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Select (Value)" componentmode="Hidden" id="1">
    <BOUNDS type="Node" left="2070" top="9735" width="100" height="100">
@@ -75,11 +75,11 @@
    </PIN>
    </NODE>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="6" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="3570" top="2625" width="795" height="240">
+   <BOUNDS type="Box" left="3855" top="2370" width="795" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="3570" top="2625" width="0" height="0">
+   <BOUNDS type="Node" left="3855" top="2370" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="15">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="5">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -281,7 +281,7 @@
    <NODE systemname="Subtract (Value)" nodename="Subtract (Value)" componentmode="Hidden" id="23">
    <BOUNDS type="Node" left="3765" top="4260" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Input 2" slicecount="1" values="2" visible="1">
+   <PIN pinname="Input 2" slicecount="1" visible="1" values="2">
    </PIN>
    <PIN pinname="Input 1" visible="1">
    </PIN>
@@ -318,7 +318,11 @@
    </LINK>
    <LINK srcnodeid="20" srcpinname="Cycles" dstnodeid="18" dstpinname="Random Seed">
    </LINK>
-   <LINK srcnodeid="6" srcpinname="Y Output Value" dstnodeid="18" dstpinname="Spread Count">
+   <LINK srcnodeid="6" srcpinname="Y Output Value" dstnodeid="18" dstpinname="Spread Count" linkstyle="Bezier">
+   <LINKPOINT x="3855" y="2865">
+   </LINKPOINT>
+   <LINKPOINT x="2445" y="2865">
+   </LINKPOINT>
    </LINK>
    <LINK srcnodeid="18" srcpinname="Output" dstnodeid="19" dstpinname="Go To Position">
    </LINK>
@@ -336,7 +340,11 @@
    </NODE>
    <LINK srcnodeid="2" srcpinname="Output" dstnodeid="24" dstpinname="Y Input Value">
    </LINK>
-   <LINK srcnodeid="6" srcpinname="Y Output Value" dstnodeid="4" dstpinname="Spread Count">
+   <LINK srcnodeid="6" srcpinname="Y Output Value" dstnodeid="4" dstpinname="Spread Count" linkstyle="Bezier">
+   <LINKPOINT x="3855" y="2888">
+   </LINKPOINT>
+   <LINKPOINT x="3585" y="2888">
+   </LINKPOINT>
    </LINK>
    <LINK srcnodeid="22" srcpinname="Output" dstnodeid="7" dstpinname="Input">
    </LINK>
@@ -358,7 +366,11 @@
    </LINK>
    <LINK srcnodeid="3" srcpinname="Output" dstnodeid="13" dstpinname="Input 1">
    </LINK>
-   <LINK srcnodeid="6" srcpinname="Y Output Value" dstnodeid="23" dstpinname="Input 1">
+   <LINK srcnodeid="6" srcpinname="Y Output Value" dstnodeid="23" dstpinname="Input 1" linkstyle="Bezier">
+   <LINKPOINT x="3870" y="3435">
+   </LINKPOINT>
+   <LINKPOINT x="3795" y="3435">
+   </LINKPOINT>
    </LINK>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="26" systemname="IOBox (String)">
    <BOUNDS type="Node" left="5055" top="8625" width="2655" height="270">

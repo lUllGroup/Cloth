@@ -299,10 +299,7 @@ void CSConstantForce( uint3 DTid : SV_DispatchThreadID)
 		float2 lookup1 = float2(lookupA,lookupB);
 				
 		
-		//float depth =  texDepth.SampleLevel(mySampler,lookup1,0).r  * 65.535;
 		float depth =  texDepth.SampleLevel(mySampler,lookup1,0).r;
-
-		//float3 newTarget = float3(Output[iterator].pos.x,Output[iterator].pos.y,(depth * -depthExtrude) - depthOffset);	
 
 		float3 newTarget = float3(Output[iterator].pos.x,Output[iterator].pos.y,((-depth * -depthExtrude) - depthOffset));	
 
