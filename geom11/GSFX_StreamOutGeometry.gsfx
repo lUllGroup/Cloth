@@ -18,7 +18,6 @@ struct particle
 	float3 pos;
 	float3 oldPos;
 	bool pinched;
-	float3 outputBuffer;
 };
 
 

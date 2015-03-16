@@ -48,7 +48,6 @@ struct particle
 	float3 pos;
 	float3 oldPos;
 	bool pinched;
-	float3 outputBuffer;
 };
 
 float1 mapRange(float1 value, float from1,float to1,float from2, float to2){
@@ -252,12 +251,6 @@ void CSConstantForce( uint3 DTid : SV_DispatchThreadID)
 		
 		
 		
-		
-//		if( iterator % uint(50) == 0){
-//			Output[iterator /  uint(50)	].outputBuffer = Output[iterator].pos;
-//		}
-		
-		
 		///////////////////////
 		// Return
 		///////////////////////
@@ -306,10 +299,10 @@ void CSConstantForce( uint3 DTid : SV_DispatchThreadID)
 		
 		float3 force2 = Output[iterator].pos - newTarget;
 		
-		force2 = saturate(force2)*1;
+		force2 = saturate(force2);
 	
 		//if(depth < depthThreshold[0] && force2.z > 0) {
-		if(depth < depthThreshold[0]) {
+		if(depth < depthThreshold[0] && length(force2) != 0) {
 			//if(Output[iterator].pos.z > positionThreshold[0] && Output[iterator].pos.z < positionThreshold[1]) {
 				Output[iterator].pos += force2 * -.0005 * texRepellForce;
 			//}
@@ -335,8 +328,9 @@ void CSConstantForce( uint3 DTid : SV_DispatchThreadID)
 			int divide = iterator/(width) + 1;
 		
 			float3 temp = Output[iterator].pos;
+			float3 movement = (Output[iterator].pos - Output[iterator].oldPos);						
 			float3 tempOut = Output[iterator].pos +
-			(Output[iterator].pos - Output[iterator].oldPos) * bounce + (gravity * movementFactor[iterator]) * 0.001;
+			movement * bounce + (gravity * movementFactor[iterator]) * 0.001;
 			
 			Output[iterator].oldPos = temp;
 			Output[iterator].pos = tempOut;
