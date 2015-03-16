@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="C:\Users\Admin\Desktop\Coth\subpatches\clothTex.v4p" systemname="clothTex" filename="C:\Users\Michael\Desktop\nodecloth\String Physics\subpatches\clothTex.v4p" scrollx="9615" scrolly="2400">
-   <BOUNDS type="Window" left="6375" top="8055" width="19245" height="8415">
+   <PATCH nodename="C:\Users\Admin\Desktop\Coth\subpatches\clothTex.v4p" systemname="clothTex" filename="C:\Users\Michael\Desktop\nodecloth\String Physics\subpatches\clothTex.v4p" scrollx="1815" scrolly="0">
+   <BOUNDS type="Window" left="8925" top="2475" width="19245" height="13125">
    </BOUNDS>
    <PACK Name="image" Version="0.2.0">
    </PACK>
@@ -190,28 +190,6 @@
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
    </NODE>
-   <NODE systemname="Renderer (DX11 TempTarget)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Renderer (DX11 TempTarget)" componentmode="Hidden" id="16">
-   <BOUNDS type="Node" left="9930" top="6495" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Layer" visible="1">
-   </PIN>
-   <PIN pinname="View" visible="1">
-   </PIN>
-   <PIN pinname="Projection" visible="1">
-   </PIN>
-   <PIN pinname="Texture SizeXY" visible="1">
-   </PIN>
-   <PIN pinname="AA Samples per Pixel" slicecount="1" values="8">
-   </PIN>
-   <PIN pinname="Buffers" visible="1">
-   </PIN>
-   <PIN pinname="Background Color" visible="1">
-   </PIN>
-   <PIN pinname="Enable Depth Buffer" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="Enabled" visible="1" slicecount="1" values="1">
-   </PIN>
-   </NODE>
    <NODE systemname="Camera (Transform Softimage)" filename="%VVVV%\lib\nodes\modules\Transform\Camera (Transform Softimage).v4p" nodename="Camera (Transform Softimage)" componentmode="Hidden" id="17">
    <BOUNDS type="Node" left="12705" top="5490" width="100" height="100">
    </BOUNDS>
@@ -287,7 +265,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="13230" top="4710" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.006">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.008">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -384,16 +362,6 @@
    </LINK>
    <LINK srcnodeid="23" srcpinname="Y Output Value" dstnodeid="14" dstpinname="Thickness">
    </LINK>
-   <LINK srcnodeid="14" srcpinname="Layer" dstnodeid="16" dstpinname="Layer">
-   </LINK>
-   <LINK srcnodeid="3" srcpinname="Color Output" dstnodeid="16" dstpinname="Background Color">
-   </LINK>
-   <LINK srcnodeid="26" srcpinname="Y Output Value" dstnodeid="16" dstpinname="Texture SizeXY">
-   </LINK>
-   <LINK srcnodeid="19" srcpinname="Transform Out" dstnodeid="16" dstpinname="View">
-   </LINK>
-   <LINK srcnodeid="21" srcpinname="Transform Out" dstnodeid="16" dstpinname="Projection">
-   </LINK>
    <NODE id="29" systemname="IOBox (Node)" componentmode="InABox" nodename="IOBox (Node)">
    <PIN pinname="Descriptive Name" slicecount="1" values="Front">
    </PIN>
@@ -401,9 +369,9 @@
    </BOUNDS>
    <BOUNDS type="Node" left="9930" top="8550" width="750" height="240">
    </BOUNDS>
+   <PIN pinname="Input Node" visible="1" slicecount="1" values="||">
+   </PIN>
    </NODE>
-   <LINK srcnodeid="16" srcpinname="Buffers" dstnodeid="29" dstpinname="Input Node">
-   </LINK>
    <LINK srcnodeid="13" srcpinname="Y Output Value" dstnodeid="11" dstpinname="Resolution X">
    </LINK>
    <LINK srcnodeid="17" srcpinname="View" dstnodeid="18" dstpinname="Transform">
@@ -417,27 +385,25 @@
    <NODE systemname="Transform (Transform 2d)" nodename="Transform (Transform 2d)" componentmode="Hidden" id="31">
    <BOUNDS type="Node" left="6195" top="7845" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="TranslateX" slicecount="24" visible="1" values="-0.67">
+   <PIN pinname="TranslateX" slicecount="1" visible="1" values="-0.61">
    </PIN>
    <PIN pinname="Transform Out" visible="1">
    </PIN>
-   <PIN pinname="ScaleX" slicecount="1" values="0.29">
+   <PIN pinname="ScaleX" slicecount="1" values="0.18">
    </PIN>
-   <PIN pinname="TranslateY" visible="1">
+   <PIN pinname="TranslateY" visible="1" slicecount="1" values="0">
    </PIN>
    <PIN pinname="ScaleY" slicecount="1" values="-1">
    </PIN>
    </NODE>
    <LINK srcnodeid="10" srcpinname="Transform Out" dstnodeid="31" dstpinname="Transform In">
    </LINK>
-   <LINK srcnodeid="24" srcpinname="Bang" dstnodeid="22" dstpinname="Y Input Value">
-   </LINK>
    <NODE systemname="Text (DX11.Layer)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.Text.dll" nodename="Text (DX11.Layer)" componentmode="Hidden" id="37">
    <BOUNDS type="Node" left="1650" top="5355" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Font" slicecount="1" values="Arial">
    </PIN>
-   <PIN pinname="Size" slicecount="1" values="300">
+   <PIN pinname="Size" slicecount="1" values="500">
    </PIN>
    <PIN pinname="Bold" slicecount="1" values="0">
    </PIN>
@@ -479,9 +445,9 @@
    </PIN>
    <PIN pinname="AA Samples per Pixel" slicecount="1" values="8">
    </PIN>
+   <PIN pinname="Buffers" visible="1">
+   </PIN>
    </NODE>
-   <LINK srcnodeid="48" srcpinname="Buffers" dstnodeid="27" dstpinname="Input Node">
-   </LINK>
    <LINK srcnodeid="26" srcpinname="Y Output Value" dstnodeid="48" dstpinname="Texture SizeXY">
    </LINK>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="51" systemname="IOBox (String)">
@@ -517,13 +483,11 @@
    </BOUNDS>
    <PIN pinname="Output" visible="1">
    </PIN>
-   <PIN pinname="Spread Count" slicecount="1" values="6">
+   <PIN pinname="Spread Count" slicecount="1" values="1">
    </PIN>
    <PIN pinname="Width" slicecount="1" values="2.74">
    </PIN>
    </NODE>
-   <LINK srcnodeid="52" srcpinname="Y Out" dstnodeid="31" dstpinname="TranslateY">
-   </LINK>
    <LINK srcnodeid="53" srcpinname="Output" dstnodeid="52" dstpinname="X In">
    </LINK>
    <NODE systemname="LinearSpread (Spreads)" nodename="LinearSpread (Spreads)" componentmode="Hidden" id="54">
@@ -549,8 +513,6 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="52" srcpinname="X Out" dstnodeid="56" dstpinname="Input 1">
-   </LINK>
-   <LINK srcnodeid="56" srcpinname="Output" dstnodeid="31" dstpinname="TranslateX">
    </LINK>
    <NODE systemname="LinearSpread (Spreads)" nodename="LinearSpread (Spreads)" componentmode="Hidden" id="58">
    <BOUNDS type="Node" left="7560" top="6765" width="100" height="100">
@@ -743,7 +705,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="16665" top="5310" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="2" visible="1" values="1024,1024">
+   <PIN pinname="Y Input Value" slicecount="2" visible="1" values="512,512">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -821,7 +783,7 @@
    </BOUNDS>
    <PIN pinname="ScaleY" slicecount="1" values="100">
    </PIN>
-   <PIN pinname="ScaleX" slicecount="1" values="0.4">
+   <PIN pinname="ScaleX" slicecount="1" values="0.5">
    </PIN>
    <PIN pinname="TranslateY" slicecount="1" values="0">
    </PIN>
@@ -866,8 +828,6 @@
    </LINK>
    <LINK srcnodeid="102" srcpinname="Output" dstnodeid="99" dstpinname="Rotate">
    </LINK>
-   <LINK srcnodeid="15" srcpinname="Y Output Value" dstnodeid="16" dstpinname="Enabled">
-   </LINK>
    <LINK srcnodeid="15" srcpinname="Y Output Value" dstnodeid="14" dstpinname="Enabled">
    </LINK>
    <NODE nodename="IOBox (Color)" componentmode="InABox" id="103" systemname="IOBox (Color)">
@@ -881,5 +841,71 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="72" srcpinname="Buffers" dstnodeid="63" dstpinname="Input Node">
+   </LINK>
+   <LINK srcnodeid="26" srcpinname="Y Output Value" dstnodeid="91" dstpinname="Y Input Value">
+   </LINK>
+   <LINK srcnodeid="22" srcpinname="Y Output Value" dstnodeid="48" dstpinname="Enabled">
+   </LINK>
+   <LINK srcnodeid="24" srcpinname="Bang" dstnodeid="22" dstpinname="Y Input Value">
+   </LINK>
+   <NODE systemname="Writer (DX11.Texture 2d)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Writer (DX11.Texture 2d)" componentmode="Hidden" id="104">
+   <BOUNDS type="Node" left="11400" top="8880" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Texture In" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Filename" slicecount="1" values="..\assets\frontTex.jpg">
+   </PIN>
+   <PIN pinname="Write" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Format" slicecount="1" values="Jpg">
+   </PIN>
+   </NODE>
+   <NODE systemname="FileTexture (DX11 2d)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="FileTexture (DX11 2d)" componentmode="Hidden" id="105">
+   <BOUNDS type="Node" left="9915" top="7425" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Filename" slicecount="1" values="..\assets\frontTex.jpg">
+   </PIN>
+   <PIN pinname="Texture Out" visible="1">
+   </PIN>
+   <PIN pinname="Reload" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <NODE id="16" systemname="Renderer (DX11 TempTarget)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Renderer (DX11 TempTarget)" componentmode="Hidden">
+   <PIN pinname="Buffers" visible="1">
+   </PIN>
+   <PIN pinname="AA Samples per Pixel" slicecount="1" values="8">
+   </PIN>
+   <BOUNDS type="Node" left="9930" top="6495" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="View" visible="1">
+   </PIN>
+   <PIN pinname="Projection" visible="1">
+   </PIN>
+   <PIN pinname="Texture SizeXY" visible="1">
+   </PIN>
+   <PIN pinname="Background Color" visible="1">
+   </PIN>
+   <PIN pinname="Enable Depth Buffer" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Enabled" visible="1" slicecount="1" values="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="16" srcpinname="Buffers" dstnodeid="104" dstpinname="Texture In">
+   </LINK>
+   <LINK srcnodeid="15" srcpinname="Y Output Value" dstnodeid="16" dstpinname="Enabled">
+   </LINK>
+   <LINK srcnodeid="21" srcpinname="Transform Out" dstnodeid="16" dstpinname="Projection">
+   </LINK>
+   <LINK srcnodeid="19" srcpinname="Transform Out" dstnodeid="16" dstpinname="View">
+   </LINK>
+   <LINK srcnodeid="26" srcpinname="Y Output Value" dstnodeid="16" dstpinname="Texture SizeXY">
+   </LINK>
+   <LINK srcnodeid="3" srcpinname="Color Output" dstnodeid="16" dstpinname="Background Color">
+   </LINK>
+   <LINK srcnodeid="14" srcpinname="Layer" dstnodeid="16" dstpinname="Layer">
+   </LINK>
+   <LINK srcnodeid="16" srcpinname="Buffers" dstnodeid="29" dstpinname="Input Node">
    </LINK>
    </PATCH>

@@ -305,9 +305,11 @@ void CSConstantForce( uint3 DTid : SV_DispatchThreadID)
 
 		
 		float3 force2 = Output[iterator].pos - newTarget;
+		
+		force2 = saturate(force2)*1;
 	
-
-		if(depth < depthThreshold[0] && force2.z > 0) {
+		//if(depth < depthThreshold[0] && force2.z > 0) {
+		if(depth < depthThreshold[0]) {
 			//if(Output[iterator].pos.z > positionThreshold[0] && Output[iterator].pos.z < positionThreshold[1]) {
 				Output[iterator].pos += force2 * -.0005 * texRepellForce;
 			//}
