@@ -72,7 +72,7 @@ RWStructuredBuffer<particle> Output : BACKBUFFER;
 //COMPUTE SHADER ===============================================================
 //==============================================================================
 
-[numthreads(32, 1, 1)]
+[numthreads(64, 1, 1)]
 void CSConstantForce( uint3 DTid : SV_DispatchThreadID)
 {
 
@@ -287,8 +287,6 @@ void CSConstantForce( uint3 DTid : SV_DispatchThreadID)
 		float1 lookupA = mapRange(Output[iterator].pos.x,depthMap[0],depthMap[1],depthMap[2],depthMap[3]);
 		float1 lookupB = mapRange(Output[iterator].pos.y,depthMap[4],depthMap[5],depthMap[6],depthMap[7]);
 		
-		//lookupA = Output[iterator].pos.x;
-		//lookupB = Output[iterator].pos.y;
 		float2 lookup1 = float2(lookupA,lookupB);
 				
 		
@@ -299,10 +297,10 @@ void CSConstantForce( uint3 DTid : SV_DispatchThreadID)
 		
 		float3 force2 = Output[iterator].pos - newTarget;
 		
-		force2 = saturate(force2);
+	force2 = saturate(force2);
 	
 		//if(depth < depthThreshold[0] && force2.z > 0) {
-		if(depth < depthThreshold[0] && length(force2) != 0) {
+		if(depth > 0) {
 			//if(Output[iterator].pos.z > positionThreshold[0] && Output[iterator].pos.z < positionThreshold[1]) {
 				Output[iterator].pos += force2 * -.0005 * texRepellForce;
 			//}

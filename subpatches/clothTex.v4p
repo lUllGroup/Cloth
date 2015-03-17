@@ -1,10 +1,10 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="C:\Users\Admin\Desktop\Coth\subpatches\clothTex.v4p" systemname="clothTex" filename="C:\Users\Michael\Desktop\nodecloth\String Physics\subpatches\clothTex.v4p" scrollx="1815" scrolly="0">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.3.dtd" >
+   <PATCH nodename="C:\Users\Michael\Desktop\Coth\subpatches\clothTex.v4p" systemname="clothTex" filename="C:\Users\Michael\Desktop\nodecloth\String Physics\subpatches\clothTex.v4p" scrollx="1380" scrolly="0">
    <BOUNDS type="Window" left="8925" top="2475" width="19245" height="13125">
    </BOUNDS>
    <PACK Name="image" Version="0.2.0">
    </PACK>
-   <PACK Name="addonpack" Version="33.7.0">
+   <PACK Name="addonpack" Version="33.3.0">
    </PACK>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="2" systemname="IOBox (String)">
    <BOUNDS type="Box" left="1830" top="1560" width="1095" height="465">
@@ -171,9 +171,9 @@
    </PIN>
    </NODE>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="15" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="11625" top="5760" width="480" height="480">
+   <BOUNDS type="Box" left="11700" top="5805" width="480" height="480">
    </BOUNDS>
-   <BOUNDS type="Node" left="11625" top="5760" width="0" height="0">
+   <BOUNDS type="Node" left="11700" top="5805" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Y Input Value" visible="1" slicecount="1" values="0">
    </PIN>
@@ -443,7 +443,7 @@
    </PIN>
    <PIN pinname="Layer" visible="1" slicecount="1" values="||">
    </PIN>
-   <PIN pinname="AA Samples per Pixel" slicecount="1" values="8">
+   <PIN pinname="AA Samples per Pixel" slicecount="1" values="2">
    </PIN>
    <PIN pinname="Buffers" visible="1">
    </PIN>
@@ -617,7 +617,7 @@
    </PIN>
    <PIN pinname="Texture SizeXY" visible="1" slicecount="2" values="3000,3000">
    </PIN>
-   <PIN pinname="AA Samples per Pixel" slicecount="1" values="8">
+   <PIN pinname="AA Samples per Pixel" slicecount="1" values="2">
    </PIN>
    <PIN pinname="Buffers" visible="1">
    </PIN>
@@ -848,32 +848,10 @@
    </LINK>
    <LINK srcnodeid="24" srcpinname="Bang" dstnodeid="22" dstpinname="Y Input Value">
    </LINK>
-   <NODE systemname="Writer (DX11.Texture 2d)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Writer (DX11.Texture 2d)" componentmode="Hidden" id="104">
-   <BOUNDS type="Node" left="11400" top="8880" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Texture In" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Filename" slicecount="1" values="..\assets\frontTex.jpg">
-   </PIN>
-   <PIN pinname="Write" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="Format" slicecount="1" values="Jpg">
-   </PIN>
-   </NODE>
-   <NODE systemname="FileTexture (DX11 2d)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="FileTexture (DX11 2d)" componentmode="Hidden" id="105">
-   <BOUNDS type="Node" left="9915" top="7425" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Filename" slicecount="1" values="..\assets\frontTex.jpg">
-   </PIN>
-   <PIN pinname="Texture Out" visible="1">
-   </PIN>
-   <PIN pinname="Reload" slicecount="1" values="0">
-   </PIN>
-   </NODE>
    <NODE id="16" systemname="Renderer (DX11 TempTarget)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Renderer (DX11 TempTarget)" componentmode="Hidden">
    <PIN pinname="Buffers" visible="1">
    </PIN>
-   <PIN pinname="AA Samples per Pixel" slicecount="1" values="8">
+   <PIN pinname="AA Samples per Pixel" slicecount="1" values="2">
    </PIN>
    <BOUNDS type="Node" left="9930" top="6495" width="100" height="100">
    </BOUNDS>
@@ -892,10 +870,6 @@
    <PIN pinname="Enabled" visible="1" slicecount="1" values="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="16" srcpinname="Buffers" dstnodeid="104" dstpinname="Texture In">
-   </LINK>
-   <LINK srcnodeid="15" srcpinname="Y Output Value" dstnodeid="16" dstpinname="Enabled">
-   </LINK>
    <LINK srcnodeid="21" srcpinname="Transform Out" dstnodeid="16" dstpinname="Projection">
    </LINK>
    <LINK srcnodeid="19" srcpinname="Transform Out" dstnodeid="16" dstpinname="View">
@@ -907,5 +881,23 @@
    <LINK srcnodeid="14" srcpinname="Layer" dstnodeid="16" dstpinname="Layer">
    </LINK>
    <LINK srcnodeid="16" srcpinname="Buffers" dstnodeid="29" dstpinname="Input Node">
+   </LINK>
+   <LINK srcnodeid="15" srcpinname="Y Output Value" dstnodeid="16" dstpinname="Enabled">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="107" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="11310" top="2940" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="11310" top="2940" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="5">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Integer">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="107" srcpinname="Y Output Value" dstnodeid="11" dstpinname="Resolution Y">
    </LINK>
    </PATCH>

@@ -17,7 +17,6 @@ struct particle
 	float3 pos;
 	float3 test;
 	bool pinched;
-	float3 outputBuffer;
 
 };
 StructuredBuffer<particle> pData;
