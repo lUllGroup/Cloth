@@ -423,9 +423,9 @@
    <LINK srcnodeid="19" srcpinname="Y Output Value" dstnodeid="16" dstpinname="Input 3">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="30" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="15405" top="2535" width="795" height="240">
+   <BOUNDS type="Box" left="15405" top="2460" width="795" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="15405" top="2535" width="0" height="0">
+   <BOUNDS type="Node" left="15405" top="2460" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.5">
    </PIN>

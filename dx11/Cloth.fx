@@ -1,18 +1,16 @@
 bool reset;
 int pCount;
 int resolveCount;
-float3 target;
 float3 gravity;
 StructuredBuffer<float> movementFactor;
 float width;
 float restLength;
-//Texture2D tex;
 Texture2D texDepth <string uiname="Depth";>;
 int conections = 8;
 
 int left;
 int leftTogUp;
-int right;
+int applyAttractor;
 float bounce;
 float power;
 float resolveFactor;
@@ -25,7 +23,9 @@ float returnStrength;
 
 
 
-
+StructuredBuffer<float3> attractor;
+StructuredBuffer<float> attractorSize;
+StructuredBuffer<float> attractorStrength;
 StructuredBuffer<float3> resetData;
 StructuredBuffer<int> pinDown;
 StructuredBuffer<int> connectSizes;
@@ -116,7 +116,7 @@ void CSConstantForce( uint3 DTid : SV_DispatchThreadID)
 					
 					switch(b){
 						
-//						// Bending Constraints
+						// Bending Constraints
 								case 0:
 								if(iterator < (pCount-(width * connectSize))){
 									// Down
@@ -259,18 +259,25 @@ void CSConstantForce( uint3 DTid : SV_DispatchThreadID)
 		Output[iterator].pos += returnVec * .0001  * returnStrength;
 		
 			
-		///////////////////////
-		// Repell from attractor
-		///////////////////////
+		uint numObjects, dummy;
+    	attractor.GetDimensions(numObjects, dummy); 
 		
-		// calculate target force	
-		float3 force = target - Output[iterator].pos;
-		float myDistance = length(force);
+		for(int d = 0; d < numObjects; d++){
 			
-
-		if(myDistance <= 0.15  && right){
-			//float strength = 2 / myDistance * myDistance;
-			Output[iterator].pos += force * -.001;
+			
+			///////////////////////
+			// Repell from attractor
+			///////////////////////
+			
+			// calculate target force	
+			float3 force = attractor[d] - Output[iterator].pos;
+			float myDistance = length(force);
+				
+	
+			if(myDistance <= attractorSize[d]  && applyAttractor){
+				//float strength = 2 / myDistance * myDistance;
+				Output[iterator].pos += force * -.001 * attractorStrength[d];
+			} 
 		} 
 		
 		
@@ -349,7 +356,7 @@ void CSConstantForce( uint3 DTid : SV_DispatchThreadID)
 			
 		
 		
-		float3 distanceTarget = target - Output[iterator].pos;
+		float3 distanceTarget = attractor[0] - Output[iterator].pos;
 		float distanceTargetLength = length(distanceTarget);
 		
 		if(leftTogUp){
@@ -361,7 +368,7 @@ void CSConstantForce( uint3 DTid : SV_DispatchThreadID)
 		}
 		
 		if(Output[iterator].pinched && left){
-			Output[iterator].pos = float3(target.x,target.y, -.01);
+			Output[iterator].pos += (distanceTarget + float3(0,0,-.2))*.001;
 		}
 	}
 }
