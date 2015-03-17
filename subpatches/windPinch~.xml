@@ -1,10 +1,10 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="C:\Users\Admin\Desktop\Coth\subpatches\windPinch.v4p" systemname="windPinch" filename="C:\Users\Michael\Desktop\nodecloth\String Physics\subpatches\windPinch.v4p" scrollx="0" scrolly="0">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.3.dtd" >
+   <PATCH nodename="C:\Users\Michael\Desktop\Coth\subpatches\windPinch.v4p" systemname="windPinch" filename="C:\Users\Michael\Desktop\nodecloth\String Physics\subpatches\windPinch.v4p" scrollx="0" scrolly="0">
    <BOUNDS type="Window" left="11685" top="0" width="11940" height="15150">
    </BOUNDS>
    <PACK Name="image" Version="0.2.0">
    </PACK>
-   <PACK Name="addonpack" Version="33.7.0">
+   <PACK Name="addonpack" Version="33.3.0">
    </PACK>
    <NODE systemname="Select (Value)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Select (Value)" componentmode="Hidden" id="1">
    <BOUNDS type="Node" left="2070" top="9735" width="100" height="100">
@@ -79,7 +79,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="3855" top="2370" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="5">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="3">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -223,7 +223,7 @@
    </PIN>
    <PIN pinname="Width">
    </PIN>
-   <PIN pinname="Random Seed" visible="1">
+   <PIN pinname="Random Seed" visible="1" slicecount="1" values="8">
    </PIN>
    <PIN pinname="Standard Deviation" slicecount="1" values="0.5">
    </PIN>
@@ -237,7 +237,7 @@
    </PIN>
    <PIN pinname="Cyclic" slicecount="1" values="0">
    </PIN>
-   <PIN pinname="FilterTime" slicecount="1" values="5">
+   <PIN pinname="FilterTime" slicecount="1" values="1">
    </PIN>
    </NODE>
    <NODE systemname="LFO (Animation)" nodename="LFO (Animation)" componentmode="Hidden" id="20">
@@ -246,6 +246,8 @@
    <PIN pinname="Cycles" visible="1">
    </PIN>
    <PIN pinname="Period" slicecount="1" values="8">
+   </PIN>
+   <PIN pinname="Reset" slicecount="1" values="0">
    </PIN>
    </NODE>
    <NODE systemname="Map (Value)" nodename="Map (Value)" componentmode="Hidden" id="21">
@@ -315,8 +317,6 @@
    <LINK srcnodeid="16" srcpinname="High" dstnodeid="15" dstpinname="Index">
    </LINK>
    <LINK srcnodeid="15" srcpinname="Output" dstnodeid="17" dstpinname="Input 1">
-   </LINK>
-   <LINK srcnodeid="20" srcpinname="Cycles" dstnodeid="18" dstpinname="Random Seed">
    </LINK>
    <LINK srcnodeid="6" srcpinname="Y Output Value" dstnodeid="18" dstpinname="Spread Count" linkstyle="Bezier">
    <LINKPOINT x="3855" y="2865">
@@ -413,5 +413,7 @@
    </LINKPOINT>
    <LINKPOINT x="2580" y="6075">
    </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="20" srcpinname="Cycles" dstnodeid="18" dstpinname="Random Seed">
    </LINK>
    </PATCH>

@@ -1,18 +1,16 @@
 bool reset;
 int pCount;
 int resolveCount;
-float3 target;
+//float3 target;
 float3 gravity;
 StructuredBuffer<float> movementFactor;
 float width;
 float restLength;
-//Texture2D tex;
 Texture2D texDepth <string uiname="Depth";>;
-int conections = 8;
 
 int left;
 int leftTogUp;
-int right;
+int applyAttractor;
 float bounce;
 float power;
 float resolveFactor;
@@ -24,8 +22,7 @@ float texRepellForce = 1;
 float returnStrength;
 
 
-
-
+StructuredBuffer<float3> attractor;
 StructuredBuffer<float3> resetData;
 StructuredBuffer<int> pinDown;
 StructuredBuffer<int> connectSizes;
@@ -89,17 +86,13 @@ void CSConstantForce( uint3 DTid : SV_DispatchThreadID)
 	else
 	{	
 			
-//			if( iterator % uint(1000) == 0){
-//				Output[iterator /  uint(1000)	].outputBuffer = Output[iterator].pos;
-//			}
-		
+
 			for(int a = 0; a < resolveCount; a++){
 				
 			float connection = 0;
 			float rest_length = restLength;
 			float rest_length2 = sqrt((rest_length * rest_length) + (rest_length * rest_length));
 			
-			int connectionCount = conections;
 			
 			float3 p1 = 0;
 			float3 p2 = 0;
@@ -112,11 +105,11 @@ void CSConstantForce( uint3 DTid : SV_DispatchThreadID)
 				connectSize = connectSizes[c];
 				bendingFactor = bendingFactors[c];
 				
-				for(int b = 0; b < connectionCount; b++){
+				for(int b = 0; b < 8; b++){
 					
 					switch(b){
 						
-//						// Bending Constraints
+						// Bending Constraints
 								case 0:
 								if(iterator < (pCount-(width * connectSize))){
 									// Down
@@ -234,23 +227,7 @@ void CSConstantForce( uint3 DTid : SV_DispatchThreadID)
 			}				
 		}
 		
-		///////////////////////
-		// Self Collision
-		///////////////////////
-		
-//		for(int i = 0; i < pCount; i+= 10){
-//			
-//			float3 collideDistance = Output[i].pos - Output[iterator].pos ;
-//			
-//			if(length(collideDistance) <= .005){
-//				
-//				Output[iterator].pos -= collideDistance * 0.01;
-//			} 
-//		}
-		
-		
-		
-		
+
 		///////////////////////
 		// Return
 		///////////////////////
@@ -258,20 +235,29 @@ void CSConstantForce( uint3 DTid : SV_DispatchThreadID)
 		float3 returnVec =  resetData[iterator] - Output[iterator].pos;
 		Output[iterator].pos += returnVec * .0001  * returnStrength;
 		
-			
-		///////////////////////
-		// Repell from attractor
-		///////////////////////
 		
-		// calculate target force	
-		float3 force = target - Output[iterator].pos;
-		float myDistance = length(force);
+		
+		uint numObjects, dummy;
+    	attractor.GetDimensions(numObjects, dummy); 
+		
+		for(int d = 0; d < numObjects; d++){
 			
-
-		if(myDistance <= 0.15  && right){
-			//float strength = 2 / myDistance * myDistance;
-			Output[iterator].pos += force * -.001;
-		} 
+			
+			///////////////////////
+			// Repell from attractor
+			///////////////////////
+			
+			// calculate target force	
+			float3 force = attractor[d] - Output[iterator].pos;
+			float myDistance = length(force);
+				
+	
+			if(myDistance <= 0.3  && applyAttractor){
+				//float strength = 2 / myDistance * myDistance;
+				Output[iterator].pos += force * -.001;
+			} 
+		}
+	
 		
 		
 		///////////////////////
@@ -297,22 +283,13 @@ void CSConstantForce( uint3 DTid : SV_DispatchThreadID)
 		
 		float3 force2 = Output[iterator].pos - newTarget;
 		
-	force2 = saturate(force2);
+		force2 = saturate(force2);
 	
-		//if(depth < depthThreshold[0] && force2.z > 0) {
+
 		if(depth > 0) {
-			//if(Output[iterator].pos.z > positionThreshold[0] && Output[iterator].pos.z < positionThreshold[1]) {
-				Output[iterator].pos += force2 * -.0005 * texRepellForce;
-			//}
-			
+			Output[iterator].pos += force2 * -.0005 * texRepellForce;
 		}
-	
-//		if(depth > depthThreshold[0] && depth < depthThreshold[1] && force2.z > 0) {
-//			if(Output[iterator].pos.z > positionThreshold[0] && Output[iterator].pos.z < positionThreshold[1]) {
-//				Output[iterator].pos += force2 * -.0005 * texRepellForce;
-//			}
-//			
-//		}
+
 			
 		//////////////////////////////////////////////////////
 		
@@ -339,19 +316,21 @@ void CSConstantForce( uint3 DTid : SV_DispatchThreadID)
 		{
 			
 			// Pin Down
-		
+			
+			
+			
 			Output[iterator].oldPos = resetData[iterator];
 			Output[iterator].pos = resetData[iterator];
-		
+			
 		}
 			
 		
 		
-		float3 distanceTarget = target - Output[iterator].pos;
+		float3 distanceTarget = attractor[0] - Output[iterator].pos;
 		float distanceTargetLength = length(distanceTarget);
 		
 		if(leftTogUp){
-			if(distanceTargetLength <= .04){
+			if(distanceTargetLength <= .2){
 				Output[iterator].pinched = true;
 			}else{
 				Output[iterator].pinched = false;
@@ -359,7 +338,8 @@ void CSConstantForce( uint3 DTid : SV_DispatchThreadID)
 		}
 		
 		if(Output[iterator].pinched && left){
-			Output[iterator].pos = float3(target.x,target.y, -.01);
+			//Output[iterator].pos = float3(target.x,target.y, -.2);
+			Output[iterator].pos += (distanceTarget + float3(0,0,-.2))*.001;
 		}
 	}
 }
