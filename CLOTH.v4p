@@ -1,15 +1,15 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.3.dtd" >
-   <PATCH nodename="C:\Users\Michael\Desktop\Coth\CLOTH.v4p" systemname="verlet_patch" filename="C:\Users\Michael\Desktop\Verlet Strings - NEW\verlet_patch.v4p" bgcolor="15132390" scrollx="2415" scrolly="2190">
+   <PATCH nodename="C:\Users\Michael\Desktop\Coth\CLOTH.v4p" systemname="verlet_patch" filename="C:\Users\Michael\Desktop\Verlet Strings - NEW\verlet_patch.v4p" bgcolor="15132390" scrollx="0" scrolly="4335">
    <BOUNDS type="Window" left="12600" top="0" width="12600" height="15150">
    </BOUNDS>
    <NODE systemname="Keyboard (System Window Legacy2)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Keyboard (System Window)" componentmode="Hidden" id="135">
-   <BOUNDS type="Node" left="7095" top="9435" width="100" height="100">
+   <BOUNDS type="Node" left="7305" top="8940" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Keyboard" visible="1">
    </PIN>
    </NODE>
    <NODE systemname="KeyMatch (Keyboard)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="KeyMatch (String)" componentmode="Hidden" id="134">
-   <BOUNDS type="Node" left="7080" top="10095" width="100" height="100">
+   <BOUNDS type="Node" left="7290" top="9600" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Key Match" slicecount="1" values="r">
    </PIN>
@@ -21,7 +21,7 @@
    <LINK srcnodeid="135" srcpinname="Keyboard" dstnodeid="134" dstpinname="Keyboard">
    </LINK>
    <NODE systemname="TogEdge (Animation)" nodename="TogEdge (Animation)" componentmode="Hidden" id="133">
-   <BOUNDS type="Node" left="7095" top="10620" width="100" height="100">
+   <BOUNDS type="Node" left="7305" top="10125" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
@@ -31,9 +31,9 @@
    <LINK srcnodeid="134" srcpinname="R" dstnodeid="133" dstpinname="Input">
    </LINK>
    <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="130">
-   <BOUNDS type="Node" left="8295" top="10575" width="100" height="100">
+   <BOUNDS type="Node" left="8505" top="10080" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="8295" top="10575" width="1470" height="1380">
+   <BOUNDS type="Box" left="8505" top="10080" width="1470" height="1380">
    </BOUNDS>
    <PIN pinname="Value Type" slicecount="1" values="Boolean">
    </PIN>
@@ -517,7 +517,7 @@
    </PIN>
    </NODE>
    <NODE systemname="OR (Boolean)" nodename="OR (Boolean)" componentmode="Hidden" id="972">
-   <BOUNDS type="Node" left="7095" top="11925" width="100" height="100">
+   <BOUNDS type="Node" left="7305" top="11430" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Output" visible="1">
    </PIN>
@@ -1637,7 +1637,7 @@
    </LINKPOINT>
    </LINK>
    <NODE systemname="Torus (DX11.Geometry)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Torus (DX11.Geometry)" componentmode="Hidden" id="1879">
-   <BOUNDS type="Node" left="22680" top="4290" width="100" height="100">
+   <BOUNDS type="Node" left="22695" top="4290" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Geometry Out" visible="1">
    </PIN>
@@ -1649,7 +1649,7 @@
    </PIN>
    </NODE>
    <NODE systemname="Constant (DX11.Effect)" filename="%VVVV%\packs\dx11\nodes\dx11\Constant.fx" nodename="Constant (DX11.Effect)" componentmode="Hidden" id="1881">
-   <BOUNDS type="Node" left="22365" top="6120" width="100" height="100">
+   <BOUNDS type="Node" left="22380" top="6120" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Geometry" visible="1">
    </PIN>
@@ -1671,7 +1671,7 @@
    </PIN>
    </NODE>
    <NODE systemname="Transform (Transform 3d)" nodename="Transform (Transform 3d)" componentmode="Hidden" id="1883">
-   <BOUNDS type="Node" left="22845" top="5565" width="100" height="100">
+   <BOUNDS type="Node" left="22860" top="5565" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Transform Out" visible="1">
    </PIN>
@@ -1693,7 +1693,7 @@
    <LINK srcnodeid="1794" srcpinname="Output" dstnodeid="1198" dstpinname="Data">
    </LINK>
    <NODE systemname="UniformScale (Transform)" nodename="UniformScale (Transform)" componentmode="Hidden" id="1885">
-   <BOUNDS type="Node" left="22845" top="5040" width="100" height="100">
+   <BOUNDS type="Node" left="22860" top="5040" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Transform Out" visible="1">
    </PIN>
@@ -1791,7 +1791,7 @@
    <LINK srcnodeid="1880" srcpinname="Depth Buffer" dstnodeid="1890" dstpinname="Texture In">
    </LINK>
    <NODE systemname="LFO (Animation)" nodename="LFO (Animation)" componentmode="Hidden" id="1892">
-   <BOUNDS type="Node" left="24375" top="4410" width="100" height="100">
+   <BOUNDS type="Node" left="24390" top="4410" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Output" visible="1">
    </PIN>
@@ -1803,9 +1803,9 @@
    </PIN>
    </NODE>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="1893" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="25155" top="3660" width="795" height="480">
+   <BOUNDS type="Box" left="25170" top="3660" width="795" height="480">
    </BOUNDS>
-   <BOUNDS type="Node" left="25155" top="3660" width="0" height="0">
+   <BOUNDS type="Node" left="25170" top="3660" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="2" visible="1" values="0.41,0.14">
    </PIN>
@@ -1823,7 +1823,7 @@
    <LINK srcnodeid="1893" srcpinname="Y Output Value" dstnodeid="1892" dstpinname="Phase">
    </LINK>
    <NODE systemname="Vector (2d Split)" nodename="Vector (2d Split)" componentmode="Hidden" id="1894">
-   <BOUNDS type="Node" left="24390" top="4905" width="100" height="100">
+   <BOUNDS type="Node" left="24405" top="4905" width="100" height="100">
    </BOUNDS>
    <PIN pinname="XY" visible="1">
    </PIN>
@@ -1835,21 +1835,21 @@
    <LINK srcnodeid="1892" srcpinname="Output" dstnodeid="1894" dstpinname="XY">
    </LINK>
    <LINK srcnodeid="1894" srcpinname="X" dstnodeid="1883" dstpinname="Yaw" linkstyle="Bezier">
-   <LINKPOINT x="24390" y="5370">
+   <LINKPOINT x="24405" y="5370">
    </LINKPOINT>
-   <LINKPOINT x="24150" y="5370">
+   <LINKPOINT x="24165" y="5370">
    </LINKPOINT>
    </LINK>
    <LINK srcnodeid="1894" srcpinname="Y" dstnodeid="1883" dstpinname="Roll" linkstyle="Bezier">
-   <LINKPOINT x="24900" y="5355">
+   <LINKPOINT x="24915" y="5355">
    </LINKPOINT>
-   <LINKPOINT x="24330" y="5355">
+   <LINKPOINT x="24345" y="5355">
    </LINKPOINT>
    </LINK>
    <LINK srcnodeid="1894" srcpinname="X" dstnodeid="1883" dstpinname="Pitch" linkstyle="Bezier">
-   <LINKPOINT x="24390" y="5355">
+   <LINKPOINT x="24405" y="5355">
    </LINKPOINT>
-   <LINKPOINT x="24000" y="5355">
+   <LINKPOINT x="24015" y="5355">
    </LINKPOINT>
    </LINK>
    <NODE systemname="ApplyTransform (Transform Vector)" nodename="ApplyTransform (Transform Vector)" componentmode="Hidden" id="1895">
@@ -1881,9 +1881,9 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="972" srcpinname="Output" dstnodeid="1896" dstpinname="Input 1" linkstyle="Bezier">
-   <LINKPOINT x="8555" y="13450">
+   <LINKPOINT x="8695" y="13120">
    </LINKPOINT>
-   <LINKPOINT x="27880" y="13085">
+   <LINKPOINT x="27950" y="12920">
    </LINKPOINT>
    </LINK>
    <LINK srcnodeid="1896" srcpinname="Output" dstnodeid="259" dstpinname="Apply">
@@ -1999,7 +1999,7 @@
    <LINK srcnodeid="1905" srcpinname="Output" dstnodeid="1526" dstpinname="Calculate">
    </LINK>
    <NODE systemname="Change (Animation)" nodename="Change (Animation)" componentmode="Hidden" id="1906">
-   <BOUNDS type="Node" left="7305" top="11370" width="100" height="100">
+   <BOUNDS type="Node" left="7515" top="10875" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
@@ -2007,9 +2007,9 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="509" srcpinname="Output" dstnodeid="1906" dstpinname="Input" linkstyle="Bezier">
-   <LINKPOINT x="14025" y="9308">
+   <LINKPOINT x="14095" y="9143">
    </LINKPOINT>
-   <LINKPOINT x="7365" y="9308">
+   <LINKPOINT x="7505" y="8978">
    </LINKPOINT>
    </LINK>
    <LINK srcnodeid="1906" srcpinname="OnChange" dstnodeid="972" dstpinname="Input 2">
@@ -2347,5 +2347,15 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="130" srcpinname="Y Output Value" dstnodeid="972" dstpinname="Input 3">
+   </LINK>
+   <NODE systemname="OnOpen (VVVV)" nodename="OnOpen (VVVV)" componentmode="Hidden" id="1924">
+   <BOUNDS type="Node" left="12465" top="26355" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Bang" visible="1">
+   </PIN>
+   <PIN pinname="Simulate" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="1924" srcpinname="Bang" dstnodeid="1474" dstpinname="Y Input Value">
    </LINK>
    </PATCH>
