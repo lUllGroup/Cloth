@@ -29,6 +29,8 @@ psIn VS(vsIn input)
 	float3 center = float3(x,y,z);
 	
 	//Move Box
+
+	
 	center += input.pos.xyz;
 	
     output.pos  = mul(float4(center,1.0f),tVP);

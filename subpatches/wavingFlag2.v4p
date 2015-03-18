@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="C:\Users\Admin\Desktop\Coth\subpatches\wavingFlag2.v4p" systemname="wavingFlag2" filename="C:\Users\Michael\Desktop\nodecloth\String Physics\subpatches\wavingFlag2.v4p" scrollx="9990" scrolly="12480">
+   <PATCH nodename="C:\Users\Admin\Desktop\Coth\subpatches\wavingFlag2.v4p" systemname="wavingFlag2" filename="C:\Users\Michael\Desktop\nodecloth\String Physics\subpatches\wavingFlag2.v4p" scrollx="0" scrolly="4560">
    <BOUNDS type="Window" left="6930" top="7140" width="16005" height="8400">
    </BOUNDS>
    <PACK Name="image" Version="0.2.0">
@@ -223,7 +223,7 @@
    </PIN>
    <PIN pinname="Reset" visible="1" slicecount="1" values="0">
    </PIN>
-   <PIN pinname="Time" visible="1" slicecount="1" values="5">
+   <PIN pinname="Time" visible="1" slicecount="1" values="4">
    </PIN>
    </NODE>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="211" systemname="IOBox (Value Advanced)">
@@ -529,9 +529,9 @@
    </PIN>
    <PIN pinname="Height" visible="1">
    </PIN>
-   <PIN pinname="Input X" slicecount="1" values="1" visible="1">
+   <PIN pinname="Input X" slicecount="1" visible="1" values="1">
    </PIN>
-   <PIN pinname="Input Y" slicecount="1" values="1" visible="1">
+   <PIN pinname="Input Y" slicecount="1" visible="1" values="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="14" srcpinname="Input Value" dstnodeid="243" dstpinname="Spread Count" linkstyle="Bezier">
@@ -857,7 +857,7 @@
    </PIN>
    <PIN pinname="Position Out" visible="1">
    </PIN>
-   <PIN pinname="FilterTime" slicecount="1" values="3">
+   <PIN pinname="FilterTime" slicecount="1" values="6">
    </PIN>
    </NODE>
    <LINK srcnodeid="301" srcpinname="Position Out" dstnodeid="300" dstpinname="Input 2">

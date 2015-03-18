@@ -1,21 +1,21 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.3.dtd" >
-   <PATCH nodename="C:\Users\Michael\Desktop\nodecloth\String Physics\subpatches\attractor.v4p" systemname="attractor" filename="C:\Users\Michael\Desktop\nodecloth\String Physics\subpatches\attractor.v4p">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
+   <PATCH nodename="C:\Users\Admin\Desktop\Coth\subpatches\attractor.v4p" systemname="attractor" filename="C:\Users\Michael\Desktop\nodecloth\String Physics\subpatches\attractor.v4p" scrollx="0" scrolly="1350">
    <BOUNDS type="Window" left="4965" top="8100" width="7920" height="4920">
    </BOUNDS>
    <PACK Name="image" Version="0.2.0">
    </PACK>
-   <PACK Name="addonpack" Version="33.3.0">
+   <PACK Name="addonpack" Version="33.7.0">
    </PACK>
    <NODE systemname="Integrate (Differential)" nodename="Integrate (Differential)" componentmode="Hidden" id="1">
-   <BOUNDS type="Node" left="2355" top="90" width="100" height="100">
+   <BOUNDS type="Node" left="2505" top="1725" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Position Out" visible="1">
    </PIN>
-   <PIN pinname="Position In" slicecount="1" values="0.3">
+   <PIN pinname="Position In" slicecount="1" values="0.05">
    </PIN>
    </NODE>
    <NODE systemname="Perlin (2d)" nodename="Perlin (2d)" componentmode="Hidden" id="0">
-   <BOUNDS type="Node" left="2385" top="2055" width="100" height="100">
+   <BOUNDS type="Node" left="2535" top="3690" width="100" height="100">
    </BOUNDS>
    <PIN pinname="X" visible="1">
    </PIN>
@@ -23,21 +23,21 @@
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
-   <PIN pinname="Octaves" slicecount="1" values="1">
+   <PIN pinname="Octaves" slicecount="1" values="2">
    </PIN>
    </NODE>
    <NODE systemname="LinearSpread (Spreads)" nodename="LinearSpread (Spreads)" componentmode="Hidden" id="6">
-   <BOUNDS type="Node" left="2370" top="870" width="100" height="100">
+   <BOUNDS type="Node" left="2520" top="2505" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Output" visible="1">
    </PIN>
    <PIN pinname="Spread Count" slicecount="1" values="2">
    </PIN>
-   <PIN pinname="Input" visible="1">
+   <PIN pinname="Input" visible="1" slicecount="1" values="461.716647404531">
    </PIN>
    </NODE>
    <NODE systemname="Cross (2d)" nodename="Cross (2d)" componentmode="Hidden" id="7">
-   <BOUNDS type="Node" left="2385" top="1470" width="100" height="100">
+   <BOUNDS type="Node" left="2535" top="3105" width="100" height="100">
    </BOUNDS>
    <PIN pinname="X In" visible="1">
    </PIN>
@@ -52,12 +52,10 @@
    </LINK>
    <LINK srcnodeid="7" srcpinname="Y Out" dstnodeid="0" dstpinname="Y">
    </LINK>
-   <LINK srcnodeid="1" srcpinname="Position Out" dstnodeid="6" dstpinname="Input">
-   </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="8" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="2295" top="2550" width="795" height="240">
+   <BOUNDS type="Box" left="2445" top="4185" width="795" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="2295" top="2550" width="0" height="0">
+   <BOUNDS type="Node" left="2445" top="4185" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -67,5 +65,61 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="0" srcpinname="Output" dstnodeid="8" dstpinname="Y Input Value">
+   </LINK>
+   <NODE systemname="Add (Value)" nodename="Add (Value)" componentmode="Hidden" id="11">
+   <BOUNDS type="Node" left="3915" top="1995" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1" slicecount="5" values="0.1,0.3,0.5,0.7,0.9">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="1" srcpinname="Position Out" dstnodeid="11" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="11" srcpinname="Output" dstnodeid="6" dstpinname="Input">
+   </LINK>
+   <NODE systemname="LinearSpread (Spreads)" nodename="LinearSpread (Spreads)" componentmode="Hidden" id="12">
+   <BOUNDS type="Node" left="5220" top="2505" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Spread Count" slicecount="1" values="5" visible="1">
+   </PIN>
+   <PIN pinname="Input" slicecount="1" values="0.5">
+   </PIN>
+   </NODE>
+   <NODE systemname="Multiply (Value)" nodename="Multiply (Value)" componentmode="Hidden" id="13">
+   <BOUNDS type="Node" left="5220" top="3645" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" slicecount="1" values="100">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="12" srcpinname="Output" dstnodeid="13" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="13" srcpinname="Output" dstnodeid="11" dstpinname="Input 2">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="14" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="6255" top="1995" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="6255" top="1995" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="5">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Integer">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Spread Count|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="14" srcpinname="Y Output Value" dstnodeid="12" dstpinname="Spread Count">
    </LINK>
    </PATCH>

@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
    <PATCH nodename="C:\Users\Admin\Desktop\Coth\subpatches\windPinch.v4p" systemname="windPinch" filename="C:\Users\Michael\Desktop\nodecloth\String Physics\subpatches\windPinch.v4p" scrollx="0" scrolly="0">
-   <BOUNDS type="Window" left="11685" top="0" width="11940" height="15150">
+   <BOUNDS type="Window" left="18180" top="3765" width="11940" height="15150">
    </BOUNDS>
    <PACK Name="image" Version="0.2.0">
    </PACK>
@@ -79,7 +79,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="3855" top="2370" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="5">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="10">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>

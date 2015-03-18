@@ -273,15 +273,16 @@ void CSConstantForce( uint3 DTid : SV_DispatchThreadID)
 			float3 force = attractor[d] - Output[iterator].pos;
 			float myDistance = length(force);
 				
-	
+			
+			//if(applyAttractor){
 			if(myDistance <= attractorSize[d]  && applyAttractor){
-				//float strength = 2 / myDistance * myDistance;
-				Output[iterator].pos += force * -.001 * attractorStrength[d];
+				float strength = .5 / myDistance * myDistance;
+				Output[iterator].pos += force * -.001 * attractorStrength[d] * strength;
 			} 
 		} 
 		
 		
-		///////////////////////
+		///////////////////////r
 		// Repell from texture
 		///////////////////////
 

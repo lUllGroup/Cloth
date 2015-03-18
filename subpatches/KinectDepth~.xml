@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="C:\Users\Admin\Desktop\Coth\subpatches\KinectDepth.v4p" scrollx="0" scrolly="10050" systemname="KinectDepth" filename="C:\Users\Admin\Desktop\KinectDepth.v4p">
-   <BOUNDS type="Window" left="9495" top="2520" width="12900" height="7740">
+   <PATCH nodename="C:\Users\Admin\Desktop\Coth\subpatches\KinectDepth.v4p" scrollx="0" scrolly="10410" systemname="KinectDepth" filename="C:\Users\Admin\Desktop\KinectDepth.v4p">
+   <BOUNDS type="Window" left="9495" top="2520" width="12900" height="11760">
    </BOUNDS>
    <PACK Name="addonpack" Version="33.7.0">
    </PACK>
@@ -475,6 +475,10 @@
    </BOUNDS>
    <PIN pinname="Transform In" visible="1" slicecount="1" values="||">
    </PIN>
+   <PIN pinname="Enable Pointcloud" visible="1">
+   </PIN>
+   <PIN pinname="Enabled" visible="1">
+   </PIN>
    </NODE>
    <LINK srcnodeid="189" srcpinname="Y Output Value" dstnodeid="333" dstpinname="Motor Angle" linkstyle="Bezier">
    <LINKPOINT x="3675" y="6173">
@@ -506,6 +510,10 @@
    <PIN pinname="Index" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Transform In" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Enable Pointcloud" visible="1">
+   </PIN>
+   <PIN pinname="Enabled" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="189" srcpinname="Y Output Value" dstnodeid="334" dstpinname="Motor Angle" linkstyle="Bezier">
@@ -539,6 +547,10 @@
    </PIN>
    <PIN pinname="Index" slicecount="1" values="1">
    </PIN>
+   <PIN pinname="Enable Pointcloud" visible="1">
+   </PIN>
+   <PIN pinname="Enabled" visible="1">
+   </PIN>
    </NODE>
    <LINK srcnodeid="189" srcpinname="Y Output Value" dstnodeid="335" dstpinname="Motor Angle" linkstyle="Bezier">
    <LINKPOINT x="3705" y="6173">
@@ -570,6 +582,10 @@
    <PIN pinname="Index" slicecount="1" values="1">
    </PIN>
    <PIN pinname="Transform In" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Enable Pointcloud" visible="1">
+   </PIN>
+   <PIN pinname="Enabled" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="189" srcpinname="Y Output Value" dstnodeid="336" dstpinname="Motor Angle" linkstyle="Bezier">
@@ -676,10 +692,90 @@
    <LINKPOINT x="6255" y="5288">
    </LINKPOINT>
    </LINK>
-   <LINK srcnodeid="339" srcpinname="Transform Out" dstnodeid="335" dstpinname="Transform In">
+   <LINK srcnodeid="339" srcpinname="Transform Out" dstnodeid="335" dstpinname="Transform In" linkstyle="Bezier">
+   <LINKPOINT x="6255" y="8573">
+   </LINKPOINT>
+   <LINKPOINT x="6240" y="8573">
+   </LINKPOINT>
    </LINK>
-   <LINK srcnodeid="339" srcpinname="Transform Out" dstnodeid="336" dstpinname="Transform In">
+   <LINK srcnodeid="339" srcpinname="Transform Out" dstnodeid="336" dstpinname="Transform In" linkstyle="Bezier">
+   <LINKPOINT x="6300" y="8573">
+   </LINKPOINT>
+   <LINKPOINT x="7395" y="8573">
+   </LINKPOINT>
    </LINK>
    <LINK srcnodeid="338" srcpinname="Transform Out" dstnodeid="334" dstpinname="Transform In">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="340" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="8385" top="8175" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="8385" top="8175" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="PointCloud">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="340" srcpinname="Y Output Value" dstnodeid="336" dstpinname="Enable Pointcloud" linkstyle="Bezier">
+   <LINKPOINT x="8385" y="8993">
+   </LINKPOINT>
+   <LINKPOINT x="7620" y="8993">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="340" srcpinname="Y Output Value" dstnodeid="335" dstpinname="Enable Pointcloud" linkstyle="Bezier">
+   <LINKPOINT x="8385" y="8993">
+   </LINKPOINT>
+   <LINKPOINT x="6435" y="8993">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="340" srcpinname="Y Output Value" dstnodeid="334" dstpinname="Enable Pointcloud" linkstyle="Bezier">
+   <LINKPOINT x="8385" y="8993">
+   </LINKPOINT>
+   <LINKPOINT x="5250" y="8993">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="340" srcpinname="Y Output Value" dstnodeid="333" dstpinname="Enable Pointcloud" linkstyle="Bezier">
+   <LINKPOINT x="8385" y="8993">
+   </LINKPOINT>
+   <LINKPOINT x="4065" y="8993">
+   </LINKPOINT>
+   </LINK>
+   <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="342">
+   <BOUNDS type="Node" left="9945" top="8085" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="9945" top="8085" width="480" height="480">
+   </BOUNDS>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Y Input Value" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="On">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="342" srcpinname="Y Output Value" dstnodeid="336" dstpinname="Enabled">
+   </LINK>
+   <LINK srcnodeid="342" srcpinname="Y Output Value" dstnodeid="335" dstpinname="Enabled">
+   </LINK>
+   <LINK srcnodeid="342" srcpinname="Y Output Value" dstnodeid="334" dstpinname="Enabled">
+   </LINK>
+   <LINK srcnodeid="342" srcpinname="Y Output Value" dstnodeid="333" dstpinname="Enabled">
    </LINK>
    </PATCH>
