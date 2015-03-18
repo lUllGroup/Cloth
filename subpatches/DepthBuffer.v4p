@@ -7,7 +7,7 @@
    <INFO author="tmp" description="Creates a colored pointcloud layer and a pointcloud buffer and an (filtered) IndexBuffer." tags="DX11, Kinect">
    </INFO>
    <NODE systemname="Topology (DX11.Geometry)" filename="%VVVV%\packs\DX11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Topology (DX11.Geometry)" componentmode="Hidden" id="12">
-   <BOUNDS type="Node" left="510" top="3195" width="100" height="100">
+   <BOUNDS type="Node" left="1290" top="5400" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Topology" slicecount="1" values="PointList">
    </PIN>
@@ -15,13 +15,13 @@
    </PIN>
    <PIN pinname="Geometry Out" visible="1">
    </PIN>
-   <BOUNDS type="Box" left="510" top="3195">
+   <BOUNDS type="Box" left="1290" top="5400">
    </BOUNDS>
    <PIN pinname="Enabled" slicecount="1" values="1">
    </PIN>
    </NODE>
    <NODE systemname="PerVertexDrawer (DX11.Drawer)" filename="%VVVV%\packs\DX11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="PerVertexDrawer (DX11 Geometry)" componentmode="Hidden" id="11">
-   <BOUNDS type="Node" left="525" top="2790" width="1200" height="270">
+   <BOUNDS type="Node" left="1305" top="4995" width="1200" height="270">
    </BOUNDS>
    <PIN pinname="Geometry In" visible="1" slicecount="1" values="||">
    </PIN>
@@ -29,9 +29,9 @@
    </PIN>
    </NODE>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="7" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="11055" top="630" width="285" height="240">
+   <BOUNDS type="Box" left="11835" top="2835" width="285" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="11055" top="630" width="0" height="0">
+   <BOUNDS type="Node" left="11835" top="2835" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" values="1">
    </PIN>
@@ -51,9 +51,9 @@
    </PIN>
    </NODE>
    <NODE nodename="IOBox (Node)" componentmode="InABox" id="28" systemname="IOBox (Node)">
-   <BOUNDS type="Box" left="1875" top="645" width="795" height="240">
+   <BOUNDS type="Box" left="2655" top="2850" width="795" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="1875" top="645" width="0" height="0">
+   <BOUNDS type="Node" left="2655" top="2850" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Input Node" slicecount="1" values="||">
    </PIN>
@@ -61,9 +61,9 @@
    </PIN>
    </NODE>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="29" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="3210" top="645" width="795" height="480">
+   <BOUNDS type="Box" left="3990" top="2850" width="795" height="480">
    </BOUNDS>
-   <BOUNDS type="Node" left="3210" top="645" width="0" height="0">
+   <BOUNDS type="Node" left="3990" top="2850" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="2" values="0,0">
    </PIN>
@@ -81,7 +81,7 @@
    </PIN>
    </NODE>
    <NODE systemname="Radians (Value Cycles)" filename="%VVVV%\lib\nodes\modules\Value\Radians (Value Cycles).v4p" nodename="Radians (Value Cycles)" componentmode="Hidden" id="30">
-   <BOUNDS type="Node" left="3210" top="1935" width="100" height="100">
+   <BOUNDS type="Node" left="3990" top="4140" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Degrees" visible="1">
    </PIN>
@@ -89,13 +89,13 @@
    </PIN>
    <PIN pinname="Cycles" visible="1" slicecount="1" values="1">
    </PIN>
-   <BOUNDS type="Box" left="3210" top="1935">
+   <BOUNDS type="Box" left="3990" top="4140">
    </BOUNDS>
    </NODE>
    <NODE nodename="IOBox (Node)" componentmode="InABox" id="31" systemname="IOBox (Node)">
-   <BOUNDS type="Box" left="4575" top="645" width="795" height="240">
+   <BOUNDS type="Box" left="5355" top="2850" width="795" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="4575" top="645" width="0" height="0">
+   <BOUNDS type="Node" left="5355" top="2850" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Input Node" slicecount="1" values="||">
    </PIN>
@@ -105,7 +105,7 @@
    </PIN>
    </NODE>
    <NODE systemname="Grid (DX11.Geometry)" filename="%VVVV%\packs\DX11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Grid (DX11.Geometry)" componentmode="Hidden" id="196">
-   <BOUNDS type="Node" left="525" top="2355" width="780" height="270">
+   <BOUNDS type="Node" left="1305" top="4560" width="780" height="270">
    </BOUNDS>
    <PIN pinname="Geometry Out" visible="1">
    </PIN>
@@ -117,9 +117,9 @@
    </PIN>
    </NODE>
    <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="195">
-   <BOUNDS type="Node" left="660" top="645" width="100" height="100">
+   <BOUNDS type="Node" left="1440" top="2850" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="660" top="645" width="420" height="450">
+   <BOUNDS type="Box" left="1440" top="2850" width="420" height="450">
    </BOUNDS>
    <PIN pinname="Rows" slicecount="1" values="2">
    </PIN>
@@ -143,7 +143,7 @@
    </PIN>
    </NODE>
    <NODE systemname="Vector (2d Split)" nodename="Vector (2d Split)" componentmode="Hidden" id="194">
-   <BOUNDS type="Node" left="660" top="1335" width="870" height="270">
+   <BOUNDS type="Node" left="1440" top="3540" width="870" height="270">
    </BOUNDS>
    <PIN pinname="XY" visible="1" slicecount="2" values="640,480">
    </PIN>
@@ -153,7 +153,7 @@
    </PIN>
    </NODE>
    <NODE systemname="Multiply (Value Spectral)" nodename="Multiply (Value Spectral)" componentmode="Hidden" id="197">
-   <BOUNDS type="Node" left="1650" top="1335" width="100" height="100">
+   <BOUNDS type="Node" left="2430" top="3540" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1" slicecount="2" values="640,480">
    </PIN>
@@ -167,37 +167,37 @@
    <LINK srcnodeid="195" srcpinname="Y Output Value" dstnodeid="194" dstpinname="XY">
    </LINK>
    <LINK srcnodeid="194" srcpinname="X" dstnodeid="196" dstpinname="Resolution X" linkstyle="VHV">
-   <LINKPOINT x="645" y="1980">
+   <LINKPOINT x="1425" y="4185">
    </LINKPOINT>
-   <LINKPOINT x="960" y="1980">
+   <LINKPOINT x="1740" y="4185">
    </LINKPOINT>
    </LINK>
    <LINK srcnodeid="194" srcpinname="Y" dstnodeid="196" dstpinname="Resolution Y" linkstyle="VHV">
-   <LINKPOINT x="1425" y="1980">
+   <LINKPOINT x="2205" y="4185">
    </LINKPOINT>
-   <LINKPOINT x="1350" y="1980">
+   <LINKPOINT x="2130" y="4185">
    </LINKPOINT>
    </LINK>
    <LINK srcnodeid="196" srcpinname="Geometry Out" dstnodeid="11" dstpinname="Geometry In">
    </LINK>
    <LINK srcnodeid="195" srcpinname="Y Output Value" dstnodeid="197" dstpinname="Input" linkstyle="VHV" hiddenwhenlocked="0">
-   <LINKPOINT x="720" y="1200">
+   <LINKPOINT x="1500" y="3405">
    </LINKPOINT>
-   <LINKPOINT x="1650" y="1200">
+   <LINKPOINT x="2430" y="3405">
    </LINKPOINT>
    </LINK>
    <NODE nodename="IOBox (Node)" componentmode="InABox" id="216" systemname="IOBox (Node)">
-   <BOUNDS type="Box" left="1725" top="4830" width="795" height="240">
+   <BOUNDS type="Box" left="2505" top="7035" width="795" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="1725" top="4830" width="0" height="0">
+   <BOUNDS type="Node" left="2505" top="7035" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Descriptive Name" slicecount="1" values="|Buffer Out|">
    </PIN>
    </NODE>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="217" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="2715" top="4545" width="795" height="240">
+   <BOUNDS type="Box" left="3495" top="6750" width="795" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="2715" top="4545" width="0" height="0">
+   <BOUNDS type="Node" left="3495" top="6750" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -209,9 +209,9 @@
    <LINK srcnodeid="197" srcpinname="Output" dstnodeid="217" dstpinname="Y Input Value">
    </LINK>
    <NODE systemname="GS_DepthToCoordinates (DX11.GeomFX)" filename="%VVVV%\packs\KinectDX11Bundle\nodes\modules\Visualization\geom11\GS_DepthToCoordinates.gsfx" nodename="GS_DepthToCoordinates (DX11.GeomFX)" componentmode="Hidden" id="35">
-   <BOUNDS type="Node" left="510" top="3705" width="6855" height="270">
+   <BOUNDS type="Node" left="1290" top="5910" width="6855" height="270">
    </BOUNDS>
-   <BOUNDS type="Box" left="510" top="3705">
+   <BOUNDS type="Box" left="1290" top="5910">
    </BOUNDS>
    <PIN pinname="View" visible="-1" pintype="Input" slicecount="1" values="||">
    </PIN>
@@ -243,15 +243,15 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="12" srcpinname="Geometry Out" dstnodeid="35" dstpinname="Geometry In" linkstyle="VHV">
-   <LINKPOINT x="70" y="3620">
+   <LINKPOINT x="850" y="5825">
    </LINKPOINT>
-   <LINKPOINT x="1010" y="3520">
+   <LINKPOINT x="1790" y="5725">
    </LINKPOINT>
    </LINK>
    <LINK srcnodeid="28" srcpinname="Output Node" dstnodeid="35" dstpinname="Transform In" linkstyle="VHV">
-   <LINKPOINT x="1495" y="2390">
+   <LINKPOINT x="2275" y="4595">
    </LINKPOINT>
-   <LINKPOINT x="1100" y="2290">
+   <LINKPOINT x="1880" y="4495">
    </LINKPOINT>
    </LINK>
    <LINK srcnodeid="30" srcpinname="Radians" dstnodeid="35" dstpinname="FOVXY">
@@ -259,11 +259,25 @@
    <LINK srcnodeid="31" srcpinname="Output Node" dstnodeid="35" dstpinname="Depth">
    </LINK>
    <LINK srcnodeid="7" srcpinname="Y Output Value" dstnodeid="35" dstpinname="Enabled" linkstyle="Bezier" hiddenwhenlocked="1">
-   <LINKPOINT x="11055" y="2273">
+   <LINKPOINT x="11835" y="4478">
    </LINKPOINT>
-   <LINKPOINT x="7365" y="2273">
+   <LINKPOINT x="8145" y="4478">
    </LINKPOINT>
    </LINK>
    <LINK srcnodeid="35" srcpinname="Buffer Out" dstnodeid="216" dstpinname="Input Node">
    </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="218" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="570" top="435" width="3840" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="570" top="435" width="2460" height="945">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|Based on:&cr;&lf;KinectToolkitDX11 by Intolight&cr;&lf;copyright: intolight 2014&cr;&lf;Creative Commons 4.0 BY-NC-SA&cr;&lf;&cr;&lf;contact: robert@intolight.de|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
    </PATCH>

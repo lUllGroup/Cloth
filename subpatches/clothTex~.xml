@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="C:\Users\Admin\Desktop\Coth\subpatches\clothTex.v4p" systemname="clothTex" filename="C:\Users\Michael\Desktop\nodecloth\String Physics\subpatches\clothTex.v4p" scrollx="2565" scrolly="270">
+   <PATCH nodename="C:\Users\Admin\Desktop\Coth\subpatches\clothTex.v4p" systemname="clothTex" filename="C:\Users\Michael\Desktop\nodecloth\String Physics\subpatches\clothTex.v4p" scrollx="2385" scrolly="0">
    <BOUNDS type="Window" left="8925" top="2475" width="19245" height="13125">
    </BOUNDS>
    <PACK Name="image" Version="0.2.0">
@@ -107,7 +107,7 @@
    </PIN>
    <PIN pinname="Resolution X" visible="1">
    </PIN>
-   <PIN pinname="Resolution Y" visible="1" slicecount="1" values="2">
+   <PIN pinname="Resolution Y" visible="1" slicecount="1" values="5">
    </PIN>
    </NODE>
    <NODE systemname="Transform (Transform 3d Vector)" nodename="Transform (Transform 3d Vector)" componentmode="Hidden" id="12">
@@ -501,7 +501,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="17295" top="6120" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" visible="1" slicecount="1" values="1">
+   <PIN pinname="Y Input Value" visible="1" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -511,7 +511,7 @@
    </PIN>
    <PIN pinname="Behavior" slicecount="1" values="Toggle">
    </PIN>
-   <PIN pinname="X Input Value" slicecount="1" values="1">
+   <PIN pinname="X Input Value" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
@@ -799,7 +799,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="10425" top="3015" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="5">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="2">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -810,8 +810,6 @@
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="106" srcpinname="Y Output Value" dstnodeid="11" dstpinname="Resolution Y">
-   </LINK>
    <NODE id="104" systemname="Writer (DX11.Texture 2d)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Writer (DX11.Texture 2d)" componentmode="Hidden">
    <BOUNDS type="Node" left="11400" top="9930" width="100" height="100">
    </BOUNDS>
@@ -845,5 +843,7 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="67" srcpinname="Transform Out" dstnodeid="72" dstpinname="Projection">
+   </LINK>
+   <LINK srcnodeid="106" srcpinname="Y Output Value" dstnodeid="11" dstpinname="Resolution Y">
    </LINK>
    </PATCH>

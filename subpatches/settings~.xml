@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="C:\Users\Admin\Desktop\Coth\subpatches\settings.v4p" systemname="settings" filename="C:\Users\Michael\Desktop\nodecloth\String Physics\subpatches\settings.v4p" scrollx="3210" scrolly="0">
+   <PATCH nodename="C:\Users\Admin\Desktop\Coth\subpatches\settings.v4p" systemname="settings" filename="C:\Users\Michael\Desktop\nodecloth\String Physics\subpatches\settings.v4p" scrollx="1965" scrolly="0">
    <BOUNDS type="Window" left="9030" top="6405" width="13800" height="7200">
    </BOUNDS>
    <PACK Name="image" Version="0.2.0">
@@ -39,7 +39,7 @@
    </PIN>
    <PIN pinname="Input 1" visible="1">
    </PIN>
-   <PIN pinname="Input 2" visible="1" slicecount="3" values="1,0.03,0.002">
+   <PIN pinname="Input 2" visible="1" slicecount="3" values="1,0.05,0.002">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
@@ -73,7 +73,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="5595" top="1995" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="3" visible="1" values="1,0.03,0.002">
+   <PIN pinname="Y Input Value" slicecount="3" visible="1" values="1,0.3,0.02">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -423,9 +423,9 @@
    <LINK srcnodeid="19" srcpinname="Y Output Value" dstnodeid="16" dstpinname="Input 3">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="30" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="15405" top="2535" width="795" height="240">
+   <BOUNDS type="Box" left="15405" top="2460" width="795" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="15405" top="2535" width="0" height="0">
+   <BOUNDS type="Node" left="15405" top="2460" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.5">
    </PIN>
@@ -436,6 +436,6 @@
    </NODE>
    <LINK srcnodeid="30" srcpinname="Y Output Value" dstnodeid="16" dstpinname="Input 5">
    </LINK>
-   <LINK srcnodeid="0" srcpinname="Y Output Value" dstnodeid="1" dstpinname="Input 2">
+   <LINK srcnodeid="3" srcpinname="Y Output Value" dstnodeid="1" dstpinname="Input 2">
    </LINK>
    </PATCH>
