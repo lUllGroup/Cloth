@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="C:\Users\Admin\Desktop\Coth\subpatches\KinectDepth.v4p" scrollx="0" scrolly="10815" systemname="KinectDepth" filename="C:\Users\Admin\Desktop\KinectDepth.v4p">
+   <PATCH nodename="C:\Users\Admin\Desktop\Coth\subpatches\KinectDepth.v4p" scrollx="0" scrolly="11340" systemname="KinectDepth" filename="C:\Users\Admin\Desktop\KinectDepth.v4p">
    <BOUNDS type="Window" left="15540" top="1695" width="13260" height="12360">
    </BOUNDS>
    <PACK Name="addonpack" Version="33.7.0">
@@ -286,7 +286,7 @@
    <LINKPOINT x="9495" y="16838">
    </LINKPOINT>
    </LINK>
-   <NODE systemname="Preview (DX11.Texture)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Preview (DX11.Texture)" componentmode="InAWindow" id="204" stayontop="1">
+   <NODE systemname="Preview (DX11.Texture)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Preview (DX11.Texture)" componentmode="Hidden" id="204" stayontop="1">
    <BOUNDS type="Node" left="9270" top="21330" width="100" height="100">
    </BOUNDS>
    <BOUNDS type="Box" left="9270" top="21330" width="6000" height="4500">

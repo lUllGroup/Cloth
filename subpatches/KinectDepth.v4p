@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="C:\Users\Admin\Desktop\Coth\subpatches\KinectDepth.v4p" scrollx="0" scrolly="11340" systemname="KinectDepth" filename="C:\Users\Admin\Desktop\KinectDepth.v4p">
+   <PATCH nodename="C:\Users\Admin\Desktop\Coth\subpatches\KinectDepth.v4p" scrollx="60" scrolly="11280" systemname="KinectDepth" filename="C:\Users\Admin\Desktop\KinectDepth.v4p">
    <BOUNDS type="Window" left="15540" top="1695" width="13260" height="12360">
    </BOUNDS>
    <PACK Name="addonpack" Version="33.7.0">

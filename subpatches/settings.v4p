@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="C:\Users\Admin\Desktop\Coth\subpatches\settings.v4p" systemname="settings" filename="C:\Users\Michael\Desktop\nodecloth\String Physics\subpatches\settings.v4p" scrollx="2055" scrolly="525">
+   <PATCH nodename="C:\Users\Admin\Desktop\Coth\subpatches\settings.v4p" systemname="settings" filename="C:\Users\Michael\Desktop\nodecloth\String Physics\subpatches\settings.v4p" scrollx="4020" scrolly="255">
    <BOUNDS type="Window" left="9030" top="6405" width="13800" height="7200">
    </BOUNDS>
    <PACK Name="image" Version="0.2.0">
@@ -11,7 +11,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="4755" top="1995" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="3" visible="1" values="0.7,0.4,0.05">
+   <PIN pinname="Y Input Value" slicecount="3" visible="1" values="0.7,0.4,0.01">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -341,7 +341,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="12945" top="2430" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.5">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -438,4 +438,30 @@
    </LINK>
    <LINK srcnodeid="3" srcpinname="Y Output Value" dstnodeid="1" dstpinname="Input 2">
    </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="31" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="5385" top="615" width="585" height="960">
+   </BOUNDS>
+   <BOUNDS type="Node" left="5385" top="615" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="3" visible="1" values="0.7,0.4,0.05">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Real">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Vector Size" slicecount="1" values="2">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="|0, 0|">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   <PIN pinname="SliceCount Mode" slicecount="1" values="ColsRowsPages">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="||">
+   </PIN>
+   </NODE>
    </PATCH>
