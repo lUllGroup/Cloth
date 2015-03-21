@@ -134,6 +134,7 @@ float4 PS(vs2ps In, bool front : SV_IsFrontFace): SV_Target
 		//col += In.Pos.z*10;
 		
 	} else {
+		In.TexCd = tTex1;
 		col = tfront.Sample(g_samLinear, In.TexCd.xy);
 		col.rgb *= PhongDirectional(In.NormV, In.ViewDirV, In.LightDirV);	
 		col.a *= Alpha;

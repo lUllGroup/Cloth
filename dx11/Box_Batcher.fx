@@ -30,7 +30,7 @@ psIn VS(vsIn input)
 	
 	//Move Box
 	
-	if(length(center) > 10){
+	if(length(center) > 4){
 		center += input.pos.xyz;
 	}
 
