@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="C:\Users\Admin\Desktop\Coth\subpatches\wind.v4p" systemname="wind" filename="C:\Users\Michael\Desktop\nodecloth\String Physics\subpatches\wind.v4p" scrollx="1635" scrolly="1845">
+   <PATCH nodename="C:\Users\Admin\Desktop\Coth\subpatches\wind.v4p" systemname="wind" filename="C:\Users\Michael\Desktop\nodecloth\String Physics\subpatches\wind.v4p" scrollx="1530" scrolly="1350">
    <BOUNDS type="Window" left="11895" top="7455" width="6840" height="7140">
    </BOUNDS>
    <PACK Name="image" Version="0.2.0">
@@ -166,9 +166,17 @@
    </NODE>
    <LINK srcnodeid="10" srcpinname="Y Output Value" dstnodeid="8" dstpinname="Input 2">
    </LINK>
-   <LINK srcnodeid="6" srcpinname="Output" dstnodeid="1" dstpinname="X">
+   <LINK srcnodeid="6" srcpinname="Output" dstnodeid="1" dstpinname="X" linkstyle="Bezier">
+   <LINKPOINT x="3765" y="4080">
+   </LINKPOINT>
+   <LINKPOINT x="2685" y="4080">
+   </LINKPOINT>
    </LINK>
-   <LINK srcnodeid="3" srcpinname="Output" dstnodeid="1" dstpinname="Z">
+   <LINK srcnodeid="3" srcpinname="Output" dstnodeid="1" dstpinname="Z" linkstyle="Bezier">
+   <LINKPOINT x="2685" y="4065">
+   </LINKPOINT>
+   <LINKPOINT x="3765" y="4065">
+   </LINKPOINT>
    </LINK>
    <NODE systemname="Switch (Value Input)" nodename="Switch (Value Input)" componentmode="Hidden" id="11">
    <BOUNDS type="Node" left="2400" top="7065" width="2265" height="270">
@@ -193,7 +201,7 @@
    </PIN>
    </NODE>
    <NODE nodename="R (Value)" id="13" systemname="R (Value)">
-   <BOUNDS type="Node" left="2415" top="5760" width="0" height="0">
+   <BOUNDS type="Node" left="2415" top="5490" width="0" height="0">
    </BOUNDS>
    <PIN pinname="" visible="1">
    </PIN>
@@ -250,11 +258,19 @@
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="13" srcpinname="Input Value" dstnodeid="16" dstpinname="Input 1">
+   <LINK srcnodeid="13" srcpinname="Input Value" dstnodeid="16" dstpinname="Input 1" linkstyle="Bezier">
+   <LINKPOINT x="2475" y="5865">
+   </LINKPOINT>
+   <LINKPOINT x="3480" y="5865">
+   </LINKPOINT>
    </LINK>
    <LINK srcnodeid="16" srcpinname="Output" dstnodeid="15" dstpinname="Switch">
    </LINK>
-   <LINK srcnodeid="8" srcpinname="Output" dstnodeid="15" dstpinname="Input 2">
+   <LINK srcnodeid="8" srcpinname="Output" dstnodeid="15" dstpinname="Input 2" linkstyle="Bezier">
+   <LINKPOINT x="2700" y="5865">
+   </LINKPOINT>
+   <LINKPOINT x="3990" y="5865">
+   </LINKPOINT>
    </LINK>
    <LINK srcnodeid="15" srcpinname="Output" dstnodeid="11" dstpinname="Input 1">
    </LINK>
@@ -280,6 +296,10 @@
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="17" srcpinname="Y Output Value" dstnodeid="15" dstpinname="Input 1">
+   <LINK srcnodeid="17" srcpinname="Y Output Value" dstnodeid="15" dstpinname="Input 1" linkstyle="Bezier">
+   <LINKPOINT x="5265" y="5723">
+   </LINKPOINT>
+   <LINKPOINT x="3810" y="5723">
+   </LINKPOINT>
    </LINK>
    </PATCH>

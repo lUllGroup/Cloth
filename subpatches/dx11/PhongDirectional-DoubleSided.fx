@@ -29,6 +29,7 @@ Texture2D tback <string uiname="TextureBack";>;
 Texture2D tZ <string uiname="TextureZ";>;
 
 float4x4 tTex <bool uvspace=true; string uiname="Texture Transform";>;
+float4x4 tTex2 <bool uvspace=true; string uiname="Texture Transform Z";>;
 float4x4 tColor <string uiname="Color Transform";>;
 
 float zPower;
@@ -78,7 +79,8 @@ vs2ps VS(
 	
 	Out.Pos = PosO;
 	
-    Out.TexCd = mul(TexCd, tTex);
+   // Out.TexCd = mul(TexCd, tTex);
+	Out.TexCd = TexCd;
     Out.ViewDirV = -normalize(mul(PosO, tWV));
 	
 	//Out.vId = 1;
@@ -99,7 +101,10 @@ float Alpha <float uimin=0.0; float uimax=1.0;> = 1;
 float4 PS(vs2ps In, bool front : SV_IsFrontFace): SV_Target
 {
   
-	 float4 col;
+	float4 tTexZ =  mul(In.TexCd, tTex2);
+	float4 tTex1 = mul(In.TexCd, tTex);
+	//In.TexCd = mul(In.TexCd, tTex);
+	float4 col;
 	
 	if(zTex == 1){
 		
@@ -107,18 +112,27 @@ float4 PS(vs2ps In, bool front : SV_IsFrontFace): SV_Target
 	//	float4 c0=tfront.Sample(g_samLinear,In.TexCd.xy);
 	//	float4 c1=tZ.Sample(g_samLinear,In.TexCd.xy)*float4(1,1,1,saturate(-In.Pos.z*zPower));
 	//  float4 col=bld(max(c0,c1),c0,c1);
-	
+		
+		
 		float4 c0=tfront.Sample(g_samLinear,In.TexCd.xy);
-		float4 c1=tZ.Sample(g_samLinear,In.TexCd.xy)*float4(1,1,1,saturate(-In.Pos.z*zPower));
-	    col=bld(lerp(c0,c1,saturate(-In.Pos.z*zPower)),c1,c0);
+		
+		In.TexCd = tTexZ;
+		
+		float4 c1=tZ.Sample(g_samLinear,In.TexCd.xy)*float4(1,1,1,saturate((-In.Pos.z-.005)*zPower));
+		
+		In.TexCd = tTex1;
+		//col = c0;
+		//if(-In.Pos.z*zPower > 1){
+			col=bld(lerp(c0,c1,saturate((-In.Pos.z-.005)*zPower)),c1,c0);
+		//}	    
 		
 		
-	    col.rgb *= PhongDirectional(In.NormV, In.ViewDirV, In.LightDirV);
+	   	col.rgb *= PhongDirectional(In.NormV, In.ViewDirV, In.LightDirV);
 		
 		col.a *= Alpha;
 		
-		col += In.Pos.z*1;
-	
+		//col += In.Pos.z*10;
+		
 	} else {
 		col = tfront.Sample(g_samLinear, In.TexCd.xy);
 		col.rgb *= PhongDirectional(In.NormV, In.ViewDirV, In.LightDirV);	

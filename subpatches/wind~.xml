@@ -25,7 +25,7 @@
    </BOUNDS>
    <PIN pinname="X" visible="1" slicecount="1" values="-0.34">
    </PIN>
-   <PIN pinname="Y" slicecount="1" visible="1" values="-0.03">
+   <PIN pinname="Y" slicecount="1" visible="1" values="-0.05">
    </PIN>
    <PIN pinname="XYZ" visible="1">
    </PIN>
@@ -193,7 +193,7 @@
    </PIN>
    </NODE>
    <NODE nodename="R (Value)" id="13" systemname="R (Value)">
-   <BOUNDS type="Node" left="2415" top="5760" width="0" height="0">
+   <BOUNDS type="Node" left="2415" top="5490" width="0" height="0">
    </BOUNDS>
    <PIN pinname="" visible="1">
    </PIN>
@@ -250,11 +250,19 @@
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="13" srcpinname="Input Value" dstnodeid="16" dstpinname="Input 1">
+   <LINK srcnodeid="13" srcpinname="Input Value" dstnodeid="16" dstpinname="Input 1" linkstyle="Bezier">
+   <LINKPOINT x="2475" y="5865">
+   </LINKPOINT>
+   <LINKPOINT x="3480" y="5865">
+   </LINKPOINT>
    </LINK>
    <LINK srcnodeid="16" srcpinname="Output" dstnodeid="15" dstpinname="Switch">
    </LINK>
-   <LINK srcnodeid="8" srcpinname="Output" dstnodeid="15" dstpinname="Input 2">
+   <LINK srcnodeid="8" srcpinname="Output" dstnodeid="15" dstpinname="Input 2" linkstyle="Bezier">
+   <LINKPOINT x="2700" y="5865">
+   </LINKPOINT>
+   <LINKPOINT x="3990" y="5865">
+   </LINKPOINT>
    </LINK>
    <LINK srcnodeid="15" srcpinname="Output" dstnodeid="11" dstpinname="Input 1">
    </LINK>
@@ -280,6 +288,10 @@
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="17" srcpinname="Y Output Value" dstnodeid="15" dstpinname="Input 1">
+   <LINK srcnodeid="17" srcpinname="Y Output Value" dstnodeid="15" dstpinname="Input 1" linkstyle="Bezier">
+   <LINKPOINT x="5265" y="5723">
+   </LINKPOINT>
+   <LINKPOINT x="3810" y="5723">
+   </LINKPOINT>
    </LINK>
    </PATCH>

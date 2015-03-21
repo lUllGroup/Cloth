@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="C:\Users\Admin\Desktop\Coth\subpatches\Kinect.v4p" systemname="Kinect" filename="C:\Users\Admin\Desktop\Coth\subpatches\Kinect.v4p" scrollx="165" scrolly="2280">
+   <PATCH nodename="C:\Users\Admin\Desktop\Coth\subpatches\Kinect.v4p" systemname="Kinect" filename="C:\Users\Admin\Desktop\Coth\subpatches\Kinect.v4p" scrollx="0" scrolly="0">
    <NODE systemname="Depth (Kinect Microsoft)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.MSKinect.dll" nodename="Depth (Kinect Microsoft)" componentmode="Hidden" id="0">
    <BOUNDS type="Node" left="4905" top="2400" width="100" height="100">
    </BOUNDS>
@@ -134,8 +134,6 @@
    </NODE>
    <LINK srcnodeid="1" srcpinname="Geometry Out" dstnodeid="4" dstpinname="Geometry">
    </LINK>
-   <LINK srcnodeid="2" srcpinname="Buffer Out" dstnodeid="4" dstpinname="sobuffer">
-   </LINK>
    <NODE id="9" systemname="IOBox (Node)" componentmode="InABox" nodename="IOBox (Node)">
    <PIN pinname="Descriptive Name" slicecount="1" values="Layer">
    </PIN>
@@ -171,8 +169,6 @@
    <LINK srcnodeid="11" srcpinname="Y Output Value" dstnodeid="2" dstpinname="Resolution">
    </LINK>
    <LINK srcnodeid="5" srcpinname="Output" dstnodeid="2" dstpinname="Depth FOVXY">
-   </LINK>
-   <LINK srcnodeid="0" srcpinname="Texture" dstnodeid="2" dstpinname="Depth">
    </LINK>
    <NODE id="12" systemname="IOBox (Value Advanced)" componentmode="InABox" nodename="IOBox (Value Advanced)">
    <PIN pinname="Descriptive Name" slicecount="1" values="|Motor Angle|">
@@ -263,5 +259,9 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="16" srcpinname="Y Output Value" dstnodeid="4" dstpinname="Enabled">
+   </LINK>
+   <LINK srcnodeid="2" srcpinname="Buffer Out" dstnodeid="4" dstpinname="sobuffer">
+   </LINK>
+   <LINK srcnodeid="0" srcpinname="Texture" dstnodeid="2" dstpinname="Depth">
    </LINK>
    </PATCH>

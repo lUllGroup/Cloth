@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="C:\Users\Admin\Desktop\Coth\subpatches\KinectDepth.v4p" scrollx="0" scrolly="10410" systemname="KinectDepth" filename="C:\Users\Admin\Desktop\KinectDepth.v4p">
-   <BOUNDS type="Window" left="9495" top="2520" width="12900" height="11760">
+   <PATCH nodename="C:\Users\Admin\Desktop\Coth\subpatches\KinectDepth.v4p" scrollx="0" scrolly="10815" systemname="KinectDepth" filename="C:\Users\Admin\Desktop\KinectDepth.v4p">
+   <BOUNDS type="Window" left="15540" top="1695" width="13260" height="12360">
    </BOUNDS>
    <PACK Name="addonpack" Version="33.7.0">
    </PACK>
@@ -189,7 +189,7 @@
    <NODE systemname="Invert (DX11.TextureFX)" filename="%VVVV%\packs\dx11\nodes\texture11\Filter\Invert.tfx" nodename="Invert (DX11.TextureFX)" componentmode="Hidden" id="176">
    <BOUNDS type="Node" left="4170" top="19785" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Texture In" visible="1">
+   <PIN pinname="Texture In" visible="1" slicecount="1" values="||">
    </PIN>
    <PIN pinname="Texture Out" visible="1">
    </PIN>
@@ -198,8 +198,6 @@
    <PIN pinname="Enabled" slicecount="1" values="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="152" srcpinname="Texture Out" dstnodeid="176" dstpinname="Texture In">
-   </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="182" systemname="IOBox (Value Advanced)">
    <BOUNDS type="Box" left="3390" top="14730" width="795" height="480">
    </BOUNDS>
@@ -288,12 +286,12 @@
    <LINKPOINT x="9495" y="16838">
    </LINKPOINT>
    </LINK>
-   <NODE systemname="Preview (DX11.Texture)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Preview (DX11.Texture)" componentmode="Hidden" id="204" stayontop="1">
-   <BOUNDS type="Node" left="9285" top="20400" width="100" height="100">
+   <NODE systemname="Preview (DX11.Texture)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Preview (DX11.Texture)" componentmode="InAWindow" id="204" stayontop="1">
+   <BOUNDS type="Node" left="9270" top="21330" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="9285" top="20400" width="6000" height="4500">
+   <BOUNDS type="Box" left="9270" top="21330" width="6000" height="4500">
    </BOUNDS>
-   <BOUNDS type="Window" left="2865" top="5190" width="14880" height="9120">
+   <BOUNDS type="Window" left="2190" top="1965" width="13500" height="11040">
    </BOUNDS>
    <PIN pinname="Texture In" visible="1" slicecount="1" values="||">
    </PIN>
@@ -363,7 +361,7 @@
    </BOUNDS>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
-   <PIN pinname="Y Input Value" slicecount="1" values="0.06">
+   <PIN pinname="Y Input Value" slicecount="1" values="0.07">
    </PIN>
    </NODE>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="231" systemname="IOBox (Value Advanced)">
@@ -440,10 +438,8 @@
    </LINK>
    <LINK srcnodeid="176" srcpinname="Texture Out" dstnodeid="153" dstpinname="Texture In">
    </LINK>
-   <LINK srcnodeid="203" srcpinname="Texture Out" dstnodeid="204" dstpinname="Texture In">
-   </LINK>
    <NODE systemname="HSCB (DX11.TextureFX)" filename="%VVVV%\packs\dx11\nodes\texture11\Filter\HSCB.tfx" nodename="HSCB (DX11.TextureFX)" componentmode="Hidden" id="313">
-   <BOUNDS type="Node" left="4155" top="20565" width="100" height="100">
+   <BOUNDS type="Node" left="4155" top="20640" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Texture In" visible="1">
    </PIN>
@@ -456,16 +452,6 @@
    </NODE>
    <LINK srcnodeid="176" srcpinname="Texture Out" dstnodeid="313" dstpinname="Texture In">
    </LINK>
-   <LINK srcnodeid="313" srcpinname="Texture Out" dstnodeid="173" dstpinname="Input Node">
-   </LINK>
-   <NODE id="314" componentmode="Hidden" systemname="SuppressDepthNoise (DX11.Texture)" filename="%VVVV%\packs\KinectDX11Bundle\nodes\modules\Filtering\SuppressDepthNoise (DX11.Texture).v4p" nodename="SuppressDepthNoise (DX11.Texture)" hiddenwhenlocked="0" managers="">
-   <BOUNDS type="Node" left="9915" top="2250" width="100" height="100">
-   </BOUNDS>
-   <BOUNDS type="Box" left="7095" top="870" width="4800" height="3600">
-   </BOUNDS>
-   <BOUNDS type="Window" left="3525" top="3570" width="10845" height="11115">
-   </BOUNDS>
-   </NODE>
    <NODE systemname="Kinect" filename="Kinect.v4p" nodename="Kinect.v4p" componentmode="Hidden" id="333">
    <BOUNDS type="Node" left="3165" top="9360" width="0" height="0">
    </BOUNDS>
@@ -478,6 +464,8 @@
    <PIN pinname="Enable Pointcloud" visible="1">
    </PIN>
    <PIN pinname="Enabled" visible="1">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="189" srcpinname="Y Output Value" dstnodeid="333" dstpinname="Motor Angle" linkstyle="Bezier">
@@ -659,7 +647,7 @@
    </BOUNDS>
    <PIN pinname="Transform Out" visible="1">
    </PIN>
-   <PIN pinname="TranslateX" slicecount="1" values="0">
+   <PIN pinname="TranslateX" slicecount="1" values="-0.49">
    </PIN>
    <PIN pinname="TranslateY" slicecount="1" values="0">
    </PIN>
@@ -679,11 +667,13 @@
    </BOUNDS>
    <PIN pinname="Transform Out" visible="1">
    </PIN>
-   <PIN pinname="TranslateX" slicecount="1" values="-0.31">
+   <PIN pinname="TranslateX" slicecount="1" values="0.29">
    </PIN>
-   <PIN pinname="TranslateY" slicecount="1" values="0.02">
+   <PIN pinname="TranslateY" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Transform In" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="TranslateZ" slicecount="1" values="0">
    </PIN>
    </NODE>
    <LINK srcnodeid="174" srcpinname="Transform Out" dstnodeid="339" dstpinname="Transform In" linkstyle="Bezier">
@@ -777,5 +767,11 @@
    <LINK srcnodeid="342" srcpinname="Y Output Value" dstnodeid="334" dstpinname="Enabled">
    </LINK>
    <LINK srcnodeid="342" srcpinname="Y Output Value" dstnodeid="333" dstpinname="Enabled">
+   </LINK>
+   <LINK srcnodeid="152" srcpinname="Texture Out" dstnodeid="176" dstpinname="Texture In">
+   </LINK>
+   <LINK srcnodeid="313" srcpinname="Texture Out" dstnodeid="173" dstpinname="Input Node">
+   </LINK>
+   <LINK srcnodeid="203" srcpinname="Texture Out" dstnodeid="204" dstpinname="Texture In">
    </LINK>
    </PATCH>

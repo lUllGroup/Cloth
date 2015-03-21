@@ -29,11 +29,16 @@ psIn VS(vsIn input)
 	float3 center = float3(x,y,z);
 	
 	//Move Box
+	
+	if(length(center) > 10){
+		center += input.pos.xyz;
+	}
 
 	
-	center += input.pos.xyz;
+
 	
     output.pos  = mul(float4(center,1.0f),tVP);
+
 	output.nv = mul(float4(input.norm,0.0f),tV).xyz;
     return output;
 }

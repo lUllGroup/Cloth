@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="C:\Users\Admin\Desktop\Coth\subpatches\wavingFlag2.v4p" systemname="wavingFlag2" filename="C:\Users\Michael\Desktop\nodecloth\String Physics\subpatches\wavingFlag2.v4p" scrollx="0" scrolly="4560">
-   <BOUNDS type="Window" left="6930" top="7140" width="16005" height="8400">
+   <PATCH nodename="C:\Users\Admin\Desktop\Coth\subpatches\wavingFlag2.v4p" systemname="wavingFlag2" filename="C:\Users\Michael\Desktop\nodecloth\String Physics\subpatches\wavingFlag2.v4p" scrollx="2880" scrolly="105">
+   <BOUNDS type="Window" left="10350" top="1755" width="17685" height="12465">
    </BOUNDS>
    <PACK Name="image" Version="0.2.0">
    </PACK>
@@ -541,7 +541,7 @@
    </LINKPOINT>
    </LINK>
    <NODE systemname="Random (Value)" nodename="Random (Value)" componentmode="Hidden" id="245">
-   <BOUNDS type="Node" left="9480" top="3330" width="100" height="100">
+   <BOUNDS type="Node" left="9480" top="2430" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Enabled" visible="1">
    </PIN>
@@ -551,7 +551,7 @@
    </PIN>
    </NODE>
    <NODE systemname="Damper (Animation)" nodename="Damper (Animation)" componentmode="Hidden" id="246">
-   <BOUNDS type="Node" left="9480" top="4005" width="100" height="100">
+   <BOUNDS type="Node" left="9480" top="3105" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Go To Position" visible="1">
    </PIN>
@@ -610,9 +610,17 @@
    </LINK>
    <LINK srcnodeid="251" srcpinname="Output" dstnodeid="222" dstpinname="Input 1">
    </LINK>
-   <LINK srcnodeid="95" srcpinname="Y Output Value" dstnodeid="251" dstpinname="Index">
+   <LINK srcnodeid="95" srcpinname="Y Output Value" dstnodeid="251" dstpinname="Index" linkstyle="Bezier">
+   <LINKPOINT x="5505" y="5453">
+   </LINKPOINT>
+   <LINKPOINT x="9240" y="5453">
+   </LINKPOINT>
    </LINK>
-   <LINK srcnodeid="95" srcpinname="Y Output Value" dstnodeid="250" dstpinname="Index">
+   <LINK srcnodeid="95" srcpinname="Y Output Value" dstnodeid="250" dstpinname="Index" linkstyle="Bezier">
+   <LINKPOINT x="5505" y="5468">
+   </LINKPOINT>
+   <LINKPOINT x="10230" y="5468">
+   </LINKPOINT>
    </LINK>
    <NODE systemname="LinearSpread (Spreads)" nodename="LinearSpread (Spreads)" componentmode="Hidden" id="252">
    <BOUNDS type="Node" left="5400" top="1230" width="100" height="100">
@@ -739,9 +747,9 @@
    <LINK srcnodeid="264" srcpinname="Output 2" dstnodeid="12" dstpinname=".. To [">
    </LINK>
    <LINK srcnodeid="242" srcpinname="Output" dstnodeid="245" dstpinname="Enabled" linkstyle="Bezier">
-   <LINKPOINT x="7275" y="5205">
+   <LINKPOINT x="7275" y="4905">
    </LINKPOINT>
-   <LINKPOINT x="9480" y="5205">
+   <LINKPOINT x="9480" y="4605">
    </LINKPOINT>
    </LINK>
    <NODE systemname="LT (Value)" nodename="LT (Value)" componentmode="Hidden" id="267">
@@ -982,6 +990,8 @@
    <PIN pinname="Set" visible="1">
    </PIN>
    <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Reset" visible="1">
    </PIN>
    </NODE>
    <NODE systemname="Bounds (Spectral)" nodename="Bounds (Spectral)" componentmode="Hidden" id="350">
@@ -1355,5 +1365,33 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="349" srcpinname="Output" dstnodeid="382" dstpinname="Y Input Value">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="384" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="13950" top="1575" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="13950" top="1575" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Bang">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Reset">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="384" srcpinname="Y Output Value" dstnodeid="210" dstpinname="Reset">
+   </LINK>
+   <LINK srcnodeid="384" srcpinname="Y Output Value" dstnodeid="349" dstpinname="Reset">
+   </LINK>
+   <LINK srcnodeid="384" srcpinname="Y Output Value" dstnodeid="209" dstpinname="Reset">
    </LINK>
    </PATCH>

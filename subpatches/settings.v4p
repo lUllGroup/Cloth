@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="C:\Users\Admin\Desktop\Coth\subpatches\settings.v4p" systemname="settings" filename="C:\Users\Michael\Desktop\nodecloth\String Physics\subpatches\settings.v4p" scrollx="3225" scrolly="0">
+   <PATCH nodename="C:\Users\Admin\Desktop\Coth\subpatches\settings.v4p" systemname="settings" filename="C:\Users\Michael\Desktop\nodecloth\String Physics\subpatches\settings.v4p" scrollx="2055" scrolly="525">
    <BOUNDS type="Window" left="9030" top="6405" width="13800" height="7200">
    </BOUNDS>
    <PACK Name="image" Version="0.2.0">
@@ -7,11 +7,11 @@
    <PACK Name="addonpack" Version="33.7.0">
    </PACK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="0" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="4755" top="1995" width="600" height="960">
+   <BOUNDS type="Box" left="4755" top="1995" width="585" height="960">
    </BOUNDS>
    <BOUNDS type="Node" left="4755" top="1995" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="3" visible="1" values="1,0.03,0.001">
+   <PIN pinname="Y Input Value" slicecount="3" visible="1" values="0.7,0.4,0.05">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>

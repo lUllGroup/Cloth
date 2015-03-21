@@ -261,7 +261,7 @@ void CSConstantForce( uint3 DTid : SV_DispatchThreadID)
 			
 		uint numObjects, dummy;
     	attractor.GetDimensions(numObjects, dummy); 
-		
+		float3 attractorRepell = 0;
 		for(int d = 0; d < numObjects; d++){
 			
 			
@@ -277,7 +277,8 @@ void CSConstantForce( uint3 DTid : SV_DispatchThreadID)
 			//if(applyAttractor){
 			if(myDistance <= attractorSize[d]  && applyAttractor){
 				float strength = .5 / myDistance * myDistance;
-				Output[iterator].pos += force * -.001 * attractorStrength[d] * strength;
+				//Output[iterator].pos += force * -.001 * attractorStrength[d] * strength;
+				attractorRepell += force * -.001 * attractorStrength[d] * strength;
 			} 
 		} 
 		
@@ -308,11 +309,13 @@ void CSConstantForce( uint3 DTid : SV_DispatchThreadID)
 		float3 force2 = Output[iterator].pos - newTarget;
 		
 		force2 = saturate(force2);
-	
+		float3 texRepell;
 		//if(depth < depthThreshold[0] && force2.z > 0) {
 		if(depth < depthThreshold[0] && length(force2) != 0) {
 			//if(Output[iterator].pos.z > positionThreshold[0] && Output[iterator].pos.z < positionThreshold[1]) {
-				Output[iterator].pos += force2 * -.0005 * texRepellForce;
+				texRepell =  force2 * -.0005 * texRepellForce;
+				//Output[iterator].pos += force2 * -.0005 * texRepellForce;
+			
 			//}
 			
 		}
@@ -336,9 +339,31 @@ void CSConstantForce( uint3 DTid : SV_DispatchThreadID)
 			int divide = iterator/(width) + 1;
 		
 			float3 temp = Output[iterator].pos;
-			float3 movement = (Output[iterator].pos - Output[iterator].oldPos);						
+			float3 movement = (Output[iterator].pos - Output[iterator].oldPos);	
+			
+//			float clamper = .01;
+//			
+//			if(movement.x > clamper){
+//				movement.x = clamper;
+//			}
+//			if(movement.x < -clamper){
+//				movement.x = -clamper;
+//			}
+//			if(movement.y > clamper){
+//				movement.y = clamper;
+//			}
+//			if(movement.y < -clamper){
+//				movement.y = -clamper;
+//			}
+//				if(movement.z > clamper){
+//				movement.z = clamper;
+//			}
+//			if(movement.z < -clamper){
+//				movement.z = -clamper;
+//			}
+			
 			float3 tempOut = Output[iterator].pos +
-			movement * bounce + (gravity * movementFactor[iterator]) * 0.001;
+			movement * bounce + (gravity * movementFactor[iterator]) * 0.001 + texRepell + attractorRepell;
 			
 			Output[iterator].oldPos = temp;
 			Output[iterator].pos = tempOut;
