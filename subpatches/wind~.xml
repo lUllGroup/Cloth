@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="C:\Users\Admin\Desktop\Coth\subpatches\wind.v4p" systemname="wind" filename="C:\Users\Michael\Desktop\nodecloth\String Physics\subpatches\wind.v4p" scrollx="1635" scrolly="1845">
+   <PATCH nodename="C:\Users\Admin\Desktop\Coth\subpatches\wind.v4p" systemname="wind" filename="C:\Users\Michael\Desktop\nodecloth\String Physics\subpatches\wind.v4p" scrollx="1530" scrolly="1350">
    <BOUNDS type="Window" left="11895" top="7455" width="6840" height="7140">
    </BOUNDS>
    <PACK Name="image" Version="0.2.0">
@@ -166,9 +166,17 @@
    </NODE>
    <LINK srcnodeid="10" srcpinname="Y Output Value" dstnodeid="8" dstpinname="Input 2">
    </LINK>
-   <LINK srcnodeid="6" srcpinname="Output" dstnodeid="1" dstpinname="X">
+   <LINK srcnodeid="6" srcpinname="Output" dstnodeid="1" dstpinname="X" linkstyle="Bezier">
+   <LINKPOINT x="3765" y="4080">
+   </LINKPOINT>
+   <LINKPOINT x="2685" y="4080">
+   </LINKPOINT>
    </LINK>
-   <LINK srcnodeid="3" srcpinname="Output" dstnodeid="1" dstpinname="Z">
+   <LINK srcnodeid="3" srcpinname="Output" dstnodeid="1" dstpinname="Z" linkstyle="Bezier">
+   <LINKPOINT x="2685" y="4065">
+   </LINKPOINT>
+   <LINKPOINT x="3765" y="4065">
+   </LINKPOINT>
    </LINK>
    <NODE systemname="Switch (Value Input)" nodename="Switch (Value Input)" componentmode="Hidden" id="11">
    <BOUNDS type="Node" left="2400" top="7065" width="2265" height="270">
@@ -211,7 +219,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="4590" top="6225" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="3" visible="1" values="0,-0.02,0">
+   <PIN pinname="Y Input Value" slicecount="3" visible="1" values="0,-0.01,-0.001">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>

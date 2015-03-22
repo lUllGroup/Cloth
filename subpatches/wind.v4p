@@ -25,7 +25,7 @@
    </BOUNDS>
    <PIN pinname="X" visible="1" slicecount="1" values="-0.34">
    </PIN>
-   <PIN pinname="Y" slicecount="1" visible="1" values="-0.05">
+   <PIN pinname="Y" slicecount="1" visible="1" values="-0.1">
    </PIN>
    <PIN pinname="XYZ" visible="1">
    </PIN>
@@ -219,7 +219,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="4590" top="6225" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="3" visible="1" values="0,-0.02,0">
+   <PIN pinname="Y Input Value" slicecount="3" visible="1" values="0,-0.01,-0.001">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>

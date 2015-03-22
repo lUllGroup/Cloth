@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="C:\Users\Admin\Desktop\Coth\subpatches\Kinect.v4p" systemname="Kinect" filename="C:\Users\Admin\Desktop\Coth\subpatches\Kinect.v4p" scrollx="0" scrolly="0">
+   <PATCH nodename="C:\Users\Admin\Desktop\Coth\subpatches\Kinect.v4p" systemname="Kinect" filename="C:\Users\Admin\Desktop\Coth\subpatches\Kinect.v4p" scrollx="360" scrolly="0">
    <NODE systemname="Depth (Kinect Microsoft)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.MSKinect.dll" nodename="Depth (Kinect Microsoft)" componentmode="Hidden" id="0">
    <BOUNDS type="Node" left="4905" top="2400" width="100" height="100">
    </BOUNDS>
@@ -105,7 +105,7 @@
    <NODE systemname="Kinect (Devices Microsoft)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.MSKinect.dll" nodename="Kinect (Devices Microsoft)" componentmode="Hidden" id="7">
    <BOUNDS type="Node" left="4890" top="1500" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Enabled" slicecount="1" values="1">
+   <PIN pinname="Enabled" slicecount="1" values="1" visible="1">
    </PIN>
    <PIN pinname="Enable Color" slicecount="1" values="0">
    </PIN>
@@ -263,5 +263,25 @@
    <LINK srcnodeid="2" srcpinname="Buffer Out" dstnodeid="4" dstpinname="sobuffer">
    </LINK>
    <LINK srcnodeid="0" srcpinname="Texture" dstnodeid="2" dstpinname="Depth">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="17" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="7635" top="825" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="7635" top="825" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Enabled">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="17" srcpinname="Y Output Value" dstnodeid="7" dstpinname="Enabled">
    </LINK>
    </PATCH>

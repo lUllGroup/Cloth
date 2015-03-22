@@ -118,12 +118,12 @@ float4 PS(vs2ps In, bool front : SV_IsFrontFace): SV_Target
 		
 		In.TexCd = tTexZ;
 		
-		float4 c1=tZ.Sample(g_samLinear,In.TexCd.xy)*float4(1,1,1,saturate((-In.Pos.z-.005)*zPower));
+		float4 c1=tZ.Sample(g_samLinear,In.TexCd.xy)*float4(1,1,1,saturate((-In.Pos.z-.05)*zPower));
 		
 		In.TexCd = tTex1;
 		//col = c0;
 		//if(-In.Pos.z*zPower > 1){
-			col=bld(lerp(c0,c1,saturate((-In.Pos.z-.005)*zPower)),c1,c0);
+			col=bld(lerp(c0,c1,saturate((-In.Pos.z-.05)*zPower)),c1,c0);
 		//}	    
 		
 		
