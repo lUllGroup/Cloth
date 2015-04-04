@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="C:\Users\Admin\Desktop\Coth\subpatches\wind.v4p" systemname="wind" filename="C:\Users\Michael\Desktop\nodecloth\String Physics\subpatches\wind.v4p" scrollx="1680" scrolly="1035">
+   <PATCH nodename="C:\Users\Admin\Desktop\Coth\subpatches\wind.v4p" systemname="wind" filename="C:\Users\Michael\Desktop\nodecloth\String Physics\subpatches\wind.v4p" scrollx="1860" scrolly="1695">
    <BOUNDS type="Window" left="11895" top="7455" width="6840" height="7140">
    </BOUNDS>
    <PACK Name="image" Version="0.2.0">

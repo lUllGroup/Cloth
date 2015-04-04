@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="C:\Users\Admin\Desktop\Coth\subpatches\KinectDepth.v4p" scrollx="0" scrolly="945" systemname="KinectDepth" filename="C:\Users\Admin\Desktop\KinectDepth.v4p">
-   <BOUNDS type="Window" left="14670" top="3915" width="13260" height="10320">
+   <PATCH nodename="C:\Users\Admin\Desktop\Coth\subpatches\KinectDepth.v4p" scrollx="6285" scrolly="8565" systemname="KinectDepth" filename="C:\Users\Admin\Desktop\KinectDepth.v4p">
+   <BOUNDS type="Window" left="11490" top="3255" width="13260" height="10320">
    </BOUNDS>
    <PACK Name="addonpack" Version="33.7.0">
    </PACK>
@@ -130,6 +130,12 @@
    <PIN pinname="Enable Depth Buffer" slicecount="1" values="1">
    </PIN>
    <PIN pinname="Buffers" visible="1">
+   </PIN>
+   <PIN pinname="Generate Mip Maps" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Mip Map Levels" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Clear Depth" slicecount="1" values="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="171" srcpinname="Depth Buffer" dstnodeid="152" dstpinname="Texture In">
@@ -303,9 +309,9 @@
    </PIN>
    </NODE>
    <NODE systemname="Renderer (DX11 TempTarget)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Renderer (DX11 TempTarget)" componentmode="Hidden" id="206">
-   <BOUNDS type="Node" left="7605" top="15660" width="100" height="100">
+   <BOUNDS type="Node" left="7125" top="15660" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="7605" top="15660" width="6000" height="4500">
+   <BOUNDS type="Box" left="7125" top="15660" width="6000" height="4500">
    </BOUNDS>
    <BOUNDS type="Window" left="14400" top="0" width="14400" height="15600">
    </BOUNDS>
@@ -400,18 +406,6 @@
    <PIN pinname="X Input Value" slicecount="1" values="0">
    </PIN>
    </NODE>
-   <LINK srcnodeid="157" srcpinname="Transform Out" dstnodeid="206" dstpinname="Projection" linkstyle="Bezier">
-   <LINKPOINT x="5115" y="14955">
-   </LINKPOINT>
-   <LINKPOINT x="9780" y="14955">
-   </LINKPOINT>
-   </LINK>
-   <LINK srcnodeid="156" srcpinname="Transform Out" dstnodeid="206" dstpinname="View" linkstyle="Bezier">
-   <LINKPOINT x="4125" y="14948">
-   </LINKPOINT>
-   <LINKPOINT x="9630" y="14948">
-   </LINKPOINT>
-   </LINK>
    <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="233">
    <BOUNDS type="Node" left="9690" top="18435" width="100" height="100">
    </BOUNDS>
@@ -546,8 +540,6 @@
    </NODE>
    <LINK srcnodeid="152" srcpinname="Texture Out" dstnodeid="176" dstpinname="Texture In">
    </LINK>
-   <LINK srcnodeid="203" srcpinname="Texture Out" dstnodeid="204" dstpinname="Texture In">
-   </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="344" systemname="IOBox (Value Advanced)">
    <BOUNDS type="Box" left="6030" top="18900" width="870" height="240">
    </BOUNDS>
@@ -645,7 +637,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="4485" top="10230" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -655,7 +647,7 @@
    </PIN>
    <PIN pinname="Behavior" slicecount="1" values="Toggle">
    </PIN>
-   <PIN pinname="X Input Value" slicecount="1" values="1">
+   <PIN pinname="X Input Value" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="Enabled">
    </PIN>
@@ -665,7 +657,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="6810" top="10320" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -677,7 +669,7 @@
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="Enabled">
    </PIN>
-   <PIN pinname="X Input Value" slicecount="1" values="1">
+   <PIN pinname="X Input Value" slicecount="1" values="0">
    </PIN>
    </NODE>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="359" systemname="IOBox (Value Advanced)">
@@ -703,7 +695,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="3165" top="9360" width="9330" height="9750">
    </BOUNDS>
-   <BOUNDS type="Window" left="15240" top="4260" width="9330" height="11040">
+   <BOUNDS type="Window" left="13515" top="2295" width="9330" height="11040">
    </BOUNDS>
    <PIN pinname="Transform In" visible="1" slicecount="1" values="||">
    </PIN>
@@ -795,7 +787,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="5535" top="9360" width="9330" height="9750">
    </BOUNDS>
-   <BOUNDS type="Window" left="14805" top="3375" width="9330" height="9750">
+   <BOUNDS type="Window" left="11505" top="1470" width="9330" height="9750">
    </BOUNDS>
    <PIN pinname="Layer" visible="1">
    </PIN>
@@ -895,17 +887,15 @@
    <NODE systemname="HSCB (DX11.TextureFX)" filename="%VVVV%\packs\dx11\nodes\texture11\Filter\HSCB.tfx" nodename="HSCB (DX11.TextureFX)" componentmode="Hidden" id="360">
    <BOUNDS type="Node" left="4155" top="20640" width="100" height="100">
    </BOUNDS>
+   <PIN pinname="Texture Out" visible="1">
+   </PIN>
    </NODE>
    <LINK srcnodeid="176" srcpinname="Texture Out" dstnodeid="360" dstpinname="Texture In">
    </LINK>
    <LINK srcnodeid="353" srcpinname="Y Output Value" dstnodeid="360" dstpinname="Contrast">
    </LINK>
-   <LINK srcnodeid="176" srcpinname="Texture Out" dstnodeid="173" dstpinname="Input Node">
-   <LINKPOINT x="3795" y="21300">
-   </LINKPOINT>
-   </LINK>
    <NODE systemname="DepthOnly (DX11.Layer)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="DepthOnly (DX11.Layer)" componentmode="Hidden" id="361">
-   <BOUNDS type="Node" left="2700" top="13710" width="100" height="100">
+   <BOUNDS type="Node" left="2655" top="13500" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Layer In" visible="1">
    </PIN>
@@ -917,5 +907,13 @@
    <LINK srcnodeid="361" srcpinname="Layer Out" dstnodeid="171" dstpinname="Layer">
    </LINK>
    <LINK srcnodeid="361" srcpinname="Layer Out" dstnodeid="206" dstpinname="Layer">
+   </LINK>
+   <LINK srcnodeid="203" srcpinname="Texture Out" dstnodeid="204" dstpinname="Texture In">
+   </LINK>
+   <LINK srcnodeid="156" srcpinname="Transform Out" dstnodeid="206" dstpinname="View">
+   </LINK>
+   <LINK srcnodeid="157" srcpinname="Transform Out" dstnodeid="206" dstpinname="Projection">
+   </LINK>
+   <LINK srcnodeid="360" srcpinname="Texture Out" dstnodeid="173" dstpinname="Input Node">
    </LINK>
    </PATCH>
