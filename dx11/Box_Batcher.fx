@@ -2,6 +2,15 @@ float4x4 tVP: VIEWPROJECTION;
 float4x4 tV : VIEW;
 
 ByteAddressBuffer sobuffer;
+Texture2D texRGBDepth <string uiname="RGBDepth";>;
+
+SamplerState sPoint : IMMUTABLE
+{
+    Filter = MIN_MAG_MIP_POINT;
+    AddressU = Border;
+    AddressV = Border;
+};
+
 
 struct vsIn
 {
@@ -13,6 +22,7 @@ struct vsIn
 struct psIn
 {
     float4 pos : SV_POSITION;
+	//float2 uv : TEXCOORD0;
 	float3 nv : TEXCOORD0;
 }; 
 
@@ -40,12 +50,17 @@ psIn VS(vsIn input)
     output.pos  = mul(float4(center,1.0f),tVP);
 
 	output.nv = mul(float4(input.norm,0.0f),tV).xyz;
+	
+	// pass texcoords for color lookup
+	//output.uv = float2(asfloat(sobuffer.Load(input.ii * 24 + 16)), asfloat(sobuffer.Load(input.ii * 24 + 20)));
+	
     return output;
 }
 
 float4 PS(psIn input): SV_Target
 {
    return float4(normalize(input.nv)*0.5f+0.5f,1.0f);
+	//return texRGBDepth.SampleLevel(sPoint,input.uv,0);
 }
 
 

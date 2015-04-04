@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="C:\Users\Admin\Desktop\Coth\subpatches\wavingFlag2.v4p" systemname="wavingFlag2" filename="C:\Users\Michael\Desktop\nodecloth\String Physics\subpatches\wavingFlag2.v4p" scrollx="2880" scrolly="105">
+   <PATCH nodename="C:\Users\Admin\Desktop\Coth\subpatches\wavingFlag2.v4p" systemname="wavingFlag2" filename="C:\Users\Michael\Desktop\nodecloth\String Physics\subpatches\wavingFlag2.v4p" scrollx="0" scrolly="5490">
    <BOUNDS type="Window" left="10350" top="1755" width="17685" height="12465">
    </BOUNDS>
    <PACK Name="image" Version="0.2.0">
@@ -479,9 +479,9 @@
    </PIN>
    </NODE>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="240" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="7230" top="4425" width="480" height="480">
+   <BOUNDS type="Box" left="7245" top="3420" width="480" height="480">
    </BOUNDS>
-   <BOUNDS type="Node" left="7230" top="4425" width="0" height="0">
+   <BOUNDS type="Node" left="7245" top="3420" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
    </PIN>
@@ -1053,31 +1053,15 @@
    <LINK srcnodeid="300" srcpinname="Output" dstnodeid="187" dstpinname="X">
    </LINK>
    <NODE systemname="LT (Value)" nodename="LT (Value)" componentmode="Hidden" id="357">
-   <BOUNDS type="Node" left="10155" top="9330" width="100" height="100">
+   <BOUNDS type="Node" left="13485" top="9825" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input 1" visible="1" slicecount="60" values="-5.68619377951635E-005,-0.000217643347735124,-5.47726741543332E-005,-0.000209443414565232,-2.16521911910044E-005,-3.31715334299255E-005,-2.13605228855561E-005,-3.08408435056013E-005,-2.50328570049406E-005,-9.45730632028218E-007,-2.55954515233568E-005,-8.29540310015964E-007,-8.60901789182004E-005,-2.07401437715206E-009,-8.98729713703209E-005,-1.6759720121424E-009,-0.000402288340779845,-4.9174307020069E-013,-0.000419727645048883,-3.86061712187689E-013,-0.00156093810288425,-1.3206761641075E-015,-0.00161155469524607,-1.27457529450905E-015,-0.00402083411434398,-6.10731526507935E-014,-0.00410463026370265,-7.61964638551404E-014,-0.0071712485770108,-3.57787114296969E-010,-0.00725518707638377,-4.49346071874087E-010,-0.00959517272099746,-2.71053731061815E-007,-0.00964299341270354,-3.14244271509197E-007,-0.00454192029018729,-1.64680944729876E-005,-0.00453611501460426,-1.78994824299064E-005,-0.00372699511455035,-0.000156511069794386,-0.00368965026971665,-0.000163549786266949,-0.00222926242627099,-0.000472128867467916,-0.00218546895310137,-0.000481676445293889,-0.000896180884452471,-0.000699665501245133,-0.000868661726211216,-0.00070099239973476,-0.000244132924656522,-0.000554764215175227,-0.000234482469018161,-0.0005461575492076,-5.68619377951635E-005,-0.000217643347735124,-5.47726741543332E-005,-0.000209443414565232">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="358" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="10155" top="9735" width="480" height="480">
-   </BOUNDS>
-   <BOUNDS type="Node" left="10155" top="9735" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Units" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Precision" slicecount="1" values="4">
-   </PIN>
-   <PIN pinname="Value Type" slicecount="1" values="Boolean">
-   </PIN>
-   <PIN pinname="Behavior" slicecount="1" values="Toggle">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="357" srcpinname="Output" dstnodeid="358" dstpinname="Y Input Value">
-   </LINK>
    <NODE systemname="TogEdge (Animation)" nodename="TogEdge (Animation)" componentmode="Hidden" id="359">
-   <BOUNDS type="Node" left="13275" top="9645" width="100" height="100">
+   <BOUNDS type="Node" left="13500" top="10620" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
@@ -1089,7 +1073,7 @@
    <LINK srcnodeid="357" srcpinname="Output" dstnodeid="359" dstpinname="Input">
    </LINK>
    <NODE systemname="Add (Value Spectral)" nodename="Add (Value Spectral)" componentmode="Hidden" id="360">
-   <BOUNDS type="Node" left="10170" top="8910" width="100" height="100">
+   <BOUNDS type="Node" left="13500" top="9405" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
@@ -1101,7 +1085,7 @@
    <LINK srcnodeid="360" srcpinname="Output" dstnodeid="357" dstpinname="Input 1">
    </LINK>
    <NODE systemname="LFO (Animation)" nodename="LFO (Animation)" componentmode="Hidden" id="362">
-   <BOUNDS type="Node" left="12765" top="11070" width="100" height="100">
+   <BOUNDS type="Node" left="12990" top="12045" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Pause" visible="1" slicecount="1" values="0">
    </PIN>
@@ -1115,7 +1099,7 @@
    </PIN>
    </NODE>
    <NODE systemname="GT (Value)" nodename="GT (Value)" componentmode="Hidden" id="366">
-   <BOUNDS type="Node" left="13785" top="11490" width="100" height="100">
+   <BOUNDS type="Node" left="14010" top="12465" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input 1" visible="1">
    </PIN>
@@ -1125,7 +1109,7 @@
    <LINK srcnodeid="362" srcpinname="Cycles" dstnodeid="366" dstpinname="Input 1">
    </LINK>
    <NODE systemname="FrameDelay (Value)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="FrameDelay (Value)" componentmode="Hidden" id="367">
-   <BOUNDS type="Node" left="13785" top="11895" width="100" height="100">
+   <BOUNDS type="Node" left="14010" top="12870" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input 1" visible="1">
    </PIN>
@@ -1137,7 +1121,7 @@
    <LINK srcnodeid="366" srcpinname="Output" dstnodeid="367" dstpinname="Input 1">
    </LINK>
    <NODE systemname="TogEdge (Animation)" nodename="TogEdge (Animation)" componentmode="Hidden" id="368">
-   <BOUNDS type="Node" left="13785" top="12285" width="100" height="100">
+   <BOUNDS type="Node" left="14010" top="13260" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
@@ -1147,21 +1131,21 @@
    <LINK srcnodeid="367" srcpinname="Output 1" dstnodeid="368" dstpinname="Input">
    </LINK>
    <LINK srcnodeid="367" srcpinname="Output 1" dstnodeid="362" dstpinname="Pause">
-   <LINKPOINT x="13815" y="12900">
+   <LINKPOINT x="14040" y="13875">
    </LINKPOINT>
-   <LINKPOINT x="14205" y="13095">
+   <LINKPOINT x="14430" y="14070">
    </LINKPOINT>
-   <LINKPOINT x="14880" y="13125">
+   <LINKPOINT x="15105" y="14100">
    </LINKPOINT>
-   <LINKPOINT x="15165" y="12390">
+   <LINKPOINT x="15390" y="13365">
    </LINKPOINT>
-   <LINKPOINT x="15360" y="11595">
+   <LINKPOINT x="15585" y="12570">
    </LINKPOINT>
-   <LINKPOINT x="15090" y="10455">
+   <LINKPOINT x="15315" y="11430">
    </LINKPOINT>
-   <LINKPOINT x="14310" y="9900">
+   <LINKPOINT x="14535" y="10875">
    </LINKPOINT>
-   <LINKPOINT x="13740" y="10455">
+   <LINKPOINT x="13965" y="11430">
    </LINKPOINT>
    </LINK>
    <NODE systemname="Add (Value)" nodename="Add (Value)" componentmode="Hidden" id="354">
@@ -1179,7 +1163,7 @@
    <LINK srcnodeid="354" srcpinname="Output" dstnodeid="230" dstpinname="Input 1" linkstyle="PolyLine">
    </LINK>
    <NODE systemname="WaveShaper (Value)" nodename="WaveShaper (Value)" componentmode="Hidden" id="371">
-   <BOUNDS type="Node" left="12780" top="13275" width="100" height="100">
+   <BOUNDS type="Node" left="13005" top="14250" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
@@ -1191,7 +1175,7 @@
    <LINK srcnodeid="362" srcpinname="Output" dstnodeid="371" dstpinname="Input">
    </LINK>
    <NODE systemname="Map (Value)" nodename="Map (Value)" componentmode="Hidden" id="372">
-   <BOUNDS type="Node" left="12780" top="13770" width="100" height="100">
+   <BOUNDS type="Node" left="13005" top="14745" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
@@ -1227,7 +1211,7 @@
    <LINK srcnodeid="373" srcpinname="Y Output Value" dstnodeid="243" dstpinname="Input X">
    </LINK>
    <NODE systemname="LFO (Animation)" nodename="LFO (Animation)" componentmode="Hidden" id="379">
-   <BOUNDS type="Node" left="15090" top="11400" width="100" height="100">
+   <BOUNDS type="Node" left="15315" top="12375" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Pause" visible="1" slicecount="1" values="0">
    </PIN>
@@ -1241,7 +1225,7 @@
    </PIN>
    </NODE>
    <NODE systemname="GT (Value)" nodename="GT (Value)" componentmode="Hidden" id="378">
-   <BOUNDS type="Node" left="16110" top="11820" width="100" height="100">
+   <BOUNDS type="Node" left="16335" top="12795" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input 1" visible="1">
    </PIN>
@@ -1251,7 +1235,7 @@
    <LINK srcnodeid="379" srcpinname="Cycles" dstnodeid="378" dstpinname="Input 1">
    </LINK>
    <NODE systemname="FrameDelay (Value)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="FrameDelay (Value)" componentmode="Hidden" id="377">
-   <BOUNDS type="Node" left="16110" top="12225" width="100" height="100">
+   <BOUNDS type="Node" left="16335" top="13200" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input 1" visible="1">
    </PIN>
@@ -1263,7 +1247,7 @@
    <LINK srcnodeid="378" srcpinname="Output" dstnodeid="377" dstpinname="Input 1">
    </LINK>
    <NODE systemname="TogEdge (Animation)" nodename="TogEdge (Animation)" componentmode="Hidden" id="376">
-   <BOUNDS type="Node" left="16110" top="12615" width="100" height="100">
+   <BOUNDS type="Node" left="16335" top="13590" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
@@ -1273,25 +1257,25 @@
    <LINK srcnodeid="377" srcpinname="Output 1" dstnodeid="376" dstpinname="Input">
    </LINK>
    <LINK srcnodeid="377" srcpinname="Output 1" dstnodeid="379" dstpinname="Pause">
-   <LINKPOINT x="16140" y="13230">
+   <LINKPOINT x="16365" y="14205">
    </LINKPOINT>
-   <LINKPOINT x="16530" y="13425">
+   <LINKPOINT x="16755" y="14400">
    </LINKPOINT>
-   <LINKPOINT x="17205" y="13455">
+   <LINKPOINT x="17430" y="14430">
    </LINKPOINT>
-   <LINKPOINT x="17490" y="12720">
+   <LINKPOINT x="17715" y="13695">
    </LINKPOINT>
-   <LINKPOINT x="17685" y="11925">
+   <LINKPOINT x="17910" y="12900">
    </LINKPOINT>
-   <LINKPOINT x="17415" y="10785">
+   <LINKPOINT x="17640" y="11760">
    </LINKPOINT>
-   <LINKPOINT x="16635" y="10230">
+   <LINKPOINT x="16860" y="11205">
    </LINKPOINT>
-   <LINKPOINT x="16065" y="10785">
+   <LINKPOINT x="16290" y="11760">
    </LINKPOINT>
    </LINK>
    <NODE systemname="WaveShaper (Value)" nodename="WaveShaper (Value)" componentmode="Hidden" id="375">
-   <BOUNDS type="Node" left="15105" top="13605" width="100" height="100">
+   <BOUNDS type="Node" left="15330" top="14580" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
@@ -1303,7 +1287,7 @@
    <LINK srcnodeid="379" srcpinname="Output" dstnodeid="375" dstpinname="Input">
    </LINK>
    <NODE systemname="Map (Value)" nodename="Map (Value)" componentmode="Hidden" id="374">
-   <BOUNDS type="Node" left="15105" top="14100" width="100" height="100">
+   <BOUNDS type="Node" left="15330" top="15075" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
@@ -1388,10 +1372,22 @@
    <PIN pinname="Descriptive Name" slicecount="1" values="Reset">
    </PIN>
    </NODE>
-   <LINK srcnodeid="384" srcpinname="Y Output Value" dstnodeid="210" dstpinname="Reset">
+   <LINK srcnodeid="384" srcpinname="Y Output Value" dstnodeid="210" dstpinname="Reset" linkstyle="Bezier">
+   <LINKPOINT x="13950" y="5145">
+   </LINKPOINT>
+   <LINKPOINT x="11535" y="5145">
+   </LINKPOINT>
    </LINK>
-   <LINK srcnodeid="384" srcpinname="Y Output Value" dstnodeid="349" dstpinname="Reset">
+   <LINK srcnodeid="384" srcpinname="Y Output Value" dstnodeid="349" dstpinname="Reset" linkstyle="Bezier">
+   <LINKPOINT x="13950" y="4448">
+   </LINKPOINT>
+   <LINKPOINT x="2865" y="4448">
+   </LINKPOINT>
    </LINK>
-   <LINK srcnodeid="384" srcpinname="Y Output Value" dstnodeid="209" dstpinname="Reset">
+   <LINK srcnodeid="384" srcpinname="Y Output Value" dstnodeid="209" dstpinname="Reset" linkstyle="Bezier">
+   <LINKPOINT x="13950" y="4635">
+   </LINKPOINT>
+   <LINKPOINT x="7530" y="4635">
+   </LINKPOINT>
    </LINK>
    </PATCH>

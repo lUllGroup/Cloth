@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="C:\Users\Admin\Desktop\Coth\subpatches\Kinect.v4p" systemname="Kinect" filename="C:\Users\Admin\Desktop\Coth\subpatches\Kinect.v4p" scrollx="360" scrolly="0">
+   <PATCH nodename="C:\Users\Admin\Desktop\Coth\subpatches\Kinect.v4p" systemname="Kinect" filename="C:\Users\Admin\Desktop\Coth\subpatches\Kinect.v4p" scrollx="585" scrolly="0">
    <NODE systemname="Depth (Kinect Microsoft)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.MSKinect.dll" nodename="Depth (Kinect Microsoft)" componentmode="Hidden" id="0">
    <BOUNDS type="Node" left="4905" top="2400" width="100" height="100">
    </BOUNDS>
@@ -35,7 +35,7 @@
    </PIN>
    <PIN pinname="Transform Filter" slicecount="1" visible="1" values="||">
    </PIN>
-   <BOUNDS type="Window" left="5010" top="1935" width="13260" height="9675">
+   <BOUNDS type="Window" left="11025" top="2265" width="13260" height="9675">
    </BOUNDS>
    <PIN pinname="Pointcloud Layer" visible="1">
    </PIN>
@@ -105,7 +105,7 @@
    <NODE systemname="Kinect (Devices Microsoft)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.MSKinect.dll" nodename="Kinect (Devices Microsoft)" componentmode="Hidden" id="7">
    <BOUNDS type="Node" left="4890" top="1500" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Enabled" slicecount="1" values="1" visible="1">
+   <PIN pinname="Enabled" slicecount="1" visible="1" values="1">
    </PIN>
    <PIN pinname="Enable Color" slicecount="1" values="0">
    </PIN>
@@ -121,7 +121,7 @@
    </BOUNDS>
    <PIN pinname="Index" slicecount="1" visible="1" values="0">
    </PIN>
-   <PIN pinname="Emit Infrared" visible="1" slicecount="1" values="0">
+   <PIN pinname="Emit Infrared" visible="1" slicecount="1" values="1">
    </PIN>
    <PIN pinname="Enable Skeleton Smoothing" slicecount="1" values="0">
    </PIN>
@@ -130,6 +130,8 @@
    <PIN pinname="Smooth Parameters" visible="1" slicecount="1" values="||">
    </PIN>
    <PIN pinname="High Res Depth" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Infrared Color" slicecount="1" values="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="1" srcpinname="Geometry Out" dstnodeid="4" dstpinname="Geometry">
@@ -141,9 +143,9 @@
    </BOUNDS>
    <BOUNDS type="Node" left="1500" top="8750" width="750" height="240">
    </BOUNDS>
+   <PIN pinname="Input Node" visible="1" slicecount="1" values="||">
+   </PIN>
    </NODE>
-   <LINK srcnodeid="4" srcpinname="Layer" dstnodeid="9" dstpinname="Input Node">
-   </LINK>
    <LINK srcnodeid="3" srcpinname="Geometry Out" dstnodeid="1" dstpinname="Geometry In">
    </LINK>
    <LINK srcnodeid="2" srcpinname="Output" dstnodeid="1" dstpinname="Instance Count">
@@ -179,8 +181,6 @@
    </BOUNDS>
    </NODE>
    <LINK srcnodeid="12" srcpinname="Y Output Value" dstnodeid="7" dstpinname="Motor Angle">
-   </LINK>
-   <LINK srcnodeid="7" srcpinname="Kinect Runtime" dstnodeid="0" dstpinname="Kinect Runtime">
    </LINK>
    <NODE id="13" systemname="IOBox (Node)" componentmode="InABox" nodename="IOBox (Node)">
    <PIN pinname="Descriptive Name" slicecount="1" values="|Transform In|">
@@ -283,5 +283,9 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="17" srcpinname="Y Output Value" dstnodeid="7" dstpinname="Enabled">
+   </LINK>
+   <LINK srcnodeid="7" srcpinname="Kinect Runtime" dstnodeid="0" dstpinname="Kinect Runtime">
+   </LINK>
+   <LINK srcnodeid="4" srcpinname="Layer" dstnodeid="9" dstpinname="Input Node">
    </LINK>
    </PATCH>

@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="C:\Users\Admin\Desktop\Coth\subpatches\KinectDepth.v4p" scrollx="360" scrolly="0" systemname="KinectDepth" filename="C:\Users\Admin\Desktop\KinectDepth.v4p">
-   <BOUNDS type="Window" left="13650" top="3075" width="13260" height="10320">
+   <PATCH nodename="C:\Users\Admin\Desktop\Coth\subpatches\KinectDepth.v4p" scrollx="1410" scrolly="13830" systemname="KinectDepth" filename="C:\Users\Admin\Desktop\KinectDepth.v4p">
+   <BOUNDS type="Window" left="14670" top="3915" width="13260" height="10320">
    </BOUNDS>
    <PACK Name="addonpack" Version="33.7.0">
    </PACK>
@@ -19,9 +19,11 @@
    </PIN>
    <BOUNDS type="Box" left="3885" top="12510">
    </BOUNDS>
-   <PIN pinname="Inital Distance" slicecount="1" values="10">
+   <PIN pinname="Inital Distance" slicecount="1" values="450">
    </PIN>
-   <PIN pinname="Initial FOV" slicecount="1" values="0.1">
+   <PIN pinname="Initial FOV" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Far Plane" slicecount="1" values="500">
    </PIN>
    </NODE>
    <NODE systemname="LinearDepth (DX11.TextureFX)" filename="%VVVV%\packs\dx11\nodes\texture11\Filter\LinearDepth.tfx" nodename="LinearDepth (DX11.TextureFX)" componentmode="Hidden" id="152">
@@ -35,9 +37,9 @@
    </PIN>
    <PIN pinname="Projection" visible="1" slicecount="1" values="||">
    </PIN>
-   <PIN pinname="MinDepth" slicecount="1" visible="1" values="0">
+   <PIN pinname="MinDepth" slicecount="1" visible="1" values="20">
    </PIN>
-   <PIN pinname="MaxDepth" slicecount="1" visible="1" values="20">
+   <PIN pinname="MaxDepth" slicecount="1" visible="1" values="35">
    </PIN>
    <PIN pinname="Enabled" slicecount="1" values="1">
    </PIN>
@@ -63,7 +65,7 @@
    <NODE systemname="SetMatrix (Transform)" nodename="SetMatrix (Transform)" componentmode="Hidden" id="156">
    <BOUNDS type="Node" left="4065" top="13995" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Matrix In" visible="1" slicecount="16" values="0.999999940395355,0,0,0,0,0.999999940395355,0,0,0,0,0.999999940395355,0,0,0,9.99976921081543,0.999999940395355">
+   <PIN pinname="Matrix In" visible="1" slicecount="16" values="0.999999940395355,0,0,0,0,0.999999940395355,0,0,0,0,0.999999940395355,0,0,0,449.972473144531,0.999999940395355">
    </PIN>
    <PIN pinname="Transform Out" visible="1">
    </PIN>
@@ -79,7 +81,7 @@
    <NODE systemname="SetMatrix (Transform)" nodename="SetMatrix (Transform)" componentmode="Hidden" id="157">
    <BOUNDS type="Node" left="5055" top="14010" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Matrix In" visible="1" slicecount="16" values="3.0776834487915,0,0,0,0,3.0776834487915,0,0,0,0,1.00100111961365,1,0,0,-0.100110121071339,0">
+   <PIN pinname="Matrix In" visible="1" slicecount="16" values="63.65673828125,0,0,0,0,63.65673828125,0,0,0,0,1.00020003318787,1,0,0,-0.10003000497818,0">
    </PIN>
    <PIN pinname="Transform Out" visible="1">
    </PIN>
@@ -126,6 +128,8 @@
    <PIN pinname="Texture ScaleXY" visible="1" slicecount="1" values="1">
    </PIN>
    <PIN pinname="Enable Depth Buffer" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Buffers" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="171" srcpinname="Depth Buffer" dstnodeid="152" dstpinname="Texture In">
@@ -175,13 +179,13 @@
    </PIN>
    <PIN pinname="TranslateZ" slicecount="1" values="1.76">
    </PIN>
-   <PIN pinname="TranslateY" slicecount="1" values="1.44">
+   <PIN pinname="TranslateY" slicecount="1" values="2.51">
    </PIN>
    <PIN pinname="Yaw" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Roll" slicecount="1" values="0">
    </PIN>
-   <PIN pinname="Pitch" slicecount="1" values="0">
+   <PIN pinname="Pitch" slicecount="1" values="0.016">
    </PIN>
    </NODE>
    <LINK srcnodeid="175" srcpinname="Transform Out" dstnodeid="174" dstpinname="Transform In">
@@ -288,12 +292,12 @@
    <LINKPOINT x="9495" y="16838">
    </LINKPOINT>
    </LINK>
-   <NODE systemname="Preview (DX11.Texture)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Preview (DX11.Texture)" componentmode="InAWindow" id="204" stayontop="1">
+   <NODE systemname="Preview (DX11.Texture)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Preview (DX11.Texture)" componentmode="Hidden" id="204" stayontop="1">
    <BOUNDS type="Node" left="9270" top="21330" width="100" height="100">
    </BOUNDS>
    <BOUNDS type="Box" left="9270" top="21330" width="6000" height="4500">
    </BOUNDS>
-   <BOUNDS type="Window" left="510" top="7920" width="14685" height="7905">
+   <BOUNDS type="Window" left="150" top="5850" width="12225" height="9690">
    </BOUNDS>
    <PIN pinname="Texture In" visible="1" slicecount="1" values="||">
    </PIN>
@@ -337,7 +341,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="9345" top="13935" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -349,7 +353,7 @@
    </PIN>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
-   <PIN pinname="X Input Value" slicecount="1" values="1">
+   <PIN pinname="X Input Value" slicecount="1" values="0">
    </PIN>
    </NODE>
    <LINK srcnodeid="217" srcpinname="Y Output Value" dstnodeid="206" dstpinname="Enabled">
@@ -363,7 +367,7 @@
    </BOUNDS>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
-   <PIN pinname="Y Input Value" slicecount="1" values="0.02">
+   <PIN pinname="Y Input Value" slicecount="1" values="0.025">
    </PIN>
    </NODE>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="231" systemname="IOBox (Value Advanced)">
@@ -380,8 +384,6 @@
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="231" srcpinname="Y Output Value" dstnodeid="152" dstpinname="MaxDepth">
-   </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="232" systemname="IOBox (Value Advanced)">
    <BOUNDS type="Box" left="4590" top="18225" width="795" height="240">
    </BOUNDS>
@@ -398,8 +400,6 @@
    <PIN pinname="X Input Value" slicecount="1" values="0">
    </PIN>
    </NODE>
-   <LINK srcnodeid="232" srcpinname="Y Output Value" dstnodeid="152" dstpinname="MinDepth">
-   </LINK>
    <LINK srcnodeid="157" srcpinname="Transform Out" dstnodeid="206" dstpinname="Projection" linkstyle="Bezier">
    <LINKPOINT x="5115" y="14955">
    </LINKPOINT>
@@ -419,7 +419,7 @@
    </BOUNDS>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="-2.14">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="457.5">
    </PIN>
    </NODE>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="234" systemname="IOBox (Value Advanced)">
@@ -427,7 +427,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="9915" top="18795" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="36.3">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="464.61">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -441,148 +441,6 @@
    <LINK srcnodeid="234" srcpinname="Y Output Value" dstnodeid="203" dstpinname="MaxDepth">
    </LINK>
    <LINK srcnodeid="176" srcpinname="Texture Out" dstnodeid="153" dstpinname="Texture In">
-   </LINK>
-   <NODE systemname="Kinect" filename="Kinect.v4p" nodename="Kinect.v4p" componentmode="Hidden" id="333">
-   <BOUNDS type="Node" left="3165" top="9360" width="0" height="0">
-   </BOUNDS>
-   <BOUNDS type="Box" left="3165" top="9360" width="9330" height="9750">
-   </BOUNDS>
-   <BOUNDS type="Window" left="14805" top="3375" width="9330" height="9750">
-   </BOUNDS>
-   <PIN pinname="Transform In" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Enable Pointcloud" visible="1">
-   </PIN>
-   <PIN pinname="Enabled" visible="1" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="Layer" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="189" srcpinname="Y Output Value" dstnodeid="333" dstpinname="Motor Angle" linkstyle="Bezier">
-   <LINKPOINT x="3675" y="6173">
-   </LINKPOINT>
-   <LINKPOINT x="3540" y="6173">
-   </LINKPOINT>
-   </LINK>
-   <LINK srcnodeid="191" srcpinname="Y Output Value" dstnodeid="333" dstpinname="Resolution" linkstyle="Bezier">
-   <LINKPOINT x="8370" y="6593">
-   </LINKPOINT>
-   <LINKPOINT x="3390" y="6593">
-   </LINKPOINT>
-   </LINK>
-   <LINK srcnodeid="218" srcpinname="Y Output Value" dstnodeid="333" dstpinname="SizeXY" linkstyle="Bezier">
-   <LINKPOINT x="9660" y="6585">
-   </LINKPOINT>
-   <LINKPOINT x="3225" y="6585">
-   </LINKPOINT>
-   </LINK>
-   <NODE systemname="Kinect" filename="Kinect.v4p" nodename="Kinect.v4p" componentmode="Hidden" id="334">
-   <BOUNDS type="Node" left="4275" top="9345" width="0" height="0">
-   </BOUNDS>
-   <BOUNDS type="Box" left="4275" top="9345" width="9330" height="9750">
-   </BOUNDS>
-   <BOUNDS type="Window" left="14805" top="3375" width="9330" height="9750">
-   </BOUNDS>
-   <PIN pinname="Layer" visible="1">
-   </PIN>
-   <PIN pinname="Index" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="Transform In" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Enable Pointcloud" visible="1">
-   </PIN>
-   <PIN pinname="Enabled" visible="1" slicecount="1" values="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="189" srcpinname="Y Output Value" dstnodeid="334" dstpinname="Motor Angle" linkstyle="Bezier">
-   <LINKPOINT x="3665" y="6168">
-   </LINKPOINT>
-   <LINKPOINT x="4660" y="6163">
-   </LINKPOINT>
-   </LINK>
-   <LINK srcnodeid="191" srcpinname="Y Output Value" dstnodeid="334" dstpinname="Resolution" linkstyle="Bezier">
-   <LINKPOINT x="8345" y="6588">
-   </LINKPOINT>
-   <LINKPOINT x="4525" y="6583">
-   </LINKPOINT>
-   </LINK>
-   <LINK srcnodeid="218" srcpinname="Y Output Value" dstnodeid="334" dstpinname="SizeXY" linkstyle="Bezier">
-   <LINKPOINT x="9620" y="6588">
-   </LINKPOINT>
-   <LINKPOINT x="4360" y="6583">
-   </LINKPOINT>
-   </LINK>
-   <NODE systemname="Kinect" filename="Kinect.v4p" nodename="Kinect.v4p" componentmode="Hidden" id="335" stayontop="1">
-   <BOUNDS type="Node" left="5535" top="9360" width="0" height="0">
-   </BOUNDS>
-   <BOUNDS type="Box" left="5535" top="9360" width="9330" height="9750">
-   </BOUNDS>
-   <BOUNDS type="Window" left="14805" top="3375" width="9330" height="9750">
-   </BOUNDS>
-   <PIN pinname="Layer" visible="1">
-   </PIN>
-   <PIN pinname="Transform In" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Index" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="Enable Pointcloud" visible="1">
-   </PIN>
-   <PIN pinname="Enabled" visible="1" slicecount="1" values="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="189" srcpinname="Y Output Value" dstnodeid="335" dstpinname="Motor Angle" linkstyle="Bezier">
-   <LINKPOINT x="3705" y="6173">
-   </LINKPOINT>
-   <LINKPOINT x="5895" y="6173">
-   </LINKPOINT>
-   </LINK>
-   <LINK srcnodeid="191" srcpinname="Y Output Value" dstnodeid="335" dstpinname="Resolution" linkstyle="Bezier">
-   <LINKPOINT x="8385" y="6608">
-   </LINKPOINT>
-   <LINKPOINT x="5730" y="6608">
-   </LINKPOINT>
-   </LINK>
-   <LINK srcnodeid="218" srcpinname="Y Output Value" dstnodeid="335" dstpinname="SizeXY" linkstyle="Bezier">
-   <LINKPOINT x="9645" y="6593">
-   </LINKPOINT>
-   <LINKPOINT x="5595" y="6593">
-   </LINKPOINT>
-   </LINK>
-   <NODE systemname="Kinect" filename="Kinect.v4p" nodename="Kinect.v4p" componentmode="Hidden" id="336">
-   <BOUNDS type="Node" left="6720" top="9360" width="0" height="0">
-   </BOUNDS>
-   <BOUNDS type="Box" left="6720" top="9360" width="9330" height="9750">
-   </BOUNDS>
-   <BOUNDS type="Window" left="14805" top="3375" width="9330" height="9750">
-   </BOUNDS>
-   <PIN pinname="Layer" visible="1">
-   </PIN>
-   <PIN pinname="Index" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="Transform In" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Enable Pointcloud" visible="1">
-   </PIN>
-   <PIN pinname="Enabled" visible="1" slicecount="1" values="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="189" srcpinname="Y Output Value" dstnodeid="336" dstpinname="Motor Angle" linkstyle="Bezier">
-   <LINKPOINT x="3720" y="6180">
-   </LINKPOINT>
-   <LINKPOINT x="7065" y="6180">
-   </LINKPOINT>
-   </LINK>
-   <LINK srcnodeid="191" srcpinname="Y Output Value" dstnodeid="336" dstpinname="Resolution" linkstyle="Bezier">
-   <LINKPOINT x="8400" y="6600">
-   </LINKPOINT>
-   <LINKPOINT x="6915" y="6600">
-   </LINKPOINT>
-   </LINK>
-   <LINK srcnodeid="218" srcpinname="Y Output Value" dstnodeid="336" dstpinname="SizeXY" linkstyle="Bezier">
-   <LINKPOINT x="9660" y="6600">
-   </LINKPOINT>
-   <LINKPOINT x="6765" y="6600">
-   </LINKPOINT>
    </LINK>
    <NODE id="236" systemname="Group (DX11.Layer)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Group (DX11.Layer)" componentmode="Hidden">
    <PIN pinname="Layer 1" slicecount="1" visible="1" values="||">
@@ -599,23 +457,17 @@
    </PIN>
    <PIN pinname="Input Count" slicecount="1" values="4">
    </PIN>
+   <PIN pinname="Layer Out" visible="1">
+   </PIN>
    </NODE>
-   <LINK srcnodeid="236" srcpinname="Layer Out" dstnodeid="206" dstpinname="Layer" linkstyle="Bezier">
-   <LINKPOINT x="2715" y="13778">
-   </LINKPOINT>
-   <LINKPOINT x="7740" y="13778">
-   </LINKPOINT>
-   </LINK>
-   <LINK srcnodeid="236" srcpinname="Layer Out" dstnodeid="171" dstpinname="Layer">
-   </LINK>
    <NODE id="338" systemname="Transform (Transform 3d)" nodename="Transform (Transform 3d)" componentmode="Hidden">
    <BOUNDS type="Node" left="3825" top="7035" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Transform Out" visible="1">
    </PIN>
-   <PIN pinname="TranslateX" slicecount="1" values="-0.52">
+   <PIN pinname="TranslateX" slicecount="1" values="-0.69">
    </PIN>
-   <PIN pinname="TranslateY" slicecount="1" values="0">
+   <PIN pinname="TranslateY" slicecount="1" values="-0.04">
    </PIN>
    <PIN pinname="Transform In" visible="1">
    </PIN>
@@ -629,8 +481,6 @@
    </LINKPOINT>
    <LINKPOINT x="3870" y="4958">
    </LINKPOINT>
-   </LINK>
-   <LINK srcnodeid="338" srcpinname="Transform Out" dstnodeid="333" dstpinname="Transform In">
    </LINK>
    <NODE id="339" systemname="Transform (Transform 3d)" nodename="Transform (Transform 3d)" componentmode="Hidden">
    <BOUNDS type="Node" left="6345" top="7110" width="100" height="100">
@@ -676,34 +526,10 @@
    <PIN pinname="Descriptive Name" slicecount="1" values="PointCloud">
    </PIN>
    </NODE>
-   <LINK srcnodeid="340" srcpinname="Y Output Value" dstnodeid="336" dstpinname="Enable Pointcloud" linkstyle="Bezier">
-   <LINKPOINT x="8385" y="8993">
-   </LINKPOINT>
-   <LINKPOINT x="7620" y="8993">
-   </LINKPOINT>
-   </LINK>
-   <LINK srcnodeid="340" srcpinname="Y Output Value" dstnodeid="335" dstpinname="Enable Pointcloud" linkstyle="Bezier">
-   <LINKPOINT x="8385" y="8993">
-   </LINKPOINT>
-   <LINKPOINT x="6435" y="8993">
-   </LINKPOINT>
-   </LINK>
-   <LINK srcnodeid="340" srcpinname="Y Output Value" dstnodeid="334" dstpinname="Enable Pointcloud" linkstyle="Bezier">
-   <LINKPOINT x="8360" y="8988">
-   </LINKPOINT>
-   <LINKPOINT x="5200" y="8983">
-   </LINKPOINT>
-   </LINK>
-   <LINK srcnodeid="340" srcpinname="Y Output Value" dstnodeid="333" dstpinname="Enable Pointcloud" linkstyle="Bezier">
-   <LINKPOINT x="8385" y="8993">
-   </LINKPOINT>
-   <LINKPOINT x="4065" y="8993">
-   </LINKPOINT>
-   </LINK>
    <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="342">
-   <BOUNDS type="Node" left="9825" top="6945" width="100" height="100">
+   <BOUNDS type="Node" left="9120" top="7065" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="9825" top="6945" width="480" height="480">
+   <BOUNDS type="Box" left="9120" top="7065" width="480" height="480">
    </BOUNDS>
    <PIN pinname="Value Type" slicecount="1" values="Boolean">
    </PIN>
@@ -750,18 +576,6 @@
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
    </NODE>
-   <NODE systemname="HSCB (DX11.TextureFX)" filename="%VVVV%\packs\dx11\nodes\texture11\Filter\HSCB.tfx" nodename="HSCB (DX11.TextureFX)" componentmode="Hidden" id="345">
-   <BOUNDS type="Node" left="4155" top="20640" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Contrast" slicecount="1" visible="1" values="0.2">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="176" srcpinname="Texture Out" dstnodeid="345" dstpinname="Texture In">
-   </LINK>
-   <LINK srcnodeid="345" srcpinname="Texture Out" dstnodeid="173" dstpinname="Input Node">
-   </LINK>
-   <LINK srcnodeid="339" srcpinname="Transform Out" dstnodeid="335" dstpinname="Transform In">
-   </LINK>
    <NODE id="352" systemname="Transform (Transform 3d)" nodename="Transform (Transform 3d)" componentmode="Hidden">
    <BOUNDS type="Node" left="9675" top="6390" width="100" height="100">
    </BOUNDS>
@@ -803,19 +617,9 @@
    </PIN>
    <PIN pinname="Precision" slicecount="1" values="4">
    </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="0">
+   </PIN>
    </NODE>
-   <LINK srcnodeid="353" srcpinname="Y Output Value" dstnodeid="345" dstpinname="Contrast">
-   </LINK>
-   <LINK srcnodeid="339" srcpinname="Transform Out" dstnodeid="336" dstpinname="Transform In">
-   </LINK>
-   <LINK srcnodeid="338" srcpinname="Transform Out" dstnodeid="334" dstpinname="Transform In">
-   </LINK>
-   <LINK srcnodeid="335" srcpinname="Layer" dstnodeid="236" dstpinname="Layer 1" linkstyle="Bezier">
-   <LINKPOINT x="5535" y="10628">
-   </LINKPOINT>
-   <LINKPOINT x="3210" y="10628">
-   </LINKPOINT>
-   </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="356" systemname="IOBox (Value Advanced)">
    <BOUNDS type="Box" left="5490" top="10065" width="480" height="480">
    </BOUNDS>
@@ -831,15 +635,17 @@
    </PIN>
    <PIN pinname="Behavior" slicecount="1" values="Toggle">
    </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Enabled">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="0">
+   </PIN>
    </NODE>
-   <LINK srcnodeid="356" srcpinname="Y Output Value" dstnodeid="334" dstpinname="Enabled">
-   </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="357" systemname="IOBox (Value Advanced)">
    <BOUNDS type="Box" left="4485" top="10230" width="480" height="480">
    </BOUNDS>
    <BOUNDS type="Node" left="4485" top="10230" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -849,9 +655,11 @@
    </PIN>
    <PIN pinname="Behavior" slicecount="1" values="Toggle">
    </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Enabled">
+   </PIN>
    </NODE>
-   <LINK srcnodeid="357" srcpinname="Y Output Value" dstnodeid="333" dstpinname="Enabled">
-   </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="358" systemname="IOBox (Value Advanced)">
    <BOUNDS type="Box" left="6810" top="10320" width="480" height="480">
    </BOUNDS>
@@ -867,9 +675,11 @@
    </PIN>
    <PIN pinname="Behavior" slicecount="1" values="Toggle">
    </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Enabled">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="1">
+   </PIN>
    </NODE>
-   <LINK srcnodeid="358" srcpinname="Y Output Value" dstnodeid="335" dstpinname="Enabled">
-   </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="359" systemname="IOBox (Value Advanced)">
    <BOUNDS type="Box" left="7935" top="10005" width="480" height="480">
    </BOUNDS>
@@ -885,7 +695,227 @@
    </PIN>
    <PIN pinname="Behavior" slicecount="1" values="Toggle">
    </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Enabled">
+   </PIN>
    </NODE>
+   <NODE systemname="Kinect" filename="Kinect.v4p" nodename="Kinect.v4p" componentmode="Hidden" id="333" stayontop="1">
+   <BOUNDS type="Node" left="3165" top="9360" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="3165" top="9360" width="9330" height="9750">
+   </BOUNDS>
+   <BOUNDS type="Window" left="15240" top="4260" width="9330" height="11040">
+   </BOUNDS>
+   <PIN pinname="Transform In" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Enable Pointcloud" visible="1">
+   </PIN>
+   <PIN pinname="Enabled" visible="1" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="189" srcpinname="Y Output Value" dstnodeid="333" dstpinname="Motor Angle" linkstyle="Bezier">
+   <LINKPOINT x="3675" y="6173">
+   </LINKPOINT>
+   <LINKPOINT x="3540" y="6173">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="191" srcpinname="Y Output Value" dstnodeid="333" dstpinname="Resolution" linkstyle="Bezier">
+   <LINKPOINT x="8370" y="6593">
+   </LINKPOINT>
+   <LINKPOINT x="3390" y="6593">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="218" srcpinname="Y Output Value" dstnodeid="333" dstpinname="SizeXY" linkstyle="Bezier">
+   <LINKPOINT x="9660" y="6585">
+   </LINKPOINT>
+   <LINKPOINT x="3225" y="6585">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="338" srcpinname="Transform Out" dstnodeid="333" dstpinname="Transform In">
+   </LINK>
+   <LINK srcnodeid="340" srcpinname="Y Output Value" dstnodeid="333" dstpinname="Enable Pointcloud" linkstyle="Bezier">
+   <LINKPOINT x="8385" y="8993">
+   </LINKPOINT>
+   <LINKPOINT x="4065" y="8993">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="357" srcpinname="Y Output Value" dstnodeid="333" dstpinname="Enabled">
+   </LINK>
+   <LINK srcnodeid="333" srcpinname="Layer" dstnodeid="236" dstpinname="Layer 2">
+   </LINK>
+   <NODE systemname="Kinect" filename="Kinect.v4p" nodename="Kinect.v4p" componentmode="Hidden" id="334">
+   <BOUNDS type="Node" left="4275" top="9345" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="4275" top="9345" width="9330" height="9750">
+   </BOUNDS>
+   <BOUNDS type="Window" left="14805" top="3375" width="9330" height="9750">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Index" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Transform In" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Enable Pointcloud" visible="1">
+   </PIN>
+   <PIN pinname="Enabled" visible="1" slicecount="1" values="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="189" srcpinname="Y Output Value" dstnodeid="334" dstpinname="Motor Angle" linkstyle="Bezier">
+   <LINKPOINT x="3665" y="6168">
+   </LINKPOINT>
+   <LINKPOINT x="4660" y="6163">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="191" srcpinname="Y Output Value" dstnodeid="334" dstpinname="Resolution" linkstyle="Bezier">
+   <LINKPOINT x="8345" y="6588">
+   </LINKPOINT>
+   <LINKPOINT x="4525" y="6583">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="218" srcpinname="Y Output Value" dstnodeid="334" dstpinname="SizeXY" linkstyle="Bezier">
+   <LINKPOINT x="9620" y="6588">
+   </LINKPOINT>
+   <LINKPOINT x="4360" y="6583">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="340" srcpinname="Y Output Value" dstnodeid="334" dstpinname="Enable Pointcloud" linkstyle="Bezier">
+   <LINKPOINT x="8360" y="8988">
+   </LINKPOINT>
+   <LINKPOINT x="5200" y="8983">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="338" srcpinname="Transform Out" dstnodeid="334" dstpinname="Transform In">
+   </LINK>
+   <LINK srcnodeid="356" srcpinname="Y Output Value" dstnodeid="334" dstpinname="Enabled">
+   </LINK>
+   <NODE systemname="Kinect" filename="Kinect.v4p" nodename="Kinect.v4p" componentmode="Hidden" id="335" stayontop="1">
+   <BOUNDS type="Node" left="5535" top="9360" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="5535" top="9360" width="9330" height="9750">
+   </BOUNDS>
+   <BOUNDS type="Window" left="14805" top="3375" width="9330" height="9750">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Transform In" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Index" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Enable Pointcloud" visible="1">
+   </PIN>
+   <PIN pinname="Enabled" visible="1" slicecount="1" values="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="189" srcpinname="Y Output Value" dstnodeid="335" dstpinname="Motor Angle" linkstyle="Bezier">
+   <LINKPOINT x="3705" y="6173">
+   </LINKPOINT>
+   <LINKPOINT x="5895" y="6173">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="191" srcpinname="Y Output Value" dstnodeid="335" dstpinname="Resolution" linkstyle="Bezier">
+   <LINKPOINT x="8385" y="6608">
+   </LINKPOINT>
+   <LINKPOINT x="5730" y="6608">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="218" srcpinname="Y Output Value" dstnodeid="335" dstpinname="SizeXY" linkstyle="Bezier">
+   <LINKPOINT x="9645" y="6593">
+   </LINKPOINT>
+   <LINKPOINT x="5595" y="6593">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="340" srcpinname="Y Output Value" dstnodeid="335" dstpinname="Enable Pointcloud" linkstyle="Bezier">
+   <LINKPOINT x="8385" y="8993">
+   </LINKPOINT>
+   <LINKPOINT x="6435" y="8993">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="339" srcpinname="Transform Out" dstnodeid="335" dstpinname="Transform In">
+   </LINK>
+   <LINK srcnodeid="335" srcpinname="Layer" dstnodeid="236" dstpinname="Layer 1" linkstyle="Bezier">
+   <LINKPOINT x="5535" y="10628">
+   </LINKPOINT>
+   <LINKPOINT x="3210" y="10628">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="358" srcpinname="Y Output Value" dstnodeid="335" dstpinname="Enabled">
+   </LINK>
+   <NODE systemname="Kinect" filename="Kinect.v4p" nodename="Kinect.v4p" componentmode="Hidden" id="336">
+   <BOUNDS type="Node" left="6990" top="9330" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="6990" top="9330" width="9330" height="9750">
+   </BOUNDS>
+   <BOUNDS type="Window" left="14805" top="3375" width="9330" height="9750">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Index" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Transform In" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Enable Pointcloud" visible="1">
+   </PIN>
+   <PIN pinname="Enabled" visible="1" slicecount="1" values="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="189" srcpinname="Y Output Value" dstnodeid="336" dstpinname="Motor Angle" linkstyle="Bezier">
+   <LINKPOINT x="3810" y="6170">
+   </LINKPOINT>
+   <LINKPOINT x="7245" y="6160">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="191" srcpinname="Y Output Value" dstnodeid="336" dstpinname="Resolution" linkstyle="Bezier">
+   <LINKPOINT x="8490" y="6590">
+   </LINKPOINT>
+   <LINKPOINT x="7095" y="6580">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="218" srcpinname="Y Output Value" dstnodeid="336" dstpinname="SizeXY" linkstyle="Bezier">
+   <LINKPOINT x="9750" y="6590">
+   </LINKPOINT>
+   <LINKPOINT x="6945" y="6580">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="340" srcpinname="Y Output Value" dstnodeid="336" dstpinname="Enable Pointcloud" linkstyle="Bezier">
+   <LINKPOINT x="8475" y="8983">
+   </LINKPOINT>
+   <LINKPOINT x="7800" y="8973">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="339" srcpinname="Transform Out" dstnodeid="336" dstpinname="Transform In">
+   </LINK>
    <LINK srcnodeid="359" srcpinname="Y Output Value" dstnodeid="336" dstpinname="Enabled">
+   </LINK>
+   <LINK srcnodeid="233" srcpinname="Y Output Value" dstnodeid="152" dstpinname="MinDepth">
+   </LINK>
+   <LINK srcnodeid="234" srcpinname="Y Output Value" dstnodeid="152" dstpinname="MaxDepth">
+   </LINK>
+   <NODE systemname="HSCB (DX11.TextureFX)" filename="%VVVV%\packs\dx11\nodes\texture11\Filter\HSCB.tfx" nodename="HSCB (DX11.TextureFX)" componentmode="Hidden" id="360">
+   <BOUNDS type="Node" left="4155" top="20640" width="100" height="100">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="176" srcpinname="Texture Out" dstnodeid="360" dstpinname="Texture In">
+   </LINK>
+   <LINK srcnodeid="353" srcpinname="Y Output Value" dstnodeid="360" dstpinname="Contrast">
+   </LINK>
+   <LINK srcnodeid="176" srcpinname="Texture Out" dstnodeid="173" dstpinname="Input Node">
+   <LINKPOINT x="3795" y="21300">
+   </LINKPOINT>
+   </LINK>
+   <NODE systemname="DepthOnly (DX11.Layer)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="DepthOnly (DX11.Layer)" componentmode="Hidden" id="361">
+   <BOUNDS type="Node" left="2700" top="13710" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Layer In" visible="1">
+   </PIN>
+   <PIN pinname="Layer Out" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="236" srcpinname="Layer Out" dstnodeid="361" dstpinname="Layer In">
+   </LINK>
+   <LINK srcnodeid="361" srcpinname="Layer Out" dstnodeid="171" dstpinname="Layer">
+   </LINK>
+   <LINK srcnodeid="361" srcpinname="Layer Out" dstnodeid="206" dstpinname="Layer">
    </LINK>
    </PATCH>

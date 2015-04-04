@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="C:\Users\Admin\Desktop\Coth\subpatches\ghostDance.v4p" systemname="ghostDance" filename="C:\Users\Michael\Desktop\nodecloth\String Physics\subpatches\ghostDance.v4p" scrollx="0" scrolly="360">
+   <PATCH nodename="C:\Users\Admin\Desktop\Coth\subpatches\ghostDance.v4p" systemname="ghostDance" filename="C:\Users\Michael\Desktop\nodecloth\String Physics\subpatches\ghostDance.v4p" scrollx="75" scrolly="0">
    <NODE systemname="Count (Value)" nodename="Count (Value)" componentmode="Hidden" id="0">
    <BOUNDS type="Node" left="5295" top="2970" width="885" height="270">
    </BOUNDS>
@@ -91,7 +91,7 @@
    </PIN>
    <PIN pinname="Is Integer" slicecount="1" values="1">
    </PIN>
-   <PIN pinname="Scale" slicecount="1" values="20000">
+   <PIN pinname="Scale" slicecount="1" values="50000">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
@@ -169,7 +169,7 @@
    </PIN>
    <PIN pinname="Random Seed" visible="1">
    </PIN>
-   <PIN pinname="Standard Deviation" slicecount="1" values="0.05">
+   <PIN pinname="Standard Deviation" slicecount="1" values="0.01">
    </PIN>
    </NODE>
    <NODE systemname="Add (Value)" nodename="Add (Value)" componentmode="Hidden" id="15">
@@ -186,6 +186,8 @@
    <BOUNDS type="Node" left="2475" top="1500" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Cycles" visible="1">
+   </PIN>
+   <PIN pinname="Period" slicecount="1" values="0.5">
    </PIN>
    </NODE>
    <NODE id="17" systemname="IOBox (Value Advanced)" componentmode="InABox" nodename="IOBox (Value Advanced)">
