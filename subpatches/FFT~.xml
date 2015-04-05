@@ -1,10 +1,10 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="C:\Users\Admin\Desktop\Party Cloth\subpatches\FFT.v4p" systemname="FFT" filename="C:\Users\Admin\Desktop\Party Cloth\subpatches\FFT.v4p" scrollx="7485" scrolly="45">
-   <BOUNDS type="Window" left="24135" top="8175" width="3345" height="6630">
+   <PATCH nodename="C:\Users\Admin\Desktop\Party Cloth\subpatches\FFT.v4p" systemname="FFT" filename="C:\Users\Admin\Desktop\Party Cloth\subpatches\FFT.v4p" scrollx="2415" scrolly="2265">
+   <BOUNDS type="Window" left="24870" top="8325" width="3015" height="6645">
    </BOUNDS>
    <PACK Name="addonpack" Version="33.7.0">
    </PACK>
-   <NODE componentmode="InABox" id="0" nodename="Renderer (EX9)" systemname="Renderer (EX9)">
+   <NODE componentmode="InABox" id="0" nodename="Renderer (EX9)" systemname="Renderer (EX9)" stayontop="1">
    <BOUNDS height="0" left="2625" top="3240" type="Node" width="0">
    </BOUNDS>
    <BOUNDS height="10170" left="360" top="1155" type="Window" width="6000">
@@ -323,7 +323,7 @@
    </PIN>
    <BOUNDS height="9510" left="7800" top="375" type="Window" width="11025">
    </BOUNDS>
-   <PIN pinname="Gain" slicecount="1" values="2" visible="1">
+   <PIN pinname="Gain" slicecount="1" visible="1" values="2">
    </PIN>
    <PIN pinname="AsSpreadOut" visible="1">
    </PIN>
@@ -334,6 +334,8 @@
    <PIN pinname="HiMidOut" visible="1">
    </PIN>
    <PIN pinname="LoMidOut" visible="1">
+   </PIN>
+   <PIN pinname="FFT" visible="1">
    </PIN>
    </NODE>
    <LINK dstnodeid="0" dstpinname="Layers" linkstyle="Bezier" srcnodeid="18" srcpinname="Layer">
@@ -449,5 +451,13 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="28" srcpinname="Input Value" dstnodeid="27" dstpinname="Y Input Value">
+   </LINK>
+   <NODE nodename="S (Value)" id="29" systemname="S (Value)">
+   <BOUNDS type="Node" left="6105" top="3600" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Send String" slicecount="1" values="FFT">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="22" srcpinname="FFT" dstnodeid="29" dstpinname="Input Value">
    </LINK>
    </PATCH>

@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="C:\Users\Admin\Desktop\Coth\subpatches\attractors.v4p" systemname="attractors" filename="C:\Users\Admin\Desktop\Coth\subpatches\attractors.v4p" scrollx="45" scrolly="0">
+   <PATCH nodename="C:\Users\Admin\Desktop\Party Cloth\subpatches\attractors.v4p" systemname="attractors" filename="C:\Users\Admin\Desktop\Coth\subpatches\attractors.v4p" scrollx="210" scrolly="825">
    <BOUNDS type="Window" left="16515" top="3510" width="10065" height="8175">
    </BOUNDS>
    <PACK Name="addonpack" Version="33.7.0">
@@ -303,7 +303,7 @@
    </BOUNDS>
    <PIN pinname="" slicecount="1" visible="1" values="0">
    </PIN>
-   <PIN pinname="Receive String" slicecount="1" values="scene">
+   <PIN pinname="Receive String" slicecount="1" values="Scene">
    </PIN>
    </NODE>
    <LINK srcnodeid="22" srcpinname="Input Value" dstnodeid="8" dstpinname="Input 1">

@@ -11,7 +11,7 @@
    </BOUNDS>
    <PIN pinname="Position Out" visible="1">
    </PIN>
-   <PIN pinname="Position In" slicecount="1" values="0.1">
+   <PIN pinname="Position In" slicecount="1" values="0.05">
    </PIN>
    </NODE>
    <NODE systemname="Perlin (2d)" nodename="Perlin (2d)" componentmode="Hidden" id="0">

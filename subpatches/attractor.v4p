@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="C:\Users\Admin\Desktop\Coth\subpatches\attractor.v4p" systemname="attractor" filename="C:\Users\Michael\Desktop\nodecloth\String Physics\subpatches\attractor.v4p" scrollx="0" scrolly="1350">
+   <PATCH nodename="C:\Users\Admin\Desktop\Party Cloth\subpatches\attractor.v4p" systemname="attractor" filename="C:\Users\Michael\Desktop\nodecloth\String Physics\subpatches\attractor.v4p" scrollx="0" scrolly="1350">
    <BOUNDS type="Window" left="4965" top="8100" width="7920" height="4920">
    </BOUNDS>
    <PACK Name="image" Version="0.2.0">
@@ -7,7 +7,7 @@
    <PACK Name="addonpack" Version="33.7.0">
    </PACK>
    <NODE systemname="Integrate (Differential)" nodename="Integrate (Differential)" componentmode="Hidden" id="1">
-   <BOUNDS type="Node" left="2505" top="1725" width="100" height="100">
+   <BOUNDS type="Node" left="3915" top="1545" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Position Out" visible="1">
    </PIN>
@@ -67,7 +67,7 @@
    <LINK srcnodeid="0" srcpinname="Output" dstnodeid="8" dstpinname="Y Input Value">
    </LINK>
    <NODE systemname="Add (Value)" nodename="Add (Value)" componentmode="Hidden" id="11">
-   <BOUNDS type="Node" left="3915" top="1995" width="100" height="100">
+   <BOUNDS type="Node" left="2535" top="1935" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input 1" visible="1">
    </PIN>
@@ -85,7 +85,7 @@
    </BOUNDS>
    <PIN pinname="Output" visible="1">
    </PIN>
-   <PIN pinname="Spread Count" slicecount="1" values="5" visible="1">
+   <PIN pinname="Spread Count" slicecount="1" visible="1" values="5">
    </PIN>
    <PIN pinname="Input" slicecount="1" values="0.5">
    </PIN>

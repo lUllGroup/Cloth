@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="C:\Users\Admin\Desktop\Coth\subpatches\meshDepth.v4p" systemname="meshDepth" filename="C:\Users\Admin\Desktop\Coth\subpatches\meshDepth.v4p" scrollx="255" scrolly="2760">
-   <BOUNDS type="Window" left="15915" top="7710" width="10710" height="10755">
+   <PATCH nodename="C:\Users\Admin\Desktop\Party Cloth\subpatches\meshDepth.v4p" systemname="meshDepth" filename="C:\Users\Admin\Desktop\Coth\subpatches\meshDepth.v4p" scrollx="0" scrolly="1140">
+   <BOUNDS type="Window" left="7890" top="6120" width="10710" height="10755">
    </BOUNDS>
    <PACK Name="addonpack" Version="33.7.0">
    </PACK>
@@ -101,9 +101,9 @@
    </PIN>
    </NODE>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="10" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="3330" top="6675" width="480" height="480">
+   <BOUNDS type="Box" left="3405" top="5895" width="480" height="480">
    </BOUNDS>
-   <BOUNDS type="Node" left="3330" top="6675" width="0" height="0">
+   <BOUNDS type="Node" left="3405" top="5895" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
    </PIN>
@@ -151,9 +151,9 @@
    </PIN>
    </NODE>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="34" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="2430" top="6750" width="795" height="480">
+   <BOUNDS type="Box" left="3090" top="6810" width="795" height="480">
    </BOUNDS>
-   <BOUNDS type="Node" left="2430" top="6750" width="0" height="0">
+   <BOUNDS type="Node" left="3090" top="6810" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="2" visible="1" values="1024,1024">
    </PIN>
@@ -231,9 +231,9 @@
    <LINK srcnodeid="38" srcpinname="Projection" dstnodeid="39" dstpinname="Projection">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="40" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="5400" top="8640" width="795" height="240">
+   <BOUNDS type="Box" left="5220" top="8895" width="795" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="5400" top="8640" width="0" height="0">
+   <BOUNDS type="Node" left="5220" top="8895" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.605">
    </PIN>
@@ -249,9 +249,9 @@
    <LINK srcnodeid="40" srcpinname="Y Output Value" dstnodeid="39" dstpinname="MaxDepth">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="41" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="4830" top="8205" width="795" height="240">
+   <BOUNDS type="Box" left="4995" top="8175" width="795" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="4830" top="8205" width="0" height="0">
+   <BOUNDS type="Node" left="4995" top="8175" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.423">
    </PIN>
@@ -269,7 +269,7 @@
    <LINK srcnodeid="41" srcpinname="Y Output Value" dstnodeid="39" dstpinname="MinDepth">
    </LINK>
    <NODE systemname="GetMatrix (Transform)" nodename="GetMatrix (Transform)" componentmode="Hidden" id="43">
-   <BOUNDS type="Node" left="4575" top="6765" width="100" height="100">
+   <BOUNDS type="Node" left="4485" top="6600" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Transform" visible="1" slicecount="1" values="||">
    </PIN>
@@ -279,7 +279,7 @@
    <LINK srcnodeid="38" srcpinname="View" dstnodeid="43" dstpinname="Transform">
    </LINK>
    <NODE systemname="GetMatrix (Transform)" nodename="GetMatrix (Transform)" componentmode="Hidden" id="44">
-   <BOUNDS type="Node" left="5550" top="6810" width="100" height="100">
+   <BOUNDS type="Node" left="5415" top="6615" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Transform" visible="1" slicecount="1" values="||">
    </PIN>
@@ -347,7 +347,9 @@
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
-   <PIN pinname="Time" slicecount="1" values="0.3">
+   <PIN pinname="Time" slicecount="1" values="0.15">
+   </PIN>
+   <PIN pinname="Retriggerable" slicecount="1" values="0">
    </PIN>
    </NODE>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="78" systemname="IOBox (Value Advanced)">

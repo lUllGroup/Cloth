@@ -5,9 +5,9 @@
    <PACK Name="addonpack" Version="33.7.0">
    </PACK>
    <NODE nodename="IOBox (Color)" componentmode="InABox" id="0" systemname="IOBox (Color)">
-   <BOUNDS type="Box" left="5760" top="3825" width="615" height="585">
+   <BOUNDS type="Box" left="5640" top="3930" width="615" height="585">
    </BOUNDS>
-   <BOUNDS type="Node" left="5760" top="3825" width="0" height="0">
+   <BOUNDS type="Node" left="5640" top="3930" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Color Input" slicecount="1" visible="1" values="|1.00000,1.00000,1.00000,1.00000|">
    </PIN>
@@ -15,11 +15,11 @@
    </PIN>
    </NODE>
    <NODE nodename="IOBox (Color)" componentmode="InABox" id="1" systemname="IOBox (Color)">
-   <BOUNDS type="Box" left="3630" top="3795" width="585" height="585">
+   <BOUNDS type="Box" left="3630" top="3795" width="465" height="480">
    </BOUNDS>
    <BOUNDS type="Node" left="3630" top="3795" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Color Input" slicecount="1" visible="1" values="|0.37469,0.11841,0.45968,1.00000|">
+   <PIN pinname="Color Input" slicecount="1" visible="1" values="|0.00000,0.09439,0.09626,1.00000|">
    </PIN>
    <PIN pinname="Color Output" visible="1">
    </PIN>
@@ -89,7 +89,7 @@
    </PIN>
    <PIN pinname="Switch" visible="1" slicecount="1" values="1">
    </PIN>
-   <PIN pinname="Input 1" slicecount="1" values="|1.00000,1.00000,1.00000,1.00000|" visible="1">
+   <PIN pinname="Input 1" slicecount="1" visible="1" values="|1.00000,1.00000,1.00000,1.00000|">
    </PIN>
    <PIN pinname="Input Count" slicecount="1" values="3">
    </PIN>
@@ -109,11 +109,11 @@
    </PIN>
    <PIN pinname="Switch" visible="1" slicecount="1" values="1">
    </PIN>
-   <PIN pinname="Input 1" visible="1" slicecount="1" values="|0.21316,0.21316,0.21316,1.00000|">
+   <PIN pinname="Input 1" visible="1" slicecount="1" values="|1.00000,1.00000,1.00000,1.00000|">
    </PIN>
    <PIN pinname="Input Count" slicecount="1" values="3">
    </PIN>
-   <PIN pinname="Input 3" visible="1">
+   <PIN pinname="Input 3" visible="1" slicecount="1" values="|0.13859,0.03935,0.15386,1.00000|">
    </PIN>
    </NODE>
    <LINK srcnodeid="10" srcpinname="Output" dstnodeid="4" dstpinname="Color Input">
@@ -127,9 +127,11 @@
    </PIN>
    <PIN pinname="Switch" visible="1" slicecount="1" values="1">
    </PIN>
-   <PIN pinname="Input 1" slicecount="1" values="|0.30028,0.30028,0.30028,1.00000|">
+   <PIN pinname="Input 1" slicecount="1" values="|1.00000,1.00000,1.00000,1.00000|">
    </PIN>
    <PIN pinname="Input Count" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Input 3" visible="1" slicecount="1" values="|0.00000,0.00000,0.00000,1.00000|">
    </PIN>
    </NODE>
    <LINK srcnodeid="2" srcpinname="Color Output" dstnodeid="12" dstpinname="Input 2">
@@ -222,22 +224,22 @@
    </LINK>
    <LINK srcnodeid="22" srcpinname="Y Output Value" dstnodeid="20" dstpinname="Y Input Value">
    </LINK>
-   <LINK srcnodeid="0" srcpinname="Color Output" dstnodeid="6" dstpinname="Input 1">
-   </LINK>
    <NODE nodename="IOBox (Color)" componentmode="InABox" id="23" systemname="IOBox (Color)">
    <BOUNDS type="Box" left="4365" top="3675" width="585" height="585">
    </BOUNDS>
    <BOUNDS type="Node" left="4365" top="3675" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Color Input" slicecount="1" visible="1" values="|0.51222,0.16277,0.63206,1.00000|">
+   <PIN pinname="Color Input" slicecount="1" visible="1" values="|0.13859,0.03935,0.15386,1.00000|">
    </PIN>
    <PIN pinname="Color Output" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="1" srcpinname="Color Output" dstnodeid="10" dstpinname="Input 2">
    </LINK>
-   <LINK srcnodeid="23" srcpinname="Color Output" dstnodeid="10" dstpinname="Input 3">
-   </LINK>
    <LINK srcnodeid="0" srcpinname="Color Output" dstnodeid="6" dstpinname="Input 3">
+   </LINK>
+   <LINK srcnodeid="0" srcpinname="Color Output" dstnodeid="6" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="1" srcpinname="Color Output" dstnodeid="10" dstpinname="Input 3">
    </LINK>
    </PATCH>

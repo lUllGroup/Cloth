@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="C:\Users\Admin\Desktop\Coth\subpatches\ghostDance.v4p" systemname="ghostDance" filename="C:\Users\Michael\Desktop\nodecloth\String Physics\subpatches\ghostDance.v4p" scrollx="75" scrolly="0">
+   <PATCH nodename="C:\Users\Admin\Desktop\Party Cloth\subpatches\ghostDance.v4p" systemname="ghostDance" filename="C:\Users\Michael\Desktop\nodecloth\String Physics\subpatches\ghostDance.v4p" scrollx="0" scrolly="0">
    <NODE systemname="Count (Value)" nodename="Count (Value)" componentmode="Hidden" id="0">
    <BOUNDS type="Node" left="5295" top="2970" width="885" height="270">
    </BOUNDS>
@@ -151,7 +151,7 @@
    </PIN>
    </NODE>
    <NODE systemname="Damper (Animation)" filename="" nodename="Damper (Animation)" componentmode="Hidden" id="13">
-   <BOUNDS type="Node" left="3465" top="4395" width="100" height="100">
+   <BOUNDS type="Node" left="3150" top="3810" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Go To Position" visible="1">
    </PIN>
@@ -159,7 +159,7 @@
    </PIN>
    </NODE>
    <NODE systemname="GaussianSpread (Spreads)" nodename="GaussianSpread (Spreads)" componentmode="Hidden" id="14">
-   <BOUNDS type="Node" left="2430" top="3825" width="100" height="100">
+   <BOUNDS type="Node" left="3135" top="2940" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Output" visible="1">
    </PIN>
@@ -167,7 +167,7 @@
    </PIN>
    <PIN pinname="Spread Count" slicecount="1" values="20">
    </PIN>
-   <PIN pinname="Random Seed" visible="1">
+   <PIN pinname="Random Seed" visible="1" slicecount="1" values="3416">
    </PIN>
    <PIN pinname="Standard Deviation" slicecount="1" values="0.01">
    </PIN>
@@ -201,8 +201,6 @@
    <LINK srcnodeid="17" srcpinname="Y Output Value" dstnodeid="12" dstpinname="Input">
    </LINK>
    <LINK srcnodeid="8" srcpinname="Output" dstnodeid="12" dstpinname="Index">
-   </LINK>
-   <LINK srcnodeid="16" srcpinname="Cycles" dstnodeid="14" dstpinname="Random Seed">
    </LINK>
    <LINK srcnodeid="17" srcpinname="Y Output Value" dstnodeid="11" dstpinname="Spread">
    </LINK>
@@ -268,12 +266,88 @@
    </LINK>
    <LINK srcnodeid="9" srcpinname="Output" dstnodeid="8" dstpinname="Enabled">
    </LINK>
-   <BOUNDS type="Window" left="11745" top="8670" width="11310" height="7020">
+   <BOUNDS type="Window" left="4530" top="6135" width="11310" height="7020">
    </BOUNDS>
    <PACK Name="image" Version="0.2.0">
    </PACK>
    <PACK Name="addonpack" Version="33.7.0">
    </PACK>
    <LINK srcnodeid="8" srcpinname="Output" dstnodeid="11" dstpinname="Index">
+   </LINK>
+   <NODE nodename="R (Value)" id="22" systemname="R (Value)">
+   <BOUNDS type="Node" left="8310" top="60" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="" slicecount="1" visible="1" values="0">
+   </PIN>
+   <PIN pinname="Receive String" slicecount="1" values="FFTDecayOut">
+   </PIN>
+   <PIN pinname="Input Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Random (Value)" nodename="Random (Value)" componentmode="Hidden" id="23">
+   <BOUNDS type="Node" left="6735" top="1515" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Scale" slicecount="1" values="1509">
+   </PIN>
+   <PIN pinname="Is Integer" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Enabled" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="GetSlice (Spreads)" nodename="GetSlice (Spreads)" componentmode="Hidden" id="24">
+   <BOUNDS type="Node" left="8100" top="1200" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Index" slicecount="1" values="3">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="22" srcpinname="Input Value" dstnodeid="24" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="24" srcpinname="Output" dstnodeid="23" dstpinname="Enabled">
+   </LINK>
+   <LINK srcnodeid="23" srcpinname="Output" dstnodeid="14" dstpinname="Random Seed">
+   </LINK>
+   <NODE systemname="GetSlice (Spreads)" nodename="GetSlice (Spreads)" componentmode="Hidden" id="25">
+   <BOUNDS type="Node" left="9270" top="660" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Index" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="22" srcpinname="Input Value" dstnodeid="25" dstpinname="Input">
+   </LINK>
+   <NODE systemname="MonoFlop (Animation)" nodename="MonoFlop (Animation)" componentmode="Hidden" id="26">
+   <BOUNDS type="Node" left="9540" top="855" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Set" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Retriggerable" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Time" slicecount="1" values="0.1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="25" srcpinname="Output" dstnodeid="26" dstpinname="Set">
+   </LINK>
+   <NODE systemname="TogEdge (Animation)" nodename="TogEdge (Animation)" componentmode="Hidden" id="27">
+   <BOUNDS type="Node" left="9765" top="1350" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Up Edge" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="26" srcpinname="Output" dstnodeid="27" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="27" srcpinname="Up Edge" dstnodeid="10" dstpinname="Y Input Value">
    </LINK>
    </PATCH>
