@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="C:\Users\Admin\Desktop\Party Cloth\subpatches\meshDepth2.v4p" systemname="meshDepth2" filename="C:\Users\Admin\Desktop\Coth\subpatches\meshDepth2.v4p" scrollx="555" scrolly="4500">
+   <PATCH nodename="C:\Users\Admin\Desktop\Party Cloth\subpatches\meshDepth2.v4p" systemname="meshDepth2" filename="C:\Users\Admin\Desktop\Coth\subpatches\meshDepth2.v4p" scrollx="2130" scrolly="0">
    <BOUNDS type="Window" left="10710" top="6435" width="15915" height="12030">
    </BOUNDS>
    <PACK Name="addonpack" Version="33.7.0">
@@ -279,7 +279,7 @@
    <NODE id="36" systemname="Transform (Transform 3d)" nodename="Transform (Transform 3d)" componentmode="Hidden">
    <PIN pinname="Pitch" slicecount="4" visible="1" values="34.6853275182546,25.5036693182041,11.8576677894263,35.7969525952868">
    </PIN>
-   <PIN pinname="Yaw" slicecount="4" visible="1" values="34.7714535501314,25.516719044764,11.8674527710375,36.1161440478792">
+   <PIN pinname="Yaw" slicecount="1" visible="1" values="0.13">
    </PIN>
    <PIN pinname="TranslateZ" slicecount="1" visible="1" values="-0.21">
    </PIN>
@@ -287,7 +287,7 @@
    </BOUNDS>
    <PIN pinname="TranslateY" slicecount="1" visible="1" values="0.019">
    </PIN>
-   <PIN pinname="Roll" slicecount="4" visible="1" values="34.8960461754465,25.5534800293522,11.8702956895306,36.4469413514126">
+   <PIN pinname="Roll" slicecount="1" visible="1" values="0.77">
    </PIN>
    <PIN pinname="TranslateX" slicecount="1" visible="1" values="0">
    </PIN>
@@ -429,7 +429,7 @@
    </BOUNDS>
    <PIN pinname="Input 1" visible="1">
    </PIN>
-   <PIN pinname="Input 2" slicecount="1" values="-0.03">
+   <PIN pinname="Input 2" slicecount="1" values="-0.06">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
@@ -521,7 +521,7 @@
    <NODE systemname="Multiply (Value)" nodename="Multiply (Value)" componentmode="Hidden" id="93">
    <BOUNDS type="Node" left="9990" top="11355" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Input 2" slicecount="1" visible="1" values="0.0005">
+   <PIN pinname="Input 2" slicecount="1" visible="1" values="0.001">
    </PIN>
    <PIN pinname="Input 1" visible="1" slicecount="4" values="0,0,0,0">
    </PIN>
@@ -541,7 +541,7 @@
    <NODE systemname="Add (Value)" nodename="Add (Value)" componentmode="Hidden" id="107">
    <BOUNDS type="Node" left="7275" top="4560" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Input 2" slicecount="1" values="0.05">
+   <PIN pinname="Input 2" slicecount="1" values="0.04">
    </PIN>
    <PIN pinname="Input 1" visible="1" slicecount="4" values="0,0,0,0">
    </PIN>
@@ -567,7 +567,7 @@
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
-   <PIN pinname="Input 2" slicecount="1" values="0.1">
+   <PIN pinname="Input 2" slicecount="1" values="0.2">
    </PIN>
    </NODE>
    <LINK srcnodeid="111" srcpinname="Output" dstnodeid="107" dstpinname="Input 1">
@@ -698,10 +698,6 @@
    </LINK>
    <LINK srcnodeid="121" srcpinname="Output" dstnodeid="36" dstpinname="Pitch">
    </LINK>
-   <LINK srcnodeid="121" srcpinname="Output" dstnodeid="36" dstpinname="Yaw">
-   </LINK>
-   <LINK srcnodeid="121" srcpinname="Output" dstnodeid="36" dstpinname="Roll">
-   </LINK>
    <NODE nodename="R (Value)" id="122" systemname="R (Value)">
    <BOUNDS type="Node" left="10260" top="12090" width="0" height="0">
    </BOUNDS>
@@ -729,5 +725,17 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="123" srcpinname="Y Output Value" dstnodeid="89" dstpinname="Initial Interest">
+   </LINK>
+   <NODE systemname="LFO (Animation)" nodename="LFO (Animation)" componentmode="Hidden" id="124">
+   <BOUNDS type="Node" left="3150" top="1290" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Period" slicecount="1" values="10">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="121" srcpinname="Output" dstnodeid="36" dstpinname="Yaw">
+   </LINK>
+   <LINK srcnodeid="121" srcpinname="Output" dstnodeid="36" dstpinname="Roll">
    </LINK>
    </PATCH>
