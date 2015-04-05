@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="C:\Users\Admin\Desktop\Coth\subpatches\KinectDepth.v4p" scrollx="6285" scrolly="8565" systemname="KinectDepth" filename="C:\Users\Admin\Desktop\KinectDepth.v4p">
+   <PATCH nodename="C:\Users\Admin\Desktop\Coth\subpatches\KinectDepth.v4p" scrollx="255" scrolly="4725" systemname="KinectDepth" filename="C:\Users\Admin\Desktop\KinectDepth.v4p">
    <BOUNDS type="Window" left="11490" top="3255" width="13260" height="10320">
    </BOUNDS>
    <PACK Name="addonpack" Version="33.7.0">
@@ -303,7 +303,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="9270" top="21330" width="6000" height="4500">
    </BOUNDS>
-   <BOUNDS type="Window" left="150" top="5850" width="12225" height="9690">
+   <BOUNDS type="Window" left="225" top="5025" width="12225" height="9690">
    </BOUNDS>
    <PIN pinname="Texture In" visible="1" slicecount="1" values="||">
    </PIN>
@@ -691,9 +691,9 @@
    </PIN>
    </NODE>
    <NODE systemname="Kinect" filename="Kinect.v4p" nodename="Kinect.v4p" componentmode="Hidden" id="333" stayontop="1">
-   <BOUNDS type="Node" left="3165" top="9360" width="0" height="0">
+   <BOUNDS type="Node" left="2940" top="9360" width="0" height="0">
    </BOUNDS>
-   <BOUNDS type="Box" left="3165" top="9360" width="9330" height="9750">
+   <BOUNDS type="Box" left="2940" top="9360" width="9330" height="9750">
    </BOUNDS>
    <BOUNDS type="Window" left="13515" top="2295" width="9330" height="11040">
    </BOUNDS>
@@ -707,29 +707,29 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="189" srcpinname="Y Output Value" dstnodeid="333" dstpinname="Motor Angle" linkstyle="Bezier">
-   <LINKPOINT x="3675" y="6173">
+   <LINKPOINT x="3600" y="6173">
    </LINKPOINT>
-   <LINKPOINT x="3540" y="6173">
+   <LINKPOINT x="3390" y="6173">
    </LINKPOINT>
    </LINK>
    <LINK srcnodeid="191" srcpinname="Y Output Value" dstnodeid="333" dstpinname="Resolution" linkstyle="Bezier">
-   <LINKPOINT x="8370" y="6593">
+   <LINKPOINT x="8295" y="6593">
    </LINKPOINT>
-   <LINKPOINT x="3390" y="6593">
+   <LINKPOINT x="3240" y="6593">
    </LINKPOINT>
    </LINK>
    <LINK srcnodeid="218" srcpinname="Y Output Value" dstnodeid="333" dstpinname="SizeXY" linkstyle="Bezier">
-   <LINKPOINT x="9660" y="6585">
+   <LINKPOINT x="9585" y="6585">
    </LINKPOINT>
-   <LINKPOINT x="3225" y="6585">
+   <LINKPOINT x="3075" y="6585">
    </LINKPOINT>
    </LINK>
    <LINK srcnodeid="338" srcpinname="Transform Out" dstnodeid="333" dstpinname="Transform In">
    </LINK>
    <LINK srcnodeid="340" srcpinname="Y Output Value" dstnodeid="333" dstpinname="Enable Pointcloud" linkstyle="Bezier">
-   <LINKPOINT x="8385" y="8993">
+   <LINKPOINT x="8310" y="8993">
    </LINKPOINT>
-   <LINKPOINT x="4065" y="8993">
+   <LINKPOINT x="3915" y="8993">
    </LINKPOINT>
    </LINK>
    <LINK srcnodeid="357" srcpinname="Y Output Value" dstnodeid="333" dstpinname="Enabled">
@@ -793,7 +793,7 @@
    </PIN>
    <PIN pinname="Transform In" visible="1" slicecount="1" values="||">
    </PIN>
-   <PIN pinname="Index" slicecount="1" values="1">
+   <PIN pinname="Index" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Enable Pointcloud" visible="1">
    </PIN>
@@ -915,5 +915,7 @@
    <LINK srcnodeid="157" srcpinname="Transform Out" dstnodeid="206" dstpinname="Projection">
    </LINK>
    <LINK srcnodeid="360" srcpinname="Texture Out" dstnodeid="173" dstpinname="Input Node">
+   </LINK>
+   <LINK srcnodeid="334" srcpinname="Layer" dstnodeid="236" dstpinname="Layer 3">
    </LINK>
    </PATCH>
