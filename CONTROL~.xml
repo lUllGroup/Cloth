@@ -13,7 +13,7 @@
    </PIN>
    <PIN pinname="Value Type" slicecount="1" values="Integer">
    </PIN>
-   <PIN pinname="Y Input Value" slicecount="1" values="0">
+   <PIN pinname="Y Input Value" slicecount="1" values="2">
    </PIN>
    </NODE>
    <NODE nodename="S (Value)" id="2" systemname="S (Value)">
@@ -33,7 +33,7 @@
    </PIN>
    <PIN pinname="Value Type" slicecount="1" values="Integer">
    </PIN>
-   <PIN pinname="Y Input Value" slicecount="1" values="1">
+   <PIN pinname="Y Input Value" slicecount="1" values="0">
    </PIN>
    </NODE>
    <NODE nodename="S (Value)" id="3" systemname="S (Value)">
@@ -151,7 +151,7 @@
    </PIN>
    <PIN pinname="Value Type" slicecount="1" values="Real">
    </PIN>
-   <PIN pinname="Y Input Value" slicecount="1" values="0.219858156028369">
+   <PIN pinname="Y Input Value" slicecount="1" values="0.3">
    </PIN>
    <PIN pinname="Show Slider" slicecount="1" values="1">
    </PIN>
