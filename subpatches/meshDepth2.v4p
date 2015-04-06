@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="C:\Users\Admin\Desktop\Party Cloth\subpatches\meshDepth2.v4p" systemname="meshDepth2" filename="C:\Users\Admin\Desktop\Coth\subpatches\meshDepth2.v4p" scrollx="2475" scrolly="660">
+   <PATCH nodename="C:\Users\Admin\Desktop\Party Cloth\subpatches\meshDepth2.v4p" systemname="meshDepth2" filename="C:\Users\Admin\Desktop\Coth\subpatches\meshDepth2.v4p" scrollx="8445" scrolly="2805">
    <BOUNDS type="Window" left="8625" top="3990" width="14400" height="11550">
    </BOUNDS>
    <PACK Name="addonpack" Version="33.7.0">
@@ -629,9 +629,9 @@
    <LINK srcnodeid="117" srcpinname="Output" dstnodeid="100" dstpinname="Y Input Value">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="118" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="12840" top="5655" width="480" height="480">
+   <BOUNDS type="Box" left="12525" top="5220" width="480" height="480">
    </BOUNDS>
-   <BOUNDS type="Node" left="12840" top="5655" width="0" height="0">
+   <BOUNDS type="Node" left="12525" top="5220" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
    </PIN>

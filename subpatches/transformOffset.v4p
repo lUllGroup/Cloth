@@ -323,7 +323,7 @@
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
-   <PIN pinname="Input 1" slicecount="1" values="-0.15">
+   <PIN pinname="Input 1" slicecount="1" values="-0.2">
    </PIN>
    <PIN pinname="Input 2" slicecount="1" values="0">
    </PIN>

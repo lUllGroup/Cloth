@@ -325,6 +325,8 @@
    </PIN>
    <PIN pinname="Input 1" slicecount="1" values="-0.15">
    </PIN>
+   <PIN pinname="Input 2" slicecount="1" values="0">
+   </PIN>
    </NODE>
    <LINK srcnodeid="29" srcpinname="Output" dstnodeid="32" dstpinname="Switch">
    </LINK>

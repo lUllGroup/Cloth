@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="C:\Users\Admin\Desktop\Party Cloth\subpatches\FFT.v4p" systemname="FFT" filename="C:\Users\Admin\Desktop\Party Cloth\subpatches\FFT.v4p" scrollx="2415" scrolly="2265">
-   <BOUNDS type="Window" left="24870" top="8325" width="3015" height="6645">
+   <PATCH nodename="C:\Users\Admin\Desktop\Party Cloth\subpatches\FFT.v4p" systemname="FFT" filename="C:\Users\Admin\Desktop\Party Cloth\subpatches\FFT.v4p" scrollx="1875" scrolly="2310">
+   <BOUNDS type="Window" left="23280" top="6525" width="4290" height="6645">
    </BOUNDS>
    <PACK Name="addonpack" Version="33.7.0">
    </PACK>
@@ -189,11 +189,11 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="14" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
-   <BOUNDS height="0" left="7095" top="2220" type="Node" width="0">
+   <BOUNDS height="0" left="7020" top="1980" type="Node" width="0">
    </BOUNDS>
    <BOUNDS height="160" left="9750" top="2985" type="Window" width="215">
    </BOUNDS>
-   <BOUNDS height="450" left="7095" top="2220" type="Box" width="450">
+   <BOUNDS height="450" left="7020" top="1980" type="Box" width="450">
    </BOUNDS>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
@@ -361,7 +361,7 @@
    </LINKPOINT>
    </LINK>
    <LINK dstnodeid="22" dstpinname="Enabled" srcnodeid="14" srcpinname="Y Output Value">
-   <LINKPOINT x="7080" y="2880">
+   <LINKPOINT x="7042" y="2760">
    </LINKPOINT>
    </LINK>
    <LINK dstnodeid="22" dstpinname="AudioDriver" srcnodeid="15" srcpinname="Output Enum">
