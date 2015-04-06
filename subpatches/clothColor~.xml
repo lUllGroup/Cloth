@@ -15,7 +15,7 @@
    </PIN>
    </NODE>
    <NODE nodename="IOBox (Color)" componentmode="InABox" id="1" systemname="IOBox (Color)">
-   <BOUNDS type="Box" left="3630" top="3795" width="1425" height="645">
+   <BOUNDS type="Box" left="3630" top="3795" width="465" height="480">
    </BOUNDS>
    <BOUNDS type="Node" left="3630" top="3795" width="0" height="0">
    </BOUNDS>
@@ -113,7 +113,7 @@
    </PIN>
    <PIN pinname="Input Count" slicecount="1" values="3">
    </PIN>
-   <PIN pinname="Input 3" visible="1">
+   <PIN pinname="Input 3" visible="1" slicecount="1" values="|0.13859,0.03935,0.15386,1.00000|">
    </PIN>
    </NODE>
    <LINK srcnodeid="10" srcpinname="Output" dstnodeid="4" dstpinname="Color Input">
@@ -236,10 +236,10 @@
    </NODE>
    <LINK srcnodeid="1" srcpinname="Color Output" dstnodeid="10" dstpinname="Input 2">
    </LINK>
-   <LINK srcnodeid="23" srcpinname="Color Output" dstnodeid="10" dstpinname="Input 3">
-   </LINK>
    <LINK srcnodeid="0" srcpinname="Color Output" dstnodeid="6" dstpinname="Input 3">
    </LINK>
    <LINK srcnodeid="0" srcpinname="Color Output" dstnodeid="6" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="1" srcpinname="Color Output" dstnodeid="10" dstpinname="Input 3">
    </LINK>
    </PATCH>

@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="C:\Users\Admin\Desktop\Party Cloth\subpatches\ghostDance.v4p" systemname="ghostDance" filename="C:\Users\Michael\Desktop\nodecloth\String Physics\subpatches\ghostDance.v4p" scrollx="270" scrolly="0">
+   <PATCH nodename="C:\Users\Admin\Desktop\Party Cloth\subpatches\ghostDance.v4p" systemname="ghostDance" filename="C:\Users\Michael\Desktop\nodecloth\String Physics\subpatches\ghostDance.v4p" scrollx="1245" scrolly="0">
    <NODE systemname="Count (Value)" nodename="Count (Value)" componentmode="Hidden" id="0">
    <BOUNDS type="Node" left="5295" top="2970" width="885" height="270">
    </BOUNDS>

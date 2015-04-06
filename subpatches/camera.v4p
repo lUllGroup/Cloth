@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="C:\Users\Admin\Desktop\Party Cloth\subpatches\camera.v4p" systemname="camera" filename="C:\Users\Admin\Desktop\Party Cloth\subpatches\camera.v4p" scrollx="2745" scrolly="225">
+   <PATCH nodename="C:\Users\Admin\Desktop\Party Cloth\subpatches\camera.v4p" systemname="camera" filename="C:\Users\Admin\Desktop\Party Cloth\subpatches\camera.v4p" scrollx="0" scrolly="0">
    <BOUNDS type="Window" left="3300" top="2895" width="14400" height="8070">
    </BOUNDS>
    <PACK Name="addonpack" Version="33.7.0">
@@ -475,7 +475,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="1815" top="930" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="3" visible="1" values="0,0,1">
+   <PIN pinname="Y Input Value" slicecount="3" visible="1" values="1,1,1">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -495,7 +495,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="2790" top="1050" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="3" visible="1" values="3,4,0">
+   <PIN pinname="Y Input Value" slicecount="3" visible="1" values="0,1,2">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -531,13 +531,13 @@
    <LINK srcnodeid="41" srcpinname="Input Value" dstnodeid="37" dstpinname="Index" linkstyle="PolyLine">
    </LINK>
    <NODE systemname="Add (Value Spectral)" nodename="Add (Value Spectral)" componentmode="Hidden" id="36">
-   <BOUNDS type="Node" left="1620" top="2760" width="100" height="100">
+   <BOUNDS type="Node" left="1620" top="2670" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
-   <PIN pinname="Bin Size" visible="1">
+   <PIN pinname="Bin Size" visible="1" slicecount="1" values="-1">
    </PIN>
    </NODE>
    <LINK srcnodeid="44" srcpinname="Output" dstnodeid="36" dstpinname="Input">
@@ -549,7 +549,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="3240" top="2310" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="2" visible="1" values="2,1">
+   <PIN pinname="Y Input Value" slicecount="2" visible="1" values="1,1">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -563,9 +563,9 @@
    </PIN>
    <PIN pinname="Default" slicecount="1" values="|0, 0|">
    </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
    </NODE>
-   <LINK srcnodeid="35" srcpinname="Y Output Value" dstnodeid="36" dstpinname="Bin Size">
-   </LINK>
    <LINK srcnodeid="37" srcpinname="Output" dstnodeid="7" dstpinname="Y Input Value">
    </LINK>
    </PATCH>

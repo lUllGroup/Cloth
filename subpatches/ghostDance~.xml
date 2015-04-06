@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="C:\Users\Admin\Desktop\Party Cloth\subpatches\ghostDance.v4p" systemname="ghostDance" filename="C:\Users\Michael\Desktop\nodecloth\String Physics\subpatches\ghostDance.v4p" scrollx="0" scrolly="0">
+   <PATCH nodename="C:\Users\Admin\Desktop\Party Cloth\subpatches\ghostDance.v4p" systemname="ghostDance" filename="C:\Users\Michael\Desktop\nodecloth\String Physics\subpatches\ghostDance.v4p" scrollx="330" scrolly="735">
    <NODE systemname="Count (Value)" nodename="Count (Value)" componentmode="Hidden" id="0">
    <BOUNDS type="Node" left="5295" top="2970" width="885" height="270">
    </BOUNDS>
@@ -169,7 +169,7 @@
    </PIN>
    <PIN pinname="Random Seed" visible="1" slicecount="1" values="3416">
    </PIN>
-   <PIN pinname="Standard Deviation" slicecount="1" values="0.01">
+   <PIN pinname="Standard Deviation" slicecount="1" values="0.03">
    </PIN>
    </NODE>
    <NODE systemname="Add (Value)" nodename="Add (Value)" componentmode="Hidden" id="15">
@@ -303,7 +303,7 @@
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
-   <PIN pinname="Index" slicecount="1" values="3">
+   <PIN pinname="Index" slicecount="1" values="2">
    </PIN>
    </NODE>
    <LINK srcnodeid="22" srcpinname="Input Value" dstnodeid="24" dstpinname="Input">

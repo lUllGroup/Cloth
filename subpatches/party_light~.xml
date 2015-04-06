@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="C:\Users\Admin\Desktop\Party Cloth\subpatches\party_light.v4p" systemname="party_light" filename="C:\Users\Admin\Desktop\Party Cloth\subpatches\party_light.v4p" scrollx="780" scrolly="9345">
+   <PATCH nodename="C:\Users\Admin\Desktop\Party Cloth\subpatches\party_light.v4p" systemname="party_light" filename="C:\Users\Admin\Desktop\Party Cloth\subpatches\party_light.v4p" scrollx="0" scrolly="7230">
    <BOUNDS type="Window" left="7905" top="5250" width="7425" height="8520">
    </BOUNDS>
    <PACK Name="addonpack" Version="33.7.0">
@@ -31,7 +31,7 @@
    <NODE systemname="Add (Value Spectral)" nodename="Add (Value Spectral)" componentmode="Hidden" id="2">
    <BOUNDS type="Node" left="4080" top="2310" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Input" visible="1" slicecount="1" values="0.00461485720923548">
+   <PIN pinname="Input" visible="1" slicecount="1" values="0.00379064797063624">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
@@ -157,7 +157,7 @@
    <NODE systemname="Multiply (Value)" nodename="Multiply (Value)" componentmode="Hidden" id="12">
    <BOUNDS type="Node" left="3360" top="11175" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Input 2" slicecount="1" visible="1" values="0.3">
+   <PIN pinname="Input 2" slicecount="1" visible="1" values="0.2">
    </PIN>
    <PIN pinname="Input 1" visible="1" slicecount="4" values="0,0,0,0">
    </PIN>
@@ -171,7 +171,7 @@
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
-   <PIN pinname="Input 2" slicecount="1" values="1000000">
+   <PIN pinname="Input 2" slicecount="1" values="100000">
    </PIN>
    </NODE>
    <NODE systemname="Add (Value Spectral)" nodename="Add (Value Spectral)" componentmode="Hidden" id="14">
@@ -617,7 +617,7 @@
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
-   <PIN pinname="Index" slicecount="1" values="2">
+   <PIN pinname="Index" slicecount="1" values="0">
    </PIN>
    </NODE>
    <LINK srcnodeid="0" srcpinname="Input Value" dstnodeid="51" dstpinname="Input">
@@ -639,7 +639,7 @@
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
-   <PIN pinname="Index" slicecount="1" values="2">
+   <PIN pinname="Index" slicecount="1" values="0">
    </PIN>
    </NODE>
    <LINK srcnodeid="53" srcpinname="Input Value" dstnodeid="52" dstpinname="Input">
@@ -655,8 +655,6 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="51" srcpinname="Output" dstnodeid="54" dstpinname="Input 1">
-   </LINK>
-   <LINK srcnodeid="54" srcpinname="Output" dstnodeid="2" dstpinname="Input">
    </LINK>
    <NODE systemname="Multiply (Value)" nodename="Multiply (Value)" componentmode="Hidden" id="55">
    <BOUNDS type="Node" left="6405" top="2430" width="100" height="100">
@@ -699,7 +697,7 @@
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
-   <PIN pinname="Input 2" slicecount="1" values="1000000">
+   <PIN pinname="Input 2" slicecount="1" values="0">
    </PIN>
    </NODE>
    <LINK srcnodeid="58" srcpinname="Output" dstnodeid="57" dstpinname="Input">
@@ -709,5 +707,7 @@
    <LINK srcnodeid="57" srcpinname="Output" dstnodeid="56" dstpinname="Input 2">
    </LINK>
    <LINK srcnodeid="56" srcpinname="Output" dstnodeid="15" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="51" srcpinname="Output" dstnodeid="2" dstpinname="Input">
    </LINK>
    </PATCH>
