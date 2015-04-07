@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="C:\Users\Admin\Desktop\Party Cloth\subpatches\clothTex.v4p" systemname="clothTex" filename="C:\Users\Michael\Desktop\nodecloth\String Physics\subpatches\clothTex.v4p" scrollx="13410" scrolly="5910">
-   <BOUNDS type="Window" left="14370" top="7245" width="11955" height="4935">
+   <PATCH nodename="C:\Users\Admin\Desktop\Party Cloth\subpatches\clothTex.v4p" systemname="clothTex" filename="C:\Users\Michael\Desktop\nodecloth\String Physics\subpatches\clothTex.v4p" scrollx="13980" scrolly="3495">
+   <BOUNDS type="Window" left="4275" top="2400" width="17460" height="8880">
    </BOUNDS>
    <PACK Name="image" Version="0.2.0">
    </PACK>
@@ -75,7 +75,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="17295" top="9705" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" visible="1" slicecount="1" values="1">
+   <PIN pinname="Y Input Value" visible="1" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -85,9 +85,11 @@
    </PIN>
    <PIN pinname="Behavior" slicecount="1" values="Toggle">
    </PIN>
-   <PIN pinname="X Input Value" slicecount="1" values="1">
+   <PIN pinname="X Input Value" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Enabled">
    </PIN>
    </NODE>
    <NODE systemname="LinearSpread (Spreads)" nodename="LinearSpread (Spreads)" componentmode="Hidden" id="80">
@@ -125,7 +127,7 @@
    </PIN>
    <PIN pinname="Transform Out" visible="1">
    </PIN>
-   <PIN pinname="XYZ" slicecount="1" values="2" visible="1">
+   <PIN pinname="XYZ" slicecount="1" visible="1" values="1.99">
    </PIN>
    </NODE>
    <LINK srcnodeid="84" srcpinname="Transform Out" dstnodeid="83" dstpinname="Transform">
@@ -143,7 +145,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="16980" top="8955" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="2" visible="1" values="2048,2048">
+   <PIN pinname="Y Input Value" slicecount="2" visible="1" values="1024,1024">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -821,7 +823,7 @@
    </BOUNDS>
    <PIN pinname="Change" visible="1">
    </PIN>
-   <PIN pinname="Period" slicecount="1" values="0.18" visible="1">
+   <PIN pinname="Period" slicecount="1" visible="1" values="0.18">
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="313" nodename="IOBox (Value Advanced)" systemname="IOBOX (VALUE ADVANCED)">
@@ -903,7 +905,7 @@
    </PIN>
    <PIN pinname="Width" slicecount="1" values="1">
    </PIN>
-   <PIN pinname="BinSize" slicecount="1" values="10" visible="1">
+   <PIN pinname="BinSize" slicecount="1" visible="1" values="10">
    </PIN>
    <PIN pinname="Antialias" slicecount="1" values="1">
    </PIN>

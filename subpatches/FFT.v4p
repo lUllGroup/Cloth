@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="C:\Users\Admin\Desktop\Party Cloth\subpatches\FFT.v4p" systemname="FFT" filename="C:\Users\Admin\Desktop\Party Cloth\subpatches\FFT.v4p" scrollx="1860" scrolly="1245">
-   <BOUNDS type="Window" left="11865" top="6525" width="15705" height="6645">
+   <PATCH nodename="C:\Users\Admin\Desktop\Party Cloth\subpatches\FFT.v4p" systemname="FFT" filename="C:\Users\Admin\Desktop\Party Cloth\subpatches\FFT.v4p" scrollx="2025" scrolly="3120">
+   <BOUNDS type="Window" left="13845" top="8400" width="7635" height="5010">
    </BOUNDS>
    <PACK Name="addonpack" Version="33.7.0">
    </PACK>
@@ -93,9 +93,9 @@
    </PIN>
    </NODE>
    <NODE id="6" nodename="Multiply (Value)" systemname="Multiply (Value)">
-   <BOUNDS height="0" left="8865" top="4635" type="Node" width="0">
+   <BOUNDS height="270" left="9180" top="5280" type="Node" width="330">
    </BOUNDS>
-   <PIN pinname="Input 1" visible="1" slicecount="4" values="4.05648192073033E031,3.24518553658427E032,0,4.05648192073033E031">
+   <PIN pinname="Input 1" visible="1" slicecount="4" values="0,0,0,0">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
@@ -131,7 +131,7 @@
    <NODE id="9" nodename="Multiply (Value)" systemname="Multiply (Value)">
    <BOUNDS height="0" left="9480" top="4650" type="Node" width="0">
    </BOUNDS>
-   <PIN pinname="Input 1" visible="1" slicecount="4" values="0.000213797442328384,0.000207517344654827,500061162.274166,0.000309701221618141">
+   <PIN pinname="Input 1" visible="1" slicecount="4" values="0.00102018517261343,0.0659522370257405,74748.7464461291,74748.7464461291">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
@@ -303,7 +303,7 @@
    </LINKPOINT>
    </LINK>
    <LINK dstnodeid="3" dstpinname="ScaleY" srcnodeid="6" srcpinname="Output">
-   <LINKPOINT x="9375" y="5115">
+   <LINKPOINT x="9533" y="5437">
    </LINKPOINT>
    </LINK>
    <LINK dstnodeid="7" dstpinname="Transform" srcnodeid="8" srcpinname="Transform Out">
@@ -329,7 +329,7 @@
    </BOUNDS>
    <PIN pinname="Send String" slicecount="1" values="FFTDecayOut">
    </PIN>
-   <PIN pinname="Input Value" slicecount="4" values="4.05648192073033E031,3.24518553658427E032,0,4.05648192073033E031">
+   <PIN pinname="Input Value" slicecount="4" values="0,0,0,0">
    </PIN>
    </NODE>
    <NODE nodename="S (Value)" id="25" systemname="S (Value)">
@@ -337,7 +337,7 @@
    </BOUNDS>
    <PIN pinname="Send String" slicecount="1" values="FFTEnergyOut">
    </PIN>
-   <PIN pinname="Input Value" slicecount="4" values="0.000213797442328384,0.000207517344654827,500061162.274166,0.000309701221618141">
+   <PIN pinname="Input Value" slicecount="4" values="0.00102018517261343,0.0659522370257405,74748.7464461291,74748.7464461291">
    </PIN>
    </NODE>
    <NODE nodename="S (Value)" id="26" systemname="S (Value)">
@@ -387,7 +387,7 @@
    </BOUNDS>
    <BOUNDS left="7050" top="3225" type="Box">
    </BOUNDS>
-   <BOUNDS height="9510" left="7800" top="375" type="Window" width="11025">
+   <BOUNDS height="9510" left="7800" top="375" type="Window" width="13095">
    </BOUNDS>
    <PIN pinname="Gain" visible="1" slicecount="1" values="1">
    </PIN>
