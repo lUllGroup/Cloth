@@ -355,7 +355,7 @@
    <LINK srcnodeid="54" srcpinname="Output" dstnodeid="56" dstpinname="Input 2">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="57" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="6990" top="6525" width="795" height="960">
+   <BOUNDS type="Box" left="6990" top="6525" width="1530" height="1035">
    </BOUNDS>
    <BOUNDS type="Node" left="6990" top="6525" width="0" height="0">
    </BOUNDS>
