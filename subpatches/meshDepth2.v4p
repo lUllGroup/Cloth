@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="C:\Users\Admin\Desktop\Party Cloth\subpatches\meshDepth2.v4p" systemname="meshDepth2" filename="C:\Users\Admin\Desktop\Coth\subpatches\meshDepth2.v4p" scrollx="4785" scrolly="0">
+   <PATCH nodename="C:\Users\Admin\Desktop\Party Cloth\subpatches\meshDepth2.v4p" systemname="meshDepth2" filename="C:\Users\Admin\Desktop\Coth\subpatches\meshDepth2.v4p" scrollx="2655" scrolly="0">
    <BOUNDS type="Window" left="8625" top="3990" width="14400" height="11550">
    </BOUNDS>
    <PACK Name="addonpack" Version="33.7.0">
@@ -561,7 +561,7 @@
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
-   <PIN pinname="Input 2" slicecount="1" values="0.02">
+   <PIN pinname="Input 2" slicecount="1" values="0.04">
    </PIN>
    </NODE>
    <LINK srcnodeid="111" srcpinname="Output" dstnodeid="107" dstpinname="Input 1">

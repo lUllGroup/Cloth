@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
    <PATCH nodename="C:\Users\Admin\Desktop\Party Cloth\subpatches\CONTROL.v4p" scrollx="0" scrolly="0" systemname="CONTROL" filename="C:\Users\Admin\Desktop\Party Cloth\CONTROL.v4p">
-   <BOUNDS type="Window" left="16680" top="6360" width="7365" height="8550">
+   <BOUNDS type="Window" left="21150" top="6660" width="7365" height="8550">
    </BOUNDS>
    <PACK Name="addonpack" Version="33.7.0">
    </PACK>
@@ -13,7 +13,7 @@
    </PIN>
    <PIN pinname="Value Type" slicecount="1" values="Integer">
    </PIN>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="4">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="2">
    </PIN>
    </NODE>
    <NODE nodename="S (Value)" id="2" systemname="S (Value)">
@@ -33,7 +33,7 @@
    </PIN>
    <PIN pinname="Value Type" slicecount="1" values="Integer">
    </PIN>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="2">
    </PIN>
    </NODE>
    <NODE nodename="S (Value)" id="3" systemname="S (Value)">
@@ -55,7 +55,7 @@
    </PIN>
    <PIN pinname="Value Type" slicecount="1" values="Real">
    </PIN>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.96039605140686">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
    </PIN>
    <PIN pinname="Show Slider" slicecount="1" values="1">
    </PIN>
@@ -91,7 +91,7 @@
    </PIN>
    <PIN pinname="Value Type" slicecount="1" values="Real">
    </PIN>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1.00990104675293">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
    </PIN>
    <PIN pinname="Show Slider" slicecount="1" values="1">
    </PIN>
@@ -151,7 +151,7 @@
    </PIN>
    <PIN pinname="Value Type" slicecount="1" values="Real">
    </PIN>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.930693030357361">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.991525411605835">
    </PIN>
    <PIN pinname="Show Slider" slicecount="1" values="1">
    </PIN>
@@ -190,44 +190,6 @@
    </LINK>
    <LINK srcnodeid="12" srcpinname="Position Out" dstnodeid="13" dstpinname="Input Value">
    </LINK>
-   <NODE systemname="OSC" filename="subpatches\OSC.v4p" nodename="subpatches\OSC.v4p" componentmode="Hidden" id="16" stayontop="1">
-   <BOUNDS type="Node" left="1185" top="3615" width="3315" height="270">
-   </BOUNDS>
-   <BOUNDS type="Window" left="915" top="2250" width="15405" height="10980">
-   </BOUNDS>
-   <PIN pinname="userInput" visible="1" slicecount="1" values="0">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="16" srcpinname="Scene" dstnodeid="1" dstpinname="Y Input Value" linkstyle="Bezier">
-   <LINKPOINT x="3620" y="4883">
-   </LINKPOINT>
-   <LINKPOINT x="640" y="4853">
-   </LINKPOINT>
-   </LINK>
-   <LINK srcnodeid="16" srcpinname="Subscene" dstnodeid="4" dstpinname="Y Input Value" linkstyle="Bezier">
-   <LINKPOINT x="4430" y="4883">
-   </LINKPOINT>
-   <LINKPOINT x="1585" y="4853">
-   </LINKPOINT>
-   </LINK>
-   <LINK srcnodeid="16" srcpinname="Gain" dstnodeid="14" dstpinname="Y Input Value" linkstyle="Bezier">
-   <LINKPOINT x="2870" y="4245">
-   </LINKPOINT>
-   <LINKPOINT x="5305" y="4215">
-   </LINKPOINT>
-   </LINK>
-   <LINK srcnodeid="16" srcpinname="Intensity1" dstnodeid="6" dstpinname="Y Input Value" linkstyle="Bezier">
-   <LINKPOINT x="1235" y="4253">
-   </LINKPOINT>
-   <LINKPOINT x="2725" y="4223">
-   </LINKPOINT>
-   </LINK>
-   <LINK srcnodeid="16" srcpinname="Intensity2" dstnodeid="9" dstpinname="Y Input Value" linkstyle="Bezier">
-   <LINKPOINT x="2045" y="4238">
-   </LINKPOINT>
-   <LINKPOINT x="4000" y="4208">
-   </LINKPOINT>
-   </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="17" systemname="IOBox (Value Advanced)">
    <BOUNDS type="Box" left="1155" top="2475" width="1755" height="735">
    </BOUNDS>
@@ -263,7 +225,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="2550" top="1365" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="2">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="60">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="s">
    </PIN>
@@ -314,8 +276,6 @@
    </LINK>
    <LINK srcnodeid="54" srcpinname="Output" dstnodeid="17" dstpinname="Y Input Value">
    </LINK>
-   <LINK srcnodeid="17" srcpinname="Y Output Value" dstnodeid="16" dstpinname="userInput">
-   </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="57" systemname="IOBox (Value Advanced)">
    <BOUNDS type="Box" left="3105" top="780" width="795" height="240">
    </BOUNDS>
@@ -355,5 +315,45 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="58" srcpinname="Y Output Value" dstnodeid="52" dstpinname="Subscenes">
+   </LINK>
+   <NODE systemname="OSC" filename="subpatches\OSC.v4p" nodename="subpatches\OSC.v4p" componentmode="Hidden" id="16" stayontop="1">
+   <BOUNDS type="Node" left="1185" top="3615" width="3315" height="270">
+   </BOUNDS>
+   <BOUNDS type="Window" left="915" top="2250" width="15405" height="10980">
+   </BOUNDS>
+   <PIN pinname="userInput" visible="1" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="16" srcpinname="Scene" dstnodeid="1" dstpinname="Y Input Value" linkstyle="Bezier">
+   <LINKPOINT x="3620" y="4883">
+   </LINKPOINT>
+   <LINKPOINT x="640" y="4853">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="16" srcpinname="Subscene" dstnodeid="4" dstpinname="Y Input Value" linkstyle="Bezier">
+   <LINKPOINT x="4430" y="4883">
+   </LINKPOINT>
+   <LINKPOINT x="1585" y="4853">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="16" srcpinname="Gain" dstnodeid="14" dstpinname="Y Input Value" linkstyle="Bezier">
+   <LINKPOINT x="2870" y="4245">
+   </LINKPOINT>
+   <LINKPOINT x="5305" y="4215">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="16" srcpinname="Intensity1" dstnodeid="6" dstpinname="Y Input Value" linkstyle="Bezier">
+   <LINKPOINT x="1235" y="4253">
+   </LINKPOINT>
+   <LINKPOINT x="2725" y="4223">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="16" srcpinname="Intensity2" dstnodeid="9" dstpinname="Y Input Value" linkstyle="Bezier">
+   <LINKPOINT x="2045" y="4238">
+   </LINKPOINT>
+   <LINKPOINT x="4000" y="4208">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="17" srcpinname="Y Output Value" dstnodeid="16" dstpinname="userInput">
    </LINK>
    </PATCH>
