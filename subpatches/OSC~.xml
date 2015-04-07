@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="C:\Users\Admin\Desktop\Party Cloth\subpatches\OSC.v4p" systemname="OSC" filename="C:\vvvv\vvvv_45beta33.7_x64\OSC.v4p" scrollx="7635" scrolly="8640">
+   <PATCH nodename="C:\Users\Admin\Desktop\Party Cloth\subpatches\OSC.v4p" systemname="OSC" filename="C:\vvvv\vvvv_45beta33.7_x64\OSC.v4p" scrollx="300" scrolly="5370">
    <BOUNDS type="Window" left="915" top="2250" width="15405" height="10980">
    </BOUNDS>
    <PACK Name="addonpack" Version="33.7.0">
@@ -1359,29 +1359,27 @@
    <LINK srcnodeid="216" srcpinname="Arguments" dstnodeid="213" dstpinname="Input String">
    </LINK>
    <NODE systemname="AsValue (String)" nodename="AsValue (String)" componentmode="Hidden" id="212">
-   <BOUNDS type="Node" left="1275" top="9240" width="100" height="100">
+   <BOUNDS type="Node" left="1260" top="9540" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Input" visible="1">
+   <PIN pinname="Input" visible="1" slicecount="1" values="2">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="213" srcpinname="Output String" dstnodeid="212" dstpinname="Input">
-   </LINK>
    <NODE systemname="AvoidNIL (Spreads)" filename="%VVVV%\lib\nodes\modules\Spreads\AvoidNIL (Spreads).v4p" nodename="AvoidNIL (Spreads)" componentmode="Hidden" id="210">
-   <BOUNDS type="Node" left="1275" top="9660" width="100" height="100">
+   <BOUNDS type="Node" left="1230" top="14985" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
+   <PIN pinname="Default" slicecount="1" values="0">
+   </PIN>
    </NODE>
-   <LINK srcnodeid="212" srcpinname="Output" dstnodeid="210" dstpinname="Input">
-   </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="217" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="1305" top="10275" width="795" height="240">
+   <BOUNDS type="Box" left="1245" top="15435" width="795" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="1305" top="10275" width="0" height="0">
+   <BOUNDS type="Node" left="1245" top="15435" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -1391,13 +1389,13 @@
    <LINK srcnodeid="210" srcpinname="Output" dstnodeid="217" dstpinname="Y Input Value">
    </LINK>
    <NODE nodename="S (Value)" id="218" systemname="S (Value)">
-   <BOUNDS type="Node" left="960" top="11055" width="0" height="0">
+   <BOUNDS type="Node" left="900" top="16215" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Send String" slicecount="1" values="autoSwitch">
    </PIN>
+   <PIN pinname="Input Value" visible="1">
+   </PIN>
    </NODE>
-   <LINK srcnodeid="210" srcpinname="Output" dstnodeid="218" dstpinname="Input Value">
-   </LINK>
    <NODE nodename="S (Value)" id="219" systemname="S (Value)">
    <BOUNDS type="Node" left="13425" top="19620" width="0" height="0">
    </BOUNDS>
@@ -1409,5 +1407,37 @@
    <LINK srcnodeid="65" srcpinname="Y Output Value" dstnodeid="135" dstpinname="Go To Position">
    </LINK>
    <LINK srcnodeid="160" srcpinname="OnChange" dstnodeid="97" dstpinname="Switch">
+   </LINK>
+   <NODE systemname="S+H (Animation)" nodename="S+H (Animation)" componentmode="Hidden" id="221">
+   <BOUNDS type="Node" left="1245" top="14355" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Set" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="212" srcpinname="Output" dstnodeid="221" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="221" srcpinname="Output" dstnodeid="210" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="213" srcpinname="Output String" dstnodeid="212" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="210" srcpinname="Output" dstnodeid="218" dstpinname="Input Value">
+   </LINK>
+   <NODE systemname="avoidNIL_change" filename="avoidNIL_change.v4p" nodename="avoidNIL_change.v4p" componentmode="Hidden" id="234">
+   <BOUNDS type="Node" left="1600" top="13757" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="0" top="11237" width="5515" height="5040">
+   </BOUNDS>
+   <BOUNDS type="Window" left="-1" top="-1" width="5515" height="5040">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="213" srcpinname="Output String" dstnodeid="234" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="234" srcpinname="Output" dstnodeid="221" dstpinname="Set">
+   </LINK>
+   <LINK srcnodeid="212" srcpinname="Output" dstnodeid="234" dstpinname="Input 1">
    </LINK>
    </PATCH>
