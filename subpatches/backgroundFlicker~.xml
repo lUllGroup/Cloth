@@ -427,7 +427,7 @@
    <LINK srcnodeid="0" srcpinname="Output" dstnodeid="29" dstpinname="Color Input">
    </LINK>
    <NODE systemname="Add (Value Spectral)" nodename="Add (Value Spectral)" componentmode="Hidden" id="30">
-   <BOUNDS type="Node" left="6420" top="7395" width="100" height="100">
+   <BOUNDS type="Node" left="4425" top="5670" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
