@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="C:\Users\Admin\Desktop\Party Cloth\subpatches\OSC.v4p" systemname="OSC" filename="C:\vvvv\vvvv_45beta33.7_x64\OSC.v4p" scrollx="2160" scrolly="4290">
+   <PATCH nodename="C:\Users\Admin\Desktop\Party Cloth\subpatches\OSC.v4p" systemname="OSC" filename="C:\vvvv\vvvv_45beta33.7_x64\OSC.v4p" scrollx="2655" scrolly="4125">
    <BOUNDS type="Window" left="915" top="2250" width="15405" height="10980">
    </BOUNDS>
    <PACK Name="addonpack" Version="33.7.0">
@@ -1628,30 +1628,6 @@
    </LINK>
    <LINK srcnodeid="212" srcpinname="Output" dstnodeid="263" dstpinname="Input 1">
    </LINK>
-   <NODE systemname="OR (Boolean)" nodename="OR (Boolean)" componentmode="Hidden" id="264">
-   <BOUNDS type="Node" left="9330" top="10515" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Input 1" visible="1" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   <PIN pinname="Input 2" visible="1" slicecount="1" values="0">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="175" srcpinname="OnReceive" dstnodeid="264" dstpinname="Input 1">
-   </LINK>
-   <NODE systemname="OnOpen (VVVV)" nodename="OnOpen (VVVV)" componentmode="Hidden" id="265">
-   <BOUNDS type="Node" left="9615" top="9600" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Bang" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="265" srcpinname="Bang" dstnodeid="264" dstpinname="Input 2">
-   </LINK>
-   <NODE systemname="Switch (Value Input)" nodename="Switch (Value Input)" componentmode="Hidden" id="266">
-   <BOUNDS type="Node" left="9990" top="10485" width="100" height="100">
-   </BOUNDS>
-   </NODE>
    <LINK srcnodeid="175" srcpinname="OnReceive" dstnodeid="181" dstpinname="Set">
    </LINK>
    </PATCH>

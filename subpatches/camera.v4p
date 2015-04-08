@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
    <PATCH nodename="C:\Users\Admin\Desktop\Party Cloth\subpatches\camera.v4p" systemname="camera" filename="C:\Users\Admin\Desktop\Party Cloth\subpatches\camera.v4p" scrollx="0" scrolly="0">
-   <BOUNDS type="Window" left="3300" top="2895" width="14400" height="10815">
+   <BOUNDS type="Window" left="8265" top="3285" width="14400" height="10815">
    </BOUNDS>
    <PACK Name="addonpack" Version="33.7.0">
    </PACK>
@@ -25,7 +25,7 @@
    <NODE systemname="Camera (Transform Softimage)" filename="%VVVV%\lib\nodes\modules\Transform\Camera (Transform Softimage).v4p" nodename="Camera (Transform Softimage)" componentmode="Hidden" id="1">
    <BOUNDS type="Node" left="2895" top="4650" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Inital Distance" slicecount="1" values="17.6">
+   <PIN pinname="Inital Distance" slicecount="1" values="20">
    </PIN>
    <PIN pinname="Initial Pitch" slicecount="1" values="0">
    </PIN>
@@ -245,7 +245,7 @@
    </PIN>
    <PIN pinname="Destination Minimum" slicecount="1" values="0.3">
    </PIN>
-   <PIN pinname="Destination Maximum" slicecount="1" values="0.5">
+   <PIN pinname="Destination Maximum" slicecount="1" values="0.6">
    </PIN>
    </NODE>
    <NODE systemname="WaveShaper (Value)" nodename="WaveShaper (Value)" componentmode="Hidden" id="16">
@@ -323,11 +323,11 @@
    </PIN>
    <PIN pinname="Input 2" slicecount="1" values="-0.04">
    </PIN>
-   <PIN pinname="Input 1" slicecount="1" values="0.09">
+   <PIN pinname="Input 1" slicecount="1" values="0.06">
    </PIN>
    </NODE>
    <NODE nodename="R (Value)" id="31" systemname="R (Value)">
-   <BOUNDS type="Node" left="12825" top="3870" width="0" height="0">
+   <BOUNDS type="Node" left="12810" top="3645" width="0" height="0">
    </BOUNDS>
    <PIN pinname="" slicecount="1" visible="1" values="0">
    </PIN>
@@ -427,7 +427,7 @@
    </PIN>
    </NODE>
    <NODE nodename="R (Value)" id="43" systemname="R (Value)">
-   <BOUNDS type="Node" left="2610" top="420" width="0" height="0">
+   <BOUNDS type="Node" left="2595" top="420" width="0" height="0">
    </BOUNDS>
    <PIN pinname="" slicecount="1" visible="1" values="0">
    </PIN>
@@ -437,7 +437,7 @@
    </PIN>
    </NODE>
    <NODE systemname="EQ (Value)" nodename="EQ (Value)" componentmode="Hidden" id="42">
-   <BOUNDS type="Node" left="2595" top="1455" width="100" height="100">
+   <BOUNDS type="Node" left="2580" top="1380" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input 1" visible="1">
    </PIN>
@@ -491,9 +491,9 @@
    <LINK srcnodeid="39" srcpinname="Y Output Value" dstnodeid="40" dstpinname="Input 2">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="38" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="2790" top="1050" width="420" height="255">
+   <BOUNDS type="Box" left="2775" top="975" width="420" height="255">
    </BOUNDS>
-   <BOUNDS type="Node" left="2790" top="1050" width="0" height="0">
+   <BOUNDS type="Node" left="2775" top="975" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="3" visible="1" values="0,1,2">
    </PIN>

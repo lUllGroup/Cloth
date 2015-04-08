@@ -420,20 +420,8 @@
    </LINK>
    <LINK srcnodeid="61" srcpinname="Output" dstnodeid="17" dstpinname="Y Input Value">
    </LINK>
-   <NODE systemname="Multiply (Value)" nodename="Multiply (Value)" componentmode="Hidden" id="62">
-   <BOUNDS type="Node" left="5550" top="6615" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Input 1" visible="1">
-   </PIN>
-   <PIN pinname="Input 2" visible="1" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="59" srcpinname="Output" dstnodeid="62" dstpinname="Input 1">
-   </LINK>
    <NODE nodename="R (Value)" id="63" systemname="R (Value)">
-   <BOUNDS type="Node" left="6225" top="6375" width="0" height="0">
+   <BOUNDS type="Node" left="7530" top="7050" width="0" height="0">
    </BOUNDS>
    <PIN pinname="" slicecount="1" visible="1" values="1">
    </PIN>
@@ -445,7 +433,7 @@
    <NODE systemname="Map (Value)" nodename="Map (Value)" componentmode="Hidden" id="64">
    <BOUNDS type="Node" left="5625" top="8265" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Input" visible="1">
+   <PIN pinname="Input" visible="1" slicecount="4" values="-21.8601204823916,22.0237515904566,-4.03960222222263,-10.6906743371377">
    </PIN>
    <PIN pinname="Source Minimum" visible="1">
    </PIN>
@@ -458,20 +446,16 @@
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="62" srcpinname="Output" dstnodeid="64" dstpinname="Input">
-   </LINK>
    <NODE systemname="Bounds (Spectral)" nodename="Bounds (Spectral)" componentmode="Hidden" id="65">
    <BOUNDS type="Node" left="5370" top="7770" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Input" visible="1">
+   <PIN pinname="Input" visible="1" slicecount="4" values="-5.36348463598166,-14.8935123414198,6.93657775403048,-27.2846204285395">
    </PIN>
    <PIN pinname="Minimum" visible="1">
    </PIN>
    <PIN pinname="Maximum" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="62" srcpinname="Output" dstnodeid="65" dstpinname="Input">
-   </LINK>
    <LINK srcnodeid="65" srcpinname="Minimum" dstnodeid="64" dstpinname="Source Minimum">
    </LINK>
    <LINK srcnodeid="65" srcpinname="Maximum" dstnodeid="64" dstpinname="Source Maximum">
@@ -545,5 +529,9 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="64" srcpinname="Output" dstnodeid="69" dstpinname="Y Input Value">
+   </LINK>
+   <LINK srcnodeid="59" srcpinname="Output" dstnodeid="65" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="59" srcpinname="Output" dstnodeid="64" dstpinname="Input">
    </LINK>
    </PATCH>
