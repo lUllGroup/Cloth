@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
    <PATCH nodename="C:\Users\Admin\Desktop\Party Cloth\subpatches\FFT.v4p" systemname="FFT" filename="C:\Users\Admin\Desktop\Party Cloth\subpatches\FFT.v4p" scrollx="0" scrolly="0">
-   <BOUNDS type="Window" left="9090" top="2925" width="3435" height="5820">
+   <BOUNDS type="Window" left="17685" top="9315" width="3225" height="5880">
    </BOUNDS>
    <PACK Name="addonpack" Version="33.7.0">
    </PACK>
@@ -331,7 +331,7 @@
    </BOUNDS>
    <PIN pinname="Send String" slicecount="1" values="FFTDecayOut">
    </PIN>
-   <PIN pinname="Input Value" slicecount="4" values="0.612117011679402,0,0,0.35308916304848" visible="1">
+   <PIN pinname="Input Value" slicecount="4" visible="1" values="0.612117011679402,0,0,0.35308916304848">
    </PIN>
    </NODE>
    <NODE nodename="S (Value)" id="25" systemname="S (Value)">
@@ -339,7 +339,7 @@
    </BOUNDS>
    <PIN pinname="Send String" slicecount="1" values="FFTEnergyOut">
    </PIN>
-   <PIN pinname="Input Value" slicecount="4" values="0.0875946760793498,0.0437920490189361,0.00795350277007727,0.00114702131908502" visible="1">
+   <PIN pinname="Input Value" slicecount="4" visible="1" values="0.0875946760793498,0.0437920490189361,0.00795350277007727,0.00114702131908502">
    </PIN>
    </NODE>
    <NODE nodename="S (Value)" id="26" systemname="S (Value)">
@@ -347,7 +347,7 @@
    </BOUNDS>
    <PIN pinname="Send String" slicecount="1" values="FFTBangOut">
    </PIN>
-   <PIN pinname="Input Value" slicecount="4" values="0,0,0,0" visible="1">
+   <PIN pinname="Input Value" slicecount="4" visible="1" values="0,0,0,0">
    </PIN>
    </NODE>
    <LINK srcnodeid="4" srcpinname="Layer" dstnodeid="18" dstpinname="Layer 1">
@@ -533,5 +533,25 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="10" srcpinname="Transform Out" dstnodeid="0" dstpinname="Projection">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="39" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="8580" top="3330" width="795" height="960">
+   </BOUNDS>
+   <BOUNDS type="Node" left="8580" top="3330" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Y Input Value" slicecount="4" values="0,,,">
+   </PIN>
+   <PIN pinname="Vector Size" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="|0, 0, 0, 1|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="38" srcpinname="Input Value" dstnodeid="39" dstpinname="Y Input Value">
    </LINK>
    </PATCH>
