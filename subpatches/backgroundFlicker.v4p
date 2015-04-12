@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="C:\Users\Admin\Desktop\Party Cloth\subpatches\backgroundFlicker.v4p" systemname="backgroundFlicker" filename="C:\Users\Admin\Desktop\Party Cloth\subpatches\backgroundFlicker.v4p" scrollx="165" scrolly="0">
+   <PATCH nodename="C:\Users\Admin\Desktop\Party Cloth\subpatches\backgroundFlicker.v4p" systemname="backgroundFlicker" filename="C:\Users\Admin\Desktop\Party Cloth\subpatches\backgroundFlicker.v4p" scrollx="870" scrolly="360">
    <BOUNDS type="Window" left="9915" top="5460" width="6405" height="10395">
    </BOUNDS>
    <PACK Name="addonpack" Version="33.7.0">
@@ -445,7 +445,7 @@
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
-   <PIN pinname="Index" visible="1">
+   <PIN pinname="Index" visible="1" slicecount="1" values="0">
    </PIN>
    </NODE>
    <LINK srcnodeid="1" srcpinname="Input Value" dstnodeid="32" dstpinname="Input">
@@ -453,11 +453,11 @@
    <LINK srcnodeid="32" srcpinname="Output" dstnodeid="3" dstpinname="Set">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="33" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="5055" top="3225" width="795" height="480">
+   <BOUNDS type="Box" left="5220" top="3180" width="795" height="480">
    </BOUNDS>
-   <BOUNDS type="Node" left="5055" top="3225" width="0" height="0">
+   <BOUNDS type="Node" left="5220" top="3180" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="2" visible="1" values="0,1">
+   <PIN pinname="Y Input Value" slicecount="2" visible="1" values="0,0">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -471,7 +471,7 @@
    </PIN>
    <PIN pinname="Default" slicecount="1" values="|0, 0|">
    </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
    </NODE>
-   <LINK srcnodeid="33" srcpinname="Y Output Value" dstnodeid="32" dstpinname="Index">
-   </LINK>
    </PATCH>
