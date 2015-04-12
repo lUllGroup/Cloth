@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="C:\Users\Admin\Desktop\Coth\subpatches\wavingFlag2.v4p" systemname="wavingFlag2" filename="C:\Users\Michael\Desktop\nodecloth\String Physics\subpatches\wavingFlag2.v4p" scrollx="0" scrolly="5490">
+   <PATCH nodename="C:\Users\Admin\Desktop\Coth\subpatches\wavingFlag2.v4p" systemname="wavingFlag2" filename="C:\Users\Michael\Desktop\nodecloth\String Physics\subpatches\wavingFlag2.v4p" scrollx="435" scrolly="5595">
    <BOUNDS type="Window" left="10350" top="1755" width="17685" height="12465">
    </BOUNDS>
    <PACK Name="image" Version="0.2.0">

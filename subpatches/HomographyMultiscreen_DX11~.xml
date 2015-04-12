@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="C:\Users\Admin\Desktop\Coth\subpatches\HomographyMultiscreen_DX11.v4p" componentmode="InAWindow" scrollx="3135" scrolly="10635" systemname="HomographyMultiscreen_1" filename="C:\Users\Michael\Desktop\HomographyMultiscreen_1.v4p">
+   <PATCH nodename="C:\Users\Admin\Desktop\Coth\subpatches\HomographyMultiscreen_DX11.v4p" componentmode="InAWindow" scrollx="2760" scrolly="5010" systemname="HomographyMultiscreen_1" filename="C:\Users\Michael\Desktop\HomographyMultiscreen_1.v4p">
    <BOUNDS height="9930" left="11160" top="5295" type="Window" width="14190">
    </BOUNDS>
    <PACK Name="addonpack" Version="33.7.0">
@@ -685,7 +685,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="12270" top="9195" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.015">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
