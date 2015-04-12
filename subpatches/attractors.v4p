@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="C:\Users\Admin\Desktop\Coth\subpatches\attractors.v4p" systemname="attractors" filename="C:\Users\Admin\Desktop\Coth\subpatches\attractors.v4p" scrollx="45" scrolly="0">
+   <PATCH nodename="C:\Users\Admin\Desktop\Coth\subpatches\attractors.v4p" systemname="attractors" filename="C:\Users\Admin\Desktop\Coth\subpatches\attractors.v4p" scrollx="15" scrolly="165">
    <BOUNDS type="Window" left="16515" top="3510" width="10065" height="8175">
    </BOUNDS>
    <PACK Name="addonpack" Version="33.7.0">
@@ -106,24 +106,12 @@
    <PIN pinname="Switch" visible="1" slicecount="1" values="0">
    </PIN>
    </NODE>
-   <NODE systemname="EQ (Value)" nodename="EQ (Value)" componentmode="Hidden" id="8">
-   <BOUNDS type="Node" left="1500" top="3165" width="450" height="270">
-   </BOUNDS>
-   <PIN pinname="Input 1" visible="1" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="Input 2" slicecount="1" values="2">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   <PIN pinname="Inverse Output" visible="1">
-   </PIN>
-   </NODE>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="9" systemname="IOBox (Value Advanced)">
    <BOUNDS type="Box" left="2805" top="6195" width="795" height="240">
    </BOUNDS>
    <BOUNDS type="Node" left="2805" top="6195" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.07">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.1">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -298,20 +286,10 @@
    </NODE>
    <LINK srcnodeid="21" srcpinname="Y Output Value" dstnodeid="10" dstpinname="Input">
    </LINK>
-   <NODE nodename="R (Value)" id="22" systemname="R (Value)">
-   <BOUNDS type="Node" left="1485" top="2460" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="" slicecount="1" visible="1" values="0">
-   </PIN>
-   <PIN pinname="Receive String" slicecount="1" values="scene">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="22" srcpinname="Input Value" dstnodeid="8" dstpinname="Input 1">
-   </LINK>
    <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="23">
-   <BOUNDS type="Node" left="1215" top="1590" width="100" height="100">
+   <BOUNDS type="Node" left="945" top="825" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="1215" top="1590" width="480" height="480">
+   <BOUNDS type="Box" left="945" top="825" width="480" height="480">
    </BOUNDS>
    <PIN pinname="Value Type" slicecount="1" values="Boolean">
    </PIN>

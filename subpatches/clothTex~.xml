@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="C:\Users\Admin\Desktop\Coth\subpatches\clothTex.v4p" systemname="clothTex" filename="C:\Users\Michael\Desktop\nodecloth\String Physics\subpatches\clothTex.v4p" scrollx="3060" scrolly="2265">
+   <PATCH nodename="C:\Users\Admin\Desktop\Coth\subpatches\clothTex.v4p" systemname="clothTex" filename="C:\Users\Michael\Desktop\nodecloth\String Physics\subpatches\clothTex.v4p" scrollx="0" scrolly="1215">
    <BOUNDS type="Window" left="14505" top="1230" width="13110" height="13950">
    </BOUNDS>
    <PACK Name="image" Version="0.2.0">
@@ -325,7 +325,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="17295" top="6120" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" visible="1" slicecount="1" values="1">
+   <PIN pinname="Y Input Value" visible="1" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -335,7 +335,7 @@
    </PIN>
    <PIN pinname="Behavior" slicecount="1" values="Toggle">
    </PIN>
-   <PIN pinname="X Input Value" slicecount="1" values="1">
+   <PIN pinname="X Input Value" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
@@ -361,7 +361,7 @@
    </PIN>
    <PIN pinname="Enabled" visible="1" slicecount="1" values="0">
    </PIN>
-   <PIN pinname="Texture ScaleXY" slicecount="2" values="1,1" visible="1">
+   <PIN pinname="Texture ScaleXY" slicecount="2" visible="1" values="1,1">
    </PIN>
    </NODE>
    <LINK srcnodeid="73" srcpinname="Y Output Value" dstnodeid="72" dstpinname="Enabled">
@@ -457,7 +457,7 @@
    </BOUNDS>
    <PIN pinname="ScaleY" slicecount="1" values="200">
    </PIN>
-   <PIN pinname="ScaleX" slicecount="1" values="0.69" visible="1">
+   <PIN pinname="ScaleX" slicecount="1" visible="1" values="0.69">
    </PIN>
    <PIN pinname="TranslateY" slicecount="1" values="0">
    </PIN>
@@ -819,6 +819,8 @@
    </BOUNDS>
    <PIN pinname="Width" visible="1">
    </PIN>
+   <PIN pinname="Evaluate" visible="1" pintype="Input" slicecount="1" values="1">
+   </PIN>
    </NODE>
    <LINK srcnodeid="214" srcpinname="Layer" dstnodeid="122" dstpinname="Layer 1">
    </LINK>
@@ -857,5 +859,25 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="220" srcpinname="Y Output Value" dstnodeid="99" dstpinname="ScaleX">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="221" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="9855" top="8550" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="9855" top="8550" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="221" srcpinname="Y Output Value" dstnodeid="214" dstpinname="Evaluate">
+   </LINK>
+   <LINK srcnodeid="25" srcpinname="Y Output Value" dstnodeid="221" dstpinname="Y Input Value">
    </LINK>
    </PATCH>

@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="C:\Users\Admin\Desktop\Coth\subpatches\Kinect.v4p" systemname="Kinect" filename="C:\Users\Admin\Desktop\Coth\subpatches\Kinect.v4p" scrollx="780" scrolly="0">
+   <PATCH nodename="C:\Users\Admin\Desktop\Coth\subpatches\Kinect.v4p" systemname="Kinect" filename="C:\Users\Admin\Desktop\Coth\subpatches\Kinect.v4p" scrollx="585" scrolly="0">
    <NODE systemname="IndexedInstancer (DX11.Drawer)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="IndexedInstancer (DX11 Geometry)" componentmode="Hidden" id="1">
    <BOUNDS type="Node" left="3000" top="7485" width="100" height="100">
    </BOUNDS>
@@ -113,13 +113,17 @@
    </PIN>
    <PIN pinname="Enable Skeleton Smoothing" slicecount="1" values="0">
    </PIN>
-   <PIN pinname="Reset" slicecount="1" values="0">
+   <PIN pinname="Reset" slicecount="1" visible="1" values="0">
    </PIN>
    <PIN pinname="Smooth Parameters" visible="1" slicecount="1" values="||">
    </PIN>
    <PIN pinname="High Res Depth" slicecount="1" values="1">
    </PIN>
    <PIN pinname="Infrared Color" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Is Started" visible="1">
+   </PIN>
+   <PIN pinname="AccelerometerXYZW" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="1" srcpinname="Geometry Out" dstnodeid="4" dstpinname="Geometry">
@@ -285,5 +289,65 @@
    <LINK srcnodeid="20" srcpinname="Texture" dstnodeid="2" dstpinname="Depth">
    </LINK>
    <LINK srcnodeid="7" srcpinname="Kinect Runtime" dstnodeid="20" dstpinname="Kinect Runtime">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="21" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="5955" top="2160" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="5955" top="2160" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Is Started|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="7" srcpinname="Is Started" dstnodeid="21" dstpinname="Y Input Value">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="22" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="7245" top="2295" width="795" height="960">
+   </BOUNDS>
+   <BOUNDS type="Node" left="7245" top="2295" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Vector Size" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Y Input Value" slicecount="4" values=",,,">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="AccelerometerXYZW">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="7" srcpinname="AccelerometerXYZW" dstnodeid="22" dstpinname="Y Input Value">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="23" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="8070" top="1350" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="8070" top="1350" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Bang">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Reset">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="23" srcpinname="Y Output Value" dstnodeid="7" dstpinname="Reset">
    </LINK>
    </PATCH>
