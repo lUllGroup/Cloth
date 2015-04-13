@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="C:\Users\Admin\Desktop\Party Cloth\subpatches\attractors.v4p" systemname="attractors" filename="C:\Users\Admin\Desktop\Coth\subpatches\attractors.v4p" scrollx="510" scrolly="585">
-   <BOUNDS type="Window" left="4170" top="5190" width="14400" height="8925">
+   <PATCH nodename="C:\Users\Admin\Desktop\Party Cloth\subpatches\attractors.v4p" systemname="attractors" filename="C:\Users\Admin\Desktop\Coth\subpatches\attractors.v4p" scrollx="495" scrolly="1050">
+   <BOUNDS type="Window" left="2445" top="5565" width="14400" height="8925">
    </BOUNDS>
    <PACK Name="addonpack" Version="33.7.0">
    </PACK>
@@ -359,7 +359,7 @@
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
-   <PIN pinname="Input 2" slicecount="1" values="1" visible="1">
+   <PIN pinname="Input 2" slicecount="1" visible="1" values="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="56" srcpinname="Output" dstnodeid="59" dstpinname="Input 1">
@@ -389,7 +389,7 @@
    <LINK srcnodeid="61" srcpinname="Output" dstnodeid="17" dstpinname="Y Input Value">
    </LINK>
    <NODE nodename="R (Value)" id="63" systemname="R (Value)">
-   <BOUNDS type="Node" left="10650" top="4155" width="0" height="0">
+   <BOUNDS type="Node" left="10725" top="3975" width="0" height="0">
    </BOUNDS>
    <PIN pinname="" slicecount="1" visible="1" values="1">
    </PIN>
@@ -455,7 +455,7 @@
    </BOUNDS>
    <PIN pinname="Input 1" visible="1">
    </PIN>
-   <PIN pinname="Input 2" visible="1">
+   <PIN pinname="Input 2" visible="1" slicecount="1" values="1.10169494152069">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
@@ -479,8 +479,6 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="68" srcpinname="Y Output Value" dstnodeid="67" dstpinname="Input 1">
-   </LINK>
-   <LINK srcnodeid="63" srcpinname="Input Value" dstnodeid="67" dstpinname="Input 2">
    </LINK>
    <LINK srcnodeid="67" srcpinname="Output" dstnodeid="66" dstpinname="XY">
    </LINK>
@@ -705,5 +703,87 @@
    <LINK srcnodeid="83" srcpinname="Output" dstnodeid="12" dstpinname="Input">
    </LINK>
    <LINK srcnodeid="58" srcpinname="Input Value" dstnodeid="73" dstpinname="Input 1">
+   </LINK>
+   <NODE systemname="S+H (Animation)" nodename="S+H (Animation)" componentmode="Hidden" id="86">
+   <BOUNDS type="Node" left="11820" top="7350" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Set" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Input" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Change (Animation)" nodename="Change (Animation)" componentmode="Hidden" id="85">
+   <BOUNDS type="Node" left="12150" top="5715" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="OnChange" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="AND (Boolean)" nodename="AND (Boolean)" componentmode="Hidden" id="84">
+   <BOUNDS type="Node" left="12150" top="6420" width="705" height="270">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1" slicecount="1" values="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="NOT (Boolean)" nodename="NOT (Boolean)" componentmode="Hidden" id="87">
+   <BOUNDS type="Node" left="12780" top="5445" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="23" srcpinname="Y Output Value" dstnodeid="87" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="87" srcpinname="Output" dstnodeid="84" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="63" srcpinname="Input Value" dstnodeid="85" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="86" srcpinname="Output" dstnodeid="67" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="63" srcpinname="Input Value" dstnodeid="86" dstpinname="Input">
+   </LINK>
+   <NODE systemname="OR (Boolean)" nodename="OR (Boolean)" componentmode="Hidden" id="88">
+   <BOUNDS type="Node" left="12165" top="6870" width="1200" height="270">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="84" srcpinname="Output" dstnodeid="88" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="88" srcpinname="Output" dstnodeid="86" dstpinname="Set">
+   </LINK>
+   <NODE systemname="OnOpen (VVVV)" nodename="OnOpen (VVVV)" componentmode="Hidden" id="89">
+   <BOUNDS type="Node" left="13290" top="5550" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Bang" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Delay (Animation)" filename="" nodename="Delay (Animation)" componentmode="Hidden" id="90">
+   <BOUNDS type="Node" left="13290" top="6090" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Time" slicecount="1" values="10">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="89" srcpinname="Bang" dstnodeid="90" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="90" srcpinname="Output" dstnodeid="88" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="85" srcpinname="OnChange" dstnodeid="84" dstpinname="Input 1" linkstyle="PolyLine">
    </LINK>
    </PATCH>

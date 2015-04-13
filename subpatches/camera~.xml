@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="C:\Users\Admin\Desktop\Party Cloth\subpatches\camera.v4p" systemname="camera" filename="C:\Users\Admin\Desktop\Party Cloth\subpatches\camera.v4p" scrollx="870" scrolly="5040">
+   <PATCH nodename="C:\Users\Admin\Desktop\Party Cloth\subpatches\camera.v4p" systemname="camera" filename="C:\Users\Admin\Desktop\Party Cloth\subpatches\camera.v4p" scrollx="4440" scrolly="0">
    <BOUNDS type="Window" left="9840" top="3750" width="14400" height="8145">
    </BOUNDS>
    <PACK Name="addonpack" Version="33.7.0">
@@ -7,15 +7,15 @@
    <NODE systemname="Camera (Transform Softimage)" filename="%VVVV%\lib\nodes\modules\Transform\Camera (Transform Softimage).v4p" nodename="Camera (Transform Softimage)" componentmode="Hidden" id="1">
    <BOUNDS type="Node" left="2925" top="12300" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Inital Distance" slicecount="1" values="20" visible="1">
+   <PIN pinname="Inital Distance" slicecount="1" visible="1" values="20">
    </PIN>
-   <PIN pinname="Initial Pitch" slicecount="1" values="0" visible="1">
+   <PIN pinname="Initial Pitch" slicecount="1" visible="1" values="0">
    </PIN>
-   <PIN pinname="Far Plane" slicecount="1" values="100" visible="1">
+   <PIN pinname="Far Plane" slicecount="1" visible="1" values="100">
    </PIN>
-   <PIN pinname="Near Plane" slicecount="1" values="1" visible="1">
+   <PIN pinname="Near Plane" slicecount="1" visible="1" values="1">
    </PIN>
-   <PIN pinname="Initial Yaw" slicecount="1" values="0" visible="1">
+   <PIN pinname="Initial Yaw" slicecount="1" visible="1" values="0">
    </PIN>
    <PIN pinname="Distortion" visible="1" slicecount="1" values="||">
    </PIN>
@@ -23,7 +23,7 @@
    </PIN>
    <PIN pinname="Projection" visible="1">
    </PIN>
-   <PIN pinname="Initial FOV" slicecount="1" values="0.01" visible="1">
+   <PIN pinname="Initial FOV" slicecount="1" visible="1" values="0.01">
    </PIN>
    <PIN pinname="View Projection" visible="1">
    </PIN>
@@ -213,7 +213,7 @@
    </BOUNDS>
    <PIN pinname="Output" visible="1">
    </PIN>
-   <PIN pinname="Period" slicecount="1" values="20">
+   <PIN pinname="Period" slicecount="1" values="60">
    </PIN>
    <PIN pinname="Reset" visible="1" slicecount="1" values="0">
    </PIN>
@@ -227,7 +227,7 @@
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
-   <PIN pinname="Destination Minimum" slicecount="1" values="0.3">
+   <PIN pinname="Destination Minimum" slicecount="1" values="0.1">
    </PIN>
    <PIN pinname="Destination Maximum" slicecount="1" values="0.6">
    </PIN>

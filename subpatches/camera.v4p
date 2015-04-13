@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="C:\Users\Admin\Desktop\Party Cloth\subpatches\camera.v4p" systemname="camera" filename="C:\Users\Admin\Desktop\Party Cloth\subpatches\camera.v4p" scrollx="0" scrolly="6675">
+   <PATCH nodename="C:\Users\Admin\Desktop\Party Cloth\subpatches\camera.v4p" systemname="camera" filename="C:\Users\Admin\Desktop\Party Cloth\subpatches\camera.v4p" scrollx="4440" scrolly="0">
    <BOUNDS type="Window" left="9840" top="3750" width="14400" height="8145">
    </BOUNDS>
    <PACK Name="addonpack" Version="33.7.0">
@@ -213,7 +213,7 @@
    </BOUNDS>
    <PIN pinname="Output" visible="1">
    </PIN>
-   <PIN pinname="Period" slicecount="1" values="20">
+   <PIN pinname="Period" slicecount="1" values="60">
    </PIN>
    <PIN pinname="Reset" visible="1" slicecount="1" values="0">
    </PIN>
@@ -227,7 +227,7 @@
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
-   <PIN pinname="Destination Minimum" slicecount="1" values="0.3">
+   <PIN pinname="Destination Minimum" slicecount="1" values="0.1">
    </PIN>
    <PIN pinname="Destination Maximum" slicecount="1" values="0.6">
    </PIN>
