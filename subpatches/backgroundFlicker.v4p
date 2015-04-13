@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="C:\Users\Admin\Desktop\Party Cloth\subpatches\backgroundFlicker.v4p" systemname="backgroundFlicker" filename="C:\Users\Admin\Desktop\Party Cloth\subpatches\backgroundFlicker.v4p" scrollx="870" scrolly="360">
+   <PATCH nodename="C:\Users\Admin\Desktop\Party Cloth\subpatches\backgroundFlicker.v4p" systemname="backgroundFlicker" filename="C:\Users\Admin\Desktop\Party Cloth\subpatches\backgroundFlicker.v4p" scrollx="105" scrolly="330">
    <BOUNDS type="Window" left="9915" top="5460" width="6405" height="10395">
    </BOUNDS>
    <PACK Name="addonpack" Version="33.7.0">
@@ -217,9 +217,9 @@
    </BOUNDS>
    <BOUNDS type="Node" left="1500" top="7670" width="750" height="240">
    </BOUNDS>
+   <PIN pinname="Color Input" visible="1" slicecount="1" values="|0.00000,0.00000,0.00000,1.00000|">
+   </PIN>
    </NODE>
-   <LINK srcnodeid="5" srcpinname="Output" dstnodeid="17" dstpinname="Color Input">
-   </LINK>
    <LINK srcnodeid="7" srcpinname="Input Value" dstnodeid="6" dstpinname="Input 1">
    </LINK>
    <LINK srcnodeid="16" srcpinname="Output" dstnodeid="0" dstpinname="Saturation">
@@ -474,4 +474,6 @@
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
    </NODE>
+   <LINK srcnodeid="5" srcpinname="Output" dstnodeid="17" dstpinname="Color Input">
+   </LINK>
    </PATCH>

@@ -17,7 +17,7 @@
    </PIN>
    <PIN pinname="Enabled" slicecount="1" visible="1" values="0">
    </PIN>
-   <PIN pinname="Alpha" visible="1" slicecount="1" values="0">
+   <PIN pinname="Alpha" visible="1" slicecount="1" values="1">
    </PIN>
    </NODE>
    <NODE systemname="Segment (DX11.Geometry)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Segment (DX11.Geometry)" componentmode="Hidden" id="1">
@@ -171,7 +171,7 @@
    </PIN>
    <PIN pinname="Transform Out" visible="1">
    </PIN>
-   <PIN pinname="XYZ" visible="1" slicecount="1" values="0">
+   <PIN pinname="XYZ" visible="1" slicecount="1" values="1">
    </PIN>
    </NODE>
    <NODE systemname="Subtract (Value)" nodename="Subtract (Value)" componentmode="Hidden" id="14">
@@ -179,7 +179,7 @@
    </BOUNDS>
    <PIN pinname="Input 1" slicecount="1" visible="1" values="1">
    </PIN>
-   <PIN pinname="Input 2" visible="1" slicecount="11" values="0.456686174195899,0.399037687906074,0.365602426919357,0.310051030455892,0.230966244295142,0.194666063771922,0.148235368235552,0.137658471796934,0.0981897624195197,0.00689145855868922,0">
+   <PIN pinname="Input 2" visible="1" slicecount="41" values="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
@@ -216,8 +216,6 @@
    </LINK>
    <LINK srcnodeid="13" srcpinname="Transform Out" dstnodeid="0" dstpinname="Transform In">
    </LINK>
-   <LINK srcnodeid="14" srcpinname="Output" dstnodeid="0" dstpinname="Alpha">
-   </LINK>
    <NODE id="17" systemname="IOBox (Node)" componentmode="InABox" nodename="IOBox (Node)">
    <PIN pinname="Descriptive Name" slicecount="1" values="Layer">
    </PIN>
@@ -227,8 +225,6 @@
    </BOUNDS>
    </NODE>
    <LINK srcnodeid="0" srcpinname="Layer" dstnodeid="17" dstpinname="Input Node">
-   </LINK>
-   <LINK srcnodeid="11" srcpinname="Y" dstnodeid="13" dstpinname="XYZ">
    </LINK>
    <LINK srcnodeid="11" srcpinname="Y" dstnodeid="15" dstpinname="Input">
    </LINK>
@@ -397,7 +393,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="3765" top="6795" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Color Input" slicecount="6" visible="1" values="|2.28275,1.19167,2.28275,1.00000|,|1.56945,1.08509,1.56945,1.00000|,|0.56556,0.93508,0.56556,1.00000|,|0.13819,0.87122,0.13819,1.00000|,|0.08718,0.58341,0.08718,1.00000|,|0.06281,0.42035,0.06281,1.00000|">
+   <PIN pinname="Color Input" slicecount="1" visible="1" values="|0.00000,0.00000,0.00000,1.00000|">
    </PIN>
    </NODE>
    <LINK srcnodeid="28" srcpinname="Color Output" dstnodeid="0" dstpinname="Color">
@@ -477,7 +473,7 @@
    <LINK srcnodeid="36" srcpinname="Output" dstnodeid="4" dstpinname="Y Input Value">
    </LINK>
    <NODE id="40" systemname="GetSpread (Spreads)" nodename="GetSpread (Spreads)" componentmode="Hidden" hiddenwhenlocked="0" managers="">
-   <PIN pinname="Count" slicecount="1" pintype="Input" visible="1" values="10">
+   <PIN pinname="Count" slicecount="1" pintype="Input" visible="1" values="41">
    </PIN>
    <PIN pinname="Output" visible="1" pintype="Output">
    </PIN>
@@ -494,8 +490,6 @@
    </NODE>
    <LINK srcnodeid="15" srcpinname="Output" dstnodeid="40" dstpinname="Input">
    </LINK>
-   <LINK srcnodeid="40" srcpinname="Output" dstnodeid="14" dstpinname="Input 2">
-   </LINK>
    <LINK srcnodeid="5" srcpinname="Up Edge" dstnodeid="10" dstpinname="Bang">
    </LINK>
    <NODE systemname="HSL (Color Join)" nodename="HSL (Color Join)" componentmode="Hidden" id="41">
@@ -503,11 +497,13 @@
    </BOUNDS>
    <PIN pinname="Output" visible="1">
    </PIN>
-   <PIN pinname="Lightness" visible="1" slicecount="2" values="1.74675171510421,1.24558182597207">
+   <PIN pinname="Lightness" visible="1" slicecount="1" values="1">
    </PIN>
-   <PIN pinname="Saturation" slicecount="1" values="0.74">
+   <PIN pinname="Saturation" slicecount="1" visible="1" values="1">
    </PIN>
-   <PIN pinname="Hue" slicecount="1" values="0.02">
+   <PIN pinname="Hue" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Alpha" slicecount="1" values="1">
    </PIN>
    </NODE>
    <NODE systemname="Map (Value)" nodename="Map (Value)" componentmode="Hidden" id="42">
@@ -523,13 +519,21 @@
    </PIN>
    <PIN pinname="Source Maximum" visible="1">
    </PIN>
+   <PIN pinname="Mapping" slicecount="1" values="Mirror">
+   </PIN>
    </NODE>
-   <LINK srcnodeid="42" srcpinname="Output" dstnodeid="41" dstpinname="Lightness">
-   </LINK>
    <LINK srcnodeid="12" srcpinname="Y Output Value" dstnodeid="42" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="16" srcpinname="Y Output Value" dstnodeid="42" dstpinname="Source Maximum">
+   </LINK>
+   <LINK srcnodeid="15" srcpinname="Output" dstnodeid="14" dstpinname="Input 2">
+   <LINKPOINT x="2430" y="5790">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="42" srcpinname="Output" dstnodeid="41" dstpinname="Lightness">
    </LINK>
    <LINK srcnodeid="41" srcpinname="Output" dstnodeid="28" dstpinname="Color Input">
    </LINK>
-   <LINK srcnodeid="16" srcpinname="Y Output Value" dstnodeid="42" dstpinname="Source Maximum">
+   <LINK srcnodeid="12" srcpinname="Y Output Value" dstnodeid="13" dstpinname="XYZ">
    </LINK>
    </PATCH>
