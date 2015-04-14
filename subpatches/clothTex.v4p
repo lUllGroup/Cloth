@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="C:\Users\Admin\Desktop\Coth\subpatches\clothTex.v4p" systemname="clothTex" filename="C:\Users\Michael\Desktop\nodecloth\String Physics\subpatches\clothTex.v4p" scrollx="0" scrolly="1215">
+   <PATCH nodename="C:\Users\Admin\Desktop\Coth\subpatches\clothTex.v4p" systemname="clothTex" filename="C:\Users\Michael\Desktop\nodecloth\String Physics\subpatches\clothTex.v4p" scrollx="3510" scrolly="2880">
    <BOUNDS type="Window" left="14505" top="1230" width="13110" height="13950">
    </BOUNDS>
    <PACK Name="image" Version="0.2.0">
@@ -831,9 +831,9 @@
    <LINK srcnodeid="214" srcpinname="Layer 2" dstnodeid="122" dstpinname="Layer 3">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="215" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="10170" top="9540" width="795" height="240">
+   <BOUNDS type="Box" left="8460" top="9915" width="795" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="10170" top="9540" width="0" height="0">
+   <BOUNDS type="Node" left="8460" top="9915" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" visible="1" values="3">
    </PIN>
@@ -879,5 +879,17 @@
    <LINK srcnodeid="221" srcpinname="Y Output Value" dstnodeid="214" dstpinname="Evaluate">
    </LINK>
    <LINK srcnodeid="25" srcpinname="Y Output Value" dstnodeid="221" dstpinname="Y Input Value">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="222" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="13980" top="17190" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="13980" top="17190" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="155" srcpinname="Output" dstnodeid="222" dstpinname="Y Input Value">
    </LINK>
    </PATCH>

@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="C:\Users\Admin\Desktop\Coth\subpatches\KinectDepth.v4p" scrollx="1380" scrolly="9270" systemname="KinectDepth" filename="C:\Users\Admin\Desktop\KinectDepth.v4p">
+   <PATCH nodename="C:\Users\Admin\Desktop\Coth\subpatches\KinectDepth.v4p" scrollx="2310" scrolly="16080" systemname="KinectDepth" filename="C:\Users\Admin\Desktop\KinectDepth.v4p">
    <BOUNDS type="Window" left="15075" top="8235" width="13260" height="10320">
    </BOUNDS>
    <PACK Name="addonpack" Version="33.7.0">
@@ -49,7 +49,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="5895" top="20670" width="6000" height="4500">
    </BOUNDS>
-   <BOUNDS type="Window" left="480" top="7065" width="13200" height="8790">
+   <BOUNDS type="Window" left="510" top="4950" width="13200" height="8790">
    </BOUNDS>
    <PIN pinname="Texture In" visible="1" slicecount="1" values="||">
    </PIN>
@@ -433,8 +433,6 @@
    <LINK srcnodeid="233" srcpinname="Y Output Value" dstnodeid="203" dstpinname="MinDepth">
    </LINK>
    <LINK srcnodeid="234" srcpinname="Y Output Value" dstnodeid="203" dstpinname="MaxDepth">
-   </LINK>
-   <LINK srcnodeid="176" srcpinname="Texture Out" dstnodeid="153" dstpinname="Texture In">
    </LINK>
    <NODE id="236" systemname="Group (DX11.Layer)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Group (DX11.Layer)" componentmode="Hidden">
    <PIN pinname="Layer 1" slicecount="1" visible="1" values="||">
@@ -947,5 +945,15 @@
    </LINKPOINT>
    </LINK>
    <LINK srcnodeid="371" srcpinname="Transform Out" dstnodeid="335" dstpinname="Transform In">
+   </LINK>
+   <NODE systemname="gridDetect" filename="subpatches\gridDetect.v4p" nodename="subpatches\gridDetect.v4p" componentmode="Hidden" id="372">
+   <BOUNDS type="Node" left="6360" top="21975" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="InputTex" visible="1" slicecount="1" values="||">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="176" srcpinname="Texture Out" dstnodeid="153" dstpinname="Texture In">
+   </LINK>
+   <LINK srcnodeid="176" srcpinname="Texture Out" dstnodeid="372" dstpinname="InputTex">
    </LINK>
    </PATCH>

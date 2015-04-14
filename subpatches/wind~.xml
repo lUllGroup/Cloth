@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="C:\Users\Admin\Desktop\Coth\subpatches\wind.v4p" systemname="wind" filename="C:\Users\Michael\Desktop\nodecloth\String Physics\subpatches\wind.v4p" scrollx="1680" scrolly="1035">
-   <BOUNDS type="Window" left="11895" top="7455" width="6840" height="7140">
+   <PATCH nodename="C:\Users\Admin\Desktop\Coth\subpatches\wind.v4p" systemname="wind" filename="C:\Users\Michael\Desktop\nodecloth\String Physics\subpatches\wind.v4p" scrollx="1830" scrolly="1920">
+   <BOUNDS type="Window" left="8265" top="7320" width="6840" height="7140">
    </BOUNDS>
    <PACK Name="image" Version="0.2.0">
    </PACK>
@@ -25,7 +25,7 @@
    </BOUNDS>
    <PIN pinname="X" visible="1" slicecount="1" values="-0.34">
    </PIN>
-   <PIN pinname="Y" slicecount="1" visible="1" values="-0.14">
+   <PIN pinname="Y" slicecount="1" visible="1" values="-0.053">
    </PIN>
    <PIN pinname="XYZ" visible="1">
    </PIN>
@@ -219,7 +219,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="4590" top="6225" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="3" visible="1" values="0,-0.01,-0.001">
+   <PIN pinname="Y Input Value" slicecount="3" visible="1" values="0,-0.006,0">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -301,5 +301,25 @@
    </LINKPOINT>
    <LINKPOINT x="3810" y="5723">
    </LINKPOINT>
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="18" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="3870" top="7755" width="795" height="720">
+   </BOUNDS>
+   <BOUNDS type="Node" left="3870" top="7755" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Y Input Value" slicecount="3" values="0,,">
+   </PIN>
+   <PIN pinname="Vector Size" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="|0, 0, 0|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="11" srcpinname="Output" dstnodeid="18" dstpinname="Y Input Value">
    </LINK>
    </PATCH>

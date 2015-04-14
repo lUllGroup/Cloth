@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="C:\Users\Admin\Desktop\Coth\subpatches\KinectDepth.v4p" scrollx="465" scrolly="2220" systemname="KinectDepth" filename="C:\Users\Admin\Desktop\KinectDepth.v4p">
-   <BOUNDS type="Window" left="13785" top="3105" width="13260" height="10320">
+   <PATCH nodename="C:\Users\Admin\Desktop\Coth\subpatches\KinectDepth.v4p" scrollx="750" scrolly="16845" systemname="KinectDepth" filename="C:\Users\Admin\Desktop\KinectDepth.v4p">
+   <BOUNDS type="Window" left="15075" top="8235" width="13260" height="10320">
    </BOUNDS>
    <PACK Name="addonpack" Version="33.7.0">
    </PACK>
@@ -49,7 +49,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="5895" top="20670" width="6000" height="4500">
    </BOUNDS>
-   <BOUNDS type="Window" left="480" top="7065" width="13200" height="8790">
+   <BOUNDS type="Window" left="510" top="4950" width="13200" height="8790">
    </BOUNDS>
    <PIN pinname="Texture In" visible="1" slicecount="1" values="||">
    </PIN>
@@ -185,13 +185,13 @@
    </PIN>
    <PIN pinname="TranslateZ" slicecount="1" values="1.76">
    </PIN>
-   <PIN pinname="TranslateY" slicecount="1" values="2.51">
+   <PIN pinname="TranslateY" slicecount="1" values="3.4">
    </PIN>
    <PIN pinname="Yaw" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Roll" slicecount="1" values="0">
    </PIN>
-   <PIN pinname="Pitch" slicecount="1" values="0.016">
+   <PIN pinname="Pitch" slicecount="1" values="0.05">
    </PIN>
    </NODE>
    <LINK srcnodeid="175" srcpinname="Transform Out" dstnodeid="174" dstpinname="Transform In">
@@ -249,7 +249,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="3660" top="2760" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.8">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -303,7 +303,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="9270" top="21330" width="6000" height="4500">
    </BOUNDS>
-   <BOUNDS type="Window" left="1575" top="4410" width="12225" height="9690">
+   <BOUNDS type="Window" left="0" top="1740" width="15750" height="12360">
    </BOUNDS>
    <PIN pinname="Texture In" visible="1" slicecount="1" values="||">
    </PIN>
@@ -347,7 +347,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="9345" top="13935" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -359,7 +359,7 @@
    </PIN>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
-   <PIN pinname="X Input Value" slicecount="1" values="1">
+   <PIN pinname="X Input Value" slicecount="1" values="0">
    </PIN>
    </NODE>
    <LINK srcnodeid="217" srcpinname="Y Output Value" dstnodeid="206" dstpinname="Enabled">
@@ -433,8 +433,6 @@
    <LINK srcnodeid="233" srcpinname="Y Output Value" dstnodeid="203" dstpinname="MinDepth">
    </LINK>
    <LINK srcnodeid="234" srcpinname="Y Output Value" dstnodeid="203" dstpinname="MaxDepth">
-   </LINK>
-   <LINK srcnodeid="176" srcpinname="Texture Out" dstnodeid="153" dstpinname="Texture In">
    </LINK>
    <NODE id="236" systemname="Group (DX11.Layer)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Group (DX11.Layer)" componentmode="Hidden">
    <PIN pinname="Layer 1" slicecount="1" visible="1" values="||">
@@ -549,7 +547,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="3855" top="8400" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -559,7 +557,7 @@
    </PIN>
    <PIN pinname="Behavior" slicecount="1" values="Toggle">
    </PIN>
-   <PIN pinname="X Input Value" slicecount="1" values="1">
+   <PIN pinname="X Input Value" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="Enabled">
    </PIN>
@@ -593,7 +591,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="7785" top="8355" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -605,7 +603,7 @@
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="Enabled">
    </PIN>
-   <PIN pinname="X Input Value" slicecount="1" values="1">
+   <PIN pinname="X Input Value" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Pin Visibility" slicecount="1" values="False">
    </PIN>
@@ -718,6 +716,8 @@
    <PIN pinname="Enabled" visible="1" slicecount="1" values="1">
    </PIN>
    <PIN pinname="AccelerometerXYZW" visible="1">
+   </PIN>
+   <PIN pinname="Reset" slicecount="1" values="0">
    </PIN>
    </NODE>
    <LINK srcnodeid="189" srcpinname="Y Output Value" dstnodeid="335" dstpinname="Motor Angle" linkstyle="Bezier">
@@ -853,42 +853,16 @@
    <NODE id="365" systemname="Transform (Transform 3d)" nodename="Transform (Transform 3d)" componentmode="Hidden">
    <BOUNDS type="Node" left="4980" top="7080" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="TranslateY" slicecount="1" values="0.02">
+   <PIN pinname="TranslateY" slicecount="1" values="0">
    </PIN>
    <PIN pinname="TranslateX" slicecount="1" values="0.65">
+   </PIN>
+   <PIN pinname="Yaw" slicecount="1" values="0">
    </PIN>
    </NODE>
    <LINK srcnodeid="365" srcpinname="Transform Out" dstnodeid="334" dstpinname="Transform In">
    </LINK>
    <LINK srcnodeid="174" srcpinname="Transform Out" dstnodeid="365" dstpinname="Transform In">
-   </LINK>
-   <NODE id="366" systemname="Transform (Transform 3d)" nodename="Transform (Transform 3d)" componentmode="Hidden">
-   <BOUNDS type="Node" left="6315" top="5940" width="100" height="100">
-   </BOUNDS>
-   </NODE>
-   <LINK srcnodeid="174" srcpinname="Transform Out" dstnodeid="366" dstpinname="Transform In" linkstyle="Bezier">
-   <LINKPOINT x="5665" y="4758">
-   </LINKPOINT>
-   <LINKPOINT x="6305" y="4228">
-   </LINKPOINT>
-   </LINK>
-   <LINK srcnodeid="366" srcpinname="Transform Out" dstnodeid="335" dstpinname="Transform In">
-   </LINK>
-   <NODE id="367" systemname="Transform (Transform 3d)" nodename="Transform (Transform 3d)" componentmode="Hidden">
-   <BOUNDS type="Node" left="7680" top="6450" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="TranslateY" slicecount="1" values="0.03">
-   </PIN>
-   <PIN pinname="TranslateX" slicecount="1" values="1.31">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="174" srcpinname="Transform Out" dstnodeid="367" dstpinname="Transform In" linkstyle="Bezier">
-   <LINKPOINT x="6120" y="4928">
-   </LINKPOINT>
-   <LINKPOINT x="7215" y="4568">
-   </LINKPOINT>
-   </LINK>
-   <LINK srcnodeid="367" srcpinname="Transform Out" dstnodeid="336" dstpinname="Transform In">
    </LINK>
    <LINK srcnodeid="333" srcpinname="Layer" dstnodeid="236" dstpinname="Layer 2" linkstyle="Bezier">
    <LINKPOINT x="3075" y="10673">
@@ -937,5 +911,49 @@
    <LINK srcnodeid="369" srcpinname="Y Output Value" dstnodeid="368" dstpinname="Input">
    </LINK>
    <LINK srcnodeid="368" srcpinname="Output" dstnodeid="191" dstpinname="Y Input Value">
+   </LINK>
+   <NODE id="370" systemname="Transform (Transform 3d)" nodename="Transform (Transform 3d)" componentmode="Hidden">
+   <BOUNDS type="Node" left="7680" top="6450" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="TranslateX" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="174" srcpinname="Transform Out" dstnodeid="370" dstpinname="Transform In" linkstyle="Bezier">
+   <LINKPOINT x="6120" y="4928">
+   </LINKPOINT>
+   <LINKPOINT x="7215" y="4568">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="370" srcpinname="Transform Out" dstnodeid="336" dstpinname="Transform In">
+   </LINK>
+   <NODE id="371" systemname="Transform (Transform 3d)" nodename="Transform (Transform 3d)" componentmode="Hidden">
+   <BOUNDS type="Node" left="6315" top="5940" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Pitch" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Roll" slicecount="1" values="0.022">
+   </PIN>
+   <PIN pinname="TranslateX" slicecount="1" values="-0.12">
+   </PIN>
+   <PIN pinname="TranslateZ" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="174" srcpinname="Transform Out" dstnodeid="371" dstpinname="Transform In" linkstyle="Bezier">
+   <LINKPOINT x="5665" y="4758">
+   </LINKPOINT>
+   <LINKPOINT x="6305" y="4228">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="371" srcpinname="Transform Out" dstnodeid="335" dstpinname="Transform In">
+   </LINK>
+   <NODE systemname="gridDetect" filename="subpatches\gridDetect.v4p" nodename="subpatches\gridDetect.v4p" componentmode="Hidden" id="372">
+   <BOUNDS type="Node" left="6360" top="21975" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="InputTex" visible="1" slicecount="1" values="||">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="176" srcpinname="Texture Out" dstnodeid="153" dstpinname="Texture In">
+   </LINK>
+   <LINK srcnodeid="176" srcpinname="Texture Out" dstnodeid="372" dstpinname="InputTex">
    </LINK>
    </PATCH>
