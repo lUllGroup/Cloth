@@ -12,17 +12,17 @@ int left;
 int leftTogUp;
 int applyAttractor;
 float bounce;
-float power;
+//float power;
 float resolveFactor;
 float depthExtrude;
 float depthOffset;
-int bendingCount = 1;
 float texRepellForce = 1;
 
 float returnStrength;
 
 
 
+StructuredBuffer<float> power;
 StructuredBuffer<float3> attractor;
 StructuredBuffer<float> attractorSize;
 StructuredBuffer<float> attractorStrength;
@@ -107,7 +107,7 @@ void CSConstantForce( uint3 DTid : SV_DispatchThreadID)
 			bool skip = false;
 				
 			
-			for(int c = 0; c < bendingCount; c++){
+			for(int c = 0; c < 3; c++){
 				
 				connectSize = connectSizes[c];
 				bendingFactor = bendingFactors[c];
@@ -214,7 +214,7 @@ void CSConstantForce( uint3 DTid : SV_DispatchThreadID)
 				
 					if(currentDistance > 0.0){
 										
-						float3 correctionVector = p1_to_p2 * (power - rest_length/currentDistance);
+						float3 correctionVector = p1_to_p2 * ((power[iterator] + 1 )  - rest_length/currentDistance);
 					
 						//AllMemoryBarrier();
 						

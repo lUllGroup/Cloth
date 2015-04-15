@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="C:\Users\Admin\Desktop\Coth\subpatches\gravityNoise.v4p" systemname="gravityNoise" filename="C:\Users\Michael\Desktop\nodecloth\String Physics\subpatches\gravityNoise.v4p" scrollx="75" scrolly="0">
+   <PATCH nodename="C:\Users\Admin\Desktop\Cloth\subpatches\gravityNoise.v4p" systemname="gravityNoise" filename="C:\Users\Michael\Desktop\nodecloth\String Physics\subpatches\gravityNoise.v4p" scrollx="75" scrolly="0">
    <BOUNDS type="Window" left="16095" top="5055" width="6885" height="9045">
    </BOUNDS>
    <PACK Name="image" Version="0.2.0">
