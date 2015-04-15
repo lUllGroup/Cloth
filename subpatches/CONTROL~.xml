@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="C:\Users\Admin\Desktop\Coth\subpatches\CONTROL.v4p" scrollx="105" scrolly="0" systemname="CONTROL" filename="C:\Users\Admin\Desktop\Party Cloth\CONTROL.v4p">
+   <PATCH nodename="C:\Users\Admin\Desktop\Coth\subpatches\CONTROL.v4p" scrollx="0" scrolly="0" systemname="CONTROL" filename="C:\Users\Admin\Desktop\Party Cloth\CONTROL.v4p">
    <BOUNDS type="Window" left="19095" top="6915" width="7365" height="6930">
    </BOUNDS>
    <PACK Name="addonpack" Version="33.7.0">
@@ -415,7 +415,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="2805" top="285" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="4" visible="1" values="10,10,10,10">
+   <PIN pinname="Y Input Value" slicecount="4" visible="1" values="30,30,30,30">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="s">
    </PIN>
@@ -430,6 +430,8 @@
    <PIN pinname="Descriptive Name" slicecount="1" values="SubsceneLength">
    </PIN>
    <PIN pinname="SliceCount Mode" slicecount="1" values="ColsRowsPages">
+   </PIN>
+   <PIN pinname="Pin Visibility" slicecount="1" values="False">
    </PIN>
    </NODE>
    <LINK srcnodeid="63" srcpinname="Y Output Value" dstnodeid="52" dstpinname="SubsceneLength">

@@ -25,7 +25,7 @@
    </BOUNDS>
    <PIN pinname="X" visible="1" slicecount="1" values="-0.34">
    </PIN>
-   <PIN pinname="Y" slicecount="1" visible="1" values="-0.053">
+   <PIN pinname="Y" slicecount="1" visible="1" values="-0.1">
    </PIN>
    <PIN pinname="XYZ" visible="1">
    </PIN>

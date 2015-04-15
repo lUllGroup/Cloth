@@ -10,7 +10,7 @@ float lPower <String uiname="Power"; float uimin=0.0;> = 25.0;     //shininess o
 float lRange <String uiname="Light Range"; float uimin=0.0;> = 10.0;
 
 //phong point function
-float4 PhongPoint(float3 PosW, float3 NormV, float3 ViewDirV, float3 LightDirV)
+float4 PhongPoint(float3 PosW, float3 NormV, float3 ViewDirV, float3 LightDirV, float att2Factor)
 {
 
     float d = distance(PosW, lPos);
@@ -19,7 +19,7 @@ float4 PhongPoint(float3 PosW, float3 NormV, float3 ViewDirV, float3 LightDirV)
     //compute attenuation only if vertex within lightrange
     if (d<lRange)
     {
-       atten = 1/(saturate(lAtt0) + saturate(lAtt1) * d + saturate(lAtt2) * pow(d, 2));
+       atten = 1/(saturate(lAtt0) + saturate(lAtt1) * d + saturate(lAtt2*att2Factor) * pow(d, 2));
     }
 
     float4 amb = lAmb * atten;

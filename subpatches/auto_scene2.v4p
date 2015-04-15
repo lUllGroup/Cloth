@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="C:\Users\Admin\Desktop\Coth\subpatches\auto_scene2.v4p" systemname="auto_scene2" filename="C:\Users\Admin\Desktop\Party Cloth\subpatches\auto_scene2.v4p" scrollx="0" scrolly="840">
+   <PATCH nodename="C:\Users\Admin\Desktop\Coth\subpatches\auto_scene2.v4p" systemname="auto_scene2" filename="C:\Users\Admin\Desktop\Party Cloth\subpatches\auto_scene2.v4p" scrollx="120" scrolly="0">
    <NODE systemname="Counter (Animation)" nodename="Counter (Animation)" componentmode="Hidden" id="0">
    <BOUNDS type="Node" left="4680" top="9900" width="100" height="100">
    </BOUNDS>
@@ -201,7 +201,7 @@
    </PIN>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
-   <PIN pinname="SliceCount Mode" slicecount="1" values="ColsRowsPages">
+   <PIN pinname="SliceCount Mode" slicecount="1" values="Input">
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="Subscenes">
    </PIN>
