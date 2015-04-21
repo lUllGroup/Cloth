@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="C:\Users\Admin\Desktop\Cloth\subpatches\settings.v4p" systemname="settings" filename="C:\Users\Michael\Desktop\nodecloth\String Physics\subpatches\settings.v4p" scrollx="4245" scrolly="0">
+   <PATCH nodename="C:\Users\Admin\Desktop\Cloth\subpatches\settings.v4p" systemname="settings" filename="C:\Users\Michael\Desktop\nodecloth\String Physics\subpatches\settings.v4p" scrollx="930" scrolly="0">
    <BOUNDS type="Window" left="2955" top="6645" width="13800" height="7200">
    </BOUNDS>
    <PACK Name="image" Version="0.2.0">
@@ -7,9 +7,9 @@
    <PACK Name="addonpack" Version="33.7.0">
    </PACK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="0" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="4755" top="1995" width="585" height="960">
+   <BOUNDS type="Box" left="4365" top="2025" width="585" height="960">
    </BOUNDS>
-   <BOUNDS type="Node" left="4755" top="1995" width="0" height="0">
+   <BOUNDS type="Node" left="4365" top="2025" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="3" visible="1" values="0.7,0.4,0.01">
    </PIN>
@@ -39,7 +39,7 @@
    </PIN>
    <PIN pinname="Input 1" visible="1">
    </PIN>
-   <PIN pinname="Input 2" visible="1" slicecount="3" values="1,0.05,0.002">
+   <PIN pinname="Input 2" visible="1" slicecount="3" values="1.1,0.16,0.01">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
@@ -76,32 +76,6 @@
    <LINKPOINT x="3975" y="2475">
    </LINKPOINT>
    </LINK>
-   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="3" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="5595" top="1995" width="600" height="960">
-   </BOUNDS>
-   <BOUNDS type="Node" left="5595" top="1995" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="3" visible="1" values="1.1,0.1,0.01">
-   </PIN>
-   <PIN pinname="Units" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Precision" slicecount="1" values="4">
-   </PIN>
-   <PIN pinname="Value Type" slicecount="1" values="Real">
-   </PIN>
-   <PIN pinname="Rows" slicecount="1" values="3">
-   </PIN>
-   <PIN pinname="Vector Size" slicecount="1" values="2">
-   </PIN>
-   <PIN pinname="Default" slicecount="1" values="|0, 0|">
-   </PIN>
-   <PIN pinname="Y Output Value" visible="1">
-   </PIN>
-   <PIN pinname="SliceCount Mode" slicecount="1" values="ColsRowsPages">
-   </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="||">
-   </PIN>
-   </NODE>
    <LINK srcnodeid="0" srcpinname="Y Output Value" dstnodeid="1" dstpinname="Input 1">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="6" systemname="IOBox (Value Advanced)">
@@ -428,8 +402,6 @@
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="3" srcpinname="Y Output Value" dstnodeid="1" dstpinname="Input 2">
-   </LINK>
    <LINK srcnodeid="26" srcpinname="Output String" dstnodeid="8" dstpinname="Input 3">
    </LINK>
    <LINK srcnodeid="29" srcpinname="Output String" dstnodeid="8" dstpinname="Input 4">
@@ -481,5 +453,7 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="32" srcpinname="Y Output Value" dstnodeid="16" dstpinname="Input 5">
+   </LINK>
+   <LINK srcnodeid="0" srcpinname="Y Output Value" dstnodeid="1" dstpinname="Input 2">
    </LINK>
    </PATCH>

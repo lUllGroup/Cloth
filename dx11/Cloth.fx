@@ -4,9 +4,12 @@ int resolveCount;
 float3 gravity;
 StructuredBuffer<float> movementFactor;
 float width;
+bool softPin;
 float restLength;
+float restLengthX;
+float restLengthY;
 Texture2D texDepth <string uiname="Depth";>;
-int conections = 8;
+//int conections = 8;
 
 int left;
 int leftTogUp;
@@ -96,10 +99,12 @@ void CSConstantForce( uint3 DTid : SV_DispatchThreadID)
 			for(int a = 0; a < resolveCount; a++){
 				
 			float connection = 0;
-			float rest_length = restLength;
-			float rest_length2 = sqrt((rest_length * rest_length) + (rest_length * rest_length));
+		//	float rest_length = restLengthX;
+			float rest_length = 0;
 			
-			int connectionCount = conections;
+			float rest_length2 = sqrt((restLengthX * restLengthY) + (restLengthX * restLengthY));
+			
+			int connectionCount = 8;
 			
 			float3 p1 = 0;
 			float3 p2 = 0;
@@ -121,7 +126,7 @@ void CSConstantForce( uint3 DTid : SV_DispatchThreadID)
 								if(iterator < (pCount-(width * connectSize))){
 									// Down
 									connection = iterator+(width * connectSize);
-									rest_length = restLength * connectSize;
+									rest_length = restLengthY * connectSize;
 								} else {
 									skip = true;
 								}
@@ -132,7 +137,7 @@ void CSConstantForce( uint3 DTid : SV_DispatchThreadID)
 								if(iterator > (width * connectSize) -1 ){
 									// Up
 									connection = iterator-(width * connectSize);
-									rest_length = restLength * connectSize;
+									rest_length = restLengthY * connectSize;
 								} else {
 									skip = true;
 								}
@@ -164,7 +169,7 @@ void CSConstantForce( uint3 DTid : SV_DispatchThreadID)
 								if((iterator + connectSize) % width >= connectSize){
 									// Right
 									connection = (iterator+(connectSize*1));
-									rest_length = restLength * connectSize;
+									rest_length = restLengthX * connectSize;
 								} else {
 									skip = true;
 								}
@@ -174,7 +179,7 @@ void CSConstantForce( uint3 DTid : SV_DispatchThreadID)
 								if(iterator % width >= connectSize){
 									// Left
 									connection = (iterator+(-connectSize));
-									rest_length = restLength * connectSize;
+									rest_length = restLengthX * connectSize;
 								} else {
 									skip = true;
 								}
@@ -375,10 +380,17 @@ void CSConstantForce( uint3 DTid : SV_DispatchThreadID)
 		{
 			
 			// Pin Down
-		
-			Output[iterator].oldPos = resetData[iterator];
-			Output[iterator].pos = resetData[iterator];
-		
+			
+			if(!softPin){
+				Output[iterator].oldPos = resetData[iterator];
+				Output[iterator].pos = resetData[iterator];
+			} else {
+				Output[iterator].pos += (resetData[iterator]-Output[iterator].pos) *.01;
+				Output[iterator].oldPos = Output[iterator].pos;
+			}
+			
+			
+			
 		}
 			
 		

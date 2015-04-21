@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="C:\Users\Admin\Desktop\Coth\subpatches\windPinch.v4p" systemname="windPinch" filename="C:\Users\Michael\Desktop\nodecloth\String Physics\subpatches\windPinch.v4p" scrollx="0" scrolly="0">
-   <BOUNDS type="Window" left="7665" top="3405" width="11940" height="15150">
+   <PATCH nodename="C:\Users\Admin\Desktop\Cloth\subpatches\windPinch.v4p" systemname="windPinch" filename="C:\Users\Michael\Desktop\nodecloth\String Physics\subpatches\windPinch.v4p" scrollx="0" scrolly="0">
+   <BOUNDS type="Window" left="10005" top="4200" width="11940" height="15150">
    </BOUNDS>
    <PACK Name="image" Version="0.2.0">
    </PACK>
@@ -248,6 +248,10 @@
    <PIN pinname="Cycles" visible="1">
    </PIN>
    <PIN pinname="Period" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Pause" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Reset" visible="1" slicecount="1" values="0">
    </PIN>
    </NODE>
    <NODE systemname="Map (Value)" nodename="Map (Value)" componentmode="Hidden" id="21">

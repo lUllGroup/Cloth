@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="C:\Users\Admin\Desktop\Coth\subpatches\wind.v4p" systemname="wind" filename="C:\Users\Michael\Desktop\nodecloth\String Physics\subpatches\wind.v4p" scrollx="1830" scrolly="1920">
+   <PATCH nodename="C:\Users\Admin\Desktop\Cloth\subpatches\wind.v4p" systemname="wind" filename="C:\Users\Michael\Desktop\nodecloth\String Physics\subpatches\wind.v4p" scrollx="1830" scrolly="1980">
    <BOUNDS type="Window" left="8265" top="7320" width="6840" height="7140">
    </BOUNDS>
    <PACK Name="image" Version="0.2.0">
@@ -49,9 +49,9 @@
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
-   <PIN pinname="Destination Minimum" slicecount="1" visible="1" values="-0.02">
+   <PIN pinname="Destination Minimum" slicecount="1" visible="1" values="-0.1">
    </PIN>
-   <PIN pinname="Destination Maximum" slicecount="1" visible="1" values="0.06">
+   <PIN pinname="Destination Maximum" slicecount="1" visible="1" values="0.1">
    </PIN>
    </NODE>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="4" systemname="IOBox (Value Advanced)">
@@ -101,9 +101,9 @@
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
-   <PIN pinname="Destination Minimum" slicecount="1" values="-0.03">
+   <PIN pinname="Destination Minimum" slicecount="1" values="-0.1">
    </PIN>
-   <PIN pinname="Destination Maximum" slicecount="1" values="0.04">
+   <PIN pinname="Destination Maximum" slicecount="1" values="0.1">
    </PIN>
    </NODE>
    <NODE systemname="Vector (2d Split)" nodename="Vector (2d Split)" componentmode="Hidden" id="7">
