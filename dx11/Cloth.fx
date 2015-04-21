@@ -5,6 +5,8 @@ float3 gravity;
 StructuredBuffer<float> movementFactor;
 float width;
 float restLength;
+float restLengthX;
+float restLengthY;
 Texture2D texDepth <string uiname="Depth";>;
 int conections = 8;
 
@@ -96,8 +98,9 @@ void CSConstantForce( uint3 DTid : SV_DispatchThreadID)
 			for(int a = 0; a < resolveCount; a++){
 				
 			float connection = 0;
-			float rest_length = restLength;
-			float rest_length2 = sqrt((rest_length * rest_length) + (rest_length * rest_length));
+				//	float rest_length = restLengthX;
+			float rest_length = 0;
+			float rest_length2 = sqrt((restLengthX * restLengthY) + (restLengthX * restLengthY));
 			
 			int connectionCount = conections;
 			
@@ -121,7 +124,7 @@ void CSConstantForce( uint3 DTid : SV_DispatchThreadID)
 								if(iterator < (pCount-(width * connectSize))){
 									// Down
 									connection = iterator+(width * connectSize);
-									rest_length = restLength * connectSize;
+									rest_length = restLengthY * connectSize;
 								} else {
 									skip = true;
 								}
@@ -132,7 +135,7 @@ void CSConstantForce( uint3 DTid : SV_DispatchThreadID)
 								if(iterator > (width * connectSize) -1 ){
 									// Up
 									connection = iterator-(width * connectSize);
-									rest_length = restLength * connectSize;
+									rest_length = restLengthY * connectSize;
 								} else {
 									skip = true;
 								}
@@ -164,7 +167,7 @@ void CSConstantForce( uint3 DTid : SV_DispatchThreadID)
 								if((iterator + connectSize) % width >= connectSize){
 									// Right
 									connection = (iterator+(connectSize*1));
-									rest_length = restLength * connectSize;
+									rest_length = restLengthX * connectSize;
 								} else {
 									skip = true;
 								}
@@ -174,7 +177,7 @@ void CSConstantForce( uint3 DTid : SV_DispatchThreadID)
 								if(iterator % width >= connectSize){
 									// Left
 									connection = (iterator+(-connectSize));
-									rest_length = restLength * connectSize;
+									rest_length = restLengthX * connectSize;
 								} else {
 									skip = true;
 								}

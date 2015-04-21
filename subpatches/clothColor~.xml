@@ -15,17 +15,17 @@
    </PIN>
    </NODE>
    <NODE nodename="IOBox (Color)" componentmode="InABox" id="1" systemname="IOBox (Color)">
-   <BOUNDS type="Box" left="3630" top="3795" width="465" height="480">
+   <BOUNDS type="Box" left="3630" top="3795" width="1500" height="570">
    </BOUNDS>
    <BOUNDS type="Node" left="3630" top="3795" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Color Input" slicecount="1" visible="1" values="|0.00000,0.09439,0.09626,1.00000|">
+   <PIN pinname="Color Input" slicecount="1" visible="1" values="|0.49597,0.08420,0.07358,1.00000|">
    </PIN>
    <PIN pinname="Color Output" visible="1">
    </PIN>
    </NODE>
    <NODE nodename="IOBox (Color)" componentmode="InABox" id="2" systemname="IOBox (Color)">
-   <BOUNDS type="Box" left="2085" top="3780" width="600" height="615">
+   <BOUNDS type="Box" left="2085" top="3780" width="1140" height="540">
    </BOUNDS>
    <BOUNDS type="Node" left="2085" top="3780" width="0" height="0">
    </BOUNDS>
@@ -127,7 +127,7 @@
    </PIN>
    <PIN pinname="Switch" visible="1" slicecount="1" values="1">
    </PIN>
-   <PIN pinname="Input 1" slicecount="1" values="|1.00000,1.00000,1.00000,1.00000|">
+   <PIN pinname="Input 1" slicecount="1" visible="1" values="|1.00000,1.00000,1.00000,1.00000|">
    </PIN>
    <PIN pinname="Input Count" slicecount="1" values="3">
    </PIN>
@@ -241,5 +241,9 @@
    <LINK srcnodeid="0" srcpinname="Color Output" dstnodeid="6" dstpinname="Input 1">
    </LINK>
    <LINK srcnodeid="1" srcpinname="Color Output" dstnodeid="10" dstpinname="Input 3">
+   </LINK>
+   <LINK srcnodeid="2" srcpinname="Color Output" dstnodeid="12" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="1" srcpinname="Color Output" dstnodeid="10" dstpinname="Input 1">
    </LINK>
    </PATCH>

@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="C:\Users\Admin\Desktop\Party Cloth\subpatches\party_light.v4p" systemname="party_light" filename="C:\Users\Admin\Desktop\Party Cloth\subpatches\party_light.v4p" scrollx="1830" scrolly="8295">
+   <PATCH nodename="C:\Users\Admin\Desktop\Party Cloth\subpatches\party_light.v4p" systemname="party_light" filename="C:\Users\Admin\Desktop\Party Cloth\subpatches\party_light.v4p" scrollx="0" scrolly="8505">
    <BOUNDS type="Window" left="9540" top="4755" width="10740" height="10560">
    </BOUNDS>
    <PACK Name="addonpack" Version="33.7.0">
