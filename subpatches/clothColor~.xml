@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="C:\Users\Admin\Desktop\Party Cloth\subpatches\clothColor.v4p" systemname="clothColor" filename="C:\Users\Admin\Desktop\Party Cloth\subpatches\clothColor.v4p" scrollx="0" scrolly="0">
-   <BOUNDS type="Window" left="7995" top="7485" width="8595" height="8820">
+   <PATCH nodename="C:\Users\Admin\Desktop\Party Cloth\subpatches\clothColor.v4p" systemname="clothColor" filename="C:\Users\Admin\Desktop\Party Cloth\subpatches\clothColor.v4p" scrollx="0" scrolly="240">
+   <BOUNDS type="Window" left="8265" top="8040" width="8595" height="8820">
    </BOUNDS>
    <PACK Name="addonpack" Version="33.7.0">
    </PACK>
@@ -15,9 +15,9 @@
    </PIN>
    </NODE>
    <NODE nodename="IOBox (Color)" componentmode="InABox" id="1" systemname="IOBox (Color)">
-   <BOUNDS type="Box" left="3630" top="3795" width="1500" height="570">
+   <BOUNDS type="Box" left="3705" top="3810" width="1500" height="570">
    </BOUNDS>
-   <BOUNDS type="Node" left="3630" top="3795" width="0" height="0">
+   <BOUNDS type="Node" left="3705" top="3810" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Color Input" slicecount="1" visible="1" values="|0.49597,0.08420,0.07358,1.00000|">
    </PIN>
@@ -91,9 +91,11 @@
    </PIN>
    <PIN pinname="Input 1" slicecount="1" visible="1" values="|1.00000,1.00000,1.00000,1.00000|">
    </PIN>
-   <PIN pinname="Input Count" slicecount="1" values="3">
+   <PIN pinname="Input Count" slicecount="1" values="4">
    </PIN>
    <PIN pinname="Input 3" visible="1">
+   </PIN>
+   <PIN pinname="Input 4" slicecount="1" values="|0.00000,0.00000,0.00000,1.00000|" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="0" srcpinname="Color Output" dstnodeid="6" dstpinname="Input 2">
@@ -111,9 +113,11 @@
    </PIN>
    <PIN pinname="Input 1" visible="1" slicecount="1" values="|1.00000,1.00000,1.00000,1.00000|">
    </PIN>
-   <PIN pinname="Input Count" slicecount="1" values="3">
+   <PIN pinname="Input Count" slicecount="1" values="4">
    </PIN>
    <PIN pinname="Input 3" visible="1" slicecount="1" values="|0.13859,0.03935,0.15386,1.00000|">
+   </PIN>
+   <PIN pinname="Input 4" slicecount="1" values="|0.00000,0.00000,0.00000,1.00000|" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="10" srcpinname="Output" dstnodeid="4" dstpinname="Color Input">
@@ -129,9 +133,11 @@
    </PIN>
    <PIN pinname="Input 1" slicecount="1" visible="1" values="|1.00000,1.00000,1.00000,1.00000|">
    </PIN>
-   <PIN pinname="Input Count" slicecount="1" values="3">
+   <PIN pinname="Input Count" slicecount="1" values="4">
    </PIN>
    <PIN pinname="Input 3" visible="1" slicecount="1" values="|0.00000,0.00000,0.00000,1.00000|">
+   </PIN>
+   <PIN pinname="Input 4" slicecount="1" values="|0.12790,0.12790,0.12790,1.00000|">
    </PIN>
    </NODE>
    <LINK srcnodeid="2" srcpinname="Color Output" dstnodeid="12" dstpinname="Input 2">
@@ -225,9 +231,9 @@
    <LINK srcnodeid="22" srcpinname="Y Output Value" dstnodeid="20" dstpinname="Y Input Value">
    </LINK>
    <NODE nodename="IOBox (Color)" componentmode="InABox" id="23" systemname="IOBox (Color)">
-   <BOUNDS type="Box" left="4365" top="3675" width="585" height="585">
+   <BOUNDS type="Box" left="4320" top="1830" width="585" height="585">
    </BOUNDS>
-   <BOUNDS type="Node" left="4365" top="3675" width="0" height="0">
+   <BOUNDS type="Node" left="4320" top="1830" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Color Input" slicecount="1" visible="1" values="|0.13859,0.03935,0.15386,1.00000|">
    </PIN>
@@ -245,5 +251,7 @@
    <LINK srcnodeid="2" srcpinname="Color Output" dstnodeid="12" dstpinname="Input 1">
    </LINK>
    <LINK srcnodeid="1" srcpinname="Color Output" dstnodeid="10" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="2" srcpinname="Color Output" dstnodeid="12" dstpinname="Input 3">
    </LINK>
    </PATCH>

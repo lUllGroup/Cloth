@@ -1,4 +1,5 @@
 bool reset;
+
 int pCount;
 int resolveCount;
 float3 gravity;
@@ -8,13 +9,14 @@ float restLength;
 float restLengthX;
 float restLengthY;
 Texture2D texDepth <string uiname="Depth";>;
-int conections = 8;
+//int conections = 8;
+bool breathe;
 
 int left;
 int leftTogUp;
 int applyAttractor;
 float bounce;
-float power;
+//float power;
 float resolveFactor;
 float depthExtrude;
 float depthOffset;
@@ -24,7 +26,7 @@ float texRepellForce = 1;
 float returnStrength;
 
 
-
+StructuredBuffer<float> power;
 StructuredBuffer<float3> attractor;
 StructuredBuffer<float> attractorSize;
 StructuredBuffer<float> attractorStrength;
@@ -102,7 +104,7 @@ void CSConstantForce( uint3 DTid : SV_DispatchThreadID)
 			float rest_length = 0;
 			float rest_length2 = sqrt((restLengthX * restLengthY) + (restLengthX * restLengthY));
 			
-			int connectionCount = conections;
+			int connectionCount = 8;
 			
 			float3 p1 = 0;
 			float3 p2 = 0;
@@ -216,8 +218,12 @@ void CSConstantForce( uint3 DTid : SV_DispatchThreadID)
 					float currentDistance = length(p1_to_p2);
 				
 					if(currentDistance > 0.0){
-										
-						float3 correctionVector = p1_to_p2 * (power - rest_length/currentDistance);
+						float thePower;						if(breathe){
+							thePower = (power[iterator] + 1 );
+						} else {
+							thePower = power[0];
+						}
+						float3 correctionVector = p1_to_p2 * (thePower - rest_length/currentDistance);
 					
 						//AllMemoryBarrier();
 						

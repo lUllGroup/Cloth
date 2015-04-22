@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="C:\Users\Admin\Desktop\Party Cloth\subpatches\auto_scene2.v4p" systemname="auto_scene2" filename="C:\Users\Admin\Desktop\Party Cloth\subpatches\auto_scene2.v4p" scrollx="0" scrolly="3360">
+   <PATCH nodename="C:\Users\Admin\Desktop\Coth\subpatches\auto_scene2.v4p" systemname="auto_scene2" filename="C:\Users\Admin\Desktop\Party Cloth\subpatches\auto_scene2.v4p" scrollx="120" scrolly="0">
    <NODE systemname="Counter (Animation)" nodename="Counter (Animation)" componentmode="Hidden" id="0">
    <BOUNDS type="Node" left="4680" top="9900" width="100" height="100">
    </BOUNDS>
@@ -201,7 +201,7 @@
    </PIN>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
-   <PIN pinname="SliceCount Mode" slicecount="1" values="ColsRowsPages">
+   <PIN pinname="SliceCount Mode" slicecount="1" values="Input">
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="Subscenes">
    </PIN>
@@ -237,7 +237,7 @@
    <NODE systemname="Multiply (Value)" nodename="Multiply (Value)" componentmode="Hidden" id="16">
    <BOUNDS type="Node" left="1770" top="3315" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Input 1" visible="1">
+   <PIN pinname="Input 1" visible="1" slicecount="1" values="10">
    </PIN>
    <PIN pinname="Input 2" visible="1" slicecount="4" values="2,2,3,15">
    </PIN>
@@ -283,8 +283,6 @@
    <LINK srcnodeid="10" srcpinname="Output" dstnodeid="22" dstpinname="Y Input Value">
    </LINK>
    <LINK srcnodeid="16" srcpinname="Output" dstnodeid="18" dstpinname="Input">
-   </LINK>
-   <LINK srcnodeid="15" srcpinname="Y Output Value" dstnodeid="16" dstpinname="Input 1">
    </LINK>
    <LINK srcnodeid="17" srcpinname="Output" dstnodeid="16" dstpinname="Input 2">
    </LINK>
@@ -675,7 +673,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="4035" top="6585" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="2">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="10">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -713,12 +711,6 @@
    <LINK srcnodeid="56" srcpinname="Y Output Value" dstnodeid="69" dstpinname="Input 1">
    </LINK>
    <LINK srcnodeid="69" srcpinname="Output" dstnodeid="54" dstpinname="Maximum">
-   </LINK>
-   <LINK srcnodeid="15" srcpinname="Y Output Value" dstnodeid="65" dstpinname="Y Input Value" linkstyle="Bezier">
-   <LINKPOINT x="1085" y="4290">
-   </LINKPOINT>
-   <LINKPOINT x="3655" y="4470">
-   </LINKPOINT>
    </LINK>
    <LINK srcnodeid="40" srcpinname="Output" dstnodeid="55" dstpinname="Pause" linkstyle="Bezier" hiddenwhenlocked="1">
    <LINKPOINT x="5220" y="3525">
@@ -833,5 +825,23 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="84" srcpinname="Output" dstnodeid="85" dstpinname="Input Value">
+   </LINK>
+   <NODE systemname="GetSlice (Spreads)" nodename="GetSlice (Spreads)" componentmode="Hidden" id="86">
+   <BOUNDS type="Node" left="630" top="2655" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Index" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="15" srcpinname="Y Output Value" dstnodeid="86" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="86" srcpinname="Output" dstnodeid="16" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="86" srcpinname="Output" dstnodeid="65" dstpinname="Y Input Value">
+   </LINK>
+   <LINK srcnodeid="28" srcpinname="Y Output Value" dstnodeid="86" dstpinname="Index">
    </LINK>
    </PATCH>

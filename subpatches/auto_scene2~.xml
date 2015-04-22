@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="C:\Users\Admin\Desktop\Party Cloth\subpatches\auto_scene2.v4p" systemname="auto_scene2" filename="C:\Users\Admin\Desktop\Party Cloth\subpatches\auto_scene2.v4p" scrollx="0" scrolly="3300">
+   <PATCH nodename="C:\Users\Admin\Desktop\Party Cloth\subpatches\auto_scene2.v4p" systemname="auto_scene2" filename="C:\Users\Admin\Desktop\Party Cloth\subpatches\auto_scene2.v4p" scrollx="0" scrolly="210">
    <NODE systemname="Counter (Animation)" nodename="Counter (Animation)" componentmode="Hidden" id="0">
    <BOUNDS type="Node" left="4680" top="9900" width="100" height="100">
    </BOUNDS>
@@ -201,7 +201,7 @@
    </PIN>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
-   <PIN pinname="SliceCount Mode" slicecount="1" values="ColsRowsPages">
+   <PIN pinname="SliceCount Mode" slicecount="1" values="Input">
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="Subscenes">
    </PIN>
@@ -540,8 +540,6 @@
    <LINKPOINT x="2995" y="4503">
    </LINKPOINT>
    </LINK>
-   <LINK srcnodeid="29" srcpinname="Output" dstnodeid="14" dstpinname="Index">
-   </LINK>
    <NODE systemname="Counter (Animation)" nodename="Counter (Animation)" componentmode="Hidden" id="54">
    <BOUNDS type="Node" left="1230" top="7425" width="100" height="100">
    </BOUNDS>
@@ -833,5 +831,11 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="84" srcpinname="Output" dstnodeid="85" dstpinname="Input Value">
+   </LINK>
+   <LINK srcnodeid="29" srcpinname="Output" dstnodeid="14" dstpinname="Index" linkstyle="Bezier">
+   <LINKPOINT x="10695" y="4808">
+   </LINKPOINT>
+   <LINKPOINT x="6450" y="4808">
+   </LINKPOINT>
    </LINK>
    </PATCH>
