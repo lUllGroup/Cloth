@@ -157,7 +157,7 @@
    <NODE systemname="Multiply (Value)" nodename="Multiply (Value)" componentmode="Hidden" id="12">
    <BOUNDS type="Node" left="5625" top="9960" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Input 2" slicecount="1" visible="1" values="0.1">
+   <PIN pinname="Input 2" slicecount="1" visible="1" values="0.5">
    </PIN>
    <PIN pinname="Input 1" visible="1" slicecount="4" values="0,0,0,0">
    </PIN>

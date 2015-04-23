@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
    <PATCH nodename="C:\Users\Admin\Desktop\Party Cloth\subpatches\FFT.v4p" systemname="FFT" filename="C:\Users\Admin\Desktop\Party Cloth\subpatches\FFT.v4p" scrollx="0" scrolly="0">
-   <BOUNDS type="Window" left="24870" top="7380" width="3690" height="5925">
+   <BOUNDS type="Window" left="24075" top="8265" width="3675" height="5775">
    </BOUNDS>
    <PACK Name="addonpack" Version="33.7.0">
    </PACK>
@@ -211,7 +211,7 @@
    </BOUNDS>
    <BOUNDS height="315" left="5745" top="600" type="Box" width="3015">
    </BOUNDS>
-   <PIN pinname="Input Enum" slicecount="1" values="|Mikrofon (Realtek High Definiti|">
+   <PIN pinname="Input Enum" slicecount="1" values="|Line 1/2 (M-Audio Fast Track Pr|">
    </PIN>
    <PIN pinname="SliceCount Mode" slicecount="1" values="Input">
    </PIN>

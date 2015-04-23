@@ -474,4 +474,6 @@
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
    </NODE>
+   <LINK srcnodeid="5" srcpinname="Output" dstnodeid="17" dstpinname="Color Input">
+   </LINK>
    </PATCH>
