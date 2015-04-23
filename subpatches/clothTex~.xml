@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="C:\Users\Admin\Desktop\Party Cloth\subpatches\clothTex.v4p" systemname="clothTex" filename="C:\Users\Michael\Desktop\nodecloth\String Physics\subpatches\clothTex.v4p" scrollx="5055" scrolly="21735">
+   <PATCH nodename="C:\Users\Admin\Desktop\Party Cloth\subpatches\clothTex.v4p" systemname="clothTex" filename="C:\Users\Michael\Desktop\nodecloth\String Physics\subpatches\clothTex.v4p" scrollx="5250" scrolly="22170">
    <BOUNDS type="Window" left="2835" top="6885" width="21615" height="8460">
    </BOUNDS>
    <PACK Name="image" Version="0.2.0">
@@ -894,6 +894,8 @@
    <PIN pinname="Load In Background" slicecount="1" values="1">
    </PIN>
    <PIN pinname="Keep In Memory" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Reload" slicecount="1" values="0">
    </PIN>
    </NODE>
    <NODE systemname="GetSlice (Node)" nodename="GetSlice (Node)" componentmode="Hidden" id="251">

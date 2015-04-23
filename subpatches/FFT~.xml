@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="C:\Users\Admin\Desktop\Party Cloth\subpatches\FFT.v4p" systemname="FFT" filename="C:\Users\Admin\Desktop\Party Cloth\subpatches\FFT.v4p" scrollx="0" scrolly="9660">
-   <BOUNDS type="Window" left="25125" top="7485" width="3435" height="5820">
+   <PATCH nodename="C:\Users\Admin\Desktop\Party Cloth\subpatches\FFT.v4p" systemname="FFT" filename="C:\Users\Admin\Desktop\Party Cloth\subpatches\FFT.v4p" scrollx="0" scrolly="0">
+   <BOUNDS type="Window" left="24870" top="7380" width="3690" height="5925">
    </BOUNDS>
    <PACK Name="addonpack" Version="33.7.0">
    </PACK>

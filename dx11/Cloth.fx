@@ -10,7 +10,7 @@ float restLengthX;
 float restLengthY;
 Texture2D texDepth <string uiname="Depth";>;
 //int conections = 8;
-bool breathe;
+int breathe;
 
 int left;
 int leftTogUp;
@@ -218,11 +218,12 @@ void CSConstantForce( uint3 DTid : SV_DispatchThreadID)
 					float currentDistance = length(p1_to_p2);
 				
 					if(currentDistance > 0.0){
-						float thePower;						if(breathe){
+						float thePower;						if(breathe != 0){
 							thePower = (power[iterator] + 1 );
 						} else {
 							thePower = power[0];
 						}
+					
 						float3 correctionVector = p1_to_p2 * (thePower - rest_length/currentDistance);
 					
 						//AllMemoryBarrier();

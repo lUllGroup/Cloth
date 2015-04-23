@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="C:\Users\Admin\Desktop\Party Cloth\subpatches\clothTex.v4p" systemname="clothTex" filename="C:\Users\Michael\Desktop\nodecloth\String Physics\subpatches\clothTex.v4p" scrollx="5055" scrolly="21735">
-   <BOUNDS type="Window" left="2835" top="6885" width="21615" height="8460">
+   <PATCH nodename="C:\Users\Admin\Desktop\Party Cloth\subpatches\clothTex.v4p" systemname="clothTex" filename="C:\Users\Michael\Desktop\nodecloth\String Physics\subpatches\clothTex.v4p" scrollx="5310" scrolly="17685">
+   <BOUNDS type="Window" left="1860" top="6615" width="21615" height="8460">
    </BOUNDS>
    <PACK Name="image" Version="0.2.0">
    </PACK>
@@ -835,7 +835,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="11835" top="20580" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="2">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="3">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>

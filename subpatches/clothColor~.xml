@@ -95,7 +95,7 @@
    </PIN>
    <PIN pinname="Input 3" visible="1">
    </PIN>
-   <PIN pinname="Input 4" slicecount="1" values="|0.00000,0.00000,0.00000,1.00000|" visible="1">
+   <PIN pinname="Input 4" slicecount="1" visible="1" values="|0.00000,0.00000,0.00000,1.00000|">
    </PIN>
    </NODE>
    <LINK srcnodeid="0" srcpinname="Color Output" dstnodeid="6" dstpinname="Input 2">
@@ -117,7 +117,7 @@
    </PIN>
    <PIN pinname="Input 3" visible="1" slicecount="1" values="|0.13859,0.03935,0.15386,1.00000|">
    </PIN>
-   <PIN pinname="Input 4" slicecount="1" values="|0.00000,0.00000,0.00000,1.00000|" visible="1">
+   <PIN pinname="Input 4" slicecount="1" visible="1" values="|0.24838,0.24838,0.24838,1.00000|">
    </PIN>
    </NODE>
    <LINK srcnodeid="10" srcpinname="Output" dstnodeid="4" dstpinname="Color Input">
@@ -137,7 +137,7 @@
    </PIN>
    <PIN pinname="Input 3" visible="1" slicecount="1" values="|0.00000,0.00000,0.00000,1.00000|">
    </PIN>
-   <PIN pinname="Input 4" slicecount="1" values="|0.12790,0.12790,0.12790,1.00000|">
+   <PIN pinname="Input 4" slicecount="1" values="|0.11677,0.11677,0.11677,1.00000|">
    </PIN>
    </NODE>
    <LINK srcnodeid="2" srcpinname="Color Output" dstnodeid="12" dstpinname="Input 2">

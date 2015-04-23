@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="C:\Users\Admin\Desktop\Party Cloth\subpatches\CONTROL.v4p" scrollx="0" scrolly="-360" systemname="CONTROL" filename="C:\Users\Admin\Desktop\Party Cloth\CONTROL.v4p">
+   <PATCH nodename="C:\Users\Admin\Desktop\Party Cloth\subpatches\CONTROL.v4p" scrollx="15" scrolly="0" systemname="CONTROL" filename="C:\Users\Admin\Desktop\Party Cloth\CONTROL.v4p">
    <BOUNDS type="Window" left="17595" top="7425" width="7815" height="7440">
    </BOUNDS>
    <PACK Name="addonpack" Version="33.7.0">
@@ -297,7 +297,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="4200" top="1080" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="4" visible="1" values="2,2,3,0">
+   <PIN pinname="Y Input Value" slicecount="4" visible="1" values="3,2,3,0">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -402,12 +402,6 @@
    </NODE>
    <LINK srcnodeid="60" srcpinname="Y Output Value" dstnodeid="59" dstpinname="Input 2">
    </LINK>
-   <LINK srcnodeid="59" srcpinname="Output" dstnodeid="17" dstpinname="Y Input Value" linkstyle="Bezier">
-   <LINKPOINT x="1050" y="4965">
-   </LINKPOINT>
-   <LINKPOINT x="1395" y="4965">
-   </LINKPOINT>
-   </LINK>
    <NODE systemname="OnOpen (VVVV)" nodename="OnOpen (VVVV)" componentmode="Hidden" id="61">
    <BOUNDS type="Node" left="1005" top="3180" width="100" height="100">
    </BOUNDS>
@@ -436,6 +430,12 @@
    </LINK>
    <LINK srcnodeid="9" srcpinname="Y Output Value" dstnodeid="8" dstpinname="Input Value">
    <LINKPOINT x="4065" y="9930">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="59" srcpinname="Output" dstnodeid="17" dstpinname="Y Input Value" linkstyle="Bezier">
+   <LINKPOINT x="1050" y="4965">
+   </LINKPOINT>
+   <LINKPOINT x="1395" y="4965">
    </LINKPOINT>
    </LINK>
    </PATCH>

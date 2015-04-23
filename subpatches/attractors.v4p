@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="C:\Users\Admin\Desktop\Party Cloth\subpatches\attractors.v4p" systemname="attractors" filename="C:\Users\Admin\Desktop\Coth\subpatches\attractors.v4p" scrollx="495" scrolly="1050">
+   <PATCH nodename="C:\Users\Admin\Desktop\Party Cloth\subpatches\attractors.v4p" systemname="attractors" filename="C:\Users\Admin\Desktop\Coth\subpatches\attractors.v4p" scrollx="330" scrolly="0">
    <BOUNDS type="Window" left="2445" top="5565" width="14400" height="8925">
    </BOUNDS>
    <PACK Name="addonpack" Version="33.7.0">
