@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="C:\Users\Admin\Desktop\Cloth\subpatches\CONTROL.v4p" scrollx="0" scrolly="2160" systemname="CONTROL" filename="C:\Users\Admin\Desktop\Party Cloth\CONTROL.v4p">
-   <BOUNDS type="Window" left="21255" top="7995" width="7365" height="6930">
+   <PATCH nodename="C:\Users\Admin\Desktop\Cloth\subpatches\CONTROL.v4p" scrollx="0" scrolly="0" systemname="CONTROL" filename="C:\Users\Admin\Desktop\Party Cloth\CONTROL.v4p">
+   <BOUNDS type="Window" left="20805" top="7665" width="7365" height="6930">
    </BOUNDS>
    <PACK Name="addonpack" Version="33.7.0">
    </PACK>
@@ -259,7 +259,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="4320" top="1410" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="5" visible="1" values="2,0,0,0,0">
+   <PIN pinname="Y Input Value" slicecount="5" visible="1" values="4,0,0,0,0">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -413,7 +413,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="2805" top="285" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="5" visible="1" values="30,30,30,30,30">
+   <PIN pinname="Y Input Value" slicecount="5" visible="1" values="30,120,120,120,120">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="s">
    </PIN>

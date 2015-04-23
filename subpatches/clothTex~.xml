@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="C:\Users\Admin\Desktop\Cloth\subpatches\clothTex.v4p" systemname="clothTex" filename="C:\Users\Michael\Desktop\nodecloth\String Physics\subpatches\clothTex.v4p" scrollx="1785" scrolly="5475">
+   <PATCH nodename="C:\Users\Admin\Desktop\Cloth\subpatches\clothTex.v4p" systemname="clothTex" filename="C:\Users\Michael\Desktop\nodecloth\String Physics\subpatches\clothTex.v4p" scrollx="2355" scrolly="6180">
    <BOUNDS type="Window" left="8250" top="3345" width="13110" height="8550">
    </BOUNDS>
    <PACK Name="image" Version="0.2.0">

@@ -86,7 +86,7 @@ float Alpha <float uimin=0.0; float uimax=1.0;> = 1;
 float4 PS(vs2ps In, bool front : SV_IsFrontFace): SV_Target
 {
    float4 tTexZ =  mul(In.TexCd, tTex2);
-	float4 tTex1 = mul(In.TexCd, tTex);
+   float4 tTex1 = mul(In.TexCd, tTex);
 	//In.TexCd = mul(In.TexCd, tTex);
 	float4 col;
 	
@@ -111,7 +111,7 @@ float4 PS(vs2ps In, bool front : SV_IsFrontFace): SV_Target
 		//}	    
 		
 		
-	   	col.rgb *= PhongPoint(In.PosW, In.NormV, In.ViewDirV, In.LightDirV, 1).rgb;
+	   	col.rgb *= PhongPoint(In.PosW, In.NormV, In.ViewDirV, In.LightDirV, 0).rgb;
 		
 		col.a *= Alpha;
 		
@@ -120,13 +120,14 @@ float4 PS(vs2ps In, bool front : SV_IsFrontFace): SV_Target
 	} else {
 		In.TexCd = tTex1;
 		col = tfront.Sample(g_samLinear, In.TexCd.xy);
-		col.rgb *= PhongPoint(In.PosW, In.NormV, In.ViewDirV, In.LightDirV, 1).rgb;
+		col.rgb *= PhongPoint(In.PosW, In.NormV, In.ViewDirV, In.LightDirV, 0).rgb;
 		col.a *= Alpha;
 	}
 	
-	
+	//Transform for backside
+	In.TexCd = tTexZ;
 	float4 col2 = tback.Sample(g_samLinear, In.TexCd.xy);
-    col2.rgb *= PhongPoint(In.PosW, In.NormV, In.ViewDirV, In.LightDirV, .5).rgb;
+    col2.rgb *= PhongPoint(In.PosW, In.NormV, In.ViewDirV, In.LightDirV, 1).rgb;
 	
     col2.a *= Alpha;
 

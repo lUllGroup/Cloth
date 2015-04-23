@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="C:\Users\Admin\Desktop\Cloth\subpatches\HomographyMultiscreen_DX11.v4p" componentmode="InAWindow" scrollx="6480" scrolly="2580" systemname="HomographyMultiscreen_1" filename="C:\Users\Michael\Desktop\HomographyMultiscreen_1.v4p">
+   <PATCH nodename="C:\Users\Admin\Desktop\Cloth\subpatches\HomographyMultiscreen_DX11.v4p" componentmode="InAWindow" scrollx="6060" scrolly="3330" systemname="HomographyMultiscreen_1" filename="C:\Users\Michael\Desktop\HomographyMultiscreen_1.v4p">
    <BOUNDS height="9930" left="11160" top="5295" type="Window" width="14190">
    </BOUNDS>
    <PACK Name="addonpack" Version="33.7.0">
@@ -549,6 +549,8 @@
    </PIN>
    <BOUNDS type="Box" left="13575" top="13065">
    </BOUNDS>
+   <PIN pinname="Color" slicecount="1" values="|1.00000,1.00000,1.00000,1.00000|">
+   </PIN>
    </NODE>
    <NODE systemname="Gradient (DX11.TextureFX)" filename="%VVVV%\packs\dx11\nodes\texture11\Source\Gradient.tfx" nodename="Gradient (DX11.TextureFX)" componentmode="Hidden" id="109">
    <BOUNDS type="Node" left="14220" top="12450" width="100" height="100">
@@ -817,9 +819,9 @@
    <LINK srcnodeid="38" srcpinname="Output" dstnodeid="147" dstpinname="XY">
    </LINK>
    <NODE nodename="IOBox (Node)" componentmode="InABox" id="149" systemname="IOBox (Node)">
-   <BOUNDS type="Box" left="10545" top="12360" width="795" height="240">
+   <BOUNDS type="Box" left="10530" top="12105" width="795" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="10545" top="12360" width="0" height="0">
+   <BOUNDS type="Node" left="10530" top="12105" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Input Node" slicecount="1" visible="1" values="||">
    </PIN>
@@ -845,12 +847,12 @@
    </PIN>
    <PIN pinname="Maximum Anisotropy" slicecount="1" values="8">
    </PIN>
+   <PIN pinname="Border Color" slicecount="1" visible="1" values="|0.10287,0.10287,0.10287,1.00000|">
+   </PIN>
    </NODE>
    <LINK srcnodeid="154" srcpinname="Sampler" dstnodeid="101" dstpinname="Sampler State">
    </LINK>
    <LINK srcnodeid="104" srcpinname="Render State" dstnodeid="102" dstpinname="Render State">
-   </LINK>
-   <LINK srcnodeid="101" srcpinname="Layer" dstnodeid="102" dstpinname="Layer 1">
    </LINK>
    <LINK srcnodeid="94" srcpinname="Output" dstnodeid="27" dstpinname="Screen Space Points XY">
    </LINK>
@@ -865,8 +867,6 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="108" srcpinname="Layer" dstnodeid="158" dstpinname="Input 2">
-   </LINK>
-   <LINK srcnodeid="158" srcpinname="Output" dstnodeid="102" dstpinname="Layer 2">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="159" systemname="IOBox (Value Advanced)">
    <BOUNDS type="Box" left="12390" top="13005" width="480" height="480">
@@ -927,5 +927,19 @@
    <LINK srcnodeid="99" srcpinname="Buffers" dstnodeid="162" dstpinname="Input Node">
    </LINK>
    <LINK srcnodeid="137" srcpinname="Output Node" dstnodeid="99" dstpinname="Aspect Ratio">
+   </LINK>
+   <LINK srcnodeid="158" srcpinname="Output" dstnodeid="102" dstpinname="Layer 2">
+   </LINK>
+   <LINK srcnodeid="101" srcpinname="Layer" dstnodeid="102" dstpinname="Layer 1">
+   </LINK>
+   <NODE nodename="R (Color)" id="163" systemname="R (Color)">
+   <BOUNDS type="Node" left="11505" top="12090" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="" slicecount="1" visible="1" values="|0.10287,0.10287,0.10287,1.00000|">
+   </PIN>
+   <PIN pinname="Receive String" slicecount="1" values="BGC">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="163" srcpinname="Input Value" dstnodeid="154" dstpinname="Border Color">
    </LINK>
    </PATCH>

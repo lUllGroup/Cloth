@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="C:\Users\Admin\Desktop\Cloth\subpatches\wavingFlag2.v4p" systemname="wavingFlag2" filename="C:\Users\Michael\Desktop\nodecloth\String Physics\subpatches\wavingFlag2.v4p" scrollx="180" scrolly="195">
+   <PATCH nodename="C:\Users\Admin\Desktop\Cloth\subpatches\wavingFlag2.v4p" systemname="wavingFlag2" filename="C:\Users\Michael\Desktop\nodecloth\String Physics\subpatches\wavingFlag2.v4p" scrollx="1605" scrolly="8340">
    <BOUNDS type="Window" left="3435" top="5280" width="23565" height="8580">
    </BOUNDS>
    <PACK Name="image" Version="0.2.0">
@@ -811,7 +811,7 @@
    </BOUNDS>
    <PIN pinname="Input" slicecount="1" values="0">
    </PIN>
-   <PIN pinname="Width" slicecount="1" values="-0.25">
+   <PIN pinname="Width" slicecount="1" values="-0.4">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>

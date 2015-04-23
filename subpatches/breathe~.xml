@@ -272,16 +272,6 @@
    </BOUNDS>
    <PACK Name="addonpack" Version="33.7.0">
    </PACK>
-   <NODE systemname="Count (Value)" nodename="Count (Value)" componentmode="Hidden" id="20">
-   <BOUNDS type="Node" left="5310" top="5910" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Input" visible="1">
-   </PIN>
-   <PIN pinname="Count" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="10" srcpinname="Output" dstnodeid="20" dstpinname="Input">
-   </LINK>
    <LINK srcnodeid="14" srcpinname="Output" dstnodeid="0" dstpinname="Data">
    </LINK>
    </PATCH>
