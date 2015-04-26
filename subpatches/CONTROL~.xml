@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="C:\Users\Admin\Desktop\Cloth\subpatches\CONTROL.v4p" scrollx="135" scrolly="1875" systemname="CONTROL" filename="C:\Users\Admin\Desktop\Party Cloth\CONTROL.v4p">
-   <BOUNDS type="Window" left="20805" top="7665" width="7365" height="6930">
+   <PATCH nodename="C:\Users\Admin\Desktop\Cloth\subpatches\CONTROL.v4p" scrollx="315" scrolly="1875" systemname="CONTROL" filename="C:\Users\Admin\Desktop\Party Cloth\CONTROL.v4p">
+   <BOUNDS type="Window" left="13155" top="6630" width="7365" height="6930">
    </BOUNDS>
    <PACK Name="addonpack" Version="33.7.0">
    </PACK>
