@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="C:\Users\Admin\Desktop\Coth\subpatches\gridDetect.v4p" systemname="gridDetect" filename="C:\Users\Michi\Desktop\tanz! GIT\dhmd_epilog\scenes\Particles\gridDetect.v4p" scrollx="855" scrolly="8730">
+   <PATCH nodename="C:\Users\Admin\Desktop\Cloth\subpatches\gridDetect.v4p" systemname="gridDetect" filename="C:\Users\Michi\Desktop\tanz! GIT\dhmd_epilog\scenes\Particles\gridDetect.v4p" scrollx="855" scrolly="8730">
    <BOUNDS type="Window" left="1410" top="1410" width="14565" height="12795">
    </BOUNDS>
    <NODE nodename="IOBox (Node)" componentmode="InABox" id="3" systemname="IOBox (Node)">
@@ -331,7 +331,7 @@
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
-   <PIN pinname="Enabled" slicecount="1" values="0" visible="1">
+   <PIN pinname="Enabled" slicecount="1" visible="1" values="0">
    </PIN>
    </NODE>
    <LINK srcnodeid="72" srcpinname="Buffers" dstnodeid="79" dstpinname="Input">
@@ -379,7 +379,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="11250" top="15105" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.1">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>

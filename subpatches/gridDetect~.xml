@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="C:\Users\Admin\Desktop\Coth\subpatches\gridDetect.v4p" systemname="gridDetect" filename="C:\Users\Michi\Desktop\tanz! GIT\dhmd_epilog\scenes\Particles\gridDetect.v4p" scrollx="2325" scrolly="0">
+   <PATCH nodename="C:\Users\Admin\Desktop\Cloth\subpatches\gridDetect.v4p" systemname="gridDetect" filename="C:\Users\Michi\Desktop\tanz! GIT\dhmd_epilog\scenes\Particles\gridDetect.v4p" scrollx="855" scrolly="8730">
    <BOUNDS type="Window" left="1410" top="1410" width="14565" height="12795">
    </BOUNDS>
    <NODE nodename="IOBox (Node)" componentmode="InABox" id="3" systemname="IOBox (Node)">
@@ -331,7 +331,7 @@
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
-   <PIN pinname="Enabled" slicecount="1" values="0" visible="1">
+   <PIN pinname="Enabled" slicecount="1" visible="1" values="0">
    </PIN>
    </NODE>
    <LINK srcnodeid="72" srcpinname="Buffers" dstnodeid="79" dstpinname="Input">
@@ -374,40 +374,26 @@
    </LINK>
    <LINK srcnodeid="81" srcpinname="Output" dstnodeid="62" dstpinname="Y Input Value">
    </LINK>
-   <NODE systemname="GT (Value)" nodename="GT (Value)" componentmode="Hidden" id="83">
-   <BOUNDS type="Node" left="10560" top="15570" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Input 1" visible="1">
-   </PIN>
-   <PIN pinname="Input 2" visible="1">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="82" srcpinname="Output" dstnodeid="83" dstpinname="Input 1">
-   </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="84" systemname="IOBox (Value Advanced)">
    <BOUNDS type="Box" left="11250" top="15105" width="795" height="240">
    </BOUNDS>
    <BOUNDS type="Node" left="11250" top="15105" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.19">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
    <PIN pinname="Precision" slicecount="1" values="4">
    </PIN>
    </NODE>
-   <LINK srcnodeid="84" srcpinname="Y Output Value" dstnodeid="83" dstpinname="Input 2">
-   </LINK>
    <NODE nodename="S (Value)" id="85" systemname="S (Value)">
    <BOUNDS type="Node" left="10560" top="16425" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Send String" slicecount="1" values="empty">
    </PIN>
+   <PIN pinname="Input Value" slicecount="1" values="0">
+   </PIN>
    </NODE>
-   <LINK srcnodeid="83" srcpinname="Output" dstnodeid="85" dstpinname="Input Value">
-   </LINK>
    <NODE systemname="FullscreenQuad (DX11.Layer)" filename="%VVVV%\packs\dx11\nodes\modules\FullscreenQuad (DX11.Layer).v4p" nodename="FullscreenQuad (DX11.Layer)" componentmode="Hidden" id="86">
    <BOUNDS type="Node" left="5265" top="5985" width="100" height="100">
    </BOUNDS>
@@ -421,5 +407,21 @@
    <LINK srcnodeid="86" srcpinname="Layer" dstnodeid="30" dstpinname="Layer">
    </LINK>
    <LINK srcnodeid="30" srcpinname="Buffers" dstnodeid="59" dstpinname="Texture" linkstyle="PolyLine">
+   </LINK>
+   <NODE systemname="LE (Value)" nodename="LE (Value)" componentmode="Hidden" id="83">
+   <BOUNDS type="Node" left="10560" top="15570" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="82" srcpinname="Output" dstnodeid="83" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="84" srcpinname="Y Output Value" dstnodeid="83" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="83" srcpinname="Output" dstnodeid="85" dstpinname="Input Value">
    </LINK>
    </PATCH>

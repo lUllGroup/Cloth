@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="C:\Users\Admin\Desktop\Cloth\subpatches\frontTexSwitch.v4p" systemname="frontTexSwitch" filename="C:\Users\Admin\Desktop\Cloth\subpatches\frontTexSwitch.v4p" scrollx="975" scrolly="1185">
+   <PATCH nodename="C:\Users\Admin\Desktop\Cloth\subpatches\frontTexSwitch.v4p" systemname="frontTexSwitch" filename="C:\Users\Admin\Desktop\Cloth\subpatches\frontTexSwitch.v4p" scrollx="1020" scrolly="825">
    <BOUNDS type="Window" left="12435" top="7320" width="8220" height="5970">
    </BOUNDS>
    <PACK Name="addonpack" Version="33.7.0">

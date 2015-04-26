@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="C:\Users\Admin\Desktop\Cloth\subpatches\HomographyMultiscreen_DX11.v4p" componentmode="InAWindow" scrollx="1440" scrolly="14925" systemname="HomographyMultiscreen_DX11" filename="C:\Users\Admin\Desktop\Cloth\subpatches\HomographyMultiscreen_DX11.v4p">
-   <BOUNDS height="13605" left="3825" top="1665" type="Window" width="23535">
+   <PATCH nodename="C:\Users\Admin\Desktop\Cloth\subpatches\HomographyMultiscreen_DX11.v4p" componentmode="InAWindow" scrollx="4320" scrolly="1410" systemname="HomographyMultiscreen_DX11" filename="C:\Users\Admin\Desktop\Cloth\subpatches\HomographyMultiscreen_DX11.v4p">
+   <BOUNDS height="9540" left="4110" top="7440" type="Window" width="23535">
    </BOUNDS>
    <PACK Name="addonpack" Version="33.7.0">
    </PACK>
@@ -417,7 +417,7 @@
    </PIN>
    <PIN pinname="Show Value" slicecount="1" values="0">
    </PIN>
-   <PIN pinname="Y Input Value" slicecount="4" values="0.5,0.46969696969697,-0.484848484848485,-0.484848484848485" visible="1">
+   <PIN pinname="Y Input Value" slicecount="4" visible="1" values="0.5,0.46969696969697,-0.484848484848485,-0.484848484848485">
    </PIN>
    <PIN pinname="X Input Value" pintype="Input" slicecount="4" visible="1" values="-0.5,0.577981651376146,0.577981651376146,-0.481651376146789">
    </PIN>
@@ -733,7 +733,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="14175" top="6330" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.09">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.06">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -899,7 +899,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="12315" top="8925" width="795" height="240">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" values="0.072">
+   <PIN pinname="Y Input Value" slicecount="1" values="0.03">
    </PIN>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
@@ -925,7 +925,7 @@
    </PIN>
    <PIN pinname="Rows" slicecount="1" values="4">
    </PIN>
-   <PIN pinname="Y Input Value" slicecount="4" visible="1" values="-0.556,0.5,0.5,-0.553">
+   <PIN pinname="Y Input Value" slicecount="4" visible="1" values="-0.512,0.408,0.415,-0.51">
    </PIN>
    <PIN pinname="Vector Size" slicecount="1" values="4">
    </PIN>
@@ -945,7 +945,7 @@
    </PIN>
    <PIN pinname="Rows" slicecount="1" values="4">
    </PIN>
-   <PIN pinname="Y Input Value" slicecount="4" visible="1" values="0.461,0.5,-0.5,-0.445">
+   <PIN pinname="Y Input Value" slicecount="4" visible="1" values="0.466,0.46,-0.45,-0.449">
    </PIN>
    <PIN pinname="Vector Size" slicecount="1" values="4">
    </PIN>
@@ -965,7 +965,7 @@
    </PIN>
    <PIN pinname="Rows" slicecount="1" values="4">
    </PIN>
-   <PIN pinname="Y Input Value" slicecount="4" visible="1" values="-0.5,0.5,0.5,-0.5">
+   <PIN pinname="Y Input Value" slicecount="4" visible="1" values="-0.493,0.473,0.461,-0.499">
    </PIN>
    <PIN pinname="Vector Size" slicecount="1" values="4">
    </PIN>
@@ -985,7 +985,7 @@
    </PIN>
    <PIN pinname="Rows" slicecount="1" values="4">
    </PIN>
-   <PIN pinname="Y Input Value" slicecount="4" visible="1" values="0.473,0.468,-0.495,-0.491">
+   <PIN pinname="Y Input Value" slicecount="4" visible="1" values="0.473,0.468,-0.492,-0.49">
    </PIN>
    <PIN pinname="Vector Size" slicecount="1" values="4">
    </PIN>
@@ -1005,7 +1005,7 @@
    </PIN>
    <PIN pinname="Rows" slicecount="1" values="4">
    </PIN>
-   <PIN pinname="Y Input Value" slicecount="4" visible="1" values="-0.5,0.582,0.577,-0.517">
+   <PIN pinname="Y Input Value" slicecount="4" visible="1" values="-0.463,0.526,0.522,-0.472">
    </PIN>
    <PIN pinname="Vector Size" slicecount="1" values="4">
    </PIN>
@@ -1025,7 +1025,7 @@
    </PIN>
    <PIN pinname="Rows" slicecount="1" values="4">
    </PIN>
-   <PIN pinname="Y Input Value" slicecount="4" visible="1" values="0.476,0.493,-0.483,-0.5">
+   <PIN pinname="Y Input Value" slicecount="4" visible="1" values="0.494,0.492,-0.473,-0.484">
    </PIN>
    <PIN pinname="Vector Size" slicecount="1" values="4">
    </PIN>
@@ -1231,5 +1231,145 @@
    <LINK srcnodeid="99" srcpinname="Buffers" dstnodeid="226" dstpinname="Texture In">
    </LINK>
    <LINK srcnodeid="154" srcpinname="Sampler" dstnodeid="101" dstpinname="Sampler State">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="232" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="19455" top="25725" width="795" height="960">
+   </BOUNDS>
+   <BOUNDS type="Node" left="19455" top="25725" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Y Input Value" slicecount="4" visible="1" values="-0.512,0.408,0.415,-0.51">
+   </PIN>
+   <PIN pinname="Vector Size" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="|0, 0, 0, 1|">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="231" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="20505" top="25725" width="795" height="960">
+   </BOUNDS>
+   <BOUNDS type="Node" left="20505" top="25725" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Y Input Value" slicecount="4" visible="1" values="0.466,0.46,-0.45,-0.449">
+   </PIN>
+   <PIN pinname="Vector Size" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="|0, 0, 0, 1|">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="230" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="22290" top="25725" width="795" height="960">
+   </BOUNDS>
+   <BOUNDS type="Node" left="22290" top="25725" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Y Input Value" slicecount="4" visible="1" values="-0.493,0.473,0.461,-0.499">
+   </PIN>
+   <PIN pinname="Vector Size" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="|0, 0, 0, 1|">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="229" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="23340" top="25725" width="795" height="960">
+   </BOUNDS>
+   <BOUNDS type="Node" left="23340" top="25725" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Y Input Value" slicecount="4" visible="1" values="0.473,0.467,-0.497,-0.491">
+   </PIN>
+   <PIN pinname="Vector Size" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="|0, 0, 0, 1|">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="228" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="25275" top="25725" width="795" height="960">
+   </BOUNDS>
+   <BOUNDS type="Node" left="25275" top="25725" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Y Input Value" slicecount="4" visible="1" values="-0.464,0.526,0.522,-0.472">
+   </PIN>
+   <PIN pinname="Vector Size" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="|0, 0, 0, 1|">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="227" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="26400" top="25725" width="795" height="960">
+   </BOUNDS>
+   <BOUNDS type="Node" left="26400" top="25725" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Y Input Value" slicecount="4" visible="1" values="0.495,0.493,-0.483,-0.488">
+   </PIN>
+   <PIN pinname="Vector Size" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="|0, 0, 0, 1|">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="233" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="15435" top="4800" width="795" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="15435" top="4800" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="2" visible="1" values="0.61,0.73">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="2">
+   </PIN>
+   <PIN pinname="Vector Size" slicecount="1" values="2">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="|0, 0|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="233" srcpinname="Y Output Value" dstnodeid="135" dstpinname="Y Input Value">
    </LINK>
    </PATCH>
