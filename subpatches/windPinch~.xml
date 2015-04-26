@@ -249,9 +249,9 @@
    </PIN>
    <PIN pinname="Period" slicecount="1" values="3">
    </PIN>
-   <PIN pinname="Pause" visible="1">
+   <PIN pinname="Pause" visible="1" slicecount="1" values="0">
    </PIN>
-   <PIN pinname="Reset" visible="1">
+   <PIN pinname="Reset" visible="1" slicecount="1" values="0">
    </PIN>
    </NODE>
    <NODE systemname="Map (Value)" nodename="Map (Value)" componentmode="Hidden" id="21">
@@ -419,39 +419,5 @@
    </LINKPOINT>
    <LINKPOINT x="2580" y="6075">
    </LINKPOINT>
-   </LINK>
-   <NODE systemname="R (Value)" nodename="R (Value)" componentmode="Hidden" id="29">
-   <BOUNDS type="Node" left="1080" top="675" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Receive String" slicecount="1" values="OSCScene">
-   </PIN>
-   <PIN pinname="Input Value" visible="1">
-   </PIN>
-   </NODE>
-   <NODE systemname="EQ (Value)" nodename="EQ (Value)" componentmode="Hidden" id="31">
-   <BOUNDS type="Node" left="1095" top="1605" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Input 1" visible="1">
-   </PIN>
-   <PIN pinname="Input 2" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="Inverse Output" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="29" srcpinname="Input Value" dstnodeid="31" dstpinname="Input 1">
-   </LINK>
-   <LINK srcnodeid="31" srcpinname="Inverse Output" dstnodeid="20" dstpinname="Pause">
-   </LINK>
-   <NODE systemname="Change (Animation)" nodename="Change (Animation)" componentmode="Hidden" id="32">
-   <BOUNDS type="Node" left="1845" top="1425" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Input" visible="1">
-   </PIN>
-   <PIN pinname="OnChange" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="29" srcpinname="Input Value" dstnodeid="32" dstpinname="Input">
-   </LINK>
-   <LINK srcnodeid="32" srcpinname="OnChange" dstnodeid="20" dstpinname="Reset">
    </LINK>
    </PATCH>

@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="C:\Users\Admin\Desktop\Cloth\subpatches\CONTROL.v4p" scrollx="0" scrolly="0" systemname="CONTROL" filename="C:\Users\Admin\Desktop\Party Cloth\CONTROL.v4p">
+   <PATCH nodename="C:\Users\Admin\Desktop\Cloth\subpatches\CONTROL.v4p" scrollx="135" scrolly="1875" systemname="CONTROL" filename="C:\Users\Admin\Desktop\Party Cloth\CONTROL.v4p">
    <BOUNDS type="Window" left="20805" top="7665" width="7365" height="6930">
    </BOUNDS>
    <PACK Name="addonpack" Version="33.7.0">
@@ -349,7 +349,7 @@
    <NODE systemname="OSC" filename="OSC.v4p" nodename="OSC.v4p" componentmode="Hidden" id="16" stayontop="1">
    <BOUNDS type="Node" left="1530" top="6930" width="3315" height="270">
    </BOUNDS>
-   <BOUNDS type="Window" left="915" top="6930" width="15405" height="6300">
+   <BOUNDS type="Window" left="6150" top="10500" width="15405" height="6300">
    </BOUNDS>
    <PIN pinname="userInput" visible="1" slicecount="1" values="0">
    </PIN>
@@ -413,7 +413,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="2805" top="285" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="5" visible="1" values="30,120,120,120,120">
+   <PIN pinname="Y Input Value" slicecount="5" visible="1" values="30,150,150,150,150">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="s">
    </PIN>
@@ -437,11 +437,5 @@
    <LINK srcnodeid="10" srcpinname="Position Out" dstnodeid="8" dstpinname="Input Value">
    </LINK>
    <LINK srcnodeid="11" srcpinname="Position Out" dstnodeid="7" dstpinname="Input Value">
-   </LINK>
-   <LINK srcnodeid="59" srcpinname="Output" dstnodeid="17" dstpinname="Y Input Value" linkstyle="Bezier">
-   <LINKPOINT x="1170" y="5295">
-   </LINKPOINT>
-   <LINKPOINT x="1515" y="5295">
-   </LINKPOINT>
    </LINK>
    </PATCH>

@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="C:\Users\Admin\Desktop\Cloth\subpatches\multiTexSwitch.v4p" systemname="multiTexSwitch" filename="C:\Users\Admin\Desktop\Cloth\subpatches\multiTexSwitch.v4p" scrollx="1920" scrolly="0">
-   <BOUNDS type="Window" left="16185" top="4500" width="10470" height="10365">
+   <PATCH nodename="C:\Users\Admin\Desktop\Cloth\subpatches\multiTexSwitch.v4p" systemname="multiTexSwitch" filename="C:\Users\Admin\Desktop\Cloth\subpatches\multiTexSwitch.v4p" scrollx="0" scrolly="105">
+   <BOUNDS type="Window" left="10845" top="4500" width="15810" height="10365">
    </BOUNDS>
    <PACK Name="addonpack" Version="33.7.0">
    </PACK>
@@ -15,7 +15,7 @@
    </PIN>
    <PIN pinname="TranslateX" slicecount="1" values="0">
    </PIN>
-   <PIN pinname="TranslateY" slicecount="1" values="0.18" visible="1">
+   <PIN pinname="TranslateY" slicecount="1" visible="1" values="0.18">
    </PIN>
    <PIN pinname="Rotate" slicecount="1" values="0">
    </PIN>
@@ -405,7 +405,7 @@
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
-   <PIN pinname="Input 2" slicecount="1" values="2" visible="1">
+   <PIN pinname="Input 2" slicecount="1" visible="1" values="2">
    </PIN>
    </NODE>
    <LINK srcnodeid="11" srcpinname="Output" dstnodeid="0" dstpinname="ScaleX">
@@ -423,9 +423,9 @@
    <LINK srcnodeid="0" srcpinname="Transform Out" dstnodeid="26" dstpinname="Input Node">
    </LINK>
    <LINK srcnodeid="13" srcpinname="Y Output Value" dstnodeid="14" dstpinname="Switch" linkstyle="Bezier">
-   <LINKPOINT x="2310" y="9398">
+   <LINKPOINT x="2070" y="9413">
    </LINKPOINT>
-   <LINKPOINT x="2160" y="9428">
+   <LINKPOINT x="2400" y="9413">
    </LINKPOINT>
    </LINK>
    <NODE id="27" systemname="IOBox (Value Advanced)" componentmode="InABox" nodename="IOBox (Value Advanced)">
@@ -447,17 +447,17 @@
    <LINK srcnodeid="17" srcpinname="Input Value" dstnodeid="16" dstpinname="Input 1">
    </LINK>
    <LINK srcnodeid="13" srcpinname="Y Output Value" dstnodeid="11" dstpinname="Switch" linkstyle="Bezier">
-   <LINKPOINT x="2035" y="7708">
+   <LINKPOINT x="2055" y="7718">
    </LINKPOINT>
-   <LINKPOINT x="2030" y="7713">
+   <LINKPOINT x="2010" y="7718">
    </LINKPOINT>
    </LINK>
    <LINK srcnodeid="11" srcpinname="Output" dstnodeid="1" dstpinname="Input">
    </LINK>
    <LINK srcnodeid="13" srcpinname="Y Output Value" dstnodeid="15" dstpinname="Switch" linkstyle="Bezier">
-   <LINKPOINT x="2340" y="9513">
+   <LINKPOINT x="2070" y="9533">
    </LINKPOINT>
-   <LINKPOINT x="3030" y="9523">
+   <LINKPOINT x="3300" y="9533">
    </LINKPOINT>
    </LINK>
    <NODE id="28" systemname="IOBox (Value Advanced)" componentmode="InABox" nodename="IOBox (Value Advanced)">
@@ -481,9 +481,9 @@
    <LINK srcnodeid="18" srcpinname="Input Value" dstnodeid="22" dstpinname="Go To Position">
    </LINK>
    <LINK srcnodeid="13" srcpinname="Y Output Value" dstnodeid="12" dstpinname="Switch" linkstyle="Bezier">
-   <LINKPOINT x="2970" y="9765">
+   <LINKPOINT x="2100" y="9893">
    </LINKPOINT>
-   <LINKPOINT x="5760" y="10020">
+   <LINKPOINT x="6630" y="9893">
    </LINKPOINT>
    </LINK>
    <LINK srcnodeid="7" srcpinname="Texture Out" dstnodeid="12" dstpinname="Input 1">
@@ -525,7 +525,7 @@
    </PIN>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
-   <PIN pinname="Y Input Value" visible="1" slicecount="1" values="2">
+   <PIN pinname="Y Input Value" visible="1" slicecount="1" values="1">
    </PIN>
    </NODE>
    <NODE nodename="R (Value)" id="33" systemname="R (Value)">
@@ -545,7 +545,7 @@
    </LINKPOINT>
    </LINK>
    <NODE systemname="FileTexture (DX11 2d)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="FileTexture (DX11 2d)" componentmode="Hidden" id="34">
-   <BOUNDS type="Node" left="8445" top="12960" width="100" height="100">
+   <BOUNDS type="Node" left="8400" top="12495" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Filename" slicecount="1" values="..\assets\stars.jpg">
    </PIN>
@@ -584,7 +584,11 @@
    <PIN pinname="ID" pintype="Output" visible="-1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="13" srcpinname="Y Output Value" dstnodeid="35" dstpinname="Switch">
+   <LINK srcnodeid="13" srcpinname="Y Output Value" dstnodeid="35" dstpinname="Switch" linkstyle="Bezier">
+   <LINKPOINT x="2025" y="7718">
+   </LINKPOINT>
+   <LINKPOINT x="1170" y="7718">
+   </LINKPOINT>
    </LINK>
    <LINK srcnodeid="35" srcpinname="Output" dstnodeid="0" dstpinname="TranslateY">
    </LINK>
@@ -595,12 +599,28 @@
    </BOUNDS>
    <PIN pinname="Up" visible="1">
    </PIN>
-   <PIN pinname="Maximum" slicecount="1" values="3">
+   <PIN pinname="Maximum" slicecount="1" visible="1" values="3">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="33" srcpinname="Input Value" dstnodeid="37" dstpinname="Up">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="38" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="7770" top="1095" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="7770" top="1095" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="2">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Integer">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="38" srcpinname="Y Output Value" dstnodeid="37" dstpinname="Maximum">
    </LINK>
    <LINK srcnodeid="37" srcpinname="Output" dstnodeid="31" dstpinname="Y Input Value">
    </LINK>
