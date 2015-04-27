@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="C:\Users\Admin\Desktop\Party Cloth\subpatches\camera.v4p" systemname="camera" filename="C:\Users\Admin\Desktop\Party Cloth\subpatches\camera.v4p" scrollx="0" scrolly="3090">
+   <PATCH nodename="C:\Users\Admin\Desktop\Party Cloth\subpatches\camera.v4p" systemname="camera" filename="C:\Users\Admin\Desktop\Party Cloth\subpatches\camera.v4p" scrollx="0" scrolly="4830">
    <BOUNDS type="Window" left="4815" top="1275" width="19425" height="10620">
    </BOUNDS>
    <PACK Name="addonpack" Version="33.7.0">
@@ -27,7 +27,7 @@
    </PIN>
    <PIN pinname="View Projection" visible="1">
    </PIN>
-   <PIN pinname="Initial Interest" slicecount="3" values="0,0,0">
+   <PIN pinname="Initial Interest" slicecount="3" values="0,0,0" visible="1">
    </PIN>
    </NODE>
    <NODE systemname="Switch (Node Input)" nodename="Switch (Node Input)" componentmode="Hidden" id="2">
@@ -577,7 +577,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="4830" top="7695" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="17.75">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="17.126">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -912,12 +912,6 @@
    <LINKPOINT x="3555" y="12128">
    </LINKPOINT>
    </LINK>
-   <LINK srcnodeid="69" srcpinname="Output 4" dstnodeid="1" dstpinname="Initial FOV" linkstyle="Bezier">
-   <LINKPOINT x="3660" y="12128">
-   </LINKPOINT>
-   <LINKPOINT x="3765" y="12128">
-   </LINKPOINT>
-   </LINK>
    <LINK srcnodeid="69" srcpinname="Output 5" dstnodeid="1" dstpinname="Near Plane" linkstyle="Bezier">
    <LINKPOINT x="3855" y="12120">
    </LINKPOINT>
@@ -1073,5 +1067,27 @@
    <LINK srcnodeid="77" srcpinname="Output" dstnodeid="79" dstpinname="Input 2" linkstyle="PolyLine">
    </LINK>
    <LINK srcnodeid="79" srcpinname="Output" dstnodeid="70" dstpinname="Y Input Value">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="80" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="2055" top="9870" width="795" height="720">
+   </BOUNDS>
+   <BOUNDS type="Node" left="2055" top="9870" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="3" visible="1" values="0,-0.002,0">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Vector Size" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="3" values="0,0,0">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="80" srcpinname="Y Output Value" dstnodeid="1" dstpinname="Initial Interest">
+   </LINK>
+   <LINK srcnodeid="69" srcpinname="Output 4" dstnodeid="1" dstpinname="Initial FOV">
    </LINK>
    </PATCH>

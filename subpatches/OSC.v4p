@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="C:\Users\Admin\Desktop\Party Cloth\subpatches\OSC.v4p" systemname="OSC" filename="C:\vvvv\vvvv_45beta33.7_x64\OSC.v4p" scrollx="765" scrolly="13875">
+   <PATCH nodename="C:\Users\Admin\Desktop\Party Cloth\subpatches\OSC.v4p" systemname="OSC" filename="C:\vvvv\vvvv_45beta33.7_x64\OSC.v4p" scrollx="0" scrolly="7515">
    <BOUNDS type="Window" left="915" top="2250" width="15405" height="10980">
    </BOUNDS>
    <PACK Name="addonpack" Version="33.7.0">
@@ -287,7 +287,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="9840" top="24075" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" pintype="Input" visible="1" values="192.168.0.2">
+   <PIN pinname="Input String" slicecount="1" pintype="Input" visible="1" values="192.168.1.128">
    </PIN>
    <PIN pinname="Default" slicecount="1" pintype="Configuration" values="192.168.1.1">
    </PIN>

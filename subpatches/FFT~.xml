@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
    <PATCH nodename="C:\Users\Admin\Desktop\Party Cloth\subpatches\FFT.v4p" systemname="FFT" filename="C:\Users\Admin\Desktop\Party Cloth\subpatches\FFT.v4p" scrollx="0" scrolly="0">
-   <BOUNDS type="Window" left="14415" top="8265" width="13335" height="5775">
+   <BOUNDS type="Window" left="19290" top="8265" width="8460" height="5775">
    </BOUNDS>
    <PACK Name="addonpack" Version="33.7.0">
    </PACK>
@@ -199,9 +199,9 @@
    </PIN>
    <PIN pinname="Show Slider" slicecount="1" values="1">
    </PIN>
-   <PIN pinname="Y Input Value" slicecount="1" values="1">
+   <PIN pinname="Y Input Value" slicecount="1" values="0">
    </PIN>
-   <PIN pinname="X Input Value" slicecount="1" values="1">
+   <PIN pinname="X Input Value" slicecount="1" values="0">
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="15" nodename="IOBox (Enumerations)" systemname="IOBox (Enumerations)">
@@ -211,7 +211,7 @@
    </BOUNDS>
    <BOUNDS height="315" left="5745" top="600" type="Box" width="3015">
    </BOUNDS>
-   <PIN pinname="Input Enum" slicecount="1" values="|Line 1/2 (M-Audio Fast Track Pr|">
+   <PIN pinname="Input Enum" slicecount="1" values="|Mikrofonarray (3- Kinect USB Au|">
    </PIN>
    <PIN pinname="SliceCount Mode" slicecount="1" values="Input">
    </PIN>
