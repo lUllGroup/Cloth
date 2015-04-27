@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="C:\Users\Admin\Desktop\Cloth\subpatches\CONTROL.v4p" scrollx="105" scrolly="420" systemname="CONTROL" filename="C:\Users\Admin\Desktop\Party Cloth\CONTROL.v4p">
-   <BOUNDS type="Window" left="5775" top="6030" width="7365" height="6930">
+   <PATCH nodename="C:\Users\Admin\Desktop\Cloth\subpatches\CONTROL.v4p" scrollx="0" scrolly="0" systemname="CONTROL" filename="C:\Users\Admin\Desktop\Party Cloth\CONTROL.v4p">
+   <BOUNDS type="Window" left="555" top="5115" width="15090" height="8535">
    </BOUNDS>
    <PACK Name="addonpack" Version="33.7.0">
    </PACK>
@@ -391,7 +391,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="1140" top="1245" width="7735" height="10185">
    </BOUNDS>
-   <BOUNDS type="Window" left="2400" top="3495" width="13770" height="11115">
+   <BOUNDS type="Window" left="15690" top="3270" width="13770" height="11115">
    </BOUNDS>
    <PIN pinname="SubsceneLength" visible="1" slicecount="1" values="10">
    </PIN>
@@ -413,7 +413,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="2805" top="285" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="5" visible="1" values="30,150,150,150,150">
+   <PIN pinname="Y Input Value" slicecount="5" visible="1" values="30,150,150,34,150">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="s">
    </PIN>
@@ -438,10 +438,6 @@
    </LINK>
    <LINK srcnodeid="11" srcpinname="Position Out" dstnodeid="7" dstpinname="Input Value">
    </LINK>
-   <LINK srcnodeid="59" srcpinname="Output" dstnodeid="17" dstpinname="Y Input Value" linkstyle="Bezier">
-   <LINKPOINT x="1170" y="5295">
-   </LINKPOINT>
-   <LINKPOINT x="1515" y="5295">
-   </LINKPOINT>
+   <LINK srcnodeid="59" srcpinname="Output" dstnodeid="17" dstpinname="Y Input Value">
    </LINK>
    </PATCH>

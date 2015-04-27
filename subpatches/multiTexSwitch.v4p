@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="C:\Users\Admin\Desktop\Cloth\subpatches\multiTexSwitch.v4p" systemname="multiTexSwitch" filename="C:\Users\Admin\Desktop\Cloth\subpatches\multiTexSwitch.v4p" scrollx="0" scrolly="5445">
-   <BOUNDS type="Window" left="9540" top="4740" width="15810" height="10365">
+   <PATCH nodename="C:\Users\Admin\Desktop\Cloth\subpatches\multiTexSwitch.v4p" systemname="multiTexSwitch" filename="C:\Users\Admin\Desktop\Cloth\subpatches\multiTexSwitch.v4p" scrollx="675" scrolly="3525">
+   <BOUNDS type="Window" left="17880" top="4605" width="9780" height="10365">
    </BOUNDS>
    <PACK Name="addonpack" Version="33.7.0">
    </PACK>
@@ -217,7 +217,7 @@
    <NODE systemname="Switch (Value Input)" nodename="Switch (Value Input)" componentmode="Hidden" id="11">
    <BOUNDS type="Node" left="1980" top="8370" width="555" height="270">
    </BOUNDS>
-   <PIN pinname="Input 2" visible="1" slicecount="1" values="50">
+   <PIN pinname="Input 2" visible="1" slicecount="1" values="20">
    </PIN>
    <PIN pinname="Switch" visible="1" slicecount="1" values="1">
    </PIN>

@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="C:\Users\Admin\Desktop\Cloth\subpatches\clothTex.v4p" systemname="clothTex" filename="C:\Users\Michael\Desktop\nodecloth\String Physics\subpatches\clothTex.v4p" scrollx="2835" scrolly="11010">
+   <PATCH nodename="C:\Users\Admin\Desktop\Cloth\subpatches\clothTex.v4p" systemname="clothTex" filename="C:\Users\Michael\Desktop\nodecloth\String Physics\subpatches\clothTex.v4p" scrollx="0" scrolly="6990">
    <BOUNDS type="Window" left="8250" top="3345" width="13110" height="8550">
    </BOUNDS>
    <PACK Name="image" Version="0.2.0">
@@ -295,6 +295,12 @@
    </PIN>
    <PIN pinname="Reload" slicecount="1" visible="1" values="0">
    </PIN>
+   <PIN pinname="Keep In Memory" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="No Mips" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Load In Background" slicecount="1" values="1">
+   </PIN>
    </NODE>
    <NODE id="69" systemname="SetMatrix (Transform)" nodename="SetMatrix (Transform)" componentmode="Hidden">
    <BOUNDS type="Node" left="17640" top="7350" width="100" height="100">
@@ -337,7 +343,7 @@
    </BOUNDS>
    <PIN pinname="Texture" visible="1">
    </PIN>
-   <PIN pinname="FileName" slicecount="1" values="..\assets\frontTex.jpg" visible="1">
+   <PIN pinname="FileName" slicecount="1" visible="1" values="..\assets\frontTex.jpg">
    </PIN>
    <PIN pinname="Save" slicecount="1" visible="1" values="0">
    </PIN>
@@ -590,8 +596,6 @@
    </NODE>
    <LINK srcnodeid="144" srcpinname="Y Output Value" dstnodeid="158" dstpinname="Input 1">
    </LINK>
-   <LINK srcnodeid="158" srcpinname="Output 1" dstnodeid="105" dstpinname="Reload">
-   </LINK>
    <NODE systemname="grid" filename="grid.v4p" nodename="grid.v4p" componentmode="Hidden" id="214" stayontop="1">
    <BOUNDS type="Node" left="8185" top="10375" width="1740" height="270">
    </BOUNDS>
@@ -701,7 +705,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="7440" top="7350" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -721,7 +725,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="10485" top="16965" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" visible="1" values="..\assets\frontTex.jpg">
+   <PIN pinname="Input String" slicecount="1" visible="1" values="..\assets\frontTex.bmp">
    </PIN>
    <PIN pinname="Default" slicecount="1" values="file.foo">
    </PIN>
@@ -735,5 +739,7 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="229" srcpinname="Output String" dstnodeid="108" dstpinname="FileName">
+   </LINK>
+   <LINK srcnodeid="158" srcpinname="Output 1" dstnodeid="105" dstpinname="Reload">
    </LINK>
    </PATCH>

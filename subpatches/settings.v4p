@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
    <PATCH nodename="C:\Users\Admin\Desktop\Cloth\subpatches\settings.v4p" systemname="settings" filename="C:\Users\Michael\Desktop\nodecloth\String Physics\subpatches\settings.v4p" scrollx="6105" scrolly="0">
-   <BOUNDS type="Window" left="2955" top="6645" width="13800" height="7200">
+   <BOUNDS type="Window" left="11445" top="6000" width="13800" height="7200">
    </BOUNDS>
    <PACK Name="image" Version="0.2.0">
    </PACK>
@@ -331,7 +331,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="14325" top="1860" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.5">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.75">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>

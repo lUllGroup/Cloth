@@ -634,4 +634,6 @@
    </LINK>
    <LINK srcnodeid="7" srcpinname="Texture Out" dstnodeid="12" dstpinname="Input 1">
    </LINK>
+   <LINK srcnodeid="19" srcpinname="Output" dstnodeid="13" dstpinname="Y Input Value">
+   </LINK>
    </PATCH>

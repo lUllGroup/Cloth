@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="C:\Users\Admin\Desktop\Cloth\subpatches\frontTexSwitch.v4p" systemname="frontTexSwitch" filename="C:\Users\Admin\Desktop\Cloth\subpatches\frontTexSwitch.v4p" scrollx="1020" scrolly="825">
+   <PATCH nodename="C:\Users\Admin\Desktop\Cloth\subpatches\frontTexSwitch.v4p" systemname="frontTexSwitch" filename="C:\Users\Admin\Desktop\Cloth\subpatches\frontTexSwitch.v4p" scrollx="810" scrolly="780">
    <BOUNDS type="Window" left="12435" top="7320" width="10875" height="8085">
    </BOUNDS>
    <PACK Name="addonpack" Version="33.7.0">
@@ -163,6 +163,8 @@
    </PIN>
    <PIN pinname="No Mips" slicecount="1" values="1">
    </PIN>
+   <PIN pinname="Reload" slicecount="1" visible="1" values="0">
+   </PIN>
    </NODE>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="16" systemname="IOBox (String)">
    <BOUNDS type="Box" left="4500" top="5700" width="1755" height="435">
@@ -269,5 +271,25 @@
    <LINK srcnodeid="22" srcpinname="Input Value" dstnodeid="23" dstpinname="Input">
    </LINK>
    <LINK srcnodeid="23" srcpinname="OnChange" dstnodeid="12" dstpinname="Reset">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="24" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="8280" top="5190" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="8280" top="5190" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Bang">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Reload">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="24" srcpinname="Y Output Value" dstnodeid="15" dstpinname="Reload">
    </LINK>
    </PATCH>

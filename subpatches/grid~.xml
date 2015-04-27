@@ -1083,7 +1083,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="1200" top="2835" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.999">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.98">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -1097,7 +1097,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="1395" top="3135" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.997">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.99">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -1115,6 +1115,8 @@
    </PIN>
    <PIN pinname="Switch" visible="1">
    </PIN>
+   <PIN pinname="Input 1" slicecount="1" values="1">
+   </PIN>
    </NODE>
    <LINK srcnodeid="61" srcpinname="Y Output Value" dstnodeid="63" dstpinname="Input 2">
    </LINK>
@@ -1126,6 +1128,8 @@
    <PIN pinname="Output" visible="1">
    </PIN>
    <PIN pinname="Switch" visible="1">
+   </PIN>
+   <PIN pinname="Input 1" slicecount="1" values="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="62" srcpinname="Y Output Value" dstnodeid="64" dstpinname="Input 2">
@@ -1158,4 +1162,32 @@
    </LINK>
    <LINK srcnodeid="65" srcpinname="Y Output Value" dstnodeid="64" dstpinname="Switch">
    </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="67" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="1425" top="1965" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="1425" top="1965" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.999">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="66" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="1620" top="2265" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="1620" top="2265" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.997">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
    </PATCH>

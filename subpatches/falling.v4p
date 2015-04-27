@@ -15,7 +15,7 @@
    </BOUNDS>
    <PIN pinname="Change" visible="1">
    </PIN>
-   <PIN pinname="Period" slicecount="1" values="15">
+   <PIN pinname="Period" slicecount="1" values="11">
    </PIN>
    <PIN pinname="Reset" slicecount="1" visible="1" values="0">
    </PIN>
@@ -76,7 +76,7 @@
    </NODE>
    <LINK srcnodeid="0" srcpinname="Output" dstnodeid="7" dstpinname="Y Input Value">
    </LINK>
-   <BOUNDS type="Window" left="1710" top="6615" width="7620" height="8430">
+   <BOUNDS type="Window" left="8220" top="7155" width="7620" height="8430">
    </BOUNDS>
    <PACK Name="addonpack" Version="33.7.0">
    </PACK>
