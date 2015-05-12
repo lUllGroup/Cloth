@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.3.dtd" >
-   <PATCH nodename="C:\Users\Michael\Desktop\SIMPLE CLOTH\CLOTH.v4p" systemname="verlet_patch" filename="C:\Users\Michael\Desktop\Verlet Strings - NEW\verlet_patch.v4p" bgcolor="15132390" scrollx="18450" scrolly="8865">
+   <PATCH nodename="C:\Users\Michael\Downloads\WRAPPED IN CODE\CLOTH.v4p" systemname="verlet_patch" filename="C:\Users\Michael\Desktop\Verlet Strings - NEW\verlet_patch.v4p" bgcolor="15132390" scrollx="0" scrolly="0">
    <BOUNDS type="Window" left="12600" top="0" width="12600" height="15150">
    </BOUNDS>
    <NODE systemname="Keyboard (System Window Legacy2)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Keyboard (System Window)" componentmode="Hidden" id="135">
@@ -2370,4 +2370,48 @@
    </NODE>
    <LINK srcnodeid="1027" srcpinname="Layer" dstnodeid="1911" dstpinname="Layer 2">
    </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="1925" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="840" top="1530" width="13110" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="840" top="1530" width="5340" height="1080">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|Wrapped In Code von Michael Burk ist lizenziert unter einer Creative Commons Namensnennung - Nicht-kommerziell - Weitergabe unter gleichen Bedingungen 4.0 International Lizenz.|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="1926" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="840" top="2475" width="3900" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="840" top="2475" width="3900" height="270">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="http://creativecommons.org/licenses/by-nc-sa/4.0/">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="URL">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="1927" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="840" top="615" width="1395" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="840" top="615" width="3975" height="735">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|WRAPPED IN CODE|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="20">
+   </PIN>
+   </NODE>
    </PATCH>
