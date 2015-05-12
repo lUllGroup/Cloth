@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.3.dtd" >
-   <PATCH nodename="C:\Users\Michael\Desktop\Coth\subpatches\clothTex.v4p" systemname="clothTex" filename="C:\Users\Michael\Desktop\nodecloth\String Physics\subpatches\clothTex.v4p" scrollx="1905" scrolly="0">
+   <PATCH nodename="C:\Users\Michael\Desktop\SIMPLE CLOTH\subpatches\clothTex.v4p" systemname="clothTex" filename="C:\Users\Michael\Desktop\nodecloth\String Physics\subpatches\clothTex.v4p" scrollx="0" scrolly="0">
    <BOUNDS type="Window" left="8475" top="2295" width="25260" height="13125">
    </BOUNDS>
    <PACK Name="image" Version="0.2.0">
@@ -138,28 +138,6 @@
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
    </NODE>
-   <NODE systemname="PipeWire (DX11.Effect)" filename="..\dx11\PipeWire.fx" nodename="PipeWire (DX11.Effect)" componentmode="Hidden" id="14">
-   <BOUNDS type="Node" left="9690" top="5685" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Geometry" visible="1">
-   </PIN>
-   <PIN pinname="Layer" visible="1">
-   </PIN>
-   <PIN pinname="FlatNormals" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="Color" slicecount="1" values="|1.00000,1.00000,1.00000,1.00000|">
-   </PIN>
-   <PIN pinname="Technique" slicecount="1" values="Constant">
-   </PIN>
-   <PIN pinname="Thickness" visible="1">
-   </PIN>
-   <PIN pinname="TriangleSize" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="Transform In" visible="1">
-   </PIN>
-   <PIN pinname="Enabled" visible="1">
-   </PIN>
-   </NODE>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="15" systemname="IOBox (Value Advanced)">
    <BOUNDS type="Box" left="11670" top="4605" width="480" height="480">
    </BOUNDS>
@@ -263,9 +241,9 @@
    <NODE id="27" systemname="IOBox (Node)" componentmode="InABox" nodename="IOBox (Node)">
    <PIN pinname="Descriptive Name" slicecount="1" values="Back">
    </PIN>
-   <BOUNDS type="Box" left="1500" top="9270" width="750" height="240">
+   <BOUNDS type="Box" left="2745" top="9045" width="750" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="1500" top="9270" width="750" height="240">
+   <BOUNDS type="Node" left="2745" top="9045" width="750" height="240">
    </BOUNDS>
    <PIN pinname="Input Node" visible="1" slicecount="1" values="||">
    </PIN>
@@ -287,12 +265,6 @@
    </BOUNDS>
    </NODE>
    <LINK srcnodeid="3" srcpinname="Color Output" dstnodeid="28" dstpinname="Color Input">
-   </LINK>
-   <LINK srcnodeid="11" srcpinname="Geometry Out" dstnodeid="14" dstpinname="Geometry">
-   </LINK>
-   <LINK srcnodeid="12" srcpinname="Transform Out" dstnodeid="14" dstpinname="Transform In">
-   </LINK>
-   <LINK srcnodeid="23" srcpinname="Y Output Value" dstnodeid="14" dstpinname="Thickness">
    </LINK>
    <NODE id="29" systemname="IOBox (Node)" componentmode="InABox" nodename="IOBox (Node)">
    <PIN pinname="Descriptive Name" slicecount="1" values="Front">
@@ -628,8 +600,6 @@
    </LINK>
    <LINK srcnodeid="102" srcpinname="Output" dstnodeid="99" dstpinname="Rotate">
    </LINK>
-   <LINK srcnodeid="15" srcpinname="Y Output Value" dstnodeid="14" dstpinname="Enabled">
-   </LINK>
    <LINK srcnodeid="72" srcpinname="Buffers" dstnodeid="63" dstpinname="Input Node">
    </LINK>
    <LINK srcnodeid="26" srcpinname="Y Output Value" dstnodeid="91" dstpinname="Y Input Value">
@@ -643,7 +613,7 @@
    </PIN>
    <BOUNDS type="Node" left="9555" top="7560" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Layer" visible="1">
+   <PIN pinname="Layer" visible="1" slicecount="1" values="||">
    </PIN>
    <PIN pinname="View" visible="1" slicecount="1" values="||">
    </PIN>
@@ -661,8 +631,6 @@
    <LINK srcnodeid="26" srcpinname="Y Output Value" dstnodeid="16" dstpinname="Texture SizeXY">
    </LINK>
    <LINK srcnodeid="3" srcpinname="Color Output" dstnodeid="16" dstpinname="Background Color">
-   </LINK>
-   <LINK srcnodeid="14" srcpinname="Layer" dstnodeid="16" dstpinname="Layer">
    </LINK>
    <LINK srcnodeid="16" srcpinname="Buffers" dstnodeid="29" dstpinname="Input Node">
    </LINK>
@@ -761,5 +729,37 @@
    <LINK srcnodeid="19" srcpinname="Transform Out" dstnodeid="16" dstpinname="View">
    </LINK>
    <LINK srcnodeid="21" srcpinname="Transform Out" dstnodeid="16" dstpinname="Projection">
+   </LINK>
+   <NODE systemname="PipeWire (DX11.Effect)" filename="..\dx11\PipeWire.fx" nodename="PipeWire (DX11.Effect)" componentmode="Hidden" id="14">
+   <BOUNDS type="Node" left="9690" top="5685" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Geometry" visible="1">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="FlatNormals">
+   </PIN>
+   <PIN pinname="Color">
+   </PIN>
+   <PIN pinname="Technique">
+   </PIN>
+   <PIN pinname="Thickness" visible="1">
+   </PIN>
+   <PIN pinname="TriangleSize">
+   </PIN>
+   <PIN pinname="Transform In" visible="1">
+   </PIN>
+   <PIN pinname="Enabled" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="11" srcpinname="Geometry Out" dstnodeid="14" dstpinname="Geometry">
+   </LINK>
+   <LINK srcnodeid="12" srcpinname="Transform Out" dstnodeid="14" dstpinname="Transform In">
+   </LINK>
+   <LINK srcnodeid="23" srcpinname="Y Output Value" dstnodeid="14" dstpinname="Thickness">
+   </LINK>
+   <LINK srcnodeid="15" srcpinname="Y Output Value" dstnodeid="14" dstpinname="Enabled">
+   </LINK>
+   <LINK srcnodeid="14" srcpinname="Layer" dstnodeid="16" dstpinname="Layer">
    </LINK>
    </PATCH>

@@ -1,7 +1,6 @@
 bool reset;
 int pCount;
 int resolveCount;
-//float3 target;
 float3 gravity;
 StructuredBuffer<float> movementFactor;
 float width;
@@ -209,14 +208,12 @@ void CSConstantForce( uint3 DTid : SV_DispatchThreadID)
 										
 						float3 correctionVector = p1_to_p2 * (power - rest_length/currentDistance);
 					
-						//AllMemoryBarrier();
 						
 						if(!skip){
 							if(pinDown[iterator] != 1){
 								
 								Output[iterator].pos += correctionVector * resolveFactor * bendingFactor ;
-								//Output[connection].pos -= correctionVector * resolveFactor * bendingFactor ;
-							}
+								}
 						}
 						skip = false;
 						
@@ -253,7 +250,7 @@ void CSConstantForce( uint3 DTid : SV_DispatchThreadID)
 				
 	
 			if(myDistance <= 0.3  && applyAttractor){
-				//float strength = 2 / myDistance * myDistance;
+		
 				Output[iterator].pos += force * -.001;
 			} 
 		}
@@ -338,7 +335,6 @@ void CSConstantForce( uint3 DTid : SV_DispatchThreadID)
 		}
 		
 		if(Output[iterator].pinched && left){
-			//Output[iterator].pos = float3(target.x,target.y, -.2);
 			Output[iterator].pos += (distanceTarget + float3(0,0,-.2))*.001;
 		}
 	}

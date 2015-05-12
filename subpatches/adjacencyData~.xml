@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.3.dtd" >
-   <PATCH nodename="C:\Users\Michael\Desktop\Coth\subpatches\adjacencyData.v4p" systemname="adjacencyData" filename="C:\Users\Admin\Desktop\Coth\subpatches\adjacencyData.v4p" scrollx="0" scrolly="0">
+   <PATCH nodename="C:\Users\Michael\Desktop\Coth\subpatches\adjacencyData.v4p" systemname="adjacencyData" filename="C:\Users\Admin\Desktop\Coth\subpatches\adjacencyData.v4p" scrollx="15" scrolly="0">
    <NODE systemname="S+H (Animation)" nodename="S+H (Animation)" componentmode="Hidden" id="0">
    <BOUNDS type="Node" left="1500" top="3705" width="100" height="100">
    </BOUNDS>
@@ -144,4 +144,10 @@
    </NODE>
    <PACK Name="image" Version="0.2.0">
    </PACK>
+   <LINK srcnodeid="0" srcpinname="Output" dstnodeid="10" dstpinname="Y Input Value">
+   </LINK>
+   <LINK srcnodeid="1" srcpinname="Output" dstnodeid="9" dstpinname="Y Input Value">
+   </LINK>
+   <LINK srcnodeid="2" srcpinname="Output" dstnodeid="8" dstpinname="Y Input Value">
+   </LINK>
    </PATCH>
